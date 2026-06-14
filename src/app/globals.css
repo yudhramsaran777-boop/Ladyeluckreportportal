@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+html, body {
+  background-color: #04140f;
+  color: #e8f1ec;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1f4536 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f4536;
+  border-radius: 4px;
+}
+
+.bg-app-gradient {
+  background: radial-gradient(circle at top left, #0d3a29 0%, #04140f 55%, #020907 100%);
+}
+
+.sidebar-gradient {
+  background: linear-gradient(180deg, #0d3a29 0%, #062017 60%, #03110c 100%);
+}
+
+.card-panel {
+  background-color: #0b2419;
+  border: 1px solid #1f4536;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+
+.gold-underline {
+  position: relative;
+  display: inline-block;
+}
+.gold-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #d4af37, #f4d27a);
+}
