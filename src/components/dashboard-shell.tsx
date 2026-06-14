@@ -40,14 +40,16 @@ export function DashboardShell({
     <DashboardContext.Provider
       value={{ role, userName, userEmail, openMobileMenu: () => setMobileOpen(true) }}
     >
-      <div className="flex min-h-screen">
-        <div className="hidden md:block">
+      <div className="flex min-h-screen w-full max-w-full overflow-x-hidden">
+        <div className="hidden shrink-0 md:block">
           <Sidebar role={role} />
         </div>
         <MobileSidebar role={role} open={mobileOpen} onClose={() => setMobileOpen(false)} />
 
-        <div className="flex min-h-screen flex-1 flex-col">
-          <main className="flex-1 px-4 py-6 md:px-8 md:py-8">{children}</main>
+        <div className="flex min-h-screen min-w-0 max-w-full flex-1 flex-col overflow-x-hidden">
+          <main className="min-w-0 max-w-full flex-1 overflow-x-hidden px-4 py-6 md:px-8 md:py-8">
+            <div className="min-w-0 max-w-full">{children}</div>
+          </main>
         </div>
       </div>
     </DashboardContext.Provider>

@@ -5,7 +5,8 @@
 // - Normal Coin Difference = Starting Coins After Add - Ending Coins
 // - Real Recharge = Starting Coins After Add + Redeem Coins - Ending Coins
 // - Game Cost = Normal Coin Difference * (Game Cost Percentage / 100)
-// - True Profit = Normal Coin Difference - Game Cost
+// - Profit = Normal Coin Difference
+// - True Profit = Profit - Game Cost
 
 export interface GameRowInput {
   openingCoinsBeforeAdd: number;
@@ -39,7 +40,7 @@ export function calculateGameRow(input: GameRowInput): GameRowCalculated {
   const normalCoinDifference = startingCoinsAfterAdd - endingCoins;
   const realRecharge = startingCoinsAfterAdd + redeemCoins - endingCoins;
   const gameCost = (normalCoinDifference * gameCostPercentage) / 100;
-  const grossProfit = normalCoinDifference - gameCost;
+  const grossProfit = normalCoinDifference;
   const trueProfit = normalCoinDifference - gameCost;
 
   return {

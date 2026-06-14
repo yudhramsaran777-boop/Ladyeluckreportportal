@@ -7,8 +7,18 @@
 }
 
 html, body {
+  max-width: 100%;
+  overflow-x: hidden;
   background-color: #04140f;
   color: #e8f1ec;
+}
+
+body {
+  min-width: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 * {
@@ -34,6 +44,8 @@ html, body {
 }
 
 .card-panel {
+  max-width: 100%;
+  min-width: 0;
   background-color: #0b2419;
   border: 1px solid #1f4536;
   border-radius: 1rem;

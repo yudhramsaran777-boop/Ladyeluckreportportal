@@ -13,7 +13,7 @@ export async function GameLoginsSection({ shopId }: { shopId: string | null }) {
   }
 
   const supabase = createClient();
-  const { data: accounts } = await supabase
+  const { data: accounts, error } = await supabase
     .from("game_accounts")
     .select("*")
     .eq("shop_id", shopId)
@@ -23,7 +23,12 @@ export async function GameLoginsSection({ shopId }: { shopId: string | null }) {
   return (
     <div className="card-panel p-4">
       <h2 className="mb-4 text-sm font-semibold text-white">Game Logins</h2>
-      {(accounts || []).length === 0 ? (
+      {error ? (
+        <EmptyState
+          message="Could not load game accounts."
+          hint={error.message}
+        />
+      ) : (accounts || []).length === 0 ? (
         <EmptyState message="No game accounts assigned." />
       ) : (
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">

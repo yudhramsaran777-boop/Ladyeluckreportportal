@@ -33,6 +33,10 @@ function trueProfit(entry: any): number {
   return normalDifference || gameCost ? normalDifference - gameCost : Number(entry.true_profit || 0);
 }
 
+function profit(entry: any): number {
+  return Number(entry.normal_coin_difference ?? entry.gross_profit ?? 0);
+}
+
 export default async function ManagerDashboardPage({
   searchParams,
 }: {
@@ -96,7 +100,7 @@ export default async function ManagerDashboardPage({
   const activePaymentAccounts = (paymentAccounts || []).filter((p) => p.status === "active");
   const totalRecharge = (entries || []).reduce((sum, e) => sum + Number(e.real_recharge || 0), 0);
   const totalRedeem = (cashouts || []).reduce((sum, c) => sum + Number(c.amount || 0), 0);
-  const totalProfit = (entries || []).reduce((sum, e) => sum + Number(e.gross_profit || 0), 0);
+  const totalProfit = (entries || []).reduce((sum, e) => sum + profit(e), 0);
   const totalTrueProfit = (entries || []).reduce((sum, e) => sum + trueProfit(e), 0);
 
   const gameMap = new Map<string, { name: string; recharge: number }>();
@@ -162,7 +166,7 @@ export default async function ManagerDashboardPage({
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-6">
         <KpiCard label="Shop Recharge" value={formatCurrency(totalRecharge)} icon={DollarSign} trend="Selected range" />
         <KpiCard label="Shop Redeem" value={formatCurrency(totalRedeem)} icon={Wallet} trend="Selected range" />
-        <KpiCard label="Shop Profit" value={formatCurrency(totalProfit)} icon={TrendingUp} trend="Gross profit" />
+        <KpiCard label="Shop Profit" value={formatCurrency(totalProfit)} icon={TrendingUp} trend="Normal difference" />
         <KpiCard
           label="Shop True Profit"
           value={formatCurrency(totalTrueProfit)}

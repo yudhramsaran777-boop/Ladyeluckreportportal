@@ -98,7 +98,7 @@ export function Sidebar({ role, onNavigate }: SidebarProps) {
   }
 
   return (
-    <div className="sidebar-gradient flex h-full w-64 flex-col border-r border-panelborder">
+    <div className="sidebar-gradient flex h-full w-64 shrink-0 flex-col border-r border-panelborder">
       <div className="flex items-center gap-3 px-5 py-6">
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-gold-dark to-gold text-lg font-bold text-emerald-950">
           L

@@ -35,7 +35,7 @@ export default async function OwnerShiftReportsPage() {
       supabase.from("shops").select("id, name"),
       supabase
         .from("shift_game_entries")
-        .select("shift_report_id, real_recharge, true_profit"),
+        .select("shift_report_id, real_recharge, normal_coin_difference, game_cost, true_profit"),
       supabase.from("shift_cashouts").select("shift_report_id, amount"),
     ]);
 
@@ -45,7 +45,9 @@ export default async function OwnerShiftReportsPage() {
   for (const e of entries || []) {
     const cur = totalsByReport.get(e.shift_report_id) || { recharge: 0, profit: 0 };
     cur.recharge += Number(e.real_recharge || 0);
-    cur.profit += Number(e.true_profit || 0);
+    const normalDifference = Number(e.normal_coin_difference || 0);
+    const gameCost = Number(e.game_cost || 0);
+    cur.profit += normalDifference || gameCost ? normalDifference - gameCost : Number(e.true_profit || 0);
     totalsByReport.set(e.shift_report_id, cur);
   }
 

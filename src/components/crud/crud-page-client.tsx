@@ -28,6 +28,15 @@ function normalizePaymentAccount(values: Record<string, any>, userId: string | u
   };
 }
 
+function normalizeGameAccount(values: Record<string, any>, userId: string | undefined): Record<string, any> {
+  const statusKey = String(values.status || "active").trim().toLowerCase();
+  return {
+    ...values,
+    status: statusKey === "inactive" ? "inactive" : "active",
+    ...(userId ? { created_by: values.created_by || userId } : {}),
+  };
+}
+
 function applyTransform(transformType: TransformType | undefined, values: Record<string, any>): Record<string, any> {
   switch (transformType) {
     case "gameAccount":
@@ -246,7 +255,11 @@ export function CrudPageClient({
       data: { user },
     } = await supabase.auth.getUser();
     const normalizedPayload =
-      table === "payment_accounts" ? normalizePaymentAccount(payload, user?.id) : payload;
+      table === "payment_accounts"
+        ? normalizePaymentAccount(payload, user?.id)
+        : table === "game_accounts"
+          ? normalizeGameAccount(payload, user?.id)
+          : payload;
     // Apply transform
     const transformed = applyTransform(transformType, normalizedPayload);
 
@@ -316,8 +329,8 @@ export function CrudPageClient({
           </div>
         </div>
       ) : (
-        <div className="card-panel overflow-hidden">
-          <div className="overflow-x-auto">
+        <div className="card-panel min-w-0 max-w-full overflow-hidden">
+          <div className="max-w-full overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-panelborder text-xs uppercase text-emerald-200/50">

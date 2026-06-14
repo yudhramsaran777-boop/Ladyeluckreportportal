@@ -55,6 +55,10 @@ function trueProfit(entry: any): number {
   return normalDifference || gameCost ? normalDifference - gameCost : Number(entry.true_profit || 0);
 }
 
+function profit(entry: any): number {
+  return Number(entry.normal_coin_difference ?? entry.gross_profit ?? 0);
+}
+
 export default async function ManagerShopReportPage({
   searchParams,
 }: {
@@ -110,7 +114,7 @@ export default async function ManagerShopReportPage({
 
   const totalRecharge = (entries || []).reduce((sum, e) => sum + Number(e.real_recharge || 0), 0);
   const totalRedeems = (cashouts || []).reduce((sum, c) => sum + Number(c.amount || 0), 0);
-  const totalProfit = (entries || []).reduce((sum, e) => sum + Number(e.gross_profit || 0), 0);
+  const totalProfit = (entries || []).reduce((sum, e) => sum + profit(e), 0);
   const totalTrueProfit = (entries || []).reduce((sum, e) => sum + trueProfit(e), 0);
 
   const cashAppCashout = (cashouts || []).reduce(
@@ -201,7 +205,7 @@ export default async function ManagerShopReportPage({
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-7">
         <KpiCard label="Real Recharge" value={formatCurrency(totalRecharge)} icon={DollarSign} trend="Selected range" />
         <KpiCard label="Redeems" value={formatCurrency(totalRedeems)} icon={Wallet} trend="Cashout total" />
-        <KpiCard label="Profit" value={formatCurrency(totalProfit)} icon={TrendingUp} trend="Gross profit" />
+        <KpiCard label="Profit" value={formatCurrency(totalProfit)} icon={TrendingUp} trend="Normal difference" />
         <KpiCard
           label="True Profit"
           value={formatCurrency(totalTrueProfit)}

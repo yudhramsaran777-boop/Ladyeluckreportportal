@@ -46,6 +46,10 @@ function trueProfit(entry: any): number {
   return normalDifference || gameCost ? normalDifference - gameCost : Number(entry.true_profit || 0);
 }
 
+function profit(entry: any): number {
+  return Number(entry.normal_coin_difference ?? entry.gross_profit ?? 0);
+}
+
 function paymentDistribution(accounts: any[]) {
   const byType = new Map<string, number>();
   for (const account of accounts) {
@@ -128,7 +132,7 @@ function totals(entries: any[], cashouts: any[]) {
   return {
     recharge: entries.reduce((sum, e) => sum + Number(e.real_recharge || 0), 0),
     cashout: cashouts.reduce((sum, c) => sum + Number(c.amount || 0), 0),
-    profit: entries.reduce((sum, e) => sum + Number(e.gross_profit || 0), 0),
+    profit: entries.reduce((sum, e) => sum + profit(e), 0),
     trueProfit: entries.reduce((sum, e) => sum + trueProfit(e), 0),
     cashoutCount: cashouts.length,
     cashAppCashout: cashouts.reduce(
@@ -406,7 +410,7 @@ export async function OwnerReportContent({ searchParams, detailed = false }: Own
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-7">
         <KpiCard label="Total Recharge" value={formatCurrency(globalTotals.recharge)} icon={DollarSign} trend="All shops" />
         <KpiCard label="Total Cashout" value={formatCurrency(globalTotals.cashout)} icon={Wallet} trend="All shops" />
-        <KpiCard label="Total Profit" value={formatCurrency(globalTotals.profit)} icon={Banknote} trend="Gross profit" />
+        <KpiCard label="Total Profit" value={formatCurrency(globalTotals.profit)} icon={Banknote} trend="Normal difference" />
         <KpiCard
           label="Total True Profit"
           value={formatCurrency(globalTotals.trueProfit)}
