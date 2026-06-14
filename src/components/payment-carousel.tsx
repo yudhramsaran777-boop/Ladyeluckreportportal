@@ -31,7 +31,7 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
 
   if (accounts.length === 0) {
     return (
-      <div className="card-panel p-4">
+      <div className="card-panel w-full min-w-0 max-w-full overflow-hidden p-4">
         <h2 className="mb-4 text-sm font-semibold text-white">{title}</h2>
         <EmptyState message={emptyMessage} />
       </div>
@@ -83,31 +83,33 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
   }
 
   return (
-    <div className="card-panel p-4">
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-sm font-semibold text-white">{title}</h2>
-        <span className="text-xs text-emerald-200/50">
+    <div className="card-panel w-full min-w-0 max-w-full overflow-hidden p-4">
+      <div className="mb-4 flex min-w-0 items-center justify-between gap-3">
+        <h2 className="min-w-0 text-sm font-semibold text-white">{title}</h2>
+        <span className="shrink-0 text-xs text-emerald-200/50">
           {index + 1} of {accounts.length}
         </span>
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="relative w-full min-w-0 max-w-full overflow-hidden">
         <button
+          type="button"
           onClick={() => go(-1)}
-          className="rounded-lg border border-panelborder p-2 text-emerald-200/70 hover:text-gold"
+          className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-lg border border-panelborder bg-emerald-950/90 p-2 text-emerald-200/70 shadow-lg hover:text-gold disabled:opacity-40"
           disabled={accounts.length <= 1}
+          aria-label={`Previous ${title}`}
         >
           <ChevronLeft size={18} />
         </button>
 
-        <div className="flex-1 rounded-xl border border-panelborder bg-emerald-950/40 p-4">
-          <div className="mb-3 flex items-center justify-between">
-            <span className="text-sm font-semibold text-gold">{account.payment_type}</span>
+        <div className="w-full min-w-0 max-w-full rounded-xl border border-panelborder bg-emerald-950/40 p-4">
+          <div className="mb-3 flex min-w-0 items-center justify-between gap-3 pl-10 pr-10">
+            <span className="min-w-0 text-sm font-semibold text-gold">{account.payment_type}</span>
             <StatusBadge status={account.status} />
           </div>
 
           {account.image_url && !failedImages[account.id] ? (
-            <div className="relative mb-3 flex h-64 w-full items-center justify-center overflow-hidden rounded-xl border border-panelborder bg-black/40 sm:h-72">
+            <div className="relative mb-3 flex h-64 w-full max-w-full items-center justify-center overflow-hidden rounded-xl border border-panelborder bg-black/40 sm:h-72">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={account.image_url}
@@ -119,7 +121,7 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
               />
             </div>
           ) : (
-            <div className="mb-3 flex h-64 w-full flex-col items-center justify-center rounded-xl border border-dashed border-panelborder bg-black/30 text-emerald-300/40 sm:h-72">
+            <div className="mb-3 flex h-64 w-full max-w-full flex-col items-center justify-center rounded-xl border border-dashed border-panelborder bg-black/30 text-emerald-300/40 sm:h-72">
               <ImageOff size={30} />
               <span className="mt-2 text-xs">
                 {account.payment_type === "CashApp" ? "CashApp image not available" : "Chime image not available"}
@@ -127,13 +129,13 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
             </div>
           )}
 
-          <div className="space-y-2 text-sm">
-            {/* Tag */}
-            <div className="flex items-center justify-between gap-2">
+          <div className="min-w-0 space-y-2 text-sm">
+            <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <span className="text-emerald-200/60">Tag</span>
-              <div className="flex items-center gap-2">
-                <span className="font-medium text-white">{account.tag || "—"}</span>
+              <div className="flex min-w-0 flex-wrap items-center gap-2">
+                <span className="min-w-0 break-all font-medium text-white">{account.tag || "-"}</span>
                 <button
+                  type="button"
                   onClick={() => copy(account.tag, "tag")}
                   className="rounded-md border border-panelborder px-2 py-1 text-xs font-semibold text-emerald-100/80 hover:border-gold/50 hover:text-gold"
                   title="Copy Tag"
@@ -144,12 +146,12 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
               </div>
             </div>
 
-            {/* Email */}
-            <div className="flex items-center justify-between gap-2">
+            <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <span className="text-emerald-200/60">Email</span>
-              <div className="flex items-center gap-2">
-                <span className="font-medium text-white">{account.email || "—"}</span>
+              <div className="flex min-w-0 flex-wrap items-center gap-2">
+                <span className="min-w-0 break-all font-medium text-white">{account.email || "-"}</span>
                 <button
+                  type="button"
                   onClick={() => copy(account.email, "email")}
                   className="rounded-md border border-panelborder px-2 py-1 text-xs font-semibold text-emerald-100/80 hover:border-gold/50 hover:text-gold"
                   title="Copy Email"
@@ -160,14 +162,14 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
               </div>
             </div>
 
-            {/* Password */}
-            <div className="flex items-center justify-between gap-2">
+            <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <span className="text-emerald-200/60">Password</span>
-              <div className="flex items-center gap-2">
-                <span className="font-medium text-white">
-                  {showPassword ? account.password || "—" : "••••••••"}
+              <div className="flex min-w-0 flex-wrap items-center gap-2">
+                <span className="min-w-0 break-all font-medium text-white">
+                  {showPassword ? account.password || "-" : "••••••••"}
                 </span>
                 <button
+                  type="button"
                   onClick={() => copy(account.password, "password")}
                   className="rounded-md border border-panelborder px-2 py-1 text-xs font-semibold text-emerald-100/80 hover:border-gold/50 hover:text-gold"
                   title="Copy Password"
@@ -175,6 +177,7 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
                   Copy Password
                 </button>
                 <button
+                  type="button"
                   onClick={() => setShowPassword((s) => !s)}
                   className="text-emerald-300/60 hover:text-gold"
                   title={showPassword ? "Hide password" : "Show password"}
@@ -185,20 +188,20 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
               </div>
             </div>
 
-            {/* Payment Link */}
-            <div className="flex items-center justify-between gap-2">
-              <span className="flex-shrink-0 text-emerald-200/60">{paymentLinkLabel}</span>
+            <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <span className="shrink-0 text-emerald-200/60">{paymentLinkLabel}</span>
               {account.payment_link ? (
-                <div className="flex items-center gap-2">
+                <div className="flex min-w-0 flex-wrap items-center gap-2">
                   <span
-                    className="max-w-[140px] truncate font-medium text-emerald-100"
+                    className="min-w-0 max-w-full break-all font-medium text-emerald-100 sm:max-w-[180px] sm:truncate"
                     title={account.payment_link}
                   >
                     {account.payment_link}
                   </span>
                   <button
+                    type="button"
                     onClick={() => copy(account.payment_link, "link")}
-                    className="flex-shrink-0 text-emerald-300/60 hover:text-gold"
+                    className="shrink-0 text-emerald-300/60 hover:text-gold"
                     title="Copy payment link"
                   >
                     <Copy size={14} />
@@ -207,7 +210,7 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
                     href={account.payment_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-shrink-0 text-emerald-300/60 hover:text-gold"
+                    className="shrink-0 text-emerald-300/60 hover:text-gold"
                     title="Open payment link"
                   >
                     <ExternalLink size={14} />
@@ -219,7 +222,6 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
               )}
             </div>
 
-            {/* Notes */}
             {account.notes && (
               <div className="pt-1 text-xs text-emerald-200/50">{account.notes}</div>
             )}
@@ -241,9 +243,11 @@ export function PaymentCarousel({ title, accounts, emptyMessage }: PaymentCarous
         </div>
 
         <button
+          type="button"
           onClick={() => go(1)}
-          className="rounded-lg border border-panelborder p-2 text-emerald-200/70 hover:text-gold"
+          className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-lg border border-panelborder bg-emerald-950/90 p-2 text-emerald-200/70 shadow-lg hover:text-gold disabled:opacity-40"
           disabled={accounts.length <= 1}
+          aria-label={`Next ${title}`}
         >
           <ChevronRight size={18} />
         </button>

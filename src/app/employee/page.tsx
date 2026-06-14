@@ -41,7 +41,7 @@ export default async function EmployeeDashboardPage() {
         .from("game_accounts")
         .select("id", { count: "exact", head: true })
         .eq("shop_id", shopId)
-        .eq("status", "active"),
+        .ilike("status", "active"),
     ]);
     debugCashAppCount = cashAppCount ?? 0;
     debugChimeCount = chimeCount ?? 0;

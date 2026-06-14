@@ -13,6 +13,10 @@ function trueProfit(entry: any): number {
   return normalDifference || gameCost ? normalDifference - gameCost : Number(entry.true_profit || 0);
 }
 
+function profit(entry: any): number {
+  return Number(entry.normal_coin_difference ?? 0);
+}
+
 export default async function ManagerShiftReportsPage() {
   const supabase = createClient();
   const { data: userData } = await supabase.auth.getUser();
@@ -55,24 +59,39 @@ export default async function ManagerShiftReportsPage() {
       : Promise.resolve({ data: [] }),
   ]);
 
-  const totalsByReport = new Map<string, { recharge: number; cashout: number; trueProfit: number }>();
+  const totalsByReport = new Map<
+    string,
+    { recharge: number; normalDifference: number; gameCost: number; profit: number; cashout: number; cashoutCount: number; trueProfit: number }
+  >();
   for (const entry of entries || []) {
     const current = totalsByReport.get(entry.shift_report_id) || {
       recharge: 0,
+      normalDifference: 0,
+      gameCost: 0,
+      profit: 0,
       cashout: 0,
+      cashoutCount: 0,
       trueProfit: 0,
     };
     current.recharge += Number(entry.real_recharge || 0);
+    current.normalDifference += Number(entry.normal_coin_difference || 0);
+    current.gameCost += Number(entry.game_cost || 0);
+    current.profit += profit(entry);
     current.trueProfit += trueProfit(entry);
     totalsByReport.set(entry.shift_report_id, current);
   }
   for (const cashout of cashouts || []) {
     const current = totalsByReport.get(cashout.shift_report_id) || {
       recharge: 0,
+      normalDifference: 0,
+      gameCost: 0,
+      profit: 0,
       cashout: 0,
+      cashoutCount: 0,
       trueProfit: 0,
     };
     current.cashout += Number(cashout.amount || 0);
+    current.cashoutCount += 1;
     totalsByReport.set(cashout.shift_report_id, current);
   }
 
@@ -84,14 +103,18 @@ export default async function ManagerShiftReportsPage() {
           <EmptyState message="No shift reports yet" hint="Employees submit shift reports each shift." />
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[840px] text-left text-sm">
+            <table className="w-full min-w-[1120px] text-left text-sm">
               <thead>
                 <tr className="text-xs uppercase text-emerald-200/50">
                   <th className="py-2 pr-4">Employee</th>
                   <th className="py-2 pr-4">Date</th>
                   <th className="py-2 pr-4">Interval</th>
                   <th className="py-2 pr-4">Real Recharge</th>
+                  <th className="py-2 pr-4">Normal Diff</th>
+                  <th className="py-2 pr-4">Game Cost</th>
+                  <th className="py-2 pr-4">Profit</th>
                   <th className="py-2 pr-4">Cashout</th>
+                  <th className="py-2 pr-4">Cashouts Done</th>
                   <th className="py-2 pr-4">True Profit</th>
                   <th className="py-2 pr-4">Status</th>
                   <th className="py-2 pr-4">Action</th>
@@ -101,7 +124,11 @@ export default async function ManagerShiftReportsPage() {
                 {(reports || []).map((report) => {
                   const totals = totalsByReport.get(report.id) || {
                     recharge: 0,
+                    normalDifference: 0,
+                    gameCost: 0,
+                    profit: 0,
                     cashout: 0,
+                    cashoutCount: 0,
                     trueProfit: 0,
                   };
                   return (
@@ -110,7 +137,11 @@ export default async function ManagerShiftReportsPage() {
                       <td className="py-2 pr-4 text-emerald-100/70">{report.shift_date}</td>
                       <td className="py-2 pr-4 text-emerald-100/70">{report.shift_interval}</td>
                       <td className="py-2 pr-4 text-emerald-100">{formatCurrency(totals.recharge)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(totals.normalDifference)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(totals.gameCost)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(totals.profit)}</td>
                       <td className="py-2 pr-4 text-warning">{formatCurrency(totals.cashout)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{totals.cashoutCount}</td>
                       <td className={totals.trueProfit >= 0 ? "py-2 pr-4 text-positive" : "py-2 pr-4 text-danger"}>
                         {formatCurrency(totals.trueProfit)}
                       </td>

@@ -97,7 +97,7 @@ export default async function ManagerShopReportPage({
       ? supabase
           .from("shift_game_entries")
           .select(
-            "shift_report_id, game_name, real_recharge, redeem_amount, normal_coin_difference, game_cost, gross_profit, true_profit"
+            "shift_report_id, game_name, real_recharge, redeem_amount, normal_coin_difference, game_cost_percentage, game_cost, gross_profit, true_profit"
           )
           .in("shift_report_id", reportIds)
       : Promise.resolve({ data: [] }),
@@ -114,6 +114,7 @@ export default async function ManagerShopReportPage({
 
   const totalRecharge = (entries || []).reduce((sum, e) => sum + Number(e.real_recharge || 0), 0);
   const totalRedeems = (cashouts || []).reduce((sum, c) => sum + Number(c.amount || 0), 0);
+  const totalGameCost = (entries || []).reduce((sum, e) => sum + Number(e.game_cost || 0), 0);
   const totalProfit = (entries || []).reduce((sum, e) => sum + profit(e), 0);
   const totalTrueProfit = (entries || []).reduce((sum, e) => sum + trueProfit(e), 0);
 
@@ -138,16 +139,19 @@ export default async function ManagerShopReportPage({
 
   const rechargeGameMap = new Map<
     string,
-    { game: string; recharge: number; normalDifference: number; gameCost: number; trueProfit: number }
+    { game: string; recharge: number; normalDifference: number; gameCostPercent: number; gameCostPercentCount: number; gameCost: number; profit: number; trueProfit: number }
   >();
   for (const entry of entries || []) {
     const game = entry.game_name || "Unknown";
     const current =
       rechargeGameMap.get(game) ||
-      { game, recharge: 0, normalDifference: 0, gameCost: 0, trueProfit: 0 };
+      { game, recharge: 0, normalDifference: 0, gameCostPercent: 0, gameCostPercentCount: 0, gameCost: 0, profit: 0, trueProfit: 0 };
     current.recharge += Number(entry.real_recharge || 0);
     current.normalDifference += Number(entry.normal_coin_difference || 0);
+    current.gameCostPercent += Number(entry.game_cost_percentage || 0);
+    current.gameCostPercentCount += 1;
     current.gameCost += Number(entry.game_cost || 0);
+    current.profit += profit(entry);
     current.trueProfit += trueProfit(entry);
     rechargeGameMap.set(game, current);
   }
@@ -202,9 +206,10 @@ export default async function ManagerShopReportPage({
       <PageHeader title="24 Hour Shop Report" showDateFilter={false} />
       <DateRangeFilter start={start} end={end} minStart={minStart} maxEnd={maxEnd} error={error} />
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-7">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-8">
         <KpiCard label="Real Recharge" value={formatCurrency(totalRecharge)} icon={DollarSign} trend="Selected range" />
         <KpiCard label="Redeems" value={formatCurrency(totalRedeems)} icon={Wallet} trend="Cashout total" />
+        <KpiCard label="Game Cost" value={formatCurrency(totalGameCost)} icon={CreditCard} trend="Normal diff x cost %" />
         <KpiCard label="Profit" value={formatCurrency(totalProfit)} icon={TrendingUp} trend="Normal difference" />
         <KpiCard
           label="True Profit"
@@ -257,13 +262,15 @@ export default async function ManagerShopReportPage({
             <EmptyState message="No game entries in this range" />
           ) : (
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[680px] text-left text-sm">
+              <table className="w-full min-w-[860px] text-left text-sm">
                 <thead>
                   <tr className="text-xs uppercase text-emerald-200/50">
                     <th className="py-2 pr-4">Game</th>
                     <th className="py-2 pr-4">Real Recharge</th>
                     <th className="py-2 pr-4">Normal Diff</th>
+                    <th className="py-2 pr-4">Game Cost %</th>
                     <th className="py-2 pr-4">Game Cost</th>
+                    <th className="py-2 pr-4">Profit</th>
                     <th className="py-2 pr-4">True Profit</th>
                   </tr>
                 </thead>
@@ -273,7 +280,11 @@ export default async function ManagerShopReportPage({
                       <td className="py-2 pr-4 text-emerald-100">{row.game}</td>
                       <td className="py-2 pr-4 text-emerald-100">{formatCurrency(row.recharge)}</td>
                       <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(row.normalDifference)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">
+                        {formatNumber(row.gameCostPercentCount ? row.gameCostPercent / row.gameCostPercentCount : 0)}%
+                      </td>
                       <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(row.gameCost)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(row.profit)}</td>
                       <td className={row.trueProfit >= 0 ? "py-2 pr-4 text-positive" : "py-2 pr-4 text-danger"}>
                         {formatCurrency(row.trueProfit)}
                       </td>

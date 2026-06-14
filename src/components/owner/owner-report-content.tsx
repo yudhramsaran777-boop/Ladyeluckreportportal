@@ -99,16 +99,19 @@ function topCashoutGame(cashouts: any[]) {
 function topGames(entries: any[]) {
   const byGame = new Map<
     string,
-    { name: string; recharge: number; normalDifference: number; gameCost: number; trueProfit: number; count: number }
+    { name: string; recharge: number; normalDifference: number; gameCostPercent: number; gameCostPercentCount: number; gameCost: number; profit: number; trueProfit: number; count: number }
   >();
   for (const entry of entries) {
     const name = entry.game_name || entry.game_code || "Unknown";
     const current =
       byGame.get(name) ||
-      { name, recharge: 0, normalDifference: 0, gameCost: 0, trueProfit: 0, count: 0 };
+      { name, recharge: 0, normalDifference: 0, gameCostPercent: 0, gameCostPercentCount: 0, gameCost: 0, profit: 0, trueProfit: 0, count: 0 };
     current.recharge += Number(entry.real_recharge || 0);
     current.normalDifference += Number(entry.normal_coin_difference || 0);
+    current.gameCostPercent += Number(entry.game_cost_percentage || 0);
+    current.gameCostPercentCount += 1;
     current.gameCost += Number(entry.game_cost || 0);
+    current.profit += profit(entry);
     current.trueProfit += trueProfit(entry);
     current.count += 1;
     byGame.set(name, current);
@@ -132,6 +135,7 @@ function totals(entries: any[], cashouts: any[]) {
   return {
     recharge: entries.reduce((sum, e) => sum + Number(e.real_recharge || 0), 0),
     cashout: cashouts.reduce((sum, c) => sum + Number(c.amount || 0), 0),
+    gameCost: entries.reduce((sum, e) => sum + Number(e.game_cost || 0), 0),
     profit: entries.reduce((sum, e) => sum + profit(e), 0),
     trueProfit: entries.reduce((sum, e) => sum + trueProfit(e), 0),
     cashoutCount: cashouts.length,
@@ -205,9 +209,10 @@ function ShopSection({
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-6">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-7">
         <KpiCard label="Total Recharge" value={formatCurrency(shopTotals.recharge)} icon={DollarSign} />
         <KpiCard label="Total Cashout" value={formatCurrency(shopTotals.cashout)} icon={Wallet} />
+        <KpiCard label="Total Game Cost" value={formatCurrency(shopTotals.gameCost)} icon={CreditCard} />
         <KpiCard label="Total Profit" value={formatCurrency(shopTotals.profit)} icon={Banknote} />
         <KpiCard
           label="Total True Profit"
@@ -253,12 +258,15 @@ function ShopSection({
             <EmptyState message="No game recharge data for this range." />
           ) : (
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[620px] text-left text-sm">
+              <table className="w-full min-w-[900px] text-left text-sm">
                 <thead>
                   <tr className="text-xs uppercase text-emerald-200/50">
                     <th className="py-2 pr-4">Game</th>
                     <th className="py-2 pr-4">Recharge</th>
+                    <th className="py-2 pr-4">Normal Diff</th>
+                    <th className="py-2 pr-4">Game Cost %</th>
                     <th className="py-2 pr-4">Game Cost</th>
+                    <th className="py-2 pr-4">Profit</th>
                     <th className="py-2 pr-4">True Profit</th>
                     <th className="py-2 pr-4">Entries</th>
                   </tr>
@@ -268,7 +276,12 @@ function ShopSection({
                     <tr key={game.name}>
                       <td className="py-2 pr-4 text-emerald-100">{game.name}</td>
                       <td className="py-2 pr-4 text-emerald-100">{formatCurrency(game.recharge)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(game.normalDifference)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">
+                        {formatNumber(game.gameCostPercentCount ? game.gameCostPercent / game.gameCostPercentCount : 0)}%
+                      </td>
                       <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(game.gameCost)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(game.profit)}</td>
                       <td className={game.trueProfit >= 0 ? "py-2 pr-4 text-positive" : "py-2 pr-4 text-danger"}>{formatCurrency(game.trueProfit)}</td>
                       <td className="py-2 pr-4 text-emerald-100/70">{game.count}</td>
                     </tr>
@@ -335,7 +348,7 @@ export async function OwnerReportContent({ searchParams, detailed = false }: Own
       ? supabase
           .from("shift_game_entries")
           .select(
-            "shift_report_id, game_code, game_name, real_recharge, normal_coin_difference, game_cost, gross_profit, true_profit"
+            "shift_report_id, game_code, game_name, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, gross_profit, true_profit"
           )
           .in("shift_report_id", reportIds)
       : Promise.resolve({ data: [] }),
@@ -407,9 +420,10 @@ export async function OwnerReportContent({ searchParams, detailed = false }: Own
     <div className="space-y-6">
       <DateRangeFilter start={start} end={end} />
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-7">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-8">
         <KpiCard label="Total Recharge" value={formatCurrency(globalTotals.recharge)} icon={DollarSign} trend="All shops" />
         <KpiCard label="Total Cashout" value={formatCurrency(globalTotals.cashout)} icon={Wallet} trend="All shops" />
+        <KpiCard label="Total Game Cost" value={formatCurrency(globalTotals.gameCost)} icon={CreditCard} trend="All shops" />
         <KpiCard label="Total Profit" value={formatCurrency(globalTotals.profit)} icon={Banknote} trend="Normal difference" />
         <KpiCard
           label="Total True Profit"
@@ -429,13 +443,14 @@ export async function OwnerReportContent({ searchParams, detailed = false }: Own
             <EmptyState message="No shop performance data yet" />
           ) : (
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[760px] text-left text-sm">
+              <table className="w-full min-w-[980px] text-left text-sm">
                 <thead>
                   <tr className="text-xs uppercase text-emerald-200/50">
                     <th className="py-2 pr-4">Rank</th>
                     <th className="py-2 pr-4">Shop</th>
                     <th className="py-2 pr-4">Recharge</th>
                     <th className="py-2 pr-4">Cashout</th>
+                    <th className="py-2 pr-4">Game Cost</th>
                     <th className="py-2 pr-4">Profit</th>
                     <th className="py-2 pr-4">True Profit</th>
                     <th className="py-2 pr-4">Cashouts Done</th>
@@ -448,6 +463,7 @@ export async function OwnerReportContent({ searchParams, detailed = false }: Own
                       <td className="py-2 pr-4 text-emerald-100">{row.shop.name}</td>
                       <td className="py-2 pr-4 text-emerald-100">{formatCurrency(row.totals.recharge)}</td>
                       <td className="py-2 pr-4 text-warning">{formatCurrency(row.totals.cashout)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(row.totals.gameCost)}</td>
                       <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(row.totals.profit)}</td>
                       <td className={row.totals.trueProfit >= 0 ? "py-2 pr-4 text-positive" : "py-2 pr-4 text-danger"}>
                         {formatCurrency(row.totals.trueProfit)}

@@ -5,7 +5,7 @@ import { EmptyState } from "@/components/empty-state";
 export async function PaymentInfoSection({ shopId }: { shopId: string | null }) {
   if (!shopId) {
     return (
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <div className="grid min-w-0 grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="card-panel p-4">
           <h2 className="mb-4 text-sm font-semibold text-white">Active CashApps</h2>
           <EmptyState message="No shop assigned to your account yet." />
@@ -41,7 +41,7 @@ export async function PaymentInfoSection({ shopId }: { shopId: string | null }) 
   const chimes = normalizedAccounts.filter((a) => a.payment_type === "Chime");
 
   return (
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div className="grid min-w-0 grid-cols-1 gap-4 lg:grid-cols-2">
       <PaymentCarousel title="Active CashApps" accounts={cashApps} emptyMessage="No active CashApps assigned." />
       <PaymentCarousel title="Active Chime Tags" accounts={chimes} emptyMessage="No active Chime tags assigned." />
     </div>

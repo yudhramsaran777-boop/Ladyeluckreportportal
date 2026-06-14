@@ -100,6 +100,7 @@ export default async function ManagerDashboardPage({
   const activePaymentAccounts = (paymentAccounts || []).filter((p) => p.status === "active");
   const totalRecharge = (entries || []).reduce((sum, e) => sum + Number(e.real_recharge || 0), 0);
   const totalRedeem = (cashouts || []).reduce((sum, c) => sum + Number(c.amount || 0), 0);
+  const totalGameCost = (entries || []).reduce((sum, e) => sum + Number(e.game_cost || 0), 0);
   const totalProfit = (entries || []).reduce((sum, e) => sum + profit(e), 0);
   const totalTrueProfit = (entries || []).reduce((sum, e) => sum + trueProfit(e), 0);
 
@@ -137,24 +138,39 @@ export default async function ManagerDashboardPage({
     .sort((a, b) => b.total - a.total)
     .slice(0, 10);
 
-  const totalsByReport = new Map<string, { recharge: number; redeem: number; trueProfit: number }>();
+  const totalsByReport = new Map<
+    string,
+    { recharge: number; normalDifference: number; gameCost: number; profit: number; redeem: number; cashoutCount: number; trueProfit: number }
+  >();
   for (const entry of entries || []) {
     const current = totalsByReport.get(entry.shift_report_id) || {
       recharge: 0,
+      normalDifference: 0,
+      gameCost: 0,
+      profit: 0,
       redeem: 0,
+      cashoutCount: 0,
       trueProfit: 0,
     };
     current.recharge += Number(entry.real_recharge || 0);
+    current.normalDifference += Number(entry.normal_coin_difference || 0);
+    current.gameCost += Number(entry.game_cost || 0);
+    current.profit += profit(entry);
     current.trueProfit += trueProfit(entry);
     totalsByReport.set(entry.shift_report_id, current);
   }
   for (const cashout of cashouts || []) {
     const current = totalsByReport.get(cashout.shift_report_id) || {
       recharge: 0,
+      normalDifference: 0,
+      gameCost: 0,
+      profit: 0,
       redeem: 0,
+      cashoutCount: 0,
       trueProfit: 0,
     };
     current.redeem += Number(cashout.amount || 0);
+    current.cashoutCount += 1;
     totalsByReport.set(cashout.shift_report_id, current);
   }
 
@@ -163,9 +179,10 @@ export default async function ManagerDashboardPage({
       <PageHeader title={`Daily Shop Overview - ${shop?.name || "Shop"}`} showDateFilter={false} />
       <DateRangeFilter start={start} end={end} />
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-6">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-7">
         <KpiCard label="Shop Recharge" value={formatCurrency(totalRecharge)} icon={DollarSign} trend="Selected range" />
         <KpiCard label="Shop Redeem" value={formatCurrency(totalRedeem)} icon={Wallet} trend="Selected range" />
+        <KpiCard label="Shop Game Cost" value={formatCurrency(totalGameCost)} icon={CreditCard} trend="Normal diff x cost %" />
         <KpiCard label="Shop Profit" value={formatCurrency(totalProfit)} icon={TrendingUp} trend="Normal difference" />
         <KpiCard
           label="Shop True Profit"
@@ -174,7 +191,7 @@ export default async function ManagerDashboardPage({
           trend={totalTrueProfit >= 0 ? "Positive range" : "Negative range"}
           trendDirection={totalTrueProfit >= 0 ? "up" : "down"}
         />
-        <KpiCard label="Total Cashout Today" value={formatCurrency(totalRedeem)} icon={Users} trend="Matches range" />
+        <KpiCard label="Cashouts Done" value={formatNumber((cashouts || []).length)} icon={Users} trend="Selected range" />
         <KpiCard
           label="Active Payment Accounts"
           value={formatNumber(activePaymentAccounts.length)}
@@ -242,14 +259,18 @@ export default async function ManagerDashboardPage({
           <EmptyState message="No shift reports in this range" />
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[760px] text-left text-sm">
+            <table className="w-full min-w-[1040px] text-left text-sm">
               <thead>
                 <tr className="text-xs uppercase text-emerald-200/50">
                   <th className="py-2 pr-4">Employee</th>
                   <th className="py-2 pr-4">Shift Date</th>
                   <th className="py-2 pr-4">Status</th>
                   <th className="py-2 pr-4">Recharge</th>
+                  <th className="py-2 pr-4">Normal Diff</th>
+                  <th className="py-2 pr-4">Game Cost</th>
+                  <th className="py-2 pr-4">Profit</th>
                   <th className="py-2 pr-4">Redeem</th>
+                  <th className="py-2 pr-4">Cashouts Done</th>
                   <th className="py-2 pr-4">True Profit</th>
                   <th className="py-2 pr-4">Action</th>
                 </tr>
@@ -258,7 +279,11 @@ export default async function ManagerDashboardPage({
                 {(reports || []).map((report) => {
                   const totals = totalsByReport.get(report.id) || {
                     recharge: 0,
+                    normalDifference: 0,
+                    gameCost: 0,
+                    profit: 0,
                     redeem: 0,
+                    cashoutCount: 0,
                     trueProfit: 0,
                   };
                   return (
@@ -267,7 +292,11 @@ export default async function ManagerDashboardPage({
                       <td className="py-2 pr-4 text-emerald-100/70">{report.shift_date}</td>
                       <td className="py-2 pr-4"><StatusBadge status={report.status} /></td>
                       <td className="py-2 pr-4 text-emerald-100">{formatCurrency(totals.recharge)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(totals.normalDifference)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(totals.gameCost)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatCurrency(totals.profit)}</td>
                       <td className="py-2 pr-4 text-warning">{formatCurrency(totals.redeem)}</td>
+                      <td className="py-2 pr-4 text-emerald-100/70">{formatNumber(totals.cashoutCount)}</td>
                       <td className={totals.trueProfit >= 0 ? "py-2 pr-4 text-positive" : "py-2 pr-4 text-danger"}>
                         {formatCurrency(totals.trueProfit)}
                       </td>

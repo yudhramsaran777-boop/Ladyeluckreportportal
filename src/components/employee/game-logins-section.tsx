@@ -17,7 +17,7 @@ export async function GameLoginsSection({ shopId }: { shopId: string | null }) {
     .from("game_accounts")
     .select("*")
     .eq("shop_id", shopId)
-    .eq("status", "active")
+    .ilike("status", "active")
     .order("game_name");
 
   return (
@@ -29,7 +29,10 @@ export async function GameLoginsSection({ shopId }: { shopId: string | null }) {
           hint={error.message}
         />
       ) : (accounts || []).length === 0 ? (
-        <EmptyState message="No game accounts assigned." />
+        <EmptyState
+          message="No active game accounts assigned."
+          hint={`Shop ${shopId} returned 0 active game accounts.`}
+        />
       ) : (
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {(accounts || []).map((a) => (

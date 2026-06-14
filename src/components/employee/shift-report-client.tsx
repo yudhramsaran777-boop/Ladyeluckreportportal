@@ -14,7 +14,7 @@ import {
   type GameCode,
   type PaymentMethod,
 } from "@/lib/constants";
-import { calculateGameRow, formatCurrency, sumReportTotals } from "@/lib/calculations";
+import { calculateGameRow, formatCurrency, formatNumber, sumReportTotals } from "@/lib/calculations";
 
 interface GameSettingRow {
   game_code: string;
@@ -192,6 +192,7 @@ export function ShiftReportClient({
   const isSubmitted = report?.status === "submitted";
   const isNeedsCorrection = report?.status === "needs_correction";
   const canEditShiftInfo = editorRole === "manager";
+  const showManagerFinancials = editorRole === "manager";
 
   function updateGameRow(code: string, field: keyof GameRowState, value: string) {
     setGameRows((prev) => ({
@@ -581,7 +582,7 @@ export function ShiftReportClient({
           <div className="card-panel p-4">
             <h2 className="mb-4 text-sm font-semibold text-white">Game Coin Entries</h2>
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[900px] text-left text-sm">
+              <table className="w-full min-w-[1120px] text-left text-sm">
                 <thead>
                   <tr className="text-xs uppercase text-emerald-200/50">
                     <th className="py-2 pr-3">Game</th>
@@ -592,6 +593,10 @@ export function ShiftReportClient({
                     <th className="py-2 pr-3">Ending Coins</th>
                     <th className="py-2 pr-3">Normal Diff</th>
                     <th className="py-2 pr-3">Real Recharge</th>
+                    {showManagerFinancials && <th className="py-2 pr-3">Game Cost %</th>}
+                    {showManagerFinancials && <th className="py-2 pr-3">Game Cost</th>}
+                    {showManagerFinancials && <th className="py-2 pr-3">Profit</th>}
+                    {showManagerFinancials && <th className="py-2 pr-3">True Profit</th>}
                     <th className="py-2 pr-3">Redeem Amount</th>
                     <th className="py-2 pr-3">Notes</th>
                   </tr>
@@ -648,6 +653,26 @@ export function ShiftReportClient({
                       <td className="py-2 pr-3 text-emerald-100">
                         {calc.realRecharge.toFixed(2)}
                       </td>
+                      {showManagerFinancials && (
+                        <td className="py-2 pr-3 text-emerald-100/70">
+                          {formatNumber(costByCode[game.code] ?? game.defaultCostPercentage)}%
+                        </td>
+                      )}
+                      {showManagerFinancials && (
+                        <td className="py-2 pr-3 text-emerald-100/70">
+                          {formatCurrency(calc.gameCost)}
+                        </td>
+                      )}
+                      {showManagerFinancials && (
+                        <td className="py-2 pr-3 text-emerald-100/70">
+                          {formatCurrency(calc.grossProfit)}
+                        </td>
+                      )}
+                      {showManagerFinancials && (
+                        <td className={calc.trueProfit >= 0 ? "py-2 pr-3 text-positive" : "py-2 pr-3 text-danger"}>
+                          {formatCurrency(calc.trueProfit)}
+                        </td>
+                      )}
                       <td className="py-2 pr-3 text-emerald-100/70">
                         {formatCurrency(redeemAmount)}
                       </td>
@@ -668,6 +693,16 @@ export function ShiftReportClient({
                     <td className="py-2 pr-3">Totals</td>
                     <td colSpan={6} />
                     <td className="py-2 pr-3">{formatCurrency(totals.totalRealRecharge)}</td>
+                    {showManagerFinancials && (
+                      <>
+                        <td />
+                        <td className="py-2 pr-3">{formatCurrency(totals.totalGameCost)}</td>
+                        <td className="py-2 pr-3">{formatCurrency(totals.totalGrossProfit)}</td>
+                        <td className={totals.totalTrueProfit >= 0 ? "py-2 pr-3 text-positive" : "py-2 pr-3 text-danger"}>
+                          {formatCurrency(totals.totalTrueProfit)}
+                        </td>
+                      </>
+                    )}
                     <td />
                     <td />
                   </tr>

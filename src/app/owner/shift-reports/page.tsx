@@ -41,31 +41,52 @@ export default async function OwnerShiftReportsPage() {
 
   const shopNameById = new Map((shops || []).map((s) => [s.id, s.name]));
 
-  const totalsByReport = new Map<string, { recharge: number; profit: number }>();
-  for (const e of entries || []) {
-    const cur = totalsByReport.get(e.shift_report_id) || { recharge: 0, profit: 0 };
-    cur.recharge += Number(e.real_recharge || 0);
-    const normalDifference = Number(e.normal_coin_difference || 0);
-    const gameCost = Number(e.game_cost || 0);
-    cur.profit += normalDifference || gameCost ? normalDifference - gameCost : Number(e.true_profit || 0);
-    totalsByReport.set(e.shift_report_id, cur);
+  const totalsByReport = new Map<
+    string,
+    { recharge: number; normalDifference: number; gameCost: number; profit: number; trueProfit: number }
+  >();
+
+  for (const entry of entries || []) {
+    const current = totalsByReport.get(entry.shift_report_id) || {
+      recharge: 0,
+      normalDifference: 0,
+      gameCost: 0,
+      profit: 0,
+      trueProfit: 0,
+    };
+    const normalDifference = Number(entry.normal_coin_difference || 0);
+    const gameCost = Number(entry.game_cost || 0);
+    current.recharge += Number(entry.real_recharge || 0);
+    current.normalDifference += normalDifference;
+    current.gameCost += gameCost;
+    current.profit += normalDifference;
+    current.trueProfit += normalDifference || gameCost ? normalDifference - gameCost : Number(entry.true_profit || 0);
+    totalsByReport.set(entry.shift_report_id, current);
   }
 
-  const cashoutByReport = new Map<string, number>();
-  for (const c of cashouts || []) {
-    cashoutByReport.set(
-      c.shift_report_id,
-      (cashoutByReport.get(c.shift_report_id) || 0) + Number(c.amount || 0)
-    );
+  const cashoutByReport = new Map<string, { amount: number; count: number }>();
+  for (const cashout of cashouts || []) {
+    const current = cashoutByReport.get(cashout.shift_report_id) || { amount: 0, count: 0 };
+    current.amount += Number(cashout.amount || 0);
+    current.count += 1;
+    cashoutByReport.set(cashout.shift_report_id, current);
   }
 
-  const rows = (reports || []).map((r) => ({
-    ...r,
-    shop_name: shopNameById.get(r.shop_id) || "—",
-    real_recharge: formatCurrency(totalsByReport.get(r.id)?.recharge || 0),
-    cashout_total: formatCurrency(cashoutByReport.get(r.id) || 0),
-    true_profit: formatCurrency(totalsByReport.get(r.id)?.profit || 0),
-  }));
+  const rows = (reports || []).map((report) => {
+    const totals = totalsByReport.get(report.id);
+    const cashoutTotals = cashoutByReport.get(report.id);
+    return {
+      ...report,
+      shop_name: shopNameById.get(report.shop_id) || "-",
+      real_recharge: formatCurrency(totals?.recharge || 0),
+      normal_difference: formatCurrency(totals?.normalDifference || 0),
+      game_cost: formatCurrency(totals?.gameCost || 0),
+      profit: formatCurrency(totals?.profit || 0),
+      cashout_total: formatCurrency(cashoutTotals?.amount || 0),
+      cashouts_done: String(cashoutTotals?.count || 0),
+      true_profit: formatCurrency(totals?.trueProfit || 0),
+    };
+  });
 
   const columns: ColumnConfig[] = [
     { key: "employee_name", label: "Employee" },
@@ -73,7 +94,11 @@ export default async function OwnerShiftReportsPage() {
     { key: "shift_date", label: "Date" },
     { key: "shift_interval", label: "Interval" },
     { key: "real_recharge", label: "Real Recharge" },
+    { key: "normal_difference", label: "Normal Diff" },
+    { key: "game_cost", label: "Game Cost" },
+    { key: "profit", label: "Profit" },
     { key: "cashout_total", label: "Cashout" },
+    { key: "cashouts_done", label: "Cashouts Done" },
     { key: "true_profit", label: "True Profit" },
     { key: "status", label: "Status" },
   ];
