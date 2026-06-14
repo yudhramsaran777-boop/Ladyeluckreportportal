@@ -14,12 +14,12 @@ export default async function EmployeeLayout({
 
   const { data: profile } = await supabase
     .from("profiles")
-    .select("role, full_name, email, shop_id")
+    .select("role, full_name, email, shop_id, is_active")
     .eq("id", userData.user.id)
     .single();
 
   if (!profile) redirect("/login");
-  if (profile.role !== "employee") redirect("/dashboard");
+  if (profile.role !== "employee" || !profile.is_active) redirect("/dashboard");
 
   return (
     <DashboardShell role="employee" userName={profile.full_name} userEmail={profile.email}>

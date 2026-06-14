@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   LayoutDashboard,
   Store,
@@ -21,12 +21,14 @@ import {
   FileText,
   BadgeDollarSign,
   BookOpenCheck,
+  LogOut,
   X,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { Role } from "@/lib/constants";
 import { ROLE_LABELS } from "@/lib/constants";
 import clsx from "clsx";
+import { createClient } from "@/lib/supabase/client";
 
 interface NavItem {
   label: string;
@@ -63,11 +65,11 @@ const MANAGER_NAV: NavItem[] = [
 
 const EMPLOYEE_NAV: NavItem[] = [
   { label: "Dashboard", href: "/employee", icon: LayoutDashboard },
-  { label: "CashApp / Chime", href: "/employee/payment-info", icon: Smartphone },
-  { label: "Game Logins", href: "/employee/game-logins", icon: KeyRound },
-  { label: "Submit Shift", href: "/employee/shift-report", icon: FilePlus2 },
+  { label: "Shift Report", href: "/employee/shift-report", icon: FilePlus2 },
   { label: "My Reports", href: "/employee/my-reports", icon: FileText },
-  { label: "My Cashouts", href: "/employee/cashouts", icon: BadgeDollarSign },
+  { label: "Cashouts", href: "/employee/cashouts", icon: BadgeDollarSign },
+  { label: "Game Logins", href: "/employee/game-logins", icon: KeyRound },
+  { label: "Payment Info", href: "/employee/payment-info", icon: Smartphone },
   { label: "Rules", href: "/employee/rules", icon: BookOpenCheck },
 ];
 
@@ -84,7 +86,16 @@ interface SidebarProps {
 
 export function Sidebar({ role, onNavigate }: SidebarProps) {
   const pathname = usePathname();
+  const router = useRouter();
+  const supabase = createClient();
   const items = NAV_BY_ROLE[role];
+
+  async function handleLogout() {
+    await supabase.auth.signOut();
+    onNavigate?.();
+    router.push("/login");
+    router.refresh();
+  }
 
   return (
     <div className="sidebar-gradient flex h-full w-64 flex-col border-r border-panelborder">
@@ -125,10 +136,18 @@ export function Sidebar({ role, onNavigate }: SidebarProps) {
         })}
       </nav>
 
-      <div className="border-t border-panelborder px-4 py-4">
+      <div className="space-y-3 border-t border-panelborder px-4 py-4">
         <div className="rounded-lg border border-gold/30 bg-gold/10 px-3 py-2 text-center text-xs font-semibold tracking-wide text-gold">
           {ROLE_LABELS[role]}
         </div>
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="flex w-full items-center justify-center gap-2 rounded-lg border border-panelborder px-3 py-2 text-sm font-semibold text-emerald-100/80 hover:border-danger/50 hover:text-danger"
+        >
+          <LogOut size={16} />
+          Logout
+        </button>
       </div>
     </div>
   );

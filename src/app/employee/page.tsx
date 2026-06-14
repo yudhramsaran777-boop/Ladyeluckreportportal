@@ -89,6 +89,7 @@ export default async function EmployeeDashboardPage() {
 
   return (
     <div className="space-y-6">
+      <PageHeader title="Employee Dashboard" showDateFilter={false} />
       <div className="card-panel p-4">
         <h1 className="text-lg font-semibold text-white">
           Welcome, {employeeName}
