@@ -27,7 +27,7 @@ export function RecordFormModal({
   useEffect(() => {
     const initial: Record<string, any> = {};
     for (const f of fields) {
-      let val = initialValues?.[f.name] ?? f.defaultValue ?? (f.type === "number" ? 0 : "");
+      let val = initialValues?.[f.name] ?? f.defaultValue ?? "";
       if (f.type === "toggle-status" && typeof val === "boolean") {
         val = val ? "active" : "inactive";
       }
@@ -133,11 +133,12 @@ export function RecordFormModal({
                   onChange={(e) =>
                     setField(
                       f.name,
-                      f.type === "number" ? e.target.valueAsNumber || 0 : e.target.value
+                      e.target.value
                     )
                   }
                   placeholder={f.placeholder}
                   step={f.type === "number" ? "any" : undefined}
+                  inputMode={f.type === "number" ? "decimal" : undefined}
                   className="w-full rounded-lg border border-panelborder bg-emerald-950/60 px-3 py-2 text-sm text-white outline-none focus:border-gold"
                 />
               )}

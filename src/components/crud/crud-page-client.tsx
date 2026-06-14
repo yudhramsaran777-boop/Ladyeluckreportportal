@@ -37,6 +37,24 @@ function normalizeGameAccount(values: Record<string, any>, userId: string | unde
   };
 }
 
+function normalizePageSource(values: Record<string, any>, userId: string | undefined): Record<string, any> {
+  const statusKey = String(values.status || "active").trim().toLowerCase();
+  const platformKey = String(values.platform || "Facebook").trim().toLowerCase();
+  const platform =
+    platformKey === "instagram" || platformKey === "ig"
+      ? "Instagram"
+      : platformKey === "facebook" || platformKey === "fb" || platformKey === "meta"
+        ? "Facebook"
+        : "Other";
+
+  return {
+    ...values,
+    platform,
+    status: statusKey === "inactive" ? "inactive" : "active",
+    ...(userId ? { created_by: values.created_by || userId } : {}),
+  };
+}
+
 function applyTransform(transformType: TransformType | undefined, values: Record<string, any>): Record<string, any> {
   switch (transformType) {
     case "gameAccount":
@@ -245,7 +263,7 @@ export function CrudPageClient({
     for (const [k, v] of Object.entries(rest)) {
       const field = fields.find((f) => f.name === k);
       if (field?.type === "image") continue;
-      payload[k] = v;
+      payload[k] = field?.type === "number" ? Number(v || 0) : v;
     }
     // Apply fixed values
     for (const [k, v] of Object.entries(fixedValues)) {
@@ -259,6 +277,8 @@ export function CrudPageClient({
         ? normalizePaymentAccount(payload, user?.id)
         : table === "game_accounts"
           ? normalizeGameAccount(payload, user?.id)
+          : table === "page_sources"
+            ? normalizePageSource(payload, user?.id)
           : payload;
     // Apply transform
     const transformed = applyTransform(transformType, normalizedPayload);

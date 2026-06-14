@@ -52,9 +52,9 @@ export default async function ManagerShiftReportEditPage({
       supabase.from("game_settings").select("game_code, game_name, cost_percentage"),
       supabase
         .from("page_sources")
-        .select("id, page_name")
+        .select("id, page_name, platform")
         .eq("shop_id", profile.shop_id)
-        .eq("status", "active")
+        .ilike("status", "active")
         .order("page_name"),
       supabase.from("shift_game_entries").select("*").eq("shift_report_id", report.id),
       supabase

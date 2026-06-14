@@ -53,9 +53,9 @@ export default async function EmployeeDashboardPage() {
     shopId
       ? supabase
           .from("page_sources")
-          .select("id, page_name")
+          .select("id, page_name, platform")
           .eq("shop_id", shopId)
-          .eq("status", "active")
+          .ilike("status", "active")
           .order("page_name")
       : Promise.resolve({ data: [] }),
     supabase

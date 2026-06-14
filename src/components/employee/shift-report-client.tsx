@@ -25,6 +25,7 @@ interface GameSettingRow {
 interface PageSourceRow {
   id: string;
   page_name: string;
+  platform?: string | null;
 }
 
 interface CashoutRow {
@@ -72,16 +73,16 @@ interface ShiftReportClientProps {
 }
 
 interface GameRowState {
-  opening: number;
-  adminAdded: number;
-  ending: number;
+  opening: string;
+  adminAdded: string;
+  ending: string;
   notes: string;
 }
 
 const emptyGameRow: GameRowState = {
-  opening: 0,
-  adminAdded: 0,
-  ending: 0,
+  opening: "",
+  adminAdded: "",
+  ending: "",
   notes: "",
 };
 
@@ -95,6 +96,17 @@ const emptyCashoutForm = {
   page_source_id: "",
   notes: "",
 };
+
+function toNumber(value: string | number | null | undefined): number {
+  if (value === "" || value === null || value === undefined) return 0;
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function numberToInput(value: unknown): string {
+  const numeric = toNumber(value as string | number | null | undefined);
+  return numeric === 0 ? "" : String(numeric);
+}
 
 export function ShiftReportClient({
   shopId,
@@ -126,9 +138,9 @@ export function ShiftReportClient({
       const existing = initialEntries.find((e) => e.game_code === g.code);
       map[g.code] = existing
         ? {
-            opening: Number(existing.opening_coins_before_add) || 0,
-            adminAdded: Number(existing.admin_added_coins) || 0,
-            ending: Number(existing.ending_coins) || 0,
+            opening: numberToInput(existing.opening_coins_before_add),
+            adminAdded: numberToInput(existing.admin_added_coins),
+            ending: numberToInput(existing.ending_coins),
             notes: existing.notes || "",
           }
         : { ...emptyGameRow };
@@ -165,9 +177,9 @@ export function ShiftReportClient({
       const row = gameRows[g.code] || emptyGameRow;
       const redeemAmount = redeemByGame[g.code] || 0;
       const calc = calculateGameRow({
-        openingCoinsBeforeAdd: row.opening,
-        adminAddedCoins: row.adminAdded,
-        endingCoins: row.ending,
+        openingCoinsBeforeAdd: toNumber(row.opening),
+        adminAddedCoins: toNumber(row.adminAdded),
+        endingCoins: toNumber(row.ending),
         redeemCoins: redeemAmount,
         redeemAmount,
         gameCostPercentage: costByCode[g.code] ?? g.defaultCostPercentage,
@@ -199,7 +211,7 @@ export function ShiftReportClient({
       ...prev,
       [code]: {
         ...prev[code],
-        [field]: field === "notes" ? value : Number(value) || 0,
+        [field]: value,
       },
     }));
   }
@@ -337,11 +349,11 @@ export function ShiftReportClient({
       shift_report_id: reportId,
       game_code: game.code,
       game_name: game.name,
-      opening_coins_before_add: row.opening,
-      admin_added_coins: row.adminAdded,
+      opening_coins_before_add: toNumber(row.opening),
+      admin_added_coins: toNumber(row.adminAdded),
       starting_coins_after_add: calc.startingCoinsAfterAdd,
       redeem_coins: redeemAmount,
-      ending_coins: row.ending,
+      ending_coins: toNumber(row.ending),
       normal_coin_difference: calc.normalCoinDifference,
       real_recharge: calc.realRecharge,
       redeem_amount: redeemAmount,
@@ -612,6 +624,8 @@ export function ShiftReportClient({
                         <input
                           type="number"
                           step="any"
+                          inputMode="decimal"
+                          placeholder="0"
                           disabled={isReadOnly}
                           value={row.opening}
                           onChange={(e) => updateGameRow(game.code, "opening", e.target.value)}
@@ -622,6 +636,8 @@ export function ShiftReportClient({
                         <input
                           type="number"
                           step="any"
+                          inputMode="decimal"
+                          placeholder="0"
                           disabled={isReadOnly}
                           value={row.adminAdded}
                           onChange={(e) => updateGameRow(game.code, "adminAdded", e.target.value)}
@@ -641,6 +657,8 @@ export function ShiftReportClient({
                         <input
                           type="number"
                           step="any"
+                          inputMode="decimal"
+                          placeholder="0"
                           disabled={isReadOnly}
                           value={row.ending}
                           onChange={(e) => updateGameRow(game.code, "ending", e.target.value)}
@@ -763,6 +781,8 @@ export function ShiftReportClient({
                   <input
                     type="number"
                     step="any"
+                    inputMode="decimal"
+                    placeholder="0"
                     required
                     value={cashoutForm.amount}
                     onChange={(e) => setCashoutForm((f) => ({ ...f, amount: e.target.value }))}
@@ -812,7 +832,7 @@ export function ShiftReportClient({
                     <option value="">None / Not applicable</option>
                     {pageSources.map((p) => (
                       <option key={p.id} value={p.id}>
-                        {p.page_name}
+                        {p.platform ? `${p.page_name} - ${p.platform}` : p.page_name}
                       </option>
                     ))}
                   </select>

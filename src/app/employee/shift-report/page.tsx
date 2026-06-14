@@ -40,9 +40,9 @@ export default async function EmployeeShiftReportPage({
     supabase.from("game_settings").select("game_code, game_name, cost_percentage"),
     supabase
       .from("page_sources")
-      .select("id, page_name")
+      .select("id, page_name, platform")
       .eq("shop_id", shopId)
-      .eq("status", "active")
+      .ilike("status", "active")
       .order("page_name"),
   ]);
 
