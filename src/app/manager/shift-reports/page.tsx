@@ -3,19 +3,15 @@ import { createClient } from "@/lib/supabase/server";
 import { PageHeader } from "@/components/page-header";
 import { EmptyState } from "@/components/empty-state";
 import { StatusBadge } from "@/components/status-badge";
-import { formatCurrency } from "@/lib/calculations";
+import {
+  formatCurrency,
+  gameCostFromStoredEntry,
+  profitFromStoredEntry,
+  trueProfitFromStoredEntry,
+} from "@/lib/calculations";
 
 export const dynamic = "force-dynamic";
 
-function trueProfit(entry: any): number {
-  const normalDifference = Number(entry.normal_coin_difference || 0);
-  const gameCost = Number(entry.game_cost || 0);
-  return normalDifference || gameCost ? normalDifference - gameCost : Number(entry.true_profit || 0);
-}
-
-function profit(entry: any): number {
-  return Number(entry.normal_coin_difference ?? 0);
-}
 
 export default async function ManagerShiftReportsPage() {
   const supabase = createClient();
@@ -47,7 +43,7 @@ export default async function ManagerShiftReportsPage() {
     reportIds.length
       ? supabase
           .from("shift_game_entries")
-          .select("shift_report_id, real_recharge, normal_coin_difference, game_cost, true_profit")
+          .select("shift_report_id, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, true_profit")
           .in("shift_report_id", reportIds)
       : Promise.resolve({ data: [] }),
     reportIds.length
@@ -75,9 +71,9 @@ export default async function ManagerShiftReportsPage() {
     };
     current.recharge += Number(entry.real_recharge || 0);
     current.normalDifference += Number(entry.normal_coin_difference || 0);
-    current.gameCost += Number(entry.game_cost || 0);
-    current.profit += profit(entry);
-    current.trueProfit += trueProfit(entry);
+    current.gameCost += gameCostFromStoredEntry(entry);
+    current.profit += profitFromStoredEntry(entry);
+    current.trueProfit += trueProfitFromStoredEntry(entry);
     totalsByReport.set(entry.shift_report_id, current);
   }
   for (const cashout of cashouts || []) {

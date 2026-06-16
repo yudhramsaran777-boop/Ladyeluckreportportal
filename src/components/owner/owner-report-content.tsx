@@ -7,7 +7,13 @@ import { KpiCard } from "@/components/kpi-card";
 import { StatusBadge } from "@/components/status-badge";
 import { PaymentDonutChart } from "@/components/charts/payment-donut-chart";
 import { TopGamesBarChart } from "@/components/charts/top-games-bar-chart";
-import { formatCurrency, formatNumber } from "@/lib/calculations";
+import {
+  formatCurrency,
+  formatNumber,
+  gameCostFromStoredEntry,
+  profitFromStoredEntry,
+  trueProfitFromStoredEntry,
+} from "@/lib/calculations";
 
 interface OwnerReportContentProps {
   searchParams?: { start?: string; end?: string };
@@ -40,15 +46,6 @@ function normalizePaymentMethod(value: string | null | undefined): string {
   return "Other";
 }
 
-function trueProfit(entry: any): number {
-  const normalDifference = Number(entry.normal_coin_difference || 0);
-  const gameCost = Number(entry.game_cost || 0);
-  return normalDifference || gameCost ? normalDifference - gameCost : Number(entry.true_profit || 0);
-}
-
-function profit(entry: any): number {
-  return Number(entry.normal_coin_difference ?? entry.gross_profit ?? 0);
-}
 
 function paymentDistribution(accounts: any[]) {
   const byType = new Map<string, number>();
@@ -110,9 +107,9 @@ function topGames(entries: any[]) {
     current.normalDifference += Number(entry.normal_coin_difference || 0);
     current.gameCostPercent += Number(entry.game_cost_percentage || 0);
     current.gameCostPercentCount += 1;
-    current.gameCost += Number(entry.game_cost || 0);
-    current.profit += profit(entry);
-    current.trueProfit += trueProfit(entry);
+    current.gameCost += gameCostFromStoredEntry(entry);
+    current.profit += profitFromStoredEntry(entry);
+    current.trueProfit += trueProfitFromStoredEntry(entry);
     current.count += 1;
     byGame.set(name, current);
   }
@@ -135,9 +132,9 @@ function totals(entries: any[], cashouts: any[]) {
   return {
     recharge: entries.reduce((sum, e) => sum + Number(e.real_recharge || 0), 0),
     cashout: cashouts.reduce((sum, c) => sum + Number(c.amount || 0), 0),
-    gameCost: entries.reduce((sum, e) => sum + Number(e.game_cost || 0), 0),
-    profit: entries.reduce((sum, e) => sum + profit(e), 0),
-    trueProfit: entries.reduce((sum, e) => sum + trueProfit(e), 0),
+    gameCost: entries.reduce((sum, e) => sum + gameCostFromStoredEntry(e), 0),
+    profit: entries.reduce((sum, e) => sum + profitFromStoredEntry(e), 0),
+    trueProfit: entries.reduce((sum, e) => sum + trueProfitFromStoredEntry(e), 0),
     cashoutCount: cashouts.length,
     cashAppCashout: cashouts.reduce(
       (sum, c) => sum + (normalizePaymentMethod(c.payment_method) === "CashApp" ? Number(c.amount || 0) : 0),

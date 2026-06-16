@@ -7,7 +7,13 @@ import { EmptyState } from "@/components/empty-state";
 import { StatusBadge } from "@/components/status-badge";
 import { TopGamesBarChart } from "@/components/charts/top-games-bar-chart";
 import { DateRangeFilter } from "@/components/manager/date-range-filter";
-import { formatCurrency, formatNumber } from "@/lib/calculations";
+import {
+  formatCurrency,
+  formatNumber,
+  gameCostFromStoredEntry,
+  profitFromStoredEntry,
+  trueProfitFromStoredEntry,
+} from "@/lib/calculations";
 
 export const dynamic = "force-dynamic";
 
@@ -27,15 +33,6 @@ function parseRange(searchParams?: { start?: string; end?: string }) {
   return { start, end };
 }
 
-function trueProfit(entry: any): number {
-  const normalDifference = Number(entry.normal_coin_difference || 0);
-  const gameCost = Number(entry.game_cost || 0);
-  return normalDifference || gameCost ? normalDifference - gameCost : Number(entry.true_profit || 0);
-}
-
-function profit(entry: any): number {
-  return Number(entry.normal_coin_difference ?? entry.gross_profit ?? 0);
-}
 
 export default async function ManagerDashboardPage({
   searchParams,
@@ -82,7 +79,7 @@ export default async function ManagerDashboardPage({
       ? supabase
           .from("shift_game_entries")
           .select(
-            "shift_report_id, game_code, game_name, real_recharge, redeem_amount, normal_coin_difference, game_cost, gross_profit, true_profit"
+            "shift_report_id, game_code, game_name, real_recharge, redeem_amount, normal_coin_difference, game_cost_percentage, game_cost, gross_profit, true_profit"
           )
           .in("shift_report_id", reportIds)
       : Promise.resolve({ data: [] }),
@@ -100,9 +97,9 @@ export default async function ManagerDashboardPage({
   const activePaymentAccounts = (paymentAccounts || []).filter((p) => p.status === "active");
   const totalRecharge = (entries || []).reduce((sum, e) => sum + Number(e.real_recharge || 0), 0);
   const totalRedeem = (cashouts || []).reduce((sum, c) => sum + Number(c.amount || 0), 0);
-  const totalGameCost = (entries || []).reduce((sum, e) => sum + Number(e.game_cost || 0), 0);
-  const totalProfit = (entries || []).reduce((sum, e) => sum + profit(e), 0);
-  const totalTrueProfit = (entries || []).reduce((sum, e) => sum + trueProfit(e), 0);
+  const totalGameCost = (entries || []).reduce((sum, e) => sum + gameCostFromStoredEntry(e), 0);
+  const totalProfit = (entries || []).reduce((sum, e) => sum + profitFromStoredEntry(e), 0);
+  const totalTrueProfit = totalProfit - totalGameCost;
 
   const gameMap = new Map<string, { name: string; recharge: number }>();
   for (const entry of entries || []) {
@@ -154,9 +151,9 @@ export default async function ManagerDashboardPage({
     };
     current.recharge += Number(entry.real_recharge || 0);
     current.normalDifference += Number(entry.normal_coin_difference || 0);
-    current.gameCost += Number(entry.game_cost || 0);
-    current.profit += profit(entry);
-    current.trueProfit += trueProfit(entry);
+    current.gameCost += gameCostFromStoredEntry(entry);
+    current.profit += profitFromStoredEntry(entry);
+    current.trueProfit += trueProfitFromStoredEntry(entry);
     totalsByReport.set(entry.shift_report_id, current);
   }
   for (const cashout of cashouts || []) {

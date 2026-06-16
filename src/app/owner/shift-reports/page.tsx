@@ -1,7 +1,12 @@
 import { createClient } from "@/lib/supabase/server";
 import { PageHeader } from "@/components/page-header";
 import { CrudPageClient } from "@/components/crud/crud-page-client";
-import { formatCurrency } from "@/lib/calculations";
+import {
+  formatCurrency,
+  gameCostFromStoredEntry,
+  profitFromStoredEntry,
+  trueProfitFromStoredEntry,
+} from "@/lib/calculations";
 import type { ColumnConfig, FieldConfig } from "@/components/crud/types";
 
 export const dynamic = "force-dynamic";
@@ -35,7 +40,7 @@ export default async function OwnerShiftReportsPage() {
       supabase.from("shops").select("id, name"),
       supabase
         .from("shift_game_entries")
-        .select("shift_report_id, real_recharge, normal_coin_difference, game_cost, true_profit"),
+        .select("shift_report_id, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, true_profit"),
       supabase.from("shift_cashouts").select("shift_report_id, amount"),
     ]);
 
@@ -54,13 +59,13 @@ export default async function OwnerShiftReportsPage() {
       profit: 0,
       trueProfit: 0,
     };
-    const normalDifference = Number(entry.normal_coin_difference || 0);
-    const gameCost = Number(entry.game_cost || 0);
+    const normalDifference = profitFromStoredEntry(entry);
+    const gameCost = gameCostFromStoredEntry(entry);
     current.recharge += Number(entry.real_recharge || 0);
     current.normalDifference += normalDifference;
     current.gameCost += gameCost;
     current.profit += normalDifference;
-    current.trueProfit += normalDifference || gameCost ? normalDifference - gameCost : Number(entry.true_profit || 0);
+    current.trueProfit += trueProfitFromStoredEntry(entry);
     totalsByReport.set(entry.shift_report_id, current);
   }
 

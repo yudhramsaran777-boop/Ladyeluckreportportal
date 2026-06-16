@@ -4,7 +4,13 @@ import { PageHeader } from "@/components/page-header";
 import { EmptyState } from "@/components/empty-state";
 import { KpiCard } from "@/components/kpi-card";
 import { DateRangeFilter } from "@/components/manager/date-range-filter";
-import { formatCurrency, formatNumber } from "@/lib/calculations";
+import {
+  formatCurrency,
+  formatNumber,
+  gameCostFromStoredEntry,
+  profitFromStoredEntry,
+  trueProfitFromStoredEntry,
+} from "@/lib/calculations";
 
 export const dynamic = "force-dynamic";
 
@@ -49,15 +55,6 @@ function normalizePaymentMethod(value: string | null | undefined): string {
   return "Other";
 }
 
-function trueProfit(entry: any): number {
-  const normalDifference = Number(entry.normal_coin_difference || 0);
-  const gameCost = Number(entry.game_cost || 0);
-  return normalDifference || gameCost ? normalDifference - gameCost : Number(entry.true_profit || 0);
-}
-
-function profit(entry: any): number {
-  return Number(entry.normal_coin_difference ?? entry.gross_profit ?? 0);
-}
 
 export default async function ManagerShopReportPage({
   searchParams,
@@ -114,9 +111,9 @@ export default async function ManagerShopReportPage({
 
   const totalRecharge = (entries || []).reduce((sum, e) => sum + Number(e.real_recharge || 0), 0);
   const totalRedeems = (cashouts || []).reduce((sum, c) => sum + Number(c.amount || 0), 0);
-  const totalGameCost = (entries || []).reduce((sum, e) => sum + Number(e.game_cost || 0), 0);
-  const totalProfit = (entries || []).reduce((sum, e) => sum + profit(e), 0);
-  const totalTrueProfit = (entries || []).reduce((sum, e) => sum + trueProfit(e), 0);
+  const totalGameCost = (entries || []).reduce((sum, e) => sum + gameCostFromStoredEntry(e), 0);
+  const totalProfit = (entries || []).reduce((sum, e) => sum + profitFromStoredEntry(e), 0);
+  const totalTrueProfit = totalProfit - totalGameCost;
 
   const cashAppCashout = (cashouts || []).reduce(
     (sum, c) => sum + (normalizePaymentMethod(c.payment_method) === "CashApp" ? Number(c.amount || 0) : 0),
@@ -150,9 +147,9 @@ export default async function ManagerShopReportPage({
     current.normalDifference += Number(entry.normal_coin_difference || 0);
     current.gameCostPercent += Number(entry.game_cost_percentage || 0);
     current.gameCostPercentCount += 1;
-    current.gameCost += Number(entry.game_cost || 0);
-    current.profit += profit(entry);
-    current.trueProfit += trueProfit(entry);
+    current.gameCost += gameCostFromStoredEntry(entry);
+    current.profit += profitFromStoredEntry(entry);
+    current.trueProfit += trueProfitFromStoredEntry(entry);
     rechargeGameMap.set(game, current);
   }
   const rechargeGameRows = Array.from(rechargeGameMap.values()).sort((a, b) => b.recharge - a.recharge);
