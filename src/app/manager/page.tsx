@@ -95,24 +95,23 @@ export default async function ManagerDashboardPage({
 
   const activePaymentAccounts = (paymentAccounts || []).filter((p) => p.status === "active");
 
-  // Group entries by report, apply report-level game cost rule per report, then sum
+  // KPI cards: group ALL selected-range entries by game (ignore report boundaries)
+  // Game Vault: +165 + -87 = 78 grouped → cost 78×12% = 9.36 (NOT 165×12%=19.80)
+  const groupedRangeGames = calculateGroupedGameTotals(entries || []);
+  const rangeTotals = calculateReportTotalsFromGroupedGames(groupedRangeGames);
+  const totalRecharge = rangeTotals.totalRecharge;
+  const totalGameCost = rangeTotals.totalGameCost;
+  const totalProfit = rangeTotals.totalProfit;
+  const totalTrueProfit = rangeTotals.totalTrueProfit;
+  const totalRedeem = (cashouts || []).reduce((sum, c) => sum + Number(c.amount || 0), 0);
+
+  // Per-report table: still needs entries grouped by report
   const entriesByReport = new Map<string, any[]>();
   for (const entry of entries || []) {
     const list = entriesByReport.get(entry.shift_report_id) ?? [];
     list.push(entry);
     entriesByReport.set(entry.shift_report_id, list);
   }
-  let totalRecharge = 0, totalGameCost = 0, totalProfit = 0, totalTrueProfit = 0;
-  for (const [, group] of entriesByReport) {
-    // Group by game first, then apply report-level rule on grouped totals
-    const groupedGames = calculateGroupedGameTotals(group);
-    const rt = calculateReportTotalsFromGroupedGames(groupedGames);
-    totalRecharge += rt.totalRecharge;
-    totalGameCost += rt.totalGameCost;
-    totalProfit += rt.totalProfit;
-    totalTrueProfit += rt.totalTrueProfit;
-  }
-  const totalRedeem = (cashouts || []).reduce((sum, c) => sum + Number(c.amount || 0), 0);
 
   const gameMap = new Map<string, { name: string; recharge: number }>();
   for (const entry of entries || []) {
@@ -188,13 +187,13 @@ export default async function ManagerDashboardPage({
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-7">
         <KpiCard label="Shop Recharge" value={formatCurrency(totalRecharge)} icon={DollarSign} trend="Selected range" />
         <KpiCard label="Shop Redeem" value={formatCurrency(totalRedeem)} icon={Wallet} trend="Selected range" />
-        <KpiCard label="Shop Game Cost" value={formatCurrency(totalGameCost)} icon={CreditCard} trend="Normal diff x cost %" />
+        <KpiCard label="Shop Game Cost" value={formatCurrency(totalGameCost)} icon={CreditCard} trend="Grouped game profit x cost %" />
         <KpiCard label="Shop Profit" value={formatCurrency(totalProfit)} icon={TrendingUp} trend="Normal difference" />
         <KpiCard
           label="Shop True Profit"
           value={formatCurrency(totalTrueProfit)}
           icon={Trophy}
-          trend={totalTrueProfit >= 0 ? "Positive range" : "Negative range"}
+          trend="Profit - grouped game cost"
           trendDirection={totalTrueProfit >= 0 ? "up" : "down"}
         />
         <KpiCard label="Cashouts Done" value={formatNumber((cashouts || []).length)} icon={Users} trend="Selected range" />
