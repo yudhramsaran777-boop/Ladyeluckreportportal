@@ -28,12 +28,13 @@ export interface GameRowCalculated {
 }
 
 // Stored-entry helpers (for reading back from the DB)
-
+// NOTE: game_cost is intentionally excluded — game cost must always be re-derived
+// from normal_coin_difference × game_cost_percentage, never from a stored value
+// that may have been calculated from real_recharge in older data.
 export interface StoredGameEntryLike {
   normal_coin_difference?: number | string | null;
   gross_profit?: number | string | null;
   game_cost_percentage?: number | string | null;
-  game_cost?: number | string | null;
 }
 
 function toFiniteNumber(value: number | string | null | undefined): number {
@@ -53,16 +54,11 @@ export function profitFromStoredEntry(entry: StoredGameEntryLike): number {
 }
 
 export function gameCostFromStoredEntry(entry: StoredGameEntryLike): number {
+  // Game cost is ALWAYS derived from normal_coin_difference (profit), never from
+  // real_recharge, total_recharge, shop_recharge, or any redeem/cashout amount.
   const profit = profitFromStoredEntry(entry);
   if (profit <= 0) return 0;
-
-  const hasGameCostPercentage =
-    entry.game_cost_percentage !== null && entry.game_cost_percentage !== undefined;
-  if (hasGameCostPercentage) {
-    return calculateGameCost(profit, toFiniteNumber(entry.game_cost_percentage));
-  }
-
-  return Math.max(toFiniteNumber(entry.game_cost), 0);
+  return calculateGameCost(profit, toFiniteNumber(entry.game_cost_percentage));
 }
 
 export function trueProfitFromStoredEntry(entry: StoredGameEntryLike): number {
