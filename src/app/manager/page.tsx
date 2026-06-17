@@ -10,7 +10,8 @@ import { DateRangeFilter } from "@/components/manager/date-range-filter";
 import {
   formatCurrency,
   formatNumber,
-  calculateReportTotals,
+  calculateGroupedGameTotals,
+  calculateReportTotalsFromGroupedGames,
 } from "@/lib/calculations";
 
 export const dynamic = "force-dynamic";
@@ -103,7 +104,9 @@ export default async function ManagerDashboardPage({
   }
   let totalRecharge = 0, totalGameCost = 0, totalProfit = 0, totalTrueProfit = 0;
   for (const [, group] of entriesByReport) {
-    const rt = calculateReportTotals(group);
+    // Group by game first, then apply report-level rule on grouped totals
+    const groupedGames = calculateGroupedGameTotals(group);
+    const rt = calculateReportTotalsFromGroupedGames(groupedGames);
     totalRecharge += rt.totalRecharge;
     totalGameCost += rt.totalGameCost;
     totalProfit += rt.totalProfit;
@@ -151,7 +154,7 @@ export default async function ManagerDashboardPage({
     { recharge: number; normalDifference: number; gameCost: number; profit: number; redeem: number; cashoutCount: number; trueProfit: number }
   >();
   for (const [reportId, group] of entriesByReport) {
-    const rt = calculateReportTotals(group);
+    const rt = calculateReportTotalsFromGroupedGames(calculateGroupedGameTotals(group));
     totalsByReport.set(reportId, {
       recharge: rt.totalRecharge,
       normalDifference: rt.totalProfit,
