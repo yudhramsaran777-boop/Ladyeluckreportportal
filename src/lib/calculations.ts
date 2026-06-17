@@ -4,10 +4,9 @@
 // - startingCoinsAfterAdd = openingCoinsBeforeAdd + adminAddedCoins  (auto-computed, never manual)
 // - Normal Coin Difference = Starting Coins After Add - Ending Coins
 // - Real Recharge = Starting Coins After Add + Redeem Coins - Ending Coins
-// - Game Cost = max(Normal Coin Difference, 0) * (Game Cost Percentage / 100)
-// - Profit = Normal Coin Difference
-// - True Profit = Profit - non-negative Game Cost
-// - If Profit <= 0: Game Cost = 0, True Profit = Profit
+// - Game Cost = max(grouped game profit, 0) * (Game Cost Percentage / 100)
+//   → group entries by game FIRST, then compute game cost on the grouped profit
+// - If total report profit <= 0: Game Cost = 0, True Profit = Total Profit
 
 export interface GameRowInput {
   openingCoinsBeforeAdd: number;
@@ -28,9 +27,7 @@ export interface GameRowCalculated {
 }
 
 // Stored-entry helpers (for reading back from the DB)
-// NOTE: game_cost is intentionally excluded — game cost must always be re-derived
-// from normal_coin_difference × game_cost_percentage, never from a stored value
-// that may have been calculated from real_recharge in older data.
+// NOTE: game_cost intentionally excluded — must always be re-derived.
 export interface StoredGameEntryLike {
   normal_coin_difference?: number | string | null;
   gross_profit?: number | string | null;
@@ -112,6 +109,7 @@ export function sumReportTotals(
 
 export interface StoredEntryForReportTotals {
   shift_report_id?: string | null;
+  game_name?: string | null;
   normal_coin_difference?: number | string | null;
   real_recharge?: number | string | null;
   game_cost_percentage?: number | string | null;
@@ -124,19 +122,76 @@ export interface ReportTotals {
   totalTrueProfit: number;
 }
 
-export function calculateReportTotals(entries: StoredEntryForReportTotals[]): ReportTotals {
-  const totalRecharge = entries.reduce((sum, e) => sum + toFiniteNumber(e.real_recharge), 0);
-  const totalProfit = entries.reduce((sum, e) => sum + toFiniteNumber(e.normal_coin_difference), 0);
-  const positiveGameCosts = entries.reduce((sum, e) => {
-    const profit = toFiniteNumber(e.normal_coin_difference);
-    if (profit <= 0) return sum;
-    return sum + calculateGameCost(profit, toFiniteNumber(e.game_cost_percentage));
-  }, 0);
-  const totalGameCost = totalProfit > 0 ? positiveGameCosts : 0;
+export interface GroupedGameTotals {
+  gameName: string;
+  realRecharge: number;
+  normalDifference: number;
+  gameCostPercentage: number;
+  gameCost: number;
+  profit: number;
+  trueProfit: number;
+}
+
+/**
+ * Groups entries by game_name, then computes game cost from the GROUPED profit.
+ * This is the key rule: game cost = max(groupedProfit, 0) * costPct / 100
+ * NOT: sum of per-row positive game costs before grouping.
+ */
+export function calculateGroupedGameTotals(entries: StoredEntryForReportTotals[]): GroupedGameTotals[] {
+  const byGame = new Map<string, { recharge: number; profit: number; costPctSum: number; count: number }>();
+  for (const entry of entries) {
+    const name = entry.game_name ?? "Unknown";
+    const current = byGame.get(name) ?? { recharge: 0, profit: 0, costPctSum: 0, count: 0 };
+    current.recharge += toFiniteNumber(entry.real_recharge);
+    current.profit += toFiniteNumber(entry.normal_coin_difference);
+    current.costPctSum += toFiniteNumber(entry.game_cost_percentage);
+    current.count += 1;
+    byGame.set(name, current);
+  }
+  return Array.from(byGame.entries()).map(([gameName, g]) => {
+    const gameCostPercentage = g.count > 0 ? g.costPctSum / g.count : 0;
+    // Game cost is computed on the GROUPED profit — not per positive row
+    const gameCost = g.profit > 0 ? (g.profit * gameCostPercentage) / 100 : 0;
+    return {
+      gameName,
+      realRecharge: g.recharge,
+      normalDifference: g.profit,
+      gameCostPercentage,
+      gameCost,
+      profit: g.profit,
+      trueProfit: g.profit - gameCost,
+    };
+  });
+}
+
+/**
+ * Computes report totals from already-grouped-by-game rows.
+ * Report-level rule: if totalProfit <= 0, totalGameCost = 0.
+ */
+export function calculateReportTotalsFromGroupedGames(groupedGames: GroupedGameTotals[]): ReportTotals {
+  const totalRecharge = groupedGames.reduce((sum, g) => sum + g.realRecharge, 0);
+  const totalProfit = groupedGames.reduce((sum, g) => sum + g.profit, 0);
+  const groupedGameCost = groupedGames.reduce((sum, g) => sum + g.gameCost, 0);
+  const totalGameCost = totalProfit > 0 ? groupedGameCost : 0;
   const totalTrueProfit = totalProfit > 0 ? totalProfit - totalGameCost : totalProfit;
   return { totalRecharge, totalProfit, totalGameCost, totalTrueProfit };
 }
 
+/**
+ * Full pipeline for a single report's entries:
+ * 1. Group entries by game
+ * 2. Compute game cost per grouped game
+ * 3. Apply report-level rule on grouped totals
+ */
+export function calculateReportTotals(entries: StoredEntryForReportTotals[]): ReportTotals {
+  const groupedGames = calculateGroupedGameTotals(entries);
+  return calculateReportTotalsFromGroupedGames(groupedGames);
+}
+
+/**
+ * Groups entries by shift_report_id, applies calculateReportTotals to each group,
+ * then sums. Use for multi-report views (owner dashboard, date ranges).
+ */
 export function aggregateAcrossReports(entries: StoredEntryForReportTotals[]): ReportTotals {
   const byReport = new Map<string, StoredEntryForReportTotals[]>();
   for (const entry of entries) {

@@ -11,7 +11,8 @@ import {
   formatCurrency,
   formatNumber,
   calculateReportTotals,
-  gameCostFromStoredEntry,
+  calculateGroupedGameTotals,
+  calculateReportTotalsFromGroupedGames,
 } from "@/lib/calculations";
 
 interface OwnerReportContentProps {
@@ -93,40 +94,39 @@ function topCashoutGame(cashouts: any[]) {
 }
 
 function topGames(entries: any[]) {
-  // Pre-compute which reports have positive total profit (for report-level game cost rule)
+  // Group entries by report first, then by game within each report
   const byReport = new Map<string, any[]>();
   for (const entry of entries) {
     const list = byReport.get(entry.shift_report_id) ?? [];
     list.push(entry);
     byReport.set(entry.shift_report_id, list);
   }
-  const reportIsPositive = new Map<string, boolean>();
-  for (const [reportId, group] of byReport) {
-    const totalProfit = group.reduce((sum: number, e: any) => sum + Number(e.normal_coin_difference || 0), 0);
-    reportIsPositive.set(reportId, totalProfit > 0);
-  }
 
   const byGame = new Map<
     string,
     { name: string; recharge: number; normalDifference: number; gameCostPercent: number; gameCostPercentCount: number; gameCost: number; profit: number; trueProfit: number; count: number }
   >();
-  for (const entry of entries) {
-    const name = entry.game_name || entry.game_code || "Unknown";
-    const current =
-      byGame.get(name) ||
-      { name, recharge: 0, normalDifference: 0, gameCostPercent: 0, gameCostPercentCount: 0, gameCost: 0, profit: 0, trueProfit: 0, count: 0 };
-    // Only apply game cost if this entry's report is net positive
-    const effectiveGameCost = reportIsPositive.get(entry.shift_report_id) ? gameCostFromStoredEntry(entry) : 0;
-    const normalDiff = Number(entry.normal_coin_difference || 0);
-    current.recharge += Number(entry.real_recharge || 0);
-    current.normalDifference += normalDiff;
-    current.gameCostPercent += Number(entry.game_cost_percentage || 0);
-    current.gameCostPercentCount += 1;
-    current.gameCost += effectiveGameCost;
-    current.profit += normalDiff;
-    current.trueProfit += normalDiff - effectiveGameCost;
-    current.count += 1;
-    byGame.set(name, current);
+
+  for (const [, reportEntries] of byReport) {
+    const groupedGames = calculateGroupedGameTotals(reportEntries);
+    const rt = calculateReportTotalsFromGroupedGames(groupedGames);
+    const isPositive = rt.totalProfit > 0;
+
+    for (const g of groupedGames) {
+      const name = g.gameName;
+      const effectiveGameCost = isPositive ? g.gameCost : 0;
+      const current = byGame.get(name) ||
+        { name, recharge: 0, normalDifference: 0, gameCostPercent: 0, gameCostPercentCount: 0, gameCost: 0, profit: 0, trueProfit: 0, count: 0 };
+      current.recharge += g.realRecharge;
+      current.normalDifference += g.normalDifference;
+      current.gameCostPercent += g.gameCostPercentage;
+      current.gameCostPercentCount += 1;
+      current.gameCost += effectiveGameCost;
+      current.profit += g.profit;
+      current.trueProfit += g.profit - effectiveGameCost;
+      current.count += 1;
+      byGame.set(name, current);
+    }
   }
   return Array.from(byGame.values()).sort((a, b) => b.recharge - a.recharge);
 }
