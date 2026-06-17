@@ -5,9 +5,7 @@ import { EmptyState } from "@/components/empty-state";
 import { StatusBadge } from "@/components/status-badge";
 import {
   formatCurrency,
-  gameCostFromStoredEntry,
-  profitFromStoredEntry,
-  trueProfitFromStoredEntry,
+  calculateReportTotals,
 } from "@/lib/calculations";
 
 export const dynamic = "force-dynamic";
@@ -55,29 +53,32 @@ export default async function ManagerShiftReportsPage() {
       : Promise.resolve({ data: [] }),
   ]);
 
+  // Group entries by report, apply report-level game cost rule per report
+  const entriesByReport = new Map<string, any[]>();
+  for (const entry of entries || []) {
+    const list = entriesByReport.get(entry.shift_report_id) ?? [];
+    list.push(entry);
+    entriesByReport.set(entry.shift_report_id, list);
+  }
+
   const totalsByReport = new Map<
     string,
     { recharge: number; normalDifference: number; gameCost: number; profit: number; cashout: number; cashoutCount: number; trueProfit: number }
   >();
-  for (const entry of entries || []) {
-    const current = totalsByReport.get(entry.shift_report_id) || {
-      recharge: 0,
-      normalDifference: 0,
-      gameCost: 0,
-      profit: 0,
+  for (const [reportId, group] of entriesByReport) {
+    const rt = calculateReportTotals(group);
+    totalsByReport.set(reportId, {
+      recharge: rt.totalRecharge,
+      normalDifference: rt.totalProfit,
+      gameCost: rt.totalGameCost,
+      profit: rt.totalProfit,
       cashout: 0,
       cashoutCount: 0,
-      trueProfit: 0,
-    };
-    current.recharge += Number(entry.real_recharge || 0);
-    current.normalDifference += Number(entry.normal_coin_difference || 0);
-    current.gameCost += gameCostFromStoredEntry(entry);
-    current.profit += profitFromStoredEntry(entry);
-    current.trueProfit += trueProfitFromStoredEntry(entry);
-    totalsByReport.set(entry.shift_report_id, current);
+      trueProfit: rt.totalTrueProfit,
+    });
   }
   for (const cashout of cashouts || []) {
-    const current = totalsByReport.get(cashout.shift_report_id) || {
+    const current = totalsByReport.get(cashout.shift_report_id) ?? {
       recharge: 0,
       normalDifference: 0,
       gameCost: 0,
@@ -158,6 +159,6 @@ export default async function ManagerShiftReportsPage() {
           </div>
         )}
       </div>
-    </div>
+     </div>
   );
 }

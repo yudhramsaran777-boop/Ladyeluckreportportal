@@ -10,9 +10,7 @@ import { DateRangeFilter } from "@/components/manager/date-range-filter";
 import {
   formatCurrency,
   formatNumber,
-  gameCostFromStoredEntry,
-  profitFromStoredEntry,
-  trueProfitFromStoredEntry,
+  calculateReportTotals,
 } from "@/lib/calculations";
 
 export const dynamic = "force-dynamic";
@@ -95,11 +93,23 @@ export default async function ManagerDashboardPage({
   ]);
 
   const activePaymentAccounts = (paymentAccounts || []).filter((p) => p.status === "active");
-  const totalRecharge = (entries || []).reduce((sum, e) => sum + Number(e.real_recharge || 0), 0);
+
+  // Group entries by report, apply report-level game cost rule per report, then sum
+  const entriesByReport = new Map<string, any[]>();
+  for (const entry of entries || []) {
+    const list = entriesByReport.get(entry.shift_report_id) ?? [];
+    list.push(entry);
+    entriesByReport.set(entry.shift_report_id, list);
+  }
+  let totalRecharge = 0, totalGameCost = 0, totalProfit = 0, totalTrueProfit = 0;
+  for (const [, group] of entriesByReport) {
+    const rt = calculateReportTotals(group);
+    totalRecharge += rt.totalRecharge;
+    totalGameCost += rt.totalGameCost;
+    totalProfit += rt.totalProfit;
+    totalTrueProfit += rt.totalTrueProfit;
+  }
   const totalRedeem = (cashouts || []).reduce((sum, c) => sum + Number(c.amount || 0), 0);
-  const totalGameCost = (entries || []).reduce((sum, e) => sum + gameCostFromStoredEntry(e), 0);
-  const totalProfit = (entries || []).reduce((sum, e) => sum + profitFromStoredEntry(e), 0);
-  const totalTrueProfit = totalProfit - totalGameCost;
 
   const gameMap = new Map<string, { name: string; recharge: number }>();
   for (const entry of entries || []) {
@@ -135,29 +145,25 @@ export default async function ManagerDashboardPage({
     .sort((a, b) => b.total - a.total)
     .slice(0, 10);
 
+  // Build per-report display totals using report-level game cost rule
   const totalsByReport = new Map<
     string,
     { recharge: number; normalDifference: number; gameCost: number; profit: number; redeem: number; cashoutCount: number; trueProfit: number }
   >();
-  for (const entry of entries || []) {
-    const current = totalsByReport.get(entry.shift_report_id) || {
-      recharge: 0,
-      normalDifference: 0,
-      gameCost: 0,
-      profit: 0,
+  for (const [reportId, group] of entriesByReport) {
+    const rt = calculateReportTotals(group);
+    totalsByReport.set(reportId, {
+      recharge: rt.totalRecharge,
+      normalDifference: rt.totalProfit,
+      gameCost: rt.totalGameCost,
+      profit: rt.totalProfit,
       redeem: 0,
       cashoutCount: 0,
-      trueProfit: 0,
-    };
-    current.recharge += Number(entry.real_recharge || 0);
-    current.normalDifference += Number(entry.normal_coin_difference || 0);
-    current.gameCost += gameCostFromStoredEntry(entry);
-    current.profit += profitFromStoredEntry(entry);
-    current.trueProfit += trueProfitFromStoredEntry(entry);
-    totalsByReport.set(entry.shift_report_id, current);
+      trueProfit: rt.totalTrueProfit,
+    });
   }
   for (const cashout of cashouts || []) {
-    const current = totalsByReport.get(cashout.shift_report_id) || {
+    const current = totalsByReport.get(cashout.shift_report_id) ?? {
       recharge: 0,
       normalDifference: 0,
       gameCost: 0,
@@ -309,7 +315,7 @@ export default async function ManagerDashboardPage({
                   );
                 })}
               </tbody>
-            </table>
+                    </table>
           </div>
         )}
       </div>

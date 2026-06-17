@@ -54,8 +54,6 @@ export function profitFromStoredEntry(entry: StoredGameEntryLike): number {
 }
 
 export function gameCostFromStoredEntry(entry: StoredGameEntryLike): number {
-  // Game cost is ALWAYS derived from normal_coin_difference (profit), never from
-  // real_recharge, total_recharge, shop_recharge, or any redeem/cashout amount.
   const profit = profitFromStoredEntry(entry);
   if (profit <= 0) return 0;
   return calculateGameCost(profit, toFiniteNumber(entry.game_cost_percentage));
@@ -102,20 +100,60 @@ export function sumReportTotals(
   totalGrossProfit: number;
   totalTrueProfit: number;
 } {
-  return rows.reduce(
-    (acc, r) => ({
-      totalRealRecharge: acc.totalRealRecharge + r.realRecharge,
-      totalGameCost: acc.totalGameCost + r.gameCost,
-      totalGrossProfit: acc.totalGrossProfit + r.grossProfit,
-      totalTrueProfit: acc.totalTrueProfit + r.trueProfit,
-    }),
-    {
-      totalRealRecharge: 0,
-      totalGameCost: 0,
-      totalGrossProfit: 0,
-      totalTrueProfit: 0,
-    }
-  );
+  const totalRealRecharge = rows.reduce((sum, r) => sum + r.realRecharge, 0);
+  const totalGrossProfit = rows.reduce((sum, r) => sum + r.grossProfit, 0);
+  const positiveGameCosts = rows.reduce((sum, r) => sum + r.gameCost, 0);
+  const totalGameCost = totalGrossProfit > 0 ? positiveGameCosts : 0;
+  const totalTrueProfit = totalGrossProfit > 0 ? totalGrossProfit - totalGameCost : totalGrossProfit;
+  return { totalRealRecharge, totalGameCost, totalGrossProfit, totalTrueProfit };
+}
+
+// ─── Report-level totals from stored DB entries ─────────────────────────────
+
+export interface StoredEntryForReportTotals {
+  shift_report_id?: string | null;
+  normal_coin_difference?: number | string | null;
+  real_recharge?: number | string | null;
+  game_cost_percentage?: number | string | null;
+}
+
+export interface ReportTotals {
+  totalRecharge: number;
+  totalProfit: number;
+  totalGameCost: number;
+  totalTrueProfit: number;
+}
+
+export function calculateReportTotals(entries: StoredEntryForReportTotals[]): ReportTotals {
+  const totalRecharge = entries.reduce((sum, e) => sum + toFiniteNumber(e.real_recharge), 0);
+  const totalProfit = entries.reduce((sum, e) => sum + toFiniteNumber(e.normal_coin_difference), 0);
+  const positiveGameCosts = entries.reduce((sum, e) => {
+    const profit = toFiniteNumber(e.normal_coin_difference);
+    if (profit <= 0) return sum;
+    return sum + calculateGameCost(profit, toFiniteNumber(e.game_cost_percentage));
+  }, 0);
+  const totalGameCost = totalProfit > 0 ? positiveGameCosts : 0;
+  const totalTrueProfit = totalProfit > 0 ? totalProfit - totalGameCost : totalProfit;
+  return { totalRecharge, totalProfit, totalGameCost, totalTrueProfit };
+}
+
+export function aggregateAcrossReports(entries: StoredEntryForReportTotals[]): ReportTotals {
+  const byReport = new Map<string, StoredEntryForReportTotals[]>();
+  for (const entry of entries) {
+    const id = entry.shift_report_id ?? "__unknown__";
+    const list = byReport.get(id) ?? [];
+    list.push(entry);
+    byReport.set(id, list);
+  }
+  let totalRecharge = 0, totalProfit = 0, totalGameCost = 0, totalTrueProfit = 0;
+  for (const [, group] of byReport) {
+    const rt = calculateReportTotals(group);
+    totalRecharge += rt.totalRecharge;
+    totalProfit += rt.totalProfit;
+    totalGameCost += rt.totalGameCost;
+    totalTrueProfit += rt.totalTrueProfit;
+  }
+  return { totalRecharge, totalProfit, totalGameCost, totalTrueProfit };
 }
 
 export function formatCurrency(value: number): string {

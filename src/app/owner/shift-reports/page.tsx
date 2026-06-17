@@ -3,9 +3,7 @@ import { PageHeader } from "@/components/page-header";
 import { CrudPageClient } from "@/components/crud/crud-page-client";
 import {
   formatCurrency,
-  gameCostFromStoredEntry,
-  profitFromStoredEntry,
-  trueProfitFromStoredEntry,
+  calculateReportTotals,
 } from "@/lib/calculations";
 import type { ColumnConfig, FieldConfig } from "@/components/crud/types";
 
@@ -46,27 +44,27 @@ export default async function OwnerShiftReportsPage() {
 
   const shopNameById = new Map((shops || []).map((s) => [s.id, s.name]));
 
+  // Group entries by report, apply report-level game cost rule per report
+  const entriesByReport = new Map<string, any[]>();
+  for (const entry of entries || []) {
+    const list = entriesByReport.get(entry.shift_report_id) ?? [];
+    list.push(entry);
+    entriesByReport.set(entry.shift_report_id, list);
+  }
+
   const totalsByReport = new Map<
     string,
     { recharge: number; normalDifference: number; gameCost: number; profit: number; trueProfit: number }
   >();
-
-  for (const entry of entries || []) {
-    const current = totalsByReport.get(entry.shift_report_id) || {
-      recharge: 0,
-      normalDifference: 0,
-      gameCost: 0,
-      profit: 0,
-      trueProfit: 0,
-    };
-    const normalDifference = profitFromStoredEntry(entry);
-    const gameCost = gameCostFromStoredEntry(entry);
-    current.recharge += Number(entry.real_recharge || 0);
-    current.normalDifference += normalDifference;
-    current.gameCost += gameCost;
-    current.profit += normalDifference;
-    current.trueProfit += trueProfitFromStoredEntry(entry);
-    totalsByReport.set(entry.shift_report_id, current);
+  for (const [reportId, group] of entriesByReport) {
+    const rt = calculateReportTotals(group);
+    totalsByReport.set(reportId, {
+      recharge: rt.totalRecharge,
+      normalDifference: rt.totalProfit,
+      gameCost: rt.totalGameCost,
+      profit: rt.totalProfit,
+      trueProfit: rt.totalTrueProfit,
+    });
   }
 
   const cashoutByReport = new Map<string, { amount: number; count: number }>();

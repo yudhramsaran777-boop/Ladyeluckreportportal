@@ -10,9 +10,8 @@ import { TopGamesBarChart } from "@/components/charts/top-games-bar-chart";
 import {
   formatCurrency,
   formatNumber,
+  calculateReportTotals,
   gameCostFromStoredEntry,
-  profitFromStoredEntry,
-  trueProfitFromStoredEntry,
 } from "@/lib/calculations";
 
 interface OwnerReportContentProps {
@@ -94,6 +93,19 @@ function topCashoutGame(cashouts: any[]) {
 }
 
 function topGames(entries: any[]) {
+  // Pre-compute which reports have positive total profit (for report-level game cost rule)
+  const byReport = new Map<string, any[]>();
+  for (const entry of entries) {
+    const list = byReport.get(entry.shift_report_id) ?? [];
+    list.push(entry);
+    byReport.set(entry.shift_report_id, list);
+  }
+  const reportIsPositive = new Map<string, boolean>();
+  for (const [reportId, group] of byReport) {
+    const totalProfit = group.reduce((sum: number, e: any) => sum + Number(e.normal_coin_difference || 0), 0);
+    reportIsPositive.set(reportId, totalProfit > 0);
+  }
+
   const byGame = new Map<
     string,
     { name: string; recharge: number; normalDifference: number; gameCostPercent: number; gameCostPercentCount: number; gameCost: number; profit: number; trueProfit: number; count: number }
@@ -103,13 +115,16 @@ function topGames(entries: any[]) {
     const current =
       byGame.get(name) ||
       { name, recharge: 0, normalDifference: 0, gameCostPercent: 0, gameCostPercentCount: 0, gameCost: 0, profit: 0, trueProfit: 0, count: 0 };
+    // Only apply game cost if this entry's report is net positive
+    const effectiveGameCost = reportIsPositive.get(entry.shift_report_id) ? gameCostFromStoredEntry(entry) : 0;
+    const normalDiff = Number(entry.normal_coin_difference || 0);
     current.recharge += Number(entry.real_recharge || 0);
-    current.normalDifference += Number(entry.normal_coin_difference || 0);
+    current.normalDifference += normalDiff;
     current.gameCostPercent += Number(entry.game_cost_percentage || 0);
     current.gameCostPercentCount += 1;
-    current.gameCost += gameCostFromStoredEntry(entry);
-    current.profit += profitFromStoredEntry(entry);
-    current.trueProfit += trueProfitFromStoredEntry(entry);
+    current.gameCost += effectiveGameCost;
+    current.profit += normalDiff;
+    current.trueProfit += normalDiff - effectiveGameCost;
     current.count += 1;
     byGame.set(name, current);
   }
@@ -129,12 +144,27 @@ function cashoutGameRows(cashouts: any[]) {
 }
 
 function totals(entries: any[], cashouts: any[]) {
+  // Group entries by report and apply report-level game cost rule per report
+  const byReport = new Map<string, any[]>();
+  for (const entry of entries) {
+    const list = byReport.get(entry.shift_report_id) ?? [];
+    list.push(entry);
+    byReport.set(entry.shift_report_id, list);
+  }
+  let rechargeSum = 0, gameCostSum = 0, profitSum = 0, trueProfitSum = 0;
+  for (const [, group] of byReport) {
+    const rt = calculateReportTotals(group);
+    rechargeSum += rt.totalRecharge;
+    gameCostSum += rt.totalGameCost;
+    profitSum += rt.totalProfit;
+    trueProfitSum += rt.totalTrueProfit;
+  }
   return {
-    recharge: entries.reduce((sum, e) => sum + Number(e.real_recharge || 0), 0),
+    recharge: rechargeSum,
     cashout: cashouts.reduce((sum, c) => sum + Number(c.amount || 0), 0),
-    gameCost: entries.reduce((sum, e) => sum + gameCostFromStoredEntry(e), 0),
-    profit: entries.reduce((sum, e) => sum + profitFromStoredEntry(e), 0),
-    trueProfit: entries.reduce((sum, e) => sum + trueProfitFromStoredEntry(e), 0),
+    gameCost: gameCostSum,
+    profit: profitSum,
+    trueProfit: trueProfitSum,
     cashoutCount: cashouts.length,
     cashAppCashout: cashouts.reduce(
       (sum, c) => sum + (normalizePaymentMethod(c.payment_method) === "CashApp" ? Number(c.amount || 0) : 0),

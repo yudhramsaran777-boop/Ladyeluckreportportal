@@ -6,3 +6,8 @@ node_modules
 .DS_Store
 *.log
 tsconfig.tsbuildinfo
+
+# Local video/remotion experiments
+Remotion/
+my-video/
+{
