@@ -101,7 +101,7 @@ insert into public.payment_email_senders
   (provider, sender_email, normalized_sender_email, verification_status, is_active)
 values
   ('CashApp', 'cash@square.com',          'cash@square.com',          'pending_verification', false),
-  ('Chime',   'alers@account.chime.com',  'alers@account.chime.com',  'pending_verification', false)
+  ('Chime',   'alerts@account.chime.com',  'alerts@account.chime.com',  'pending_verification', false)
 on conflict (normalized_sender_email) do nothing;
 
 -- ---------------------------------------------------------------------------
