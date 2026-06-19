@@ -2,6 +2,8 @@ import { createClient } from "@/lib/supabase/server";
 import { PageHeader } from "@/components/page-header";
 import { EmptyState } from "@/components/empty-state";
 import { CrudPageClient } from "@/components/crud/crud-page-client";
+import { PaymentAccountGmailManager } from "@/components/manager/payment-account-gmail-manager";
+import { getPaymentFeatureFlags } from "@/lib/payment/feature-flags";
 import type { ColumnConfig, FieldConfig } from "@/components/crud/types";
 
 export const dynamic = "force-dynamic";
@@ -63,6 +65,8 @@ export default async function ManagerPaymentAccountsPage() {
     );
   }
 
+  const paymentFlags = await getPaymentFeatureFlags(profile.shop_id);
+
   const { data: accounts } = await supabase
     .from("payment_accounts")
     .select("*")
@@ -83,6 +87,11 @@ export default async function ManagerPaymentAccountsPage() {
         fixedValues={{ shop_id: profile.shop_id }}
         imageField="image_url"
       />
+
+      {/* GMAIL MANAGER - flag-gated, Phase 1 shell renders null */}
+      {paymentFlags.gmail_sync_enabled && (
+        <PaymentAccountGmailManager shopId={profile.shop_id} />
+      )}
     </div>
   );
 }

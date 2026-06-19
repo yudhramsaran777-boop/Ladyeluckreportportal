@@ -7,6 +7,8 @@ import { EmptyState } from "@/components/empty-state";
 import { StatusBadge } from "@/components/status-badge";
 import { TopGamesBarChart } from "@/components/charts/top-games-bar-chart";
 import { DateRangeFilter } from "@/components/manager/date-range-filter";
+import { ManagerPaymentOverview } from "@/components/manager/manager-payment-overview";
+import { getPaymentFeatureFlags } from "@/lib/payment/feature-flags";
 import {
   formatCurrency,
   formatNumber,
@@ -57,6 +59,8 @@ export default async function ManagerDashboardPage({
       </div>
     );
   }
+
+  const paymentFlags = await getPaymentFeatureFlags(shopId);
 
   const [{ data: shop }, { data: paymentAccounts }, { data: reports }] = await Promise.all([
     supabase.from("shops").select("name").eq("id", shopId).single(),
@@ -321,6 +325,11 @@ export default async function ManagerDashboardPage({
           </div>
         )}
       </div>
+
+      {/* PAYMENT OVERVIEW - manager-only, flag-gated, Phase 1 shell renders null */}
+      {paymentFlags.manager_payment_summary_enabled && (
+        <ManagerPaymentOverview shopId={shopId} start={start} end={end} />
+      )}
     </div>
   );
 }
