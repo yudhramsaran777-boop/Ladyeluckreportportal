@@ -1,12 +1,15 @@
 // ============================================================================
-// Lady E Luck Portal — Live Payment Activity Preview (Employee Dashboard)
-// Phase 1 shell: renders nothing until payment_dashboard_enabled = true.
-// Placed directly below the Welcome card on /employee.
+// Lady E Luck Portal - LivePaymentActivityPreview (Employee Dashboard)
+// Phase 3: Fetches up to 8 most recent counted transactions server-side.
+//
+// Placed below the Welcome card on /employee, behind payment_dashboard_enabled.
+// shop_id comes from props - the parent page derives it from the authenticated
+// session. It is never taken from URL params.
 // ============================================================================
 
-// This is an async Server Component.
-// It receives the feature flag as a prop so the parent page only makes
-// one flag lookup for the whole dashboard.
+import Link from "next/link";
+import { getEmployeeTransactions } from "@/lib/payment/payment-server";
+import { PaymentTransactionTable } from "@/components/payment/payment-transaction-table";
 
 interface LivePaymentActivityPreviewProps {
   shopId: string | null;
@@ -15,11 +18,39 @@ interface LivePaymentActivityPreviewProps {
 export async function LivePaymentActivityPreview({
   shopId,
 }: LivePaymentActivityPreviewProps) {
-  // Phase 1: shell only — no data fetched yet.
-  // Phase 3 will add the real query and transaction rows here.
-  // The flag check is done by the parent page before rendering this component,
-  // but we guard again here for safety.
   if (!shopId) return null;
 
-  return null;
+  const { data: transactions } = await getEmployeeTransactions(shopId, {
+    limit: 8,
+  });
+
+  return (
+    <div className="card-panel overflow-hidden">
+      {/* Header */}
+      <div className="flex items-center justify-between border-b border-panelborder px-4 py-3">
+        <h2 className="text-sm font-semibold text-white">Live Payment Activity</h2>
+        <span className="flex items-center gap-1.5 text-xs text-emerald-200/50">
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-positive" />
+          Live
+        </span>
+      </div>
+
+      {/* Transaction rows */}
+      <PaymentTransactionTable
+        transactions={transactions}
+        showDate={false}
+        emptyMessage="No counted payment transactions yet."
+      />
+
+      {/* Footer link */}
+      <div className="border-t border-panelborder px-4 py-3 text-right">
+        <Link
+          href="/employee/payment-info#payment-activity"
+          className="text-xs font-semibold text-gold transition-colors hover:text-gold-light"
+        >
+          View All Payments
+        </Link>
+      </div>
+    </div>
+  );
 }
