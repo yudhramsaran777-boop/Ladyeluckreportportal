@@ -4,7 +4,7 @@ export interface Profile {
   id: string;
   email: string;
   full_name: string | null;
-  role: Role;
+  role: Role | null;
   shop_id: string | null;
   is_active: boolean;
   created_at: string;
