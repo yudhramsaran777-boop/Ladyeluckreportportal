@@ -33,6 +33,7 @@ export async function PaymentActivitySection({
       initialData={data}
       initialHasMore={hasMore}
       initialNextCursor={nextCursor}
+      shopId={shopId}
     />
   );
 }

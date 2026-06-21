@@ -21,6 +21,7 @@ import {
   FileText,
   BadgeDollarSign,
   BookOpenCheck,
+  BarChart3,
   LogOut,
   X,
 } from "lucide-react";
@@ -43,6 +44,7 @@ const OWNER_NAV: NavItem[] = [
   { label: "Employees", href: "/owner/employees", icon: Users },
   { label: "Shift Reports", href: "/owner/shift-reports", icon: ClipboardList },
   { label: "Cashouts", href: "/owner/cashouts", icon: Wallet },
+  { label: "Payments Dashboard", href: "/manager/payments", icon: BarChart3 },
   { label: "Payment Accounts", href: "/owner/payment-accounts", icon: CreditCard },
   { label: "Game Accounts", href: "/owner/game-accounts", icon: Gamepad2 },
   { label: "Game Settings", href: "/owner/game-settings", icon: SlidersHorizontal },
@@ -53,6 +55,7 @@ const OWNER_NAV: NavItem[] = [
 
 const MANAGER_NAV: NavItem[] = [
   { label: "Dashboard", href: "/manager", icon: LayoutDashboard },
+  { label: "Payments Dashboard", href: "/manager/payments", icon: BarChart3 },
   { label: "Payment Accounts", href: "/manager/payment-accounts", icon: CreditCard },
   { label: "Game Accounts", href: "/manager/game-accounts", icon: Gamepad2 },
   { label: "Page Sources", href: "/manager/page-sources", icon: Facebook },

@@ -2,11 +2,8 @@
 
 // ============================================================================
 // Lady E Luck Portal - PaymentTransactionRow
-// Phase 3: Renders a single EmployeePaymentTransaction.
-//
-// Action buttons (Add Player, Recharge Player) accept optional callback props.
-// In Phase 3 these callbacks are undefined - buttons are shown as disabled
-// placeholders so the layout is finalized before Phase 4 / 5 wire them up.
+// Phase 5: Recharge Player button is enabled; shows recharge status and
+//          bonus/missing amounts inline. Add Player remains from Phase 4.
 // ============================================================================
 
 import clsx from "clsx";
@@ -153,7 +150,7 @@ export function PaymentTransactionRow({
 
   return (
     <div className="flex flex-col gap-1.5 border-b border-panelborder px-4 py-3 last:border-b-0 hover:bg-emerald-950/40">
-      {/* Row 1: time · provider · direction · amount */}
+      {/* Row 1: time + provider + direction + amount */}
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
         <span className="min-w-[80px] shrink-0 text-xs text-emerald-200/50">
           {showDate ? formatDateTime(t.occurred_at) : formatTime(t.occurred_at)}
@@ -165,7 +162,7 @@ export function PaymentTransactionRow({
         </span>
       </div>
 
-      {/* Row 2: account name · business tag · customer tag */}
+      {/* Row 2: account name + business tag + customer tag */}
       <div className="flex flex-wrap items-center gap-x-2 text-xs text-emerald-100/70">
         <span className="font-medium text-emerald-100">{t.payment_account_name}</span>
         {t.business_payment_tag && (
@@ -176,17 +173,17 @@ export function PaymentTransactionRow({
         )}
         {t.customer_payment_tag && (
           <>
-            <span className="text-emerald-200/30">→</span>
+            <span className="text-emerald-200/30">-&gt;</span>
             <span className="font-mono">{t.customer_payment_tag}</span>
           </>
         )}
       </div>
 
-      {/* Row 3: player info · match status · recharge status */}
+      {/* Row 3: player info + match status + recharge status */}
       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
         <MatchDot status={t.player_match_status} />
         {t.player_name ? (
-          <span className="text-emerald-100">{t.player_name}</span>
+          <span className="text-emerald-100 font-medium">{t.player_name}</span>
         ) : t.customer_name ? (
           <span className="text-emerald-200/50 italic">{t.customer_name}</span>
         ) : (
@@ -196,6 +193,39 @@ export function PaymentTransactionRow({
           <>
             <span className="text-emerald-200/30">·</span>
             <span className="text-emerald-200/60">{t.game_username}</span>
+          </>
+        )}
+        {/* Mapping verification badge */}
+        {t.player_match_status === "matched" && t.player_mapping_id && (
+          <>
+            <span className="text-emerald-200/30">·</span>
+            <span className="inline-flex items-center rounded-full border border-positive/30 bg-positive/10 px-1.5 py-0.5 text-[10px] font-semibold text-positive">
+              Verified
+            </span>
+          </>
+        )}
+        {t.player_match_status === "matched" && !t.player_mapping_id && (
+          <>
+            <span className="text-emerald-200/30">·</span>
+            <span className="inline-flex items-center rounded-full border border-warning/30 bg-warning/10 px-1.5 py-0.5 text-[10px] font-semibold text-warning">
+              Pending Review
+            </span>
+          </>
+        )}
+        {(t.player_match_status === "needs_review" || t.player_match_status === "conflicting") && (
+          <>
+            <span className="text-emerald-200/30">·</span>
+            <span className="inline-flex items-center rounded-full border border-danger/30 bg-danger/10 px-1.5 py-0.5 text-[10px] font-semibold text-danger">
+              Needs Review
+            </span>
+          </>
+        )}
+        {t.player_match_status === "blocked" && (
+          <>
+            <span className="text-emerald-200/30">·</span>
+            <span className="inline-flex items-center rounded-full border border-danger/30 bg-danger/10 px-1.5 py-0.5 text-[10px] font-semibold text-danger">
+              Blocked
+            </span>
           </>
         )}
         {t.recharge_status && (
@@ -209,6 +239,11 @@ export function PaymentTransactionRow({
             (+{formatCurrency(t.specific_recharge_bonus)} bonus)
           </span>
         )}
+        {t.recharge_status === "completed_no_bonus" && t.coins_recharged !== null && (
+          <span className="text-positive/70 text-xs">
+            ({formatCurrency(t.coins_recharged)} coins)
+          </span>
+        )}
         {t.recharge_status === "under_recharged" && t.specific_missing_recharge !== null && (
           <span className="text-warning/70 text-xs">
             ({formatCurrency(t.specific_missing_recharge)} missing)
@@ -216,7 +251,7 @@ export function PaymentTransactionRow({
         )}
       </div>
 
-      {/* Row 4: action buttons (Phase 4 / 5 will wire these up) */}
+      {/* Row 4: action buttons */}
       {(t.can_add_player || t.can_recharge) && (
         <div className="flex flex-wrap gap-2 pt-0.5">
           {t.can_add_player && (

@@ -295,4 +295,5 @@ alter table public.payment_accounts
   add column if not exists connection_status     text not null default 'not_connected',
   add column if not exists last_synced_at        timestamptz,
   add column if not exists updated_by            uuid
-    references public.profiles(id) on delete set null;
+    references public.profiles(id) on delete set null
+;

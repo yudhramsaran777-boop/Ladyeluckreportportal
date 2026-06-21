@@ -87,6 +87,7 @@ interface RechargeRow {
   recharge_status: string;
   bonus_given: string | number;
   missing_recharge: string | number;
+  coins_recharged: string | number;
   voided_at: string | null;
 }
 
@@ -229,7 +230,7 @@ export async function getEmployeeTransactions(
       : Promise.resolve({ data: [] as MappingRow[], error: null }),
     supabase
       .from("payment_recharges")
-      .select("id, payment_transaction_id, recharge_status, bonus_given, missing_recharge, voided_at")
+      .select("id, payment_transaction_id, recharge_status, bonus_given, missing_recharge, coins_recharged, voided_at")
       .in("payment_transaction_id", txnIds)
       .is("voided_at", null),
   ]);
@@ -293,6 +294,7 @@ export async function getEmployeeTransactions(
       recharge_status: recharge ? mapRechargeStatus(recharge.recharge_status) : null,
       specific_recharge_bonus: recharge ? Number(recharge.bonus_given) : null,
       specific_missing_recharge: recharge ? Number(recharge.missing_recharge) : null,
+      coins_recharged: recharge ? Number(recharge.coins_recharged) : null,
       can_add_player,
       can_recharge,
       player_mapping_id: mapping?.id ?? null,
