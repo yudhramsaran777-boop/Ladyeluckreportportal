@@ -26,15 +26,21 @@
 -- ---------------------------------------------------------------------------
 
 ALTER TABLE public.payment_transactions
-  ADD COLUMN IF NOT EXISTS activity_type text
-    CHECK (activity_type IN (
-      'incoming',
-      'outgoing',
-      'request_sent',
-      'request_received',
-      'refunded',
-      'failed'
-    ));
+  ADD COLUMN IF NOT EXISTS activity_type text;
+
+-- Named constraint so it can be safely dropped and re-added on re-run.
+ALTER TABLE public.payment_transactions
+  DROP CONSTRAINT IF EXISTS payment_transactions_activity_type_check;
+ALTER TABLE public.payment_transactions
+  ADD CONSTRAINT payment_transactions_activity_type_check
+  CHECK (activity_type IN (
+    'incoming',
+    'outgoing',
+    'request_sent',
+    'request_received',
+    'refunded',
+    'failed'
+  ));
 
 -- Back-fill existing rows using the direction column as a proxy.
 -- incoming ≈ direction='received', outgoing ≈ direction='sent'.
@@ -56,23 +62,12 @@ ALTER TABLE public.payment_transactions
 
 -- ---------------------------------------------------------------------------
 -- 3. Expand the status check constraint
---    Drop the old constraint (if named), then re-add with extended values.
+--    Drop any existing status constraint (named or from a prior partial run),
+--    then re-add with the full set of allowed values.
 -- ---------------------------------------------------------------------------
 
-DO $$
-DECLARE
-  cname text;
-BEGIN
-  SELECT conname INTO cname
-  FROM   pg_constraint
-  WHERE  conrelid = 'public.payment_transactions'::regclass
-    AND  contype  = 'c'
-    AND  conname  LIKE '%status%';
-
-  IF cname IS NOT NULL THEN
-    EXECUTE format('ALTER TABLE public.payment_transactions DROP CONSTRAINT %I', cname);
-  END IF;
-END $$;
+ALTER TABLE public.payment_transactions
+  DROP CONSTRAINT IF EXISTS payment_transactions_status_check;
 
 ALTER TABLE public.payment_transactions
   ADD CONSTRAINT payment_transactions_status_check
