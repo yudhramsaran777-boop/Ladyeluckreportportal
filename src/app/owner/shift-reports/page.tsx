@@ -3,7 +3,6 @@ import { PageHeader } from "@/components/page-header";
 import { CrudPageClient } from "@/components/crud/crud-page-client";
 import {
   formatCurrency,
-  calculateReportTotals,
 } from "@/lib/calculations";
 import type { ColumnConfig, FieldConfig } from "@/components/crud/types";
 
@@ -38,13 +37,14 @@ export default async function OwnerShiftReportsPage() {
       supabase.from("shops").select("id, name"),
       supabase
         .from("shift_game_entries")
-        .select("shift_report_id, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, true_profit"),
+        .select("shift_report_id, game_name, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, true_profit"),
       supabase.from("shift_cashouts").select("shift_report_id, amount"),
     ]);
 
   const shopNameById = new Map((shops || []).map((s) => [s.id, s.name]));
 
-  // Group entries by report, apply report-level game cost rule per report
+  // Group entries by report. Use stored game_cost from DB so this list
+  // matches the owner dashboard and manager views exactly.
   const entriesByReport = new Map<string, any[]>();
   for (const entry of entries || []) {
     const list = entriesByReport.get(entry.shift_report_id) ?? [];
@@ -57,13 +57,16 @@ export default async function OwnerShiftReportsPage() {
     { recharge: number; normalDifference: number; gameCost: number; profit: number; trueProfit: number }
   >();
   for (const [reportId, group] of entriesByReport) {
-    const rt = calculateReportTotals(group);
+    const reportProfit   = group.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
+    const reportRecharge = group.reduce((s: number, e: any) => s + Number(e.real_recharge || 0), 0);
+    const storedCost     = group.reduce((s: number, e: any) => s + Number(e.game_cost || 0), 0);
+    const reportGameCost = reportProfit > 0 ? storedCost : 0;
     totalsByReport.set(reportId, {
-      recharge: rt.totalRecharge,
-      normalDifference: rt.totalProfit,
-      gameCost: rt.totalGameCost,
-      profit: rt.totalProfit,
-      trueProfit: rt.totalTrueProfit,
+      recharge: reportRecharge,
+      normalDifference: reportProfit,
+      gameCost: reportGameCost,
+      profit: reportProfit,
+      trueProfit: reportProfit - reportGameCost,
     });
   }
 

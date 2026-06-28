@@ -10,9 +10,6 @@ import { TopGamesBarChart } from "@/components/charts/top-games-bar-chart";
 import {
   formatCurrency,
   formatNumber,
-  calculateReportTotals,
-  calculateGroupedGameTotals,
-  calculateReportTotalsFromGroupedGames,
 } from "@/lib/calculations";
 
 interface OwnerReportContentProps {
@@ -94,7 +91,8 @@ function topCashoutGame(cashouts: any[]) {
 }
 
 function topGames(entries: any[]) {
-  // Group entries by report first, then by game within each report
+  // Group entries by report first, then by game within each report.
+  // Use stored game_cost from DB — same source as the manager view.
   const byReport = new Map<string, any[]>();
   for (const entry of entries) {
     const list = byReport.get(entry.shift_report_id) ?? [];
@@ -108,22 +106,25 @@ function topGames(entries: any[]) {
   >();
 
   for (const [, reportEntries] of byReport) {
-    const groupedGames = calculateGroupedGameTotals(reportEntries);
-    const rt = calculateReportTotalsFromGroupedGames(groupedGames);
-    const isPositive = rt.totalProfit > 0;
+    // Zero-out rule: if report lost money, no game fee for any game in it.
+    const reportProfit = reportEntries.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
+    const isPositive = reportProfit > 0;
 
-    for (const g of groupedGames) {
-      const name = g.gameName;
-      const effectiveGameCost = isPositive ? g.gameCost : 0;
+    for (const e of reportEntries) {
+      const name = e.game_name || "Unknown";
+      const profit = Number(e.normal_coin_difference || 0);
+      const recharge = Number(e.real_recharge || 0);
+      const storedCost = Number(e.game_cost || 0);
+      const effectiveCost = isPositive ? storedCost : 0;
       const current = byGame.get(name) ||
         { name, recharge: 0, normalDifference: 0, gameCostPercent: 0, gameCostPercentCount: 0, gameCost: 0, profit: 0, trueProfit: 0, count: 0 };
-      current.recharge += g.realRecharge;
-      current.normalDifference += g.normalDifference;
-      current.gameCostPercent += g.gameCostPercentage;
+      current.recharge += recharge;
+      current.normalDifference += profit;
+      current.gameCostPercent += Number(e.game_cost_percentage || 0);
       current.gameCostPercentCount += 1;
-      current.gameCost += effectiveGameCost;
-      current.profit += g.profit;
-      current.trueProfit += g.profit - effectiveGameCost;
+      current.gameCost += effectiveCost;
+      current.profit += profit;
+      current.trueProfit += profit - effectiveCost;
       current.count += 1;
       byGame.set(name, current);
     }
@@ -144,7 +145,9 @@ function cashoutGameRows(cashouts: any[]) {
 }
 
 function totals(entries: any[], cashouts: any[]) {
-  // Group entries by report and apply report-level game cost rule per report
+  // Group entries by report to apply the report-level zero-out rule per report.
+  // Use stored game_cost from the DB (what the employee calculated at submission
+  // and the manager verifies) so owner and manager always show identical numbers.
   const byReport = new Map<string, any[]>();
   for (const entry of entries) {
     const list = byReport.get(entry.shift_report_id) ?? [];
@@ -153,11 +156,16 @@ function totals(entries: any[], cashouts: any[]) {
   }
   let rechargeSum = 0, gameCostSum = 0, profitSum = 0, trueProfitSum = 0;
   for (const [, group] of byReport) {
-    const rt = calculateReportTotals(group);
-    rechargeSum += rt.totalRecharge;
-    gameCostSum += rt.totalGameCost;
-    profitSum += rt.totalProfit;
-    trueProfitSum += rt.totalTrueProfit;
+    const reportProfit   = group.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
+    const reportRecharge = group.reduce((s: number, e: any) => s + Number(e.real_recharge || 0), 0);
+    // Stored game_cost per entry is max(0, profit) × rate, saved at submission time.
+    const storedCost     = group.reduce((s: number, e: any) => s + Number(e.game_cost || 0), 0);
+    // Zero-out rule: no game fee if the report lost money overall.
+    const reportGameCost = reportProfit > 0 ? storedCost : 0;
+    rechargeSum  += reportRecharge;
+    gameCostSum  += reportGameCost;
+    profitSum    += reportProfit;
+    trueProfitSum += reportProfit - reportGameCost;
   }
   return {
     recharge: rechargeSum,

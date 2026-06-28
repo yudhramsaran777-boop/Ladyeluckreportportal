@@ -4,8 +4,10 @@
 // - startingCoinsAfterAdd = openingCoinsBeforeAdd + adminAddedCoins  (auto-computed, never manual)
 // - Normal Coin Difference = Starting Coins After Add - Ending Coins
 // - Real Recharge = Starting Coins After Add + Redeem Coins - Ending Coins
-// - Game Cost = max(grouped game profit, 0) * (Game Cost Percentage / 100)
-//   → group entries by game FIRST, then compute game cost on the grouped profit
+// - Game Cost per game = max(profit, 0) × rate  (negative games owe $0 in game fees)
+// - Report-level Game Cost = sum(per-game costs) × (totalProfit / sumPositiveProfits)
+//   → scales the cost down so the effective rate on net profit = weighted rate of positive games
+//   → this keeps effective rate ≤ max game rate (never above 15%)
 // - If total report profit <= 0: Game Cost = 0, True Profit = Total Profit
 
 export interface GameRowInput {
@@ -127,15 +129,15 @@ export interface GroupedGameTotals {
   realRecharge: number;
   normalDifference: number;
   gameCostPercentage: number;
-  gameCost: number;
+  gameCost: number;   // max(profit, 0) × rate — for per-row display
   profit: number;
   trueProfit: number;
 }
 
 /**
- * Groups entries by game_name, then computes game cost from the GROUPED profit.
- * This is the key rule: game cost = max(groupedProfit, 0) * costPct / 100
- * NOT: sum of per-row positive game costs before grouping.
+ * Groups entries by game_name, computes per-game cost = max(profit, 0) × rate.
+ * Negative-profit games owe $0 in game fees. The report-level scaling in
+ * calculateReportTotalsFromGroupedGames keeps the total effective rate ≤ max game rate.
  */
 export function calculateGroupedGameTotals(entries: StoredEntryForReportTotals[]): GroupedGameTotals[] {
   const byGame = new Map<string, { recharge: number; profit: number; costPctSum: number; count: number }>();
@@ -150,7 +152,7 @@ export function calculateGroupedGameTotals(entries: StoredEntryForReportTotals[]
   }
   return Array.from(byGame.entries()).map(([gameName, g]) => {
     const gameCostPercentage = g.count > 0 ? g.costPctSum / g.count : 0;
-    // Game cost is computed on the GROUPED profit — not per positive row
+    // Negative games owe $0 — they get coins back which will generate future recharge revenue.
     const gameCost = g.profit > 0 ? (g.profit * gameCostPercentage) / 100 : 0;
     return {
       gameName,
@@ -166,14 +168,32 @@ export function calculateGroupedGameTotals(entries: StoredEntryForReportTotals[]
 
 /**
  * Computes report totals from already-grouped-by-game rows.
+ *
+ * Per-game rule: negative games → $0 fee (handled in calculateGroupedGameTotals).
  * Report-level rule: if totalProfit <= 0, totalGameCost = 0.
+ *
+ * Scaling rule: when losing games drag totalProfit below sumPositiveProfits,
+ * the effective rate on net profit would exceed any game's actual rate without scaling.
+ * We scale: totalGameCost = sum(per-game costs) × (totalProfit / sumPositiveProfits).
+ * This keeps the effective rate = weighted rate of positive games ≤ max game rate (15%).
  */
 export function calculateReportTotalsFromGroupedGames(groupedGames: GroupedGameTotals[]): ReportTotals {
   const totalRecharge = groupedGames.reduce((sum, g) => sum + g.realRecharge, 0);
   const totalProfit = groupedGames.reduce((sum, g) => sum + g.profit, 0);
-  const groupedGameCost = groupedGames.reduce((sum, g) => sum + g.gameCost, 0);
-  const totalGameCost = totalProfit > 0 ? groupedGameCost : 0;
-  const totalTrueProfit = totalProfit > 0 ? totalProfit - totalGameCost : totalProfit;
+
+  if (totalProfit <= 0) {
+    return { totalRecharge, totalProfit, totalGameCost: 0, totalTrueProfit: totalProfit };
+  }
+
+  const sumPositiveProfits = groupedGames.reduce((sum, g) => sum + Math.max(g.profit, 0), 0);
+  const rawGameCost = groupedGames.reduce((sum, g) => sum + g.gameCost, 0);
+
+  // Scale game cost to net profit so effective rate stays within range of actual game rates.
+  const totalGameCost = sumPositiveProfits > 0
+    ? Math.max(rawGameCost * totalProfit / sumPositiveProfits, 0)
+    : 0;
+
+  const totalTrueProfit = totalProfit - totalGameCost;
   return { totalRecharge, totalProfit, totalGameCost, totalTrueProfit };
 }
 

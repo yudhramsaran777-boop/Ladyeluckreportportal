@@ -7,8 +7,6 @@ import { DateRangeFilter } from "@/components/manager/date-range-filter";
 import {
   formatCurrency,
   formatNumber,
-  calculateGroupedGameTotals,
-  calculateReportTotalsFromGroupedGames,
 } from "@/lib/calculations";
 
 export const dynamic = "force-dynamic";
@@ -124,27 +122,34 @@ export default async function ManagerShopReportPage({
   >();
 
   for (const [, reportEntries] of entriesByReport) {
-    const groupedGames = calculateGroupedGameTotals(reportEntries);
-    const rt = calculateReportTotalsFromGroupedGames(groupedGames);
-    const isPositive = rt.totalProfit > 0;
-    totalRecharge += rt.totalRecharge;
-    totalGameCost += rt.totalGameCost;
-    totalProfit += rt.totalProfit;
-    totalTrueProfit += rt.totalTrueProfit;
+    // Use stored game_cost from the DB — same source as the owner dashboard —
+    // so both views always agree. Apply the zero-out rule per report.
+    const reportProfit   = reportEntries.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
+    const reportRecharge = reportEntries.reduce((s: number, e: any) => s + Number(e.real_recharge || 0), 0);
+    const storedCost     = reportEntries.reduce((s: number, e: any) => s + Number(e.game_cost || 0), 0);
+    const isPositive = reportProfit > 0;
+    const reportGameCost = isPositive ? storedCost : 0;
 
-    for (const g of groupedGames) {
-      // Only apply game cost if this report is net positive
-      const effectiveGameCost = isPositive ? g.gameCost : 0;
-      const current = rechargeGameMap.get(g.gameName) ||
-        { game: g.gameName, recharge: 0, normalDifference: 0, gameCostPercent: 0, gameCostPercentCount: 0, gameCost: 0, profit: 0, trueProfit: 0 };
-      current.recharge += g.realRecharge;
-      current.normalDifference += g.normalDifference;
-      current.gameCostPercent += g.gameCostPercentage;
+    totalRecharge    += reportRecharge;
+    totalGameCost    += reportGameCost;
+    totalProfit      += reportProfit;
+    totalTrueProfit  += reportProfit - reportGameCost;
+
+    for (const e of reportEntries) {
+      const gameName = e.game_name || "Unknown";
+      const profit   = Number(e.normal_coin_difference || 0);
+      const recharge = Number(e.real_recharge || 0);
+      const entryCost = isPositive ? Number(e.game_cost || 0) : 0;
+      const current = rechargeGameMap.get(gameName) ||
+        { game: gameName, recharge: 0, normalDifference: 0, gameCostPercent: 0, gameCostPercentCount: 0, gameCost: 0, profit: 0, trueProfit: 0 };
+      current.recharge          += recharge;
+      current.normalDifference  += profit;
+      current.gameCostPercent   += Number(e.game_cost_percentage || 0);
       current.gameCostPercentCount += 1;
-      current.gameCost += effectiveGameCost;
-      current.profit += g.profit;
-      current.trueProfit += g.profit - effectiveGameCost;
-      rechargeGameMap.set(g.gameName, current);
+      current.gameCost          += entryCost;
+      current.profit            += profit;
+      current.trueProfit        += profit - entryCost;
+      rechargeGameMap.set(gameName, current);
     }
   }
   const rechargeGameRows = Array.from(rechargeGameMap.values()).sort((a, b) => b.recharge - a.recharge);

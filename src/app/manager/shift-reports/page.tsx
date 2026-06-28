@@ -5,7 +5,6 @@ import { EmptyState } from "@/components/empty-state";
 import { StatusBadge } from "@/components/status-badge";
 import {
   formatCurrency,
-  calculateReportTotals,
 } from "@/lib/calculations";
 
 export const dynamic = "force-dynamic";
@@ -41,7 +40,7 @@ export default async function ManagerShiftReportsPage() {
     reportIds.length
       ? supabase
           .from("shift_game_entries")
-          .select("shift_report_id, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, true_profit")
+          .select("shift_report_id, game_name, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, true_profit")
           .in("shift_report_id", reportIds)
       : Promise.resolve({ data: [] }),
     reportIds.length
@@ -53,7 +52,8 @@ export default async function ManagerShiftReportsPage() {
       : Promise.resolve({ data: [] }),
   ]);
 
-  // Group entries by report, apply report-level game cost rule per report
+  // Group entries by report. Use stored game_cost from DB (what was calculated at
+  // submission) so this list matches the owner dashboard exactly.
   const entriesByReport = new Map<string, any[]>();
   for (const entry of entries || []) {
     const list = entriesByReport.get(entry.shift_report_id) ?? [];
@@ -66,15 +66,19 @@ export default async function ManagerShiftReportsPage() {
     { recharge: number; normalDifference: number; gameCost: number; profit: number; cashout: number; cashoutCount: number; trueProfit: number }
   >();
   for (const [reportId, group] of entriesByReport) {
-    const rt = calculateReportTotals(group);
+    const reportProfit   = group.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
+    const reportRecharge = group.reduce((s: number, e: any) => s + Number(e.real_recharge || 0), 0);
+    const storedCost     = group.reduce((s: number, e: any) => s + Number(e.game_cost || 0), 0);
+    // Zero-out: no game fee if the report lost money overall.
+    const reportGameCost = reportProfit > 0 ? storedCost : 0;
     totalsByReport.set(reportId, {
-      recharge: rt.totalRecharge,
-      normalDifference: rt.totalProfit,
-      gameCost: rt.totalGameCost,
-      profit: rt.totalProfit,
+      recharge: reportRecharge,
+      normalDifference: reportProfit,
+      gameCost: reportGameCost,
+      profit: reportProfit,
       cashout: 0,
       cashoutCount: 0,
-      trueProfit: rt.totalTrueProfit,
+      trueProfit: reportProfit - reportGameCost,
     });
   }
   for (const cashout of cashouts || []) {
