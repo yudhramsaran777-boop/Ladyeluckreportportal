@@ -2,8 +2,6 @@ import { createClient } from "@/lib/supabase/server";
 import { PageHeader } from "@/components/page-header";
 import { EmptyState } from "@/components/empty-state";
 import { PaymentInfoSection } from "@/components/employee/payment-info-section";
-import { PaymentActivitySection } from "@/components/employee/payment-activity-section";
-import { getPaymentFeatureFlags } from "@/lib/payment/feature-flags";
 
 export const dynamic = "force-dynamic";
 
@@ -17,7 +15,6 @@ export default async function EmployeePaymentInfoPage() {
     .single();
 
   const shopId = profile?.shop_id || null;
-  const paymentFlags = await getPaymentFeatureFlags(shopId);
 
   return (
     <div className="space-y-6">
@@ -31,11 +28,6 @@ export default async function EmployeePaymentInfoPage() {
         </div>
       )}
       <PaymentInfoSection shopId={shopId} />
-
-      {/* PAYMENT ACTIVITY - flag-gated, Phase 1 shell renders null */}
-      {paymentFlags.payment_dashboard_enabled && (
-        <PaymentActivitySection shopId={shopId} />
-      )}
     </div>
   );
 }

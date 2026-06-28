@@ -4,8 +4,6 @@ import { EmptyState } from "@/components/empty-state";
 import { PaymentInfoSection } from "@/components/employee/payment-info-section";
 import { GameLoginsSection } from "@/components/employee/game-logins-section";
 import { ShiftReportClient } from "@/components/employee/shift-report-client";
-import { LivePaymentActivityPreview } from "@/components/employee/live-payment-activity-preview";
-import { getPaymentFeatureFlags } from "@/lib/payment/feature-flags";
 
 export const dynamic = "force-dynamic";
 
@@ -21,8 +19,6 @@ export default async function EmployeeDashboardPage() {
   const shopId = profile?.shop_id || null;
   const employeeId = profile?.id || userData.user!.id;
   const employeeName = profile?.full_name || "Employee";
-
-  const paymentFlags = await getPaymentFeatureFlags(shopId);
 
   let debugCashAppCount = 0;
   let debugChimeCount = 0;
@@ -107,11 +103,6 @@ export default async function EmployeeDashboardPage() {
           </p>
         )}
       </div>
-
-      {/* PAYMENT ACTIVITY PREVIEW - flag-gated, Phase 1 shell renders null */}
-      {paymentFlags.payment_dashboard_enabled && (
-        <LivePaymentActivityPreview shopId={shopId} />
-      )}
 
       <PaymentInfoSection shopId={shopId} />
       <GameLoginsSection shopId={shopId} />

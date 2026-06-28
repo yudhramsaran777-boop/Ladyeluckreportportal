@@ -13,3 +13,5 @@ my-video/
 {
 
 supabase/.temp/
+
+backups/
