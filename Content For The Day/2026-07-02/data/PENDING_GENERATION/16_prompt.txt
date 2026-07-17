@@ -1,0 +1,10 @@
+ASSET: 16_audio_golden_dealer_hat_trick_line
+FORMAT: audio (6 seconds, voiceover)
+TOOL: generate_audio — text2speech_v2 (Higgsfield)
+VOICE: The Golden Dealer / Sterling / voice_id: dc382508-c8bd-443c-8cb2-46e57b8d2e6f
+POST TIME: 3:00 PM | PLATFORM: Reel voiceover | ACT: 3
+
+TEXT TO SPEAK:
+"Three times. Three wins. The Hat Trick Bonus... starts now."
+
+DELIVERY: Slow, deep, utterly calm — authority with zero urgency. Long pause after "Three wins." Then measured "The Hat Trick Bonus." Then weight on "now." No music — pure voice for layering in post.

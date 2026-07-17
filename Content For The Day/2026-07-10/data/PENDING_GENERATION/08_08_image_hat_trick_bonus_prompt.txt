@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 08
+Filename: 08_image_hat_trick_bonus
+Format: image
+Tool: higgsfield_generate_image
+Orientation: square (1:1)
+Duration: N/A
+Post Time: 2:30 PM
+Platform: Facebook + Instagram
+Promo Type: hat_trick_bonus
+Character: No character — object focus
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Still life cinematic shot. Three identical oversized soccer balls made entirely of layered solid gold are lined up in a precise row on a dark emerald green penalty spot. Each gold soccer ball is in the process of morphing — gold coins cascade from the bottom of each ball like a waterfall, pooling in stacks on the emerald turf. Lighting: each ball lit by its own overhead warm gold stadium spotlight, dramatic shadows between them. Mood: luxury, anticipation, jackpot energy. Foreground: gold coin stacks on turf in sharp focus. Background: dark stadium in soft focus with green and gold bokeh. Style: photorealistic, cinematic, hyper-detailed gold texture, dark green and gold palette. No text, no words, no letters in the image. Camera: low angle, looking slightly upward along the line of three balls, conveying grandeur and repetition.

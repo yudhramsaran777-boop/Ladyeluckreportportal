@@ -1,0 +1,7 @@
+ASSET: 03_image_story_gold_whistle_closeup
+FORMAT: image (vertical 9:16)
+TOOL: generate_image (Higgsfield)
+POST TIME: 9:15 AM | PLATFORM: Stories | ACT: 1
+
+PROMPT:
+Extreme close-up shot. Subject: ornate gold whistle hanging from a delicate gold chain, resting against black and gold striped fabric. Gold whistle is engraved with a crown motif. Droplets of gold light refract off the surface. In soft background: blurred emerald green stadium floor and gold ambient light. Lighting: macro studio lighting, warm gold backlight rim. Mood: intimate, premium, anticipatory. Foreground: whistle in razor-sharp focus. Background: bokeh of gold and emerald light. Style: photorealistic, cinematic macro, dark green and gold color palette. No text, no words, no letters in the image. Camera: extreme close-up, macro lens, slight low angle upward.

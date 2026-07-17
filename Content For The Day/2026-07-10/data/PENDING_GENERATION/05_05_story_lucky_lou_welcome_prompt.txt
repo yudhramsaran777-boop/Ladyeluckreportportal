@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 05
+Filename: 05_story_lucky_lou_welcome
+Format: image
+Tool: higgsfield_generate_image
+Orientation: vertical (9:16)
+Duration: N/A
+Post Time: 11:30 AM
+Platform: Facebook + Instagram
+Promo Type: new_player_bonus
+Character: Lucky Lou (World Cup Variant)
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Action shot. Setting: dark emerald green soccer field with gold stadium lights. Male character mid-30s, stocky build, wide expressive eyes filled with joy, enormous warm smile, running toward the camera with arms spread wide in a welcoming embrace gesture. Wearing green-and-gold soccer jersey with no real team logos, fishing hat with slot machine emoji stickers and small soccer ball sticker, one green lucky sock and one gold lucky sock visible. He's holding a 4-leaf clover in one outstretched hand. Lighting: warm stadium gold light from above, green turf glowing. Mood: joyful, welcoming, lovable underdog energy. Foreground: a few gold coins and a single casino chip on the turf catching light. Style: photorealistic, cinematic, dark green and gold palette. No text, no words, no letters in the image. Camera: low angle looking slightly up, wide shot as character runs toward viewer.

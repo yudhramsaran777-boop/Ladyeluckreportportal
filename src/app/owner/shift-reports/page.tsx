@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/page-header";
 import { CrudPageClient } from "@/components/crud/crud-page-client";
 import {
   formatCurrency,
+  singleReportTotalsFromStoredEntries,
 } from "@/lib/calculations";
 import type { ColumnConfig, FieldConfig } from "@/components/crud/types";
 
@@ -57,16 +58,14 @@ export default async function OwnerShiftReportsPage() {
     { recharge: number; normalDifference: number; gameCost: number; profit: number; trueProfit: number }
   >();
   for (const [reportId, group] of entriesByReport) {
-    const reportProfit   = group.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
-    const reportRecharge = group.reduce((s: number, e: any) => s + Number(e.real_recharge || 0), 0);
-    const storedCost     = group.reduce((s: number, e: any) => s + Number(e.game_cost || 0), 0);
-    const reportGameCost = reportProfit > 0 ? storedCost : 0;
+    // Canonical formula shared with all owner/manager views.
+    const rt = singleReportTotalsFromStoredEntries(group);
     totalsByReport.set(reportId, {
-      recharge: reportRecharge,
-      normalDifference: reportProfit,
-      gameCost: reportGameCost,
-      profit: reportProfit,
-      trueProfit: reportProfit - reportGameCost,
+      recharge: rt.totalRecharge,
+      normalDifference: rt.totalProfit,
+      gameCost: rt.totalGameCost,
+      profit: rt.totalProfit,
+      trueProfit: rt.totalTrueProfit,
     });
   }
 

@@ -1,0 +1,7 @@
+ASSET: 08_image_golden_boot_jackpot
+FORMAT: Feed Image (4:5 portrait)
+TOOL: generate_image
+POST TIME: 3:00 PM — FB + IG
+
+PROMPT:
+Dramatic portrait shot. Setting: dark emerald casino floor with stadium floodlights serving as casino spotlights from directly above, single glowing penalty spot circle on the dark green floor in foreground with a single spinning gold casino chip on it. Character: Black female character, mid-30s to early 40s, black and gold striped referee-inspired dress with gold whistle on chain, large gold hoop earrings, gold bracelet, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick. Pose: she holds a glowing gold boot trophy aloft in her right hand, arm fully extended upward, chin raised, triumphant expression — regal and commanding. Left hand on hip. Lighting: dramatic stadium floodlight from directly above creating god-ray effect in the darkness, warm gold, cinematic. Foreground: gold casino chips stacked like a penalty spot base beneath the spinning chip. Background: dark emerald casino interior fading to black at edges. Style: photorealistic, cinematic, luxury premium, dramatic lighting hero shot. No text, no words, no letters in the image. Camera: low angle looking up at Lady E holding the boot high.

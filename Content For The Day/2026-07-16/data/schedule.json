@@ -1,0 +1,25 @@
+{
+  "date": "2026-07-16",
+  "day_of_week": "Thursday",
+  "world_cup_mode": true,
+  "match_note": "No World Cup match today (rest day between semifinals and Sat/Sun matches) — standard Thursday windows apply, evening peaks emphasized.",
+  "spacing_check": "Feed images >= 2h apart (8:00, 11:00, 14:30, 18:00). Reels >= 3h apart (7:00, 16:00, 23:00). Stories every 60-90 min across the day (7 stories). Groups at 2PM, before 8PM. First post 7:00 AM, last post 11:00 PM.",
+  "schedule": [
+    {"time": "7:00 AM",  "post_id": "01", "format": "reel",        "platform": "FB + IG",       "act": 1, "promo_type": "theme_launch",     "asset": "01_reel_kickoff_whistle",      "audio": "16_audio_ladye_kickoff_vo"},
+    {"time": "8:00 AM",  "post_id": "02", "format": "feed_image",  "platform": "FB + IG",       "act": 1, "promo_type": "theme_launch",     "asset": "02_image_road_to_final_opener"},
+    {"time": "9:30 AM",  "post_id": "03", "format": "story_image", "platform": "FB + IG Story", "act": 1, "promo_type": "deal_tease",       "asset": "03_image_golden_boot_teaser"},
+    {"time": "11:00 AM", "post_id": "04", "format": "feed_image",  "platform": "FB + IG",       "act": 2, "promo_type": "new_player_bonus", "asset": "04_image_new_player_welcome"},
+    {"time": "12:30 PM", "post_id": "05", "format": "story_image", "platform": "FB + IG Story", "act": 2, "promo_type": "character",        "asset": "05_image_lucky_lou_intro"},
+    {"time": "1:30 PM",  "post_id": "06", "format": "story_image", "platform": "FB + IG Story", "act": 2, "promo_type": "daily_bonus_wheel","asset": "06_image_bonus_wheel_spin"},
+    {"time": "2:00 PM",  "post_id": "09", "format": "groups_post", "platform": "FB Groups",     "act": 3, "promo_type": "referral",         "asset": "08_image_referral_penalty_kick"},
+    {"time": "2:30 PM",  "post_id": "07", "format": "feed_image",  "platform": "FB + IG",       "act": 3, "promo_type": "todays_special",   "asset": "07_image_hat_trick_special"},
+    {"time": "3:30 PM",  "post_id": "08", "format": "story_image", "platform": "FB + IG Story", "act": 3, "promo_type": "todays_special",   "asset": "07_image_hat_trick_special", "note": "Double-post: story crop of post 07 image, deal is live 3-6PM"},
+    {"time": "4:00 PM",  "post_id": "10", "format": "reel",        "platform": "FB + IG",       "act": 3, "promo_type": "deal_reveal",      "asset": "09_reel_dealer_deal_reveal",   "audio": "17_audio_dealer_one_line"},
+    {"time": "6:00 PM",  "post_id": "11", "format": "feed_image",  "platform": "FB + IG",       "act": 4, "promo_type": "community",        "asset": "10_image_jackpot_parade_crew"},
+    {"time": "7:30 PM",  "post_id": "12", "format": "story_image", "platform": "FB + IG Story", "act": 4, "promo_type": "daily_bonus",      "asset": "11_image_daily_bonus_reminder"},
+    {"time": "9:00 PM",  "post_id": "13", "format": "story_image", "platform": "FB + IG Story", "act": 4, "promo_type": "character",        "asset": "12_image_lou_almost_win"},
+    {"time": "10:30 PM", "post_id": "14", "format": "story_image", "platform": "FB + IG Story", "act": 5, "promo_type": "halftime_reload",  "asset": "13_image_halftime_reload"},
+    {"time": "11:00 PM", "post_id": "15", "format": "reel",        "platform": "FB + IG",       "act": 5, "promo_type": "character_win",    "asset": "14_reel_lou_golden_hour_win",  "audio": "18_audio_lou_victory_line"}
+  ],
+  "song_release": {"asset": "15_audio_song_golden_kick", "use": "Background track for reels 01 and 15; optional standalone 'Song of the Day' story at 8:30 PM if Luis wants it."}
+}

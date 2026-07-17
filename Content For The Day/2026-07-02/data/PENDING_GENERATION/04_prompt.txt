@@ -1,0 +1,7 @@
+ASSET: 04_image_new_player_golden_boot_welcome
+FORMAT: image (square 1:1)
+TOOL: generate_image (Higgsfield)
+POST TIME: 11:00 AM | PLATFORM: Facebook + Instagram Feed | ACT: 2 | PROMO: new_player_bonus
+
+PROMPT:
+Medium shot at eye level. Setting: grand golden arched stadium entrance doorway glowing with warm gold light, emerald green interior visible beyond. Character: Black female character, mid-30s to early 40s, black and gold striped fitted referee-inspired dress, gold crown headpiece, gold chain with whistle, deep bronze-brown skin, crimson lips, long black gloves — extending one gloved hand directly toward camera in a welcoming gesture, warm smile. Lighting: soft warm gold light emanating from arch behind her, rim lighting on her silhouette. Mood: welcoming, premium, warm but confident. Foreground: soft gold coin sparkles at base of arch. Background: golden glow of the casino stadium beyond the entrance. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: medium shot, slight low angle, centered.

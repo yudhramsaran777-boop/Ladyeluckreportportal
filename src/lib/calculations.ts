@@ -5,9 +5,10 @@
 // - Normal Coin Difference = Starting Coins After Add - Ending Coins
 // - Real Recharge = Starting Coins After Add + Redeem Coins - Ending Coins
 // - Game Cost per game = max(profit, 0) × rate  (negative games owe $0 in game fees)
-// - Report-level Game Cost = sum(per-game costs) × (totalProfit / sumPositiveProfits)
-//   → scales the cost down so the effective rate on net profit = weighted rate of positive games
-//   → this keeps effective rate ≤ max game rate (never above 15%)
+//   → Game cost is based on PROFIT only. Recharge is NEVER a basis for game cost.
+// - Report-level Game Cost = plain sum of the per-game costs. NO scaling by net
+//   profit — each distributor bills its own game's positive profit regardless of
+//   other games' losses. (The old scaled formula understated cost; removed 2026-07-16.)
 // - If total report profit <= 0: Game Cost = 0, True Profit = Total Profit
 
 export interface GameRowInput {
@@ -107,15 +108,21 @@ export function sumReportTotals(
   return { totalRealRecharge, totalGameCost, totalGrossProfit, totalTrueProfit };
 }
 
-// ─── Report-level totals from stored DB entries ─────────────────────────────
-
-export interface StoredEntryForReportTotals {
-  shift_report_id?: string | null;
-  game_name?: string | null;
-  normal_coin_difference?: number | string | null;
-  real_recharge?: number | string | null;
-  game_cost_percentage?: number | string | null;
-}
+// ─── CANONICAL REPORT TOTALS — the single source of truth for every view ────
+//
+// Business rule (confirmed by Luis, 2026-07-16):
+// - Game cost is charged per game on POSITIVE profit only: max(profit, 0) × rate.
+//   Negative games owe $0. Recharge is NEVER a basis for game cost.
+// - Per report: if the report's total profit <= 0, game cost = 0 (zero-out rule).
+// - NO scaling of game cost by net profit. The removed "scaled" formula
+//   (game cost × totalProfit ÷ sumPositiveProfits) understated cost whenever a
+//   report contained a losing game and MUST NOT be reintroduced.
+//
+// The stored per-entry `game_cost` column already equals max(profit, 0) × rate
+// (enforced by migration 0025 and the employee submission flow), so these
+// functions sum the stored values. Owner dashboard, owner reports, owner shift
+// reports, manager dashboard, manager 24h shop report, and manager shift
+// reports MUST all use these two functions so every view shows identical numbers.
 
 export interface ReportTotals {
   totalRecharge: number;
@@ -124,111 +131,51 @@ export interface ReportTotals {
   totalTrueProfit: number;
 }
 
-export interface GroupedGameTotals {
-  gameName: string;
-  realRecharge: number;
-  normalDifference: number;
-  gameCostPercentage: number;
-  gameCost: number;   // max(profit, 0) × rate — for per-row display
-  profit: number;
-  trueProfit: number;
+export interface StoredShiftEntry {
+  shift_report_id?: string | null;
+  real_recharge?: number | string | null;
+  normal_coin_difference?: number | string | null;
+  game_cost?: number | string | null;
 }
 
 /**
- * Groups entries by game_name, computes per-game cost = max(profit, 0) × rate.
- * Negative-profit games owe $0 in game fees. The report-level scaling in
- * calculateReportTotalsFromGroupedGames keeps the total effective rate ≤ max game rate.
+ * Totals for entries that all belong to ONE shift report.
+ * Game cost = sum of stored per-entry costs, zeroed out if the report lost money.
  */
-export function calculateGroupedGameTotals(entries: StoredEntryForReportTotals[]): GroupedGameTotals[] {
-  const byGame = new Map<string, { recharge: number; profit: number; costPctSum: number; count: number }>();
+export function singleReportTotalsFromStoredEntries(entries: StoredShiftEntry[]): ReportTotals {
+  const totalRecharge = entries.reduce((sum, e) => sum + toFiniteNumber(e.real_recharge), 0);
+  const totalProfit = entries.reduce((sum, e) => sum + toFiniteNumber(e.normal_coin_difference), 0);
+  const storedCost = entries.reduce((sum, e) => sum + toFiniteNumber(e.game_cost), 0);
+  const totalGameCost = totalProfit > 0 ? storedCost : 0;
+  return {
+    totalRecharge,
+    totalProfit,
+    totalGameCost,
+    totalTrueProfit: totalProfit - totalGameCost,
+  };
+}
+
+/**
+ * Groups entries by shift_report_id, applies the per-report rule to each
+ * report, then sums. Use for any multi-report view (dashboards, date ranges).
+ */
+export function reportTotalsFromStoredEntries(entries: StoredShiftEntry[]): ReportTotals {
+  const byReport = new Map<string, StoredShiftEntry[]>();
   for (const entry of entries) {
-    const name = entry.game_name ?? "Unknown";
-    const current = byGame.get(name) ?? { recharge: 0, profit: 0, costPctSum: 0, count: 0 };
-    current.recharge += toFiniteNumber(entry.real_recharge);
-    current.profit += toFiniteNumber(entry.normal_coin_difference);
-    current.costPctSum += toFiniteNumber(entry.game_cost_percentage);
-    current.count += 1;
-    byGame.set(name, current);
-  }
-  return Array.from(byGame.entries()).map(([gameName, g]) => {
-    const gameCostPercentage = g.count > 0 ? g.costPctSum / g.count : 0;
-    // Negative games owe $0 — they get coins back which will generate future recharge revenue.
-    const gameCost = g.profit > 0 ? (g.profit * gameCostPercentage) / 100 : 0;
-    return {
-      gameName,
-      realRecharge: g.recharge,
-      normalDifference: g.profit,
-      gameCostPercentage,
-      gameCost,
-      profit: g.profit,
-      trueProfit: g.profit - gameCost,
-    };
-  });
-}
-
-/**
- * Computes report totals from already-grouped-by-game rows.
- *
- * Per-game rule: negative games → $0 fee (handled in calculateGroupedGameTotals).
- * Report-level rule: if totalProfit <= 0, totalGameCost = 0.
- *
- * Scaling rule: when losing games drag totalProfit below sumPositiveProfits,
- * the effective rate on net profit would exceed any game's actual rate without scaling.
- * We scale: totalGameCost = sum(per-game costs) × (totalProfit / sumPositiveProfits).
- * This keeps the effective rate = weighted rate of positive games ≤ max game rate (15%).
- */
-export function calculateReportTotalsFromGroupedGames(groupedGames: GroupedGameTotals[]): ReportTotals {
-  const totalRecharge = groupedGames.reduce((sum, g) => sum + g.realRecharge, 0);
-  const totalProfit = groupedGames.reduce((sum, g) => sum + g.profit, 0);
-
-  if (totalProfit <= 0) {
-    return { totalRecharge, totalProfit, totalGameCost: 0, totalTrueProfit: totalProfit };
-  }
-
-  const sumPositiveProfits = groupedGames.reduce((sum, g) => sum + Math.max(g.profit, 0), 0);
-  const rawGameCost = groupedGames.reduce((sum, g) => sum + g.gameCost, 0);
-
-  // Scale game cost to net profit so effective rate stays within range of actual game rates.
-  const totalGameCost = sumPositiveProfits > 0
-    ? Math.max(rawGameCost * totalProfit / sumPositiveProfits, 0)
-    : 0;
-
-  const totalTrueProfit = totalProfit - totalGameCost;
-  return { totalRecharge, totalProfit, totalGameCost, totalTrueProfit };
-}
-
-/**
- * Full pipeline for a single report's entries:
- * 1. Group entries by game
- * 2. Compute game cost per grouped game
- * 3. Apply report-level rule on grouped totals
- */
-export function calculateReportTotals(entries: StoredEntryForReportTotals[]): ReportTotals {
-  const groupedGames = calculateGroupedGameTotals(entries);
-  return calculateReportTotalsFromGroupedGames(groupedGames);
-}
-
-/**
- * Groups entries by shift_report_id, applies calculateReportTotals to each group,
- * then sums. Use for multi-report views (owner dashboard, date ranges).
- */
-export function aggregateAcrossReports(entries: StoredEntryForReportTotals[]): ReportTotals {
-  const byReport = new Map<string, StoredEntryForReportTotals[]>();
-  for (const entry of entries) {
-    const id = entry.shift_report_id ?? "__unknown__";
+    const id = String(entry.shift_report_id ?? "__unknown__");
     const list = byReport.get(id) ?? [];
     list.push(entry);
     byReport.set(id, list);
   }
-  let totalRecharge = 0, totalProfit = 0, totalGameCost = 0, totalTrueProfit = 0;
+  const totals: ReportTotals = { totalRecharge: 0, totalProfit: 0, totalGameCost: 0, totalTrueProfit: 0 };
   for (const [, group] of byReport) {
-    const rt = calculateReportTotals(group);
-    totalRecharge += rt.totalRecharge;
-    totalProfit += rt.totalProfit;
-    totalGameCost += rt.totalGameCost;
-    totalTrueProfit += rt.totalTrueProfit;
+    const rt = singleReportTotalsFromStoredEntries(group);
+    totals.totalRecharge += rt.totalRecharge;
+    totals.totalProfit += rt.totalProfit;
+    totals.totalGameCost += rt.totalGameCost;
+    totals.totalTrueProfit += rt.totalTrueProfit;
   }
-  return { totalRecharge, totalProfit, totalGameCost, totalTrueProfit };
+  return totals;
 }
 
 export function formatCurrency(value: number): string {

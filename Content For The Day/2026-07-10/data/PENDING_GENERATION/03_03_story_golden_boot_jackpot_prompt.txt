@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 03
+Filename: 03_story_golden_boot_jackpot
+Format: image
+Tool: higgsfield_generate_image
+Orientation: vertical (9:16)
+Duration: N/A
+Post Time: 9:30 AM
+Platform: Facebook + Instagram
+Promo Type: todays_special_bonus
+Character: No character — object focus
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Close-up cinematic shot. A single oversized soccer boot sculpted entirely from solid gold, sitting on a pedestal of dark black marble. From the boot's opening, a cascade of gold coins pours out and spills down the pedestal. Lighting: warm directional gold beam from above, rest in deep shadow. Foreground: a few gold coins in sharp focus catching light. Background: pure darkness with faint dark emerald green glow at edges. Mood: trophy-level prestige, jackpot excitement, luxury. Style: photorealistic, cinematic, hyper-detailed gold textures. Color: gold, black, deep emerald. No text, no words, no letters in the image. Camera: slightly below eye level of boot, looking up to convey grandeur.

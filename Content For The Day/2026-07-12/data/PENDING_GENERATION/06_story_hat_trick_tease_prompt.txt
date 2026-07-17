@@ -1,0 +1,7 @@
+ASSET: 06_story_hat_trick_tease
+FORMAT: Story Image (9:16 vertical)
+TOOL: generate_image
+POST TIME: 1:00 PM — FB + IG Stories
+
+PROMPT:
+Vertical portrait shot for Stories. Setting: dark emerald background with atmospheric golden haze, large analogue-style gold clock face slightly blurred in background showing time approaching 3. Character: Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress with gold whistle on a chain, gold crown-style headpiece, deep bronze-brown skin, crimson red lipstick. Pose: she holds up three fingers directly toward camera, close to lens, other hand behind her back, knowing half-smile, one eyebrow slightly raised — the gesture is confident and suggestive of a countdown. Lighting: warm directional gold from above, dramatic shadows. Foreground: three gold coins arranged like a hat trick scoreboard near bottom edge. Background: softly blurred gold clock. Style: photorealistic, cinematic, mystery and anticipation mood. No text, no words, no letters in the image. Camera: close medium portrait, slightly below eye level looking up at her.

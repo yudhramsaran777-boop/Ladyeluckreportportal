@@ -1,0 +1,278 @@
+{
+  "date": "2026-07-03",
+  "theme": "Golden Kickoff — World Cup Friday",
+  "referral_code": "REF-WORLDCUP-847",
+  "characters_today": ["LADY_E", "LUCKY_LOU", "GOLDEN_DEALER"],
+  "world_cup_mode": true,
+
+  "promotional_content_map": {
+    "new_player_bonus": {
+      "post_id": "03",
+      "act": 2,
+      "format": "feed_image",
+      "description": "Lady E (World Cup variant) welcomes new players to Lady E Luck — warm, inviting, belonging. 'The game starts here. Your bonus is waiting.'"
+    },
+    "daily_bonus_wheel": {
+      "post_id": "09",
+      "act": 4,
+      "format": "story",
+      "description": "Urgent daily bonus wheel reminder — 'Resets at midnight. Have you spun yet?' Lucky Lou variant holding wheel."
+    },
+    "referral_code": {
+      "post_id": "07",
+      "act": 3,
+      "format": "groups_post",
+      "description": "Penalty Kick Free Spin referral push. Code: REF-WORLDCUP-847. 'Pass it like a perfect assist. You both score.'"
+    },
+    "daily_bonus": {
+      "post_id": "10",
+      "act": 4,
+      "format": "story",
+      "description": "Quick daily bonus reminder — 'Before the final whistle, claim yours.' Countdown urgency."
+    },
+    "todays_special_bonus": {
+      "post_id_feed": "06",
+      "post_id_story": "08",
+      "act": 3,
+      "format": "feed_image_and_story",
+      "description": "Today's Special: Hat Trick Bonus — 3 recharges during match hours (3PM–6PM) = stacked bonus. Golden stadium aesthetic. 'Three. Times. Three. Wins.'"
+    }
+  },
+
+  "acts": [
+    {
+      "act": 1,
+      "name": "THE OPENING",
+      "time_window": "6AM–11AM",
+      "energy": "High voltage launch — wake up the crowd, set the theme",
+      "posts": [
+        {
+          "post_id": "01",
+          "format": "reel",
+          "title": "Match Day at Lady E Luck",
+          "description": "Opening cinematic reel: Lady E in World Cup referee dress standing at center of a golden casino stadium. A soccer ball rolls into frame and transforms into a spinning gold casino chip. Golden whistle sound, then music drop. Lady E looks at camera — a slow, confident smile. Text-free visual. Sets the entire day's energy.",
+          "character": "LADY_E",
+          "world_cup_variation": true,
+          "promo_type": "theme_launch",
+          "platform": "Facebook + Instagram"
+        },
+        {
+          "post_id": "02",
+          "format": "feed_image",
+          "title": "Golden Boot Morning",
+          "description": "Wide cinematic shot of the Lady E Luck casino floor styled as a luxury stadium — emerald green carpet, gold arch lights, gold card tables. The Golden Dealer stands at the far end, motionless, a single gold coin balanced on his fingertip. No text, no words.",
+          "character": "GOLDEN_DEALER",
+          "world_cup_variation": false,
+          "promo_type": "atmosphere_set",
+          "platform": "Facebook + Instagram"
+        },
+        {
+          "post_id": "02b",
+          "format": "story",
+          "title": "Today's Match Day Energy",
+          "description": "Lucky Lou (World Cup variant) in green-and-gold soccer jersey + fishing hat with soccer ball sticker, standing in front of a stadium tunnel that glows gold. He's pumped up, fist raised. Behind him: the Lady E Luck logo glows like stadium floodlights.",
+          "character": "LUCKY_LOU",
+          "world_cup_variation": true,
+          "promo_type": "theme_launch",
+          "platform": "Facebook Story + Instagram Story"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "name": "THE WELCOME",
+      "time_window": "11AM–2PM",
+      "energy": "Warm, inviting — introduce characters, welcome new players",
+      "posts": [
+        {
+          "post_id": "03",
+          "format": "feed_image",
+          "title": "New Player Bonus — The Game Starts Here",
+          "description": "Lady E (World Cup variant — black and gold striped referee dress, gold whistle) stands at a golden entrance arch. Arms open in welcome, warm confident smile. Behind her: a grand emerald-lit casino hall stretching back like a stadium concourse. Foreground: scattered gold coins and a glowing welcome banner (visual, no text). Cinematic depth-of-field.",
+          "character": "LADY_E",
+          "world_cup_variation": true,
+          "promo_type": "new_player_bonus",
+          "platform": "Facebook + Instagram"
+        },
+        {
+          "post_id": "04",
+          "format": "story",
+          "title": "Lady E Welcomes You",
+          "description": "Close-up portrait: Lady E in World Cup outfit, looking directly into camera, soft warm gold light, slight smile. Regal and inviting. Background: shallow-focus emerald green stadium lights.",
+          "character": "LADY_E",
+          "world_cup_variation": true,
+          "promo_type": "new_player_bonus",
+          "platform": "Facebook Story + Instagram Story"
+        },
+        {
+          "post_id": "05",
+          "format": "story",
+          "title": "Meet Lucky Lou — He's Back",
+          "description": "Lucky Lou (World Cup variant) bursting out of a green locker room door into golden light, arms wide, huge grin, soccer jersey, fishing hat, clover in hand. Joy and momentum. This is his comeback.",
+          "character": "LUCKY_LOU",
+          "world_cup_variation": true,
+          "promo_type": "character_intro",
+          "platform": "Facebook Story + Instagram Story"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "name": "THE GOLDEN RUSH",
+      "time_window": "2PM–6PM",
+      "energy": "Peak deals energy — urgency, exclusivity, referral push, match-day alignment",
+      "posts": [
+        {
+          "post_id": "06",
+          "format": "feed_image",
+          "title": "Hat Trick Bonus — Today Only",
+          "description": "Three gold casino chips stacked on a soccer penalty spot on a dark emerald turf. Behind the chips: a goal net dripping golden coins. Warm directional stadium floodlight from above. Dramatic, luxurious. No text in image.",
+          "character": "none",
+          "world_cup_variation": true,
+          "promo_type": "todays_special_bonus",
+          "platform": "Facebook + Instagram"
+        },
+        {
+          "post_id": "07",
+          "format": "groups_post",
+          "title": "Penalty Kick Free Spin — Referral Code Drop",
+          "description": "Lucky Lou (World Cup variant) in mid-kick pose, leg extended, kicking a soccer ball that trails golden sparks. The ball is morphing into a casino chip mid-air. Background: roaring stadium, all in emerald and gold. Perfect action freeze-frame.",
+          "character": "LUCKY_LOU",
+          "world_cup_variation": true,
+          "promo_type": "referral_code",
+          "platform": "Facebook Groups"
+        },
+        {
+          "post_id": "08",
+          "format": "story",
+          "title": "Hat Trick Bonus — Story Reminder",
+          "description": "Overhead shot of three casino chips arranged in a triangle on dark emerald velvet. Each chip glows gold from within. Dramatic downlight. Background: faint stadium crowd silhouette.",
+          "character": "none",
+          "world_cup_variation": true,
+          "promo_type": "todays_special_bonus",
+          "platform": "Facebook Story + Instagram Story"
+        },
+        {
+          "post_id": "08b",
+          "format": "reel",
+          "title": "Golden Boot Jackpot — Mid-Day Drop",
+          "description": "Short cinematic reel: The Golden Dealer walks slowly through a casino floor styled as a stadium. He stops, removes a glowing golden boot trophy from inside his jacket, and places it on the card table. He looks up, half-shadowed under wide-brim hat. A single sentence on his lips: 'The boot belongs to the biggest.' Camera pushes in slowly. Atmosphere: distant crowd roar fading to casino ambient.",
+          "character": "GOLDEN_DEALER",
+          "world_cup_variation": false,
+          "promo_type": "golden_boot_jackpot",
+          "platform": "Facebook + Instagram"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "name": "JACKPOT PARADE",
+      "time_window": "6PM–10PM",
+      "energy": "Community wins, Argentina match energy, daily bonus push, maximum evening engagement",
+      "posts": [
+        {
+          "post_id": "09",
+          "format": "story",
+          "title": "Daily Bonus Wheel — Spin Before Midnight",
+          "description": "Close overhead shot of a spinning bonus wheel glowing emerald and gold. The spinning creates golden motion blur trails. At the center: a 4-leaf clover. Lucky Lou's hand is reaching in from frame edge to spin it. Urgency and excitement.",
+          "character": "LUCKY_LOU",
+          "world_cup_variation": false,
+          "promo_type": "daily_bonus_wheel",
+          "platform": "Facebook Story + Instagram Story"
+        },
+        {
+          "post_id": "10",
+          "format": "story",
+          "title": "Daily Bonus — Claim It Now",
+          "description": "Lady E (World Cup outfit) pointing directly at camera, confident expression, gold whistle around neck, slight lean forward. Behind her: a golden countdown glow. Direct, powerful, personal.",
+          "character": "LADY_E",
+          "world_cup_variation": true,
+          "promo_type": "daily_bonus",
+          "platform": "Facebook Story + Instagram Story"
+        },
+        {
+          "post_id": "11",
+          "format": "feed_image",
+          "title": "Summer Crew Jackpot Celebration",
+          "description": "The Summer Crew — 4 diverse players, mix of ages and backgrounds — celebrating together in an emerald-lit casino lounge styled with World Cup screen backgrounds. Champagne flutes (no alcohol labels), gold confetti raining, huge smiles. Lucky Lou is in the middle, clover over his head, soccer jersey, beaming. Group shot, wide angle, warm gold lighting from above.",
+          "character": "SUMMER_CREW + LUCKY_LOU",
+          "world_cup_variation": true,
+          "promo_type": "community_wins",
+          "platform": "Facebook + Instagram"
+        },
+        {
+          "post_id": "11b",
+          "format": "story",
+          "title": "Match Night at Lady E Luck",
+          "description": "Side-angle wide shot of the Lady E Luck lounge — players seated, multiple screens showing a golden pitch (no real team identifiers), emerald and gold ambient lighting, luxurious casino atmosphere. Everyone looks engaged and excited. Cinematic, warm, premium.",
+          "character": "SUMMER_CREW",
+          "world_cup_variation": true,
+          "promo_type": "atmosphere",
+          "platform": "Facebook Story + Instagram Story"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "name": "GOLDEN HOUR",
+      "time_window": "10PM–Midnight",
+      "energy": "Mystery, finale, tomorrow tease — Lucky Lou always wins at day's end",
+      "posts": [
+        {
+          "post_id": "12",
+          "format": "story",
+          "title": "Halftime Reload — Mystery Drop",
+          "description": "Close-up of a glowing golden envelope on dark green velvet. The envelope pulses with inner light, embossed with the Lady E Luck crown logo (visual, not text). Behind it: midnight stadium lights dim to a single spotlight. Mysterious, exclusive, urgent.",
+          "character": "none",
+          "world_cup_variation": false,
+          "promo_type": "halftime_reload_mystery",
+          "platform": "Facebook Story + Instagram Story"
+        },
+        {
+          "post_id": "13",
+          "format": "reel",
+          "title": "Lucky Lou Wins — The Final Whistle",
+          "description": "Lucky Lou (World Cup variant) reaction reel: He's watching a screen, tense — then the 'final whistle' sounds (stadium sound effect), and he ERUPTS. He jumps, clover flying up, fishing hat going sideways, soccer jersey, gold confetti exploding. He pumps his fist, looks at camera, huge grin. 'He ALWAYS ends the day winning.' Slow-mo replay of the fist pump. Energy: pure joy.",
+          "character": "LUCKY_LOU",
+          "world_cup_variation": true,
+          "promo_type": "lucky_lou_wins",
+          "platform": "Facebook + Instagram"
+        }
+      ]
+    }
+  ],
+
+  "song_of_the_day": {
+    "title": "Golden Kick",
+    "artist": "Lady E (feat. The Lady E Luck Crew)",
+    "genre": "Afrobeats / Trap Fusion",
+    "bpm": 105,
+    "key": "D minor",
+    "mood": "Stadium anthem — triumphant, electric, celebratory",
+    "instruments": "Stadium crowd roar intro, Afrobeats percussion, 808 bass, brass horns, hand drums, synth shimmer, coin-drop sound effects woven in",
+    "voice_character": "LADY_E",
+    "voice_preset": "Vesper",
+    "voice_id": "c3204739-4084-41a3-9dc5-c805b307ec18",
+    "world_cup_inspired": true,
+    "shakira_dai_dai_influenced": true,
+    "lyrics": {
+      "intro": "Ohhhh ohhhh ohhhh... (crowd chant builds)\nLady E Luck, tonight we rise\nThe pitch is golden, gold is the prize",
+      "verse_1": "Friday night, the stadium glows\nEverybody here, everybody knows\nDark green and gold, that's our colors right\nWe don't just play — we WIN tonight\nBoot on the ball, spin on the wheel\nEvery moment here is real\nLucky Lou said 'Watch me go'\nGolden Dealer said 'Put it on the show'",
+      "pre_chorus": "Match day, pay day, Lady E say\nScore your bonus, don't delay\nThe whistle blows at midnight sharp\nBut right now — we party from the heart",
+      "chorus": "Golden Kick, golden spin\nLady E Luck, let the games begin\nScore big, win big, tonight's the night\nGolden boot shining, golden light\nGolden Kick — (aye aye aye)\nGolden Spin — (aye aye aye)\nWe don't lose, we don't lose\nLady E Luck — Golden Kick!",
+      "verse_2": "Argentina in Miami, 6 o'clock\nWe watching every second, we can't stop\nThree recharges equal Hat Trick win\nPass your code — let your people in\nHalftime Reload at the midnight hour\nMystery drop, feel the power\nThe Golden Dealer tips his hat\nYou already know what's after that",
+      "bridge": "Ohhhh — tonight we celebrate\n250 years and the World Cup great\nUSA soil, Lady E floor\nGolden Friday, we want MORE\n(crowd chant: More! More! More!)\nLucky Lou says he always wins\nAnd tonight — it begins again",
+      "final_chorus": "Golden Kick, golden spin\nLady E Luck, let the games begin\nScore big, win big, tonight's the night\nGolden boot shining, golden light\nGolden Kick — (aye aye aye)\nGolden Spin — (aye aye aye)\nWe don't lose, we don't lose\nLady E Luck — Golden Kick!",
+      "outro": "Lady E Luck... Golden Kickoff...\nWorld Cup Friday... we don't stop...\nOhhhh ohhhh ohhhh...\n(crowd roar fades to coin drops)\nSee you at the Golden Hour."
+    }
+  },
+
+  "character_arcs": {
+    "LADY_E": "Opens the day as the commanding referee-inspired figure who sets the rules and the tone. Welcomes new players mid-morning with warmth and power. Returns at evening to drive daily bonus urgency. Anchors the brand's premium identity throughout.",
+    "LUCKY_LOU": "Introduced mid-morning as the lovable underdog who's match-day ready. Nearly loses at every turn during the day but keeps his spirit. At Golden Hour (10PM+) — he WINS. Celebrates the final whistle. His arc always ends in victory.",
+    "GOLDEN_DEALER": "Silent and mysterious. Appears in Act 1 to set atmosphere and again in Act 3 to announce the Golden Boot Jackpot with a single line. Never explains. Never loses. His presence signals that something big is about to happen."
+  },
+
+  "total_posts": 15,
+  "post_ids": ["01", "02", "02b", "03", "04", "05", "06", "07", "08", "08b", "09", "10", "11", "11b", "12", "13"]
+}

@@ -1,0 +1,7 @@
+ASSET: 05b_story_match_energy
+FORMAT: Story Image (vertical 9:16)
+TOOL: generate_image
+CHARACTER: Lucky Lou (World Cup Variant)
+
+PROMPT:
+Vertical 9:16 cinematic story image. Medium shot. Male character, mid-30s, stocky-average build, wide expressive eyes, massive excited smile, wearing a green-and-gold soccer jersey with no real team logos, wide fishing hat covered in slot machine emoji stickers and gold star stickers with a small soccer ball sticker added — pumping both fists in the air in excitement, 4-leaf clover tucked into jersey pocket. Setting: dark casino lounge with large stadium-style gold-glowing screens visible behind him. Lighting: warm gold directional overhead light, excitement energy. Mood: electric pre-match fan energy, fun, communal. Style: photorealistic cinematic. Color: dark green, black, gold. No text, no words, no letters. Camera: medium shot, slight upward tilt for energy.

@@ -1,0 +1,9 @@
+ASSET: 01_reel_launch_whistle
+FORMAT: Reel / Video (15s vertical 9:16)
+TOOL: generate_video
+CHARACTER: Lady E (World Cup Variant)
+
+PROMPT:
+15-second vertical 9:16 cinematic video clip. Shot: Lady E in black-and-gold referee-inspired dress standing at center of a massive dark emerald-green casino floor that blends into a soccer stadium. Movement: slow push-in as she raises a golden whistle to her lips and blows — a wave of gold coins, casino chips shaped like soccer balls, and glittering confetti explodes outward toward camera. Camera movement: slow dramatic push forward with slight upward tilt. Character action: raises whistle, blows, arms spread wide as coins cascade around her. Lighting: warm gold directional light from above catching coin rain, cinematic lens flare. Atmosphere: cinematic coin particle rain, stadium crowd ambiance implied, deep black and gold color saturation. Style: photorealistic cinematic. Color: dark emerald green, black, gold. No text, no words, no letters in the video.
+
+LADY E WC APPEARANCE: Black female character, mid-30s to early 40s, wearing a black and gold striped fitted referee-inspired dress with gold whistle on a gold chain, long black gloves, large gold hoop earrings, gold bracelet, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, tall confident posture

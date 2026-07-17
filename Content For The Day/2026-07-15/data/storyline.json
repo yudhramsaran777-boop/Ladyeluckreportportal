@@ -1,0 +1,94 @@
+{
+  "date": "2026-07-15",
+  "theme": "Semifinal Showdown",
+  "world_cup_mode": true,
+  "characters_today": ["LADY_E_WC", "LUCKY_LOU_WC", "GOLDEN_DEALER"],
+  "character_arcs": {
+    "LADY_E_WC": "Referee of the day — black/gold striped referee-inspired dress + gold whistle. Opens the day with the kickoff whistle, reveals deals like calling plays, closes Golden Hour with the final whistle.",
+    "LUCKY_LOU_WC": "Wearing green-and-gold soccer jersey (no real logos) + fishing hat with soccer ball sticker. Spends all day 'almost scoring' — hits the post at noon, misses a header at 6PM — then buries the winning goal-style jackpot at 11PM. Always ends the day winning.",
+    "GOLDEN_DEALER": "Silent presence at the penalty spot. Appears once in Act 3 to reveal the Golden Boot Jackpot with a single spinning chip. One sentence max."
+  },
+  "referral_code": "REF-GOAL-347",
+  "deals": [
+    {"name": "Golden Boot Jackpot", "window": "All day", "mechanic": "Biggest recharge of the day wins a multiplier bonus", "line": "Score the biggest. Win the boot."},
+    {"name": "Hat Trick Bonus", "window": "3PM-6PM (match window)", "mechanic": "3 recharges during match hours = stacked bonus", "line": "Three times. Three wins."},
+    {"name": "Penalty Kick Free Spin", "window": "All day (referral)", "mechanic": "Share code REF-GOAL-347, friend joins, both get a free spin bonus", "line": "Pass it. They score. You both win."},
+    {"name": "Halftime Reload", "window": "10PM-Midnight", "mechanic": "Mystery midnight drop for active players", "line": "The second half always surprises."}
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "name": "THE OPENING — Kickoff Whistle",
+      "window": "6AM-11AM",
+      "posts": [
+        {"post_id": "01", "format": "reel", "promo_type": "theme_launch", "concept": "Lady E in referee dress blows gold whistle in the casino lounge; stadium floodlights flare, gold confetti falls like a kickoff. Semifinal day is HERE."},
+        {"post_id": "02", "format": "image_feed", "promo_type": "golden_boot_deal", "concept": "Golden soccer boot on a pedestal dripping gold coins, dark emerald turf background. Golden Boot Jackpot reveal — biggest recharge wins."},
+        {"post_id": "03", "format": "image_story", "promo_type": "daily_bonus_wheel", "concept": "Bonus wheel styled as a soccer ball mid-spin, gold segments glowing. Morning spin reminder — resets at midnight."}
+      ]
+    },
+    {
+      "act": 2,
+      "name": "THE WELCOME — New Signings",
+      "window": "11AM-2PM",
+      "posts": [
+        {"post_id": "04", "format": "image_feed", "promo_type": "new_player_bonus", "concept": "Lady E holds open a gold-trimmed locker-room door revealing a glowing VIP lounge. New players are today's new signings — welcome bonus. 'You belong here.'"},
+        {"post_id": "05", "format": "image_story", "promo_type": "character_moment", "concept": "Lucky Lou in soccer jersey lines up a penalty against a goal net dripping gold coins — ball hits the post. SO close. Almost-win energy before the match."},
+        {"post_id": "06", "format": "image_story", "promo_type": "pre_match_hype", "concept": "Stadium tunnel view with casino chips lined up like players walking out. 2 hours to kickoff — pre-match hype."}
+      ]
+    },
+    {
+      "act": 3,
+      "name": "THE GOLDEN RUSH — Match Window",
+      "window": "2PM-6PM",
+      "posts": [
+        {"post_id": "07", "format": "image_feed", "promo_type": "hat_trick_deal", "concept": "Three gold casino chips arranged like a hat trick of goals in the net, each glowing brighter. Hat Trick Bonus live 3PM-6PM."},
+        {"post_id": "08", "format": "image_story", "promo_type": "during_match", "concept": "Golden Dealer stands at the penalty spot, single chip spinning on the turf. Silent tension. Match is live — Stories only."},
+        {"post_id": "09", "format": "reel", "promo_type": "referral_push", "concept": "Penalty Kick Free Spin: ball passed between two players morphs into a spinning gold chip mid-flight. Share REF-GOAL-347 — you both win."},
+        {"post_id": "10", "format": "groups_post", "promo_type": "referral_community", "concept": "Community banter post: who takes the trophy — and who's claiming Hat Trick Bonus? Drop your emoji. Referral code shared."}
+      ]
+    },
+    {
+      "act": 4,
+      "name": "JACKPOT PARADE — Full Time Celebration",
+      "window": "6PM-10PM",
+      "posts": [
+        {"post_id": "11", "format": "image_feed", "promo_type": "community_wins", "concept": "The Summer Crew celebrates in the VIP lounge like a stadium crowd, gold confetti, phones raised. Full-time celebration — community wins parade."},
+        {"post_id": "12", "format": "image_story", "promo_type": "daily_bonus", "concept": "Elegant gold pocket watch at 11:55 on emerald felt. Daily bonus reminder — claim before the day resets."},
+        {"post_id": "13", "format": "image_story", "promo_type": "special_bonus_story", "concept": "Golden boot silhouette lit by a single spotlight — Golden Boot Jackpot last-call story (double-post of today's special)."}
+      ]
+    },
+    {
+      "act": 5,
+      "name": "GOLDEN HOUR — Extra Time",
+      "window": "10PM-Midnight",
+      "posts": [
+        {"post_id": "14", "format": "image_story", "promo_type": "halftime_reload", "concept": "Mystery gold envelope on a penalty spot under a floodlight beam. Halftime Reload mystery drop is live."},
+        {"post_id": "15", "format": "reel", "promo_type": "lucky_lou_wins", "concept": "Lucky Lou finally scores — top corner — net explodes into gold coins, he lifts his fishing hat like a trophy. Tomorrow tease: 'The final is coming.'"}
+      ]
+    }
+  ],
+  "song_of_the_day": {
+    "title": "Golden Kick",
+    "genre": "Afrobeats/Trap fusion",
+    "bpm": 105,
+    "key": "F minor",
+    "mood": "Stadium anthem energy — triumphant, rolling percussion, brass stabs",
+    "lead_voice": "Lady E (Vesper preset, voice_id c3204739-4084-41a3-9dc5-c805b307ec18)",
+    "instruments": "Log drums, 808 bass, stadium claps, brass section stabs, shekere, crowd chant layers, airhorn accents",
+    "lyrics": {
+      "intro": "(whistle blows)\nOhhh... you hear the crowd?\nLady E on the pitch tonight\nGolden hour, golden light\nLet's go!",
+      "verse_1": "Step out the tunnel, floodlights on me\nEmerald turf but the crown stays gold, see\nNinety minutes, nah, we play all day\nEvery spin's a shot and it's headed my way\nLou's on the wing with the clover in hand\nDealer at the spot, silent where he stands\nWhistle on my chain, I decide the game\nSemifinal fire, go and light that flame",
+      "pre_chorus": "One kick... (one kick)\nOne spin... (one spin)\nThe net is made of gold\nand we're bringing it in",
+      "chorus": "Golden kick, golden kick\nWatch it fly, watch it stick\nTop corner, hear it ring\nCrowd goes up, we're the kings\nGolden kick, golden kick\nFortune moves, better be quick\nWhen the whistle hits the night\nEvery win is gold tonight",
+      "verse_2": "Halftime? Nah, we reload the play\nHat trick bonus 'fore the end of the day\nPass it to a friend, penalty gets paid\nBoth of us score when the code gets played\nMidnight drop like a stoppage-time goal\nSecond half surprise, watch the story unfold\nAtlanta to the lounge, we run the show\nFinal whistle blows and the gold still glows",
+      "bridge": "(crowd chant: OHHH — OH OH OH)\nWhen they play it safe... we play it bold\n(OHHH — OH OH OH)\nWhen the night comes down... it comes down gold",
+      "final_chorus": "Golden kick, golden kick\nWatch it fly, watch it stick\nTop corner, hear it ring\nCrowd goes up, we're the kings\nGolden kick, golden kick\nFortune moves, better be quick\nExtra time is ours tonight\nEvery win is gold tonight",
+      "outro": "(final whistle)\nThat's full time, baby\nBut at Lady E Luck?\nWe always play extra time\n(crowd fades)"
+    }
+  },
+  "voice_lines": [
+    {"audio_id": "16", "character": "Lady E", "voice_id": "c3204739-4084-41a3-9dc5-c805b307ec18", "text": "Semifinal day, players. The whistle is mine, the gold is yours. Kickoff at Lady E Luck starts now.", "use": "Act 1 launch reel voiceover"},
+    {"audio_id": "17", "character": "Lucky Lou", "voice_id": "73a45c18-0c56-4642-a61e-f6b303f8ded1", "text": "Hit the post AGAIN? Oh come on! You know what — extra time. That's my time. Lou always finds the net.", "use": "Act 5 winning reel voiceover"},
+    {"audio_id": "18", "character": "Golden Dealer", "voice_id": "dc382508-c8bd-443c-8cb2-46e57b8d2e6f", "text": "The boot goes to the bold.", "use": "Act 3 Golden Boot moment"}
+  ]
+}

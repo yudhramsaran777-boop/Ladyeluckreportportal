@@ -1,0 +1,7 @@
+ASSET: 11_story_daily_bonus_dealer
+FORMAT: Story Image (9:16 vertical)
+TOOL: generate_image
+POST TIME: 7:30 PM — FB + IG Stories
+
+PROMPT:
+Vertical dramatic portrait for Stories. Setting: near-total darkness except for a single narrow gold spotlight from directly above illuminating the character from crown to chest. A large ornate gold clock face is blurred softly in the dark background, showing time around 7:30. Character: tall male character, all-black slim-cut suit, gold pocket square perfectly folded, wide-brim hat casting shadow over the upper half of face showing only jaw and lips, completely still posture. Pose: one gloved hand extends slowly toward camera holding a single large gold coin between thumb and forefinger — the coin catches the spotlight and glows intensely. The other hand is at his side. Absolute stillness and tension. Lighting: single narrow spotlight from above, everything else in deep shadow, the gold coin glowing. Foreground: the glowing coin takes up lower-center frame. Background: deep black with barely-visible clock face. Style: photorealistic, cinematic noir, luxury tension. No text, no words, no letters in the image. Camera: close medium portrait, low angle. Space at top and bottom for Luis overlay.

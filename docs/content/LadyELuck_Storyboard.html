@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lady E Luck — Super Bowl Commercial Storyboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Inter:wght@400;600;700&display=swap');
+
+  :root {
+    --gold: #FFD700;
+    --deep-gold: #B8860B;
+    --purple: #5B21B6;
+    --light-purple: #7C3AED;
+    --dark: #1a1a2e;
+    --cream: #FFF9E6;
+    --red: #EF4444;
+    --sky: #38BDF8;
+    --green: #22C55E;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f1a;
+    color: #fff;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, var(--purple) 0%, #1a1a2e 50%, #2d1b69 100%);
+    border-bottom: 4px solid var(--gold);
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .header-left h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-shadow: 3px 3px 0 #000, 0 0 30px rgba(255,215,0,0.5);
+  }
+  .header-left p {
+    color: #c4b5fd;
+    font-size: 0.95rem;
+    margin-top: 4px;
+  }
+  .header-badge {
+    background: var(--gold);
+    color: #000;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ── SECTION TITLES ── */
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  .section-title {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: var(--gold);
+    border-left: 6px solid var(--gold);
+    padding-left: 16px;
+    margin-bottom: 28px;
+  }
+
+  /* ── PALETTE ── */
+  .palette-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .swatch-color {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    border: 3px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  }
+  .swatch span {
+    font-size: 0.75rem;
+    color: #a0a0b0;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* ── CHARACTER CARDS ── */
+  .char-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .char-card {
+    background: #1a1a2e;
+    border: 2px solid var(--purple);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .char-card.lady { border-color: var(--gold); }
+  .char-header {
+    padding: 16px 20px;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .char-header.joe { background: linear-gradient(90deg, #1e3a5f, #1a1a2e); color: var(--sky); }
+  .char-header.lady { background: linear-gradient(90deg, #3b0764, #1a1a2e); color: var(--gold); }
+  .char-avatar {
+    width: 380px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .char-body {
+    padding: 20px;
+  }
+  .trait-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .trait-list li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #d1d1e0;
+  }
+  .trait-list li span.label {
+    color: var(--gold);
+    font-weight: 700;
+    min-width: 80px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  /* ── SVG CHARACTERS ── */
+  .joe-svg, .lady-svg { width: 100%; height: 100%; }
+
+  /* ── STORYBOARD PANELS ── */
+  .panels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 28px;
+  }
+  .panel {
+    background: #1a1a2e;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid #2d2d4e;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .panel:hover { border-color: var(--gold); transform: translateY(-3px); }
+
+  .panel-header {
+    background: var(--purple);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .panel-header.scene1 { background: #1e3a5f; }
+  .panel-header.scene2 { background: #1a3a1a; }
+  .panel-header.scene3 { background: #3a1a1a; }
+  .panel-header.scene4 { background: #3b0764; }
+  .panel-header.scene5 { background: #0f3a2a; }
+  .panel-header.scene6 { background: #3a2500; }
+
+  .panel-num {
+    font-family: 'Bangers', cursive;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+  .panel-time {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 10px;
+  }
+
+  .panel-art {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .panel-body {
+    padding: 16px 18px;
+  }
+  .panel-body h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .panel-body p {
+    font-size: 0.83rem;
+    color: #b0b0c8;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .dialogue-box {
+    background: rgba(255,255,255,0.05);
+    border-left: 3px solid var(--gold);
+    padding: 8px 12px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.82rem;
+    color: #e0d8ff;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  .meta-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .tag {
+    background: rgba(91,33,182,0.3);
+    border: 1px solid var(--light-purple);
+    color: #c4b5fd;
+    font-size: 0.72rem;
+    padding: 3px 9px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .tag.sfx { background: rgba(239,68,68,0.2); border-color: var(--red); color: #fca5a5; }
+  .tag.cam { background: rgba(56,189,248,0.2); border-color: var(--sky); color: #bae6fd; }
+  .tag.tone { background: rgba(34,197,94,0.2); border-color: var(--green); color: #bbf7d0; }
+
+  /* ── FOOTER ── */
+  .footer {
+    border-top: 2px solid #2d2d4e;
+    padding: 24px 40px;
+    text-align: center;
+    color: #555577;
+    font-size: 0.82rem;
+    margin-top: 40px;
+  }
+  .footer span { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <h1>🎲 LADY E LUCK</h1>
+    <p>Super Bowl Commercial · Cartoon Style · 60-Second Spot · Visual Storyboard v1.0</p>
+  </div>
+  <div>
+    <div class="header-badge">🎬 Production Ready</div>
+  </div>
+</div>
+
+<div class="section">
+
+  <!-- COLOR PALETTE -->
+  <h2 class="section-title">🎨 Color Palette</h2>
+  <div class="palette-grid">
+    <div class="swatch"><div class="swatch-color" style="background:#FFD700;"></div><span>Gold<br>#FFD700</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#5B21B6;"></div><span>Royal Purple<br>#5B21B6</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#1a1a2e;"></div><span>Deep Night<br>#1A1A2E</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#38BDF8;"></div><span>Cartoon Sky<br>#38BDF8</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#EF4444;"></div><span>Danger Red<br>#EF4444</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#F97316;"></div><span>Comic Orange<br>#F97316</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#22C55E;"></div><span>Lucky Green<br>#22C55E</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#FFF9E6;"></div><span>Cream White<br>#FFF9E6</span></div>
+  </div>
+
+  <!-- CHARACTER DESIGN -->
+  <h2 class="section-title">👤 Character Design Sheets</h2>
+  <div class="char-grid">
+
+    <!-- JOE -->
+    <div class="char-card">
+      <div class="char-header joe">
+        <span>💼</span> AVERAGE JOE
+      </div>
+      <div class="char-avatar" style="background: linear-gradient(180deg,#1e3a5f 0%,#0f2a4a 100%);">
+        <svg viewBox="0 0 200 200" width="180" height="180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Body -->
+          <rect x="70" y="110" width="60" height="70" rx="8" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3"/>
+          <!-- Collar & tie -->
+          <polygon points="100,115 88,130 100,128 112,130" fill="#fff"/>
+          <rect x="96" y="128" width="8" height="30" rx="2" fill="#ef4444"/>
+          <!-- Arms -->
+          <rect x="40" y="110" width="32" height="18" rx="8" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <rect x="128" y="110" width="32" height="18" rx="8" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <!-- Hands -->
+          <circle cx="40" cy="119" r="10" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <circle cx="160" cy="119" r="10" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <!-- Head -->
+          <ellipse cx="100" cy="78" rx="38" ry="38" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+          <!-- Hair (messy) -->
+          <ellipse cx="100" cy="42" rx="36" ry="18" fill="#92400e"/>
+          <ellipse cx="76" cy="46" rx="10" ry="8" fill="#92400e"/>
+          <ellipse cx="124" cy="46" rx="10" ry="8" fill="#92400e"/>
+          <!-- Eyes (wide surprised) -->
+          <ellipse cx="86" cy="76" rx="10" ry="12" fill="#fff" stroke="#1f2937" stroke-width="2"/>
+          <ellipse cx="114" cy="76" rx="10" ry="12" fill="#fff" stroke="#1f2937" stroke-width="2"/>
+          <circle cx="88" cy="78" r="5" fill="#1f2937"/>
+          <circle cx="116" cy="78" r="5" fill="#1f2937"/>
+          <circle cx="89" cy="76" r="2" fill="#fff"/>
+          <circle cx="117" cy="76" r="2" fill="#fff"/>
+          <!-- Mouth (open surprised) -->
+          <ellipse cx="100" cy="98" rx="12" ry="8" fill="#7f1d1d"/>
+          <rect x="94" y="94" width="12" height="4" rx="2" fill="#fbbf24"/>
+          <!-- Sweat drop -->
+          <ellipse cx="130" cy="60" rx="5" ry="7" fill="#60a5fa"/>
+          <!-- Stars around head -->
+          <text x="50" y="50" font-size="16" fill="#FFD700">★</text>
+          <text x="148" y="58" font-size="12" fill="#FFD700">✦</text>
+          <!-- Legs -->
+          <rect x="74" y="176" width="20" height="20" rx="4" fill="#1e3a5f"/>
+          <rect x="106" y="176" width="20" height="20" rx="4" fill="#1e3a5f"/>
+        </svg>
+      </div>
+      <div class="char-body">
+        <ul class="trait-list">
+          <li><span class="label">Style</span> Looney Tunes everyman — rumpled shirt, loose tie, messy brown hair</li>
+          <li><span class="label">Build</span> Slightly pudgy, round head, huge expressive eyes, rubbery limbs</li>
+          <li><span class="label">Color</span> Blue shirt, red tie, tan skin (#FBBF24), dark brown hair</li>
+          <li><span class="label">Expression</span> Perpetually stunned — jaw drops, stars orbit head, sweat drops</li>
+          <li><span class="label">Animation</span> Stretchy physics — squash & stretch on every impact</li>
+          <li><span class="label">Voice</span> Nasally everyman, exasperated, think Charlie Brown grown up</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- LADY E LUCK -->
+    <div class="char-card lady">
+      <div class="char-header lady">
+        <span>👑</span> LADY E LUCK
+      </div>
+      <div class="char-avatar" style="background: radial-gradient(ellipse at 50% 30%, #3b0764 0%, #1a1a2e 70%);">
+        <svg viewBox="0 0 200 200" width="180" height="180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Glow aura -->
+          <ellipse cx="100" cy="100" rx="90" ry="90" fill="rgba(255,215,0,0.05)"/>
+          <ellipse cx="100" cy="100" rx="70" ry="70" fill="rgba(255,215,0,0.08)"/>
+          <!-- Gown -->
+          <path d="M60,120 Q50,180 100,195 Q150,180 140,120 Q120,135 100,132 Q80,135 60,120Z" fill="#7C3AED" stroke="#FFD700" stroke-width="2"/>
+          <!-- Gown sparkles -->
+          <text x="70" y="165" font-size="10" fill="#FFD700">✦</text>
+          <text x="112" y="155" font-size="8" fill="#FFD700">✦</text>
+          <text x="90" y="185" font-size="10" fill="#FFD700">★</text>
+          <!-- Torso -->
+          <rect x="78" y="105" width="44" height="30" rx="8" fill="#6D28D9" stroke="#FFD700" stroke-width="2"/>
+          <!-- Gold bodice trim -->
+          <rect x="78" y="105" width="44" height="8" rx="4" fill="#FFD700" opacity="0.8"/>
+          <!-- Arms -->
+          <rect x="48" y="108" width="32" height="16" rx="8" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <rect x="120" y="108" width="32" height="16" rx="8" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <!-- Hand holding phone -->
+          <circle cx="48" cy="116" r="10" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <rect x="28" y="106" width="22" height="38" rx="4" fill="#1f2937" stroke="#38BDF8" stroke-width="2"/>
+          <rect x="30" y="108" width="18" height="30" rx="2" fill="#7C3AED"/>
+          <text x="32" y="118" font-size="7" fill="#FFD700">Lady</text>
+          <text x="31" y="126" font-size="7" fill="#FFD700">ELuck</text>
+          <text x="31" y="134" font-size="6" fill="#fff">.com</text>
+          <!-- Other hand snapping -->
+          <circle cx="152" cy="116" r="10" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <!-- Snap sparkle -->
+          <text x="158" y="108" font-size="14" fill="#FFD700">✨</text>
+          <!-- Neck -->
+          <rect x="92" y="96" width="16" height="14" rx="4" fill="#fbbf24"/>
+          <!-- Head -->
+          <ellipse cx="100" cy="72" rx="34" ry="34" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+          <!-- Hair (elegant updo) -->
+          <ellipse cx="100" cy="40" rx="32" ry="20" fill="#1f2937"/>
+          <ellipse cx="78" cy="50" rx="12" ry="10" fill="#1f2937"/>
+          <ellipse cx="122" cy="50" rx="12" ry="10" fill="#1f2937"/>
+          <!-- Hair curl -->
+          <path d="M74,60 Q66,52 72,45" stroke="#1f2937" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <!-- Crown -->
+          <polygon points="80,36 86,20 93,34 100,16 107,34 114,20 120,36" fill="#FFD700" stroke="#B8860B" stroke-width="1.5"/>
+          <circle cx="100" cy="18" r="4" fill="#ef4444"/>
+          <circle cx="87" cy="22" r="3" fill="#60a5fa"/>
+          <circle cx="113" cy="22" r="3" fill="#22c55e"/>
+          <!-- Sunglasses -->
+          <rect x="78" y="68" width="20" height="12" rx="6" fill="#1f2937" stroke="#FFD700" stroke-width="1.5"/>
+          <rect x="102" y="68" width="20" height="12" rx="6" fill="#1f2937" stroke="#FFD700" stroke-width="1.5"/>
+          <line x1="98" y1="74" x2="102" y2="74" stroke="#FFD700" stroke-width="2"/>
+          <line x1="68" y1="74" x2="78" y2="74" stroke="#FFD700" stroke-width="2"/>
+          <line x1="122" y1="74" x2="132" y2="74" stroke="#FFD700" stroke-width="2"/>
+          <!-- Smile -->
+          <path d="M88,90 Q100,100 112,90" stroke="#d97706" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- Halo sparkles -->
+          <text x="148" y="42" font-size="16" fill="#FFD700">★</text>
+          <text x="36" y="50" font-size="12" fill="#FFD700">✦</text>
+          <text x="155" y="70" font-size="10" fill="#FFD700">✦</text>
+        </svg>
+      </div>
+      <div class="char-body">
+        <ul class="trait-list">
+          <li><span class="label">Style</span> Glamorous goddess meets cartoon queen — flowing purple gown, gold trim</li>
+          <li><span class="label">Build</span> Tall, elegant silhouette, always slightly glowing, crown tilted sassily</li>
+          <li><span class="label">Color</span> Purple gown (#7C3AED), gold accents (#FFD700), dark hair, warm tan skin</li>
+          <li><span class="label">Props</span> Glowing smartphone showing LadyELuck.com, sparkling coin aura</li>
+          <li><span class="label">Expression</span> Confident smirk, chef's kiss, raised eyebrow — always in control</li>
+          <li><span class="label">Voice</span> Deep, rich, commanding yet warm — with a laugh that shakes coins loose</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- STORYBOARD PANELS -->
+  <h2 class="section-title">🎬 Scene-by-Scene Storyboard</h2>
+  <div class="panels-grid">
+
+    <!-- SCENE 1 -->
+    <div class="panel">
+      <div class="panel-header scene1">
+        <span class="panel-num">SCENE 1 · "THE MORNING FROM HELL"</span>
+        <span class="panel-time">0:00 – 0:08</span>
+      </div>
+      <div class="panel-art" style="background: linear-gradient(180deg,#fbbf24 0%,#f97316 100%);">
+        <svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Bedroom BG -->
+          <rect width="320" height="180" fill="#fde68a"/>
+          <!-- Floor -->
+          <rect x="0" y="140" width="320" height="40" fill="#d97706"/>
+          <!-- Bed -->
+          <rect x="10" y="80" width="100" height="65" rx="8" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+          <rect x="10" y="80" width="100" height="25" rx="8" fill="#bfdbfe"/>
+          <!-- Pillow -->
+          <rect x="18" y="84" width="45" height="18" rx="6" fill="#fff"/>
+          <!-- Alarm Clock -->
+          <circle cx="130" cy="100" r="18" fill="#ef4444" stroke="#000" stroke-width="2"/>
+          <text x="118" y="105" font-size="12" fill="#fff" font-weight="bold">6:00</text>
+          <!-- Banana peel on floor -->
+          <path d="M160,145 Q180,130 200,145 Q190,160 160,145Z" fill="#fef08a" stroke="#d97706" stroke-width="2"/>
+          <path d="M165,143 Q185,128 205,143" stroke="#d97706" stroke-width="2" fill="none"/>
+          <!-- Joe sliding on banana peel with stars -->
+          <!-- Joe body (sideways) -->
+          <ellipse cx="230" cy="158" rx="35" ry="18" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+          <!-- Joe head bouncing -->
+          <circle cx="270" cy="140" r="25" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <ellipse cx="262" cy="136" rx="7" ry="9" fill="#fff"/>
+          <ellipse cx="278" cy="136" rx="7" ry="9" fill="#fff"/>
+          <circle cx="264" cy="138" r="3" fill="#000"/>
+          <circle cx="280" cy="138" r="3" fill="#000"/>
+          <!-- Open mouth -->
+          <ellipse cx="271" cy="152" rx="8" ry="6" fill="#7f1d1d"/>
+          <!-- Stars -->
+          <text x="288" y="120" font-size="18" fill="#FFD700">★</text>
+          <text x="242" y="120" font-size="14" fill="#FFD700">✦</text>
+          <text x="304" y="132" font-size="12" fill="#ef4444">★</text>
+          <!-- Dog staring -->
+          <ellipse cx="60" cy="148" rx="22" ry="16" fill="#92400e"/>
+          <circle cx="60" cy="132" r="14" fill="#92400e"/>
+          <ellipse cx="54" cy="128" rx="7" ry="9" fill="#78350f"/>
+          <ellipse cx="66" cy="128" rx="7" ry="9" fill="#78350f"/>
+          <circle cx="56" cy="131" r="3" fill="#000"/>
+          <circle cx="68" cy="131" r="3" fill="#000"/>
+          <!-- SFX text -->
+          <text x="155" y="50" font-family="Impact" font-size="22" fill="#ef4444" stroke="#fff" stroke-width="1">BOING!</text>
+          <text x="240" y="70" font-family="Impact" font-size="16" fill="#f97316" stroke="#fff" stroke-width="1">SPLAT!</text>
+          <!-- Water bowl -->
+          <ellipse cx="220" cy="165" rx="28" ry="12" fill="#38bdf8" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="panel-body">
+        <h3>The Morning From Hell</h3>
+        <p>Joe wakes up, steps out of bed onto a banana peel, slides across the floor and face-plants into the dog's water bowl. Stars orbit his head. The dog walks away unimpressed.</p>
+        <div class="dialogue-box">"...Good morning to me."</div>
+        <div class="meta-row">
+          <span class="tag cam">WIDE SHOT → CLOSE</span>
+          <span class="tag sfx">BOING! SPLAT! Slide Whistle</span>
+          <span class="tag tone">Slapstick Comedy</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 2 -->
+    <div class="panel">
+      <div class="panel-header scene2">
+        <span class="panel-num">SCENE 2 · "THE COMMUTE"</span>
+        <span class="panel-time">0:08 – 0:16</span>
+      </div>
+      <div class="panel-art" style="background: linear-gradient(180deg,#1e3a5f 0%,#1a3a1a 100%);">
+        <svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sky split: sun on Joe's left, rain on Joe -->
+          <rect width="160" height="120" fill="#fde68a"/>
+          <rect x="160" y="0" width="160" height="120" fill="#1e3a5f"/>
+          <!-- Sun on left side -->
+          <circle cx="60" cy="45" r="30" fill="#FFD700"/>
+          <line x1="60" y1="5" x2="60" y2="15" stroke="#FFD700" stroke-width="3"/>
+          <line x1="95" y1="45" x2="105" y2="45" stroke="#FFD700" stroke-width="3"/>
+          <line x1="85" y1="20" x2="91" y2="26" stroke="#FFD700" stroke-width="3"/>
+          <!-- Rain clouds over Joe -->
+          <ellipse cx="230" cy="40" rx="60" ry="28" fill="#374151"/>
+          <ellipse cx="200" cy="48" rx="40" ry="22" fill="#4b5563"/>
+          <!-- Rain lines over Joe -->
+          <line x1="190" y1="70" x2="186" y2="90" stroke="#60a5fa" stroke-width="2"/>
+          <line x1="205" y1="68" x2="201" y2="88" stroke="#60a5fa" stroke-width="2"/>
+          <line x1="220" y1="72" x2="216" y2="92" stroke="#60a5fa" stroke-width="2"/>
+          <line x1="235" y1="70" x2="231" y2="90" stroke="#60a5fa" stroke-width="2"/>
+          <line x1="250" y1="68" x2="246" y2="88" stroke="#60a5fa" stroke-width="2"/>
+          <line x1="265" y1="72" x2="261" y2="92" stroke="#60a5fa" stroke-width="2"/>
+          <!-- Ground / road -->
+          <rect x="0" y="120" width="320" height="60" fill="#374151"/>
+          <rect x="0" y="118" width="320" height="6" fill="#4b5563"/>
+          <!-- Joe soaking wet, arms out -->
+          <rect x="193" y="100" width="35" height="55" rx="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+          <!-- Joe arms out wide in exasperation -->
+          <rect x="155" y="104" width="40" height="14" rx="7" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <rect x="226" y="104" width="40" height="14" rx="7" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <!-- Joe head (soaked) -->
+          <circle cx="210" cy="88" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <!-- Hair flat/wet -->
+          <rect x="186" y="66" width="48" height="18" rx="4" fill="#92400e" opacity="0.8"/>
+          <!-- Water drips from hair -->
+          <ellipse cx="196" cy="86" rx="3" ry="6" fill="#60a5fa"/>
+          <ellipse cx="224" cy="87" rx="3" ry="6" fill="#60a5fa"/>
+          <!-- Eyes (angry/defeated) -->
+          <ellipse cx="200" cy="85" rx="8" ry="8" fill="#fff"/>
+          <ellipse cx="220" cy="85" rx="8" ry="8" fill="#fff"/>
+          <circle cx="202" cy="87" r="4" fill="#000"/>
+          <circle cx="222" cy="87" r="4" fill="#000"/>
+          <!-- Mouth (miserable) -->
+          <path d="M200,99 Q210,93 220,99" stroke="#92400e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Dry rainbow on left (sunny side) -->
+          <path d="M60,115 Q100,70 140,115" stroke="url(#rainbow)" stroke-width="5" fill="none" opacity="0.8"/>
+          <defs>
+            <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="33%" stop-color="#FFD700"/>
+              <stop offset="66%" stop-color="#22c55e"/>
+              <stop offset="100%" stop-color="#60a5fa"/>
+            </linearGradient>
+          </defs>
+          <!-- Smug duck under umbrella -->
+          <ellipse cx="270" cy="148" rx="18" ry="12" fill="#FFD700"/>
+          <circle cx="278" cy="136" r="12" fill="#FFD700" stroke="#d97706" stroke-width="1"/>
+          <path d="M282,136 Q292,134 288,140" fill="#f97316" stroke="#d97706" stroke-width="1"/>
+          <!-- Umbrella -->
+          <path d="M255,100 Q270,80 285,100" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+          <line x1="270" y1="100" x2="270" y2="140" stroke="#1d4ed8" stroke-width="2"/>
+          <!-- SFX -->
+          <text x="145" y="30" font-family="Impact" font-size="20" fill="#60a5fa" stroke="#000" stroke-width="1">WHY?!</text>
+        </svg>
+      </div>
+      <div class="panel-body">
+        <h3>The Commute</h3>
+        <p>Joe steps outside. Sunny everywhere except directly above him. The instant he lowers his umbrella — downpour soaks only him. A smug cartoon duck steals his umbrella. Rainbow appears in the dry zone next to him.</p>
+        <div class="dialogue-box">"Why does this always happen to ME?!"</div>
+        <div class="meta-row">
+          <span class="tag cam">MEDIUM SHOT</span>
+          <span class="tag sfx">Thunder Crack · Sad Trombone</span>
+          <span class="tag tone">Ironic / Pathetic</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 3 -->
+    <div class="panel">
+      <div class="panel-header scene3">
+        <span class="panel-num">SCENE 3 · "THE SCRATCH TICKET"</span>
+        <span class="panel-time">0:16 – 0:24</span>
+      </div>
+      <div class="panel-art" style="background: linear-gradient(180deg,#fde68a 0%,#fbbf24 100%);">
+        <svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Diner BG -->
+          <rect width="320" height="180" fill="#fef3c7"/>
+          <!-- Booth seat -->
+          <rect x="0" y="120" width="320" height="60" fill="#dc2626"/>
+          <!-- Table -->
+          <rect x="60" y="105" width="200" height="20" rx="4" fill="#92400e"/>
+          <!-- Coffee cup -->
+          <rect x="70" y="80" width="28" height="30" rx="4" fill="#fff" stroke="#d97706" stroke-width="2"/>
+          <ellipse cx="84" cy="80" rx="14" ry="5" fill="#7f1d1d"/>
+          <path d="M98,92 Q108,88 106,98" stroke="#d97706" stroke-width="2" fill="none"/>
+          <!-- Scratch ticket large -->
+          <rect x="120" y="55" width="140" height="65" rx="8" fill="#fff" stroke="#d97706" stroke-width="3"/>
+          <rect x="128" y="63" width="124" height="14" rx="3" fill="#ef4444"/>
+          <text x="133" y="74" font-size="11" fill="#fff" font-weight="bold">🎰 LUCKY MILLIONS</text>
+          <!-- Scratch area revealed numbers -->
+          <rect x="128" y="82" width="35" height="30" rx="3" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+          <rect x="170" y="82" width="35" height="30" rx="3" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+          <rect x="212" y="82" width="35" height="30" rx="3" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+          <text x="136" y="103" font-size="18" fill="#22c55e" font-weight="bold">7</text>
+          <text x="178" y="103" font-size="18" fill="#22c55e" font-weight="bold">7</text>
+          <!-- Last number — mocking face -->
+          <circle cx="229" cy="97" r="12" fill="#FFD700" stroke="#d97706" stroke-width="2"/>
+          <ellipse cx="225" cy="94" rx="3" ry="4" fill="#000"/>
+          <ellipse cx="233" cy="94" rx="3" ry="4" fill="#000"/>
+          <path d="M223,103 Q229,99 235,103" stroke="#000" stroke-width="2" fill="none"/>
+          <!-- Tongue sticking out from ticket -->
+          <path d="M226,106 Q229,115 232,106" fill="#ef4444" stroke="#d97706" stroke-width="1"/>
+          <!-- Joe jaw dropped -->
+          <!-- Joe sitting in booth -->
+          <rect x="40" y="86" width="55" height="50" rx="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+          <circle cx="68" cy="74" r="26" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <!-- Hair -->
+          <ellipse cx="68" cy="50" rx="24" ry="14" fill="#92400e"/>
+          <!-- Eyes bulging in shock -->
+          <ellipse cx="58" cy="72" rx="12" ry="13" fill="#fff" stroke="#000" stroke-width="2"/>
+          <ellipse cx="78" cy="72" rx="12" ry="13" fill="#fff" stroke="#000" stroke-width="2"/>
+          <circle cx="60" cy="74" r="5" fill="#000"/>
+          <circle cx="80" cy="74" r="5" fill="#000"/>
+          <!-- Pupils tiny (shocked) -->
+          <circle cx="60" cy="74" r="2" fill="#fff"/>
+          <circle cx="80" cy="74" r="2" fill="#fff"/>
+          <!-- Jaw hits table -->
+          <path d="M54,90 Q68,115 82,90" stroke="#d97706" stroke-width="2" fill="#fbbf24"/>
+          <!-- SFX -->
+          <text x="155" y="22" font-family="Impact" font-size="18" fill="#ef4444" stroke="#fff" stroke-width="1">PFFFFFBBT!</text>
+          <!-- Spoon flying -->
+          <line x1="95" y1="68" x2="120" y2="55" stroke="#9ca3af" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="panel-body">
+        <h3>The Scratch Ticket</h3>
+        <p>Joe at the diner. He scratches a ticket — two 7s revealed. Last number: a cartoon face that sticks its tongue out at him. Ticket literally mocks him. Joe's jaw bounces off the table.</p>
+        <div class="dialogue-box">"The ticket just MOCKED me. THE TICKET. MOCKED. ME."</div>
+        <div class="meta-row">
+          <span class="tag cam">CLOSE-UP on ticket → Pull back</span>
+          <span class="tag sfx">Raspberry SFX · Spring Boing</span>
+          <span class="tag tone">Peak Absurdity</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 4 -->
+    <div class="panel">
+      <div class="panel-header scene4">
+        <span class="panel-num">SCENE 4 · "ENTER LADY E LUCK"</span>
+        <span class="panel-time">0:24 – 0:40</span>
+      </div>
+      <div class="panel-art" style="background: radial-gradient(ellipse at 50% 0%, #FFD700 0%, #7C3AED 40%, #1a1a2e 100%);">
+        <svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Gold explosion rays -->
+          <line x1="160" y1="10" x2="160" y2="60" stroke="#FFD700" stroke-width="4" opacity="0.8"/>
+          <line x1="160" y1="10" x2="120" y2="55" stroke="#FFD700" stroke-width="3" opacity="0.7"/>
+          <line x1="160" y1="10" x2="200" y2="55" stroke="#FFD700" stroke-width="3" opacity="0.7"/>
+          <line x1="160" y1="10" x2="100" y2="45" stroke="#FFD700" stroke-width="2" opacity="0.5"/>
+          <line x1="160" y1="10" x2="220" y2="45" stroke="#FFD700" stroke-width="2" opacity="0.5"/>
+          <line x1="160" y1="10" x2="60" y2="60" stroke="#FFD700" stroke-width="2" opacity="0.4"/>
+          <line x1="160" y1="10" x2="260" y2="60" stroke="#FFD700" stroke-width="2" opacity="0.4"/>
+          <!-- Falling coins -->
+          <circle cx="80" cy="40" r="8" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+          <text x="76" y="45" font-size="9" fill="#B8860B">$</text>
+          <circle cx="240" cy="35" r="8" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+          <text x="236" y="40" font-size="9" fill="#B8860B">$</text>
+          <circle cx="50" cy="75" r="6" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+          <circle cx="270" cy="65" r="6" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+          <circle cx="290" cy="45" r="5" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+          <circle cx="30" cy="55" r="5" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+          <!-- Cards falling -->
+          <rect x="100" y="30" width="20" height="28" rx="3" fill="#fff" stroke="#000" stroke-width="1" transform="rotate(-15,110,44)"/>
+          <text x="104" y="47" font-size="12">♠️</text>
+          <rect x="195" y="25" width="20" height="28" rx="3" fill="#fff" stroke="#000" stroke-width="1" transform="rotate(12,205,39)"/>
+          <text x="199" y="42" font-size="12">♥️</text>
+          <!-- Lady E Luck descending from above -->
+          <!-- Gown -->
+          <path d="M130,75 Q118,155 160,172 Q202,155 190,75 Q175,95 160,90 Q145,95 130,75Z" fill="#7C3AED" stroke="#FFD700" stroke-width="2"/>
+          <!-- Gold stars on gown -->
+          <text x="140" y="130" font-size="10" fill="#FFD700">★</text>
+          <text x="168" y="148" font-size="8" fill="#FFD700">✦</text>
+          <!-- Torso -->
+          <rect x="143" y="60" width="34" height="25" rx="6" fill="#6D28D9" stroke="#FFD700" stroke-width="2"/>
+          <rect x="143" y="60" width="34" height="7" rx="4" fill="#FFD700" opacity="0.9"/>
+          <!-- Arms outstretched sassy -->
+          <rect x="100" y="64" width="45" height="14" rx="7" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <rect x="175" y="64" width="45" height="14" rx="7" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <!-- Hand snap left -->
+          <circle cx="100" cy="71" r="9" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <text x="78" y="62" font-size="14" fill="#FFD700">✨</text>
+          <!-- Phone right hand -->
+          <circle cx="220" cy="71" r="9" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <rect x="225" y="54" width="20" height="34" rx="4" fill="#1f2937" stroke="#FFD700" stroke-width="1.5"/>
+          <rect x="227" y="56" width="16" height="26" rx="2" fill="#7C3AED"/>
+          <text x="228" y="65" font-size="5" fill="#FFD700">LadyELuck</text>
+          <text x="229" y="73" font-size="5" fill="#fff">.com</text>
+          <text x="228" y="78" font-size="5" fill="#22c55e">VIP ✓</text>
+          <!-- Head -->
+          <ellipse cx="160" cy="36" rx="28" ry="28" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <!-- Hair -->
+          <ellipse cx="160" cy="10" rx="26" ry="14" fill="#1f2937"/>
+          <ellipse cx="138" cy="18" rx="10" ry="8" fill="#1f2937"/>
+          <ellipse cx="182" cy="18" rx="10" ry="8" fill="#1f2937"/>
+          <!-- Crown -->
+          <polygon points="140,8 146,−4 153,7 160,−8 167,7 174,−4 180,8" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+          <circle cx="160" cy="-6" r="3" fill="#ef4444"/>
+          <!-- Sunglasses (lowered sassy) -->
+          <rect x="142" y="34" width="16" height="10" rx="5" fill="#1f2937" stroke="#FFD700" stroke-width="1.5"/>
+          <rect x="162" y="34" width="16" height="10" rx="5" fill="#1f2937" stroke="#FFD700" stroke-width="1.5"/>
+          <line x1="158" y1="39" x2="162" y2="39" stroke="#FFD700" stroke-width="1.5"/>
+          <!-- Smile -->
+          <path d="M150,47 Q160,54 170,47" stroke="#d97706" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Joe in bottom corner looking up amazed -->
+          <circle cx="38" cy="158" r="20" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <ellipse cx="31" cy="154" rx="7" ry="9" fill="#fff"/>
+          <ellipse cx="45" cy="154" rx="7" ry="9" fill="#fff"/>
+          <circle cx="32" cy="156" r="3" fill="#000"/>
+          <circle cx="46" cy="156" r="3" fill="#000"/>
+          <path d="M27,168 Q38,178 49,168" stroke="#d97706" stroke-width="2" fill="#fbbf24"/>
+          <!-- Speech bubble Lady E Luck -->
+          <rect x="72" y="148" width="180" height="28" rx="8" fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+          <polygon points="80,176 74,190 94,176" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+          <text x="80" y="159" font-size="8" fill="#000" font-weight="bold">"Honey. You've been out here</text>
+          <text x="80" y="170" font-size="8" fill="#000" font-weight="bold">risking it all on a scratch ticket?"</text>
+        </svg>
+      </div>
+      <div class="panel-body">
+        <h3>Enter Lady E Luck</h3>
+        <p>GOLDEN EXPLOSION. Lady E Luck descends from above in a shower of coins and playing cards. She surveys the damage, pushes her sunglasses down, and holds up her glowing phone showing LadyELuck.com. The banana peel, duck, and mocking ticket all hang their heads in shame.</p>
+        <div class="dialogue-box">"Honey. You've been out here risking it all... on a <em>scratch ticket?</em>"</div>
+        <div class="meta-row">
+          <span class="tag cam">LOW ANGLE → EPIC WIDE</span>
+          <span class="tag sfx">Gold Fanfare · Coin Rain</span>
+          <span class="tag tone">Goddess Entrance Energy</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 5 -->
+    <div class="panel">
+      <div class="panel-header scene5">
+        <span class="panel-num">SCENE 5 · "THE GLOW-UP"</span>
+        <span class="panel-time">0:40 – 0:52</span>
+      </div>
+      <div class="panel-art" style="background: linear-gradient(180deg,#fde68a 0%,#22c55e 100%);">
+        <svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sunny diner BG -->
+          <rect width="320" height="180" fill="#fef9c3"/>
+          <!-- Sun rays -->
+          <circle cx="160" cy="-20" r="50" fill="#FFD700" opacity="0.4"/>
+          <!-- Diner booth glow-up -->
+          <rect x="0" y="120" width="320" height="60" fill="#15803d"/>
+          <rect x="40" y="90" width="240" height="35" rx="4" fill="#92400e"/>
+          <!-- Booth seats fancy -->
+          <rect x="10" y="108" width="300" height="30" rx="8" fill="#22c55e"/>
+          <!-- Joe sitting like a king -->
+          <rect x="120" y="88" width="80" height="55" rx="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+          <!-- Tie straight now -->
+          <polygon points="160,92 152,104 160,102 168,104" fill="#fff"/>
+          <rect x="157" y="102" width="6" height="24" rx="2" fill="#ef4444"/>
+          <!-- Joe head glowing, smug grin -->
+          <circle cx="160" cy="76" r="26" fill="#fbbf24" stroke="#FFD700" stroke-width="3"/>
+          <!-- Glow halo -->
+          <circle cx="160" cy="76" r="30" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.5"/>
+          <!-- Hair perfect now -->
+          <ellipse cx="160" cy="52" rx="24" ry="12" fill="#92400e"/>
+          <!-- Cool eyes (half closed smug) -->
+          <path d="M148,74 Q155,70 162,74" stroke="#000" stroke-width="3" fill="none"/>
+          <path d="M158,74 Q165,70 172,74" stroke="#000" stroke-width="3" fill="none"/>
+          <!-- Big grin -->
+          <path d="M146,86 Q160,98 174,86" stroke="#d97706" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <rect x="148" y="83" width="24" height="6" rx="2" fill="#fbbf24"/>
+          <rect x="152" y="87" width="4" height="4" fill="#fff"/>
+          <rect x="158" y="87" width="4" height="4" fill="#fff"/>
+          <rect x="164" y="87" width="4" height="4" fill="#fff"/>
+          <!-- Phone showing LadyELuck -->
+          <rect x="176" y="72" width="26" height="44" rx="5" fill="#1f2937" stroke="#FFD700" stroke-width="2"/>
+          <rect x="178" y="74" width="22" height="36" rx="3" fill="#7C3AED"/>
+          <text x="179" y="84" font-size="5" fill="#FFD700" font-weight="bold">LadyELuck</text>
+          <text x="181" y="91" font-size="5" fill="#fff">.com</text>
+          <text x="179" y="99" font-size="5" fill="#22c55e">✓ VIP</text>
+          <text x="179" y="107" font-size="5" fill="#FFD700">BONUS!</text>
+          <!-- Dog now loyal and happy -->
+          <ellipse cx="50" cy="148" rx="24" ry="16" fill="#92400e"/>
+          <circle cx="50" cy="132" r="16" fill="#92400e"/>
+          <ellipse cx="42" cy="128" rx="8" ry="10" fill="#78350f"/>
+          <ellipse cx="58" cy="128" rx="8" ry="10" fill="#78350f"/>
+          <circle cx="44" cy="131" r="3" fill="#000"/>
+          <circle cx="60" cy="131" r="3" fill="#000"/>
+          <!-- Dog tongue out happy -->
+          <path d="M44,142 Q50,152 56,142" fill="#ef4444" stroke="#d97706" stroke-width="1"/>
+          <!-- Tail wagging -->
+          <path d="M72,150 Q90,138 96,155" stroke="#92400e" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <!-- Waitress pouring coffee perfectly -->
+          <rect x="246" y="70" width="24" height="38" rx="6" fill="#ef4444"/>
+          <circle cx="258" cy="62" r="16" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+          <!-- Coffee cup perfect pour -->
+          <rect x="220" y="86" width="24" height="28" rx="4" fill="#fff" stroke="#d97706" stroke-width="2"/>
+          <!-- Coffee pouring in perfectly -->
+          <rect x="225" y="72" width="8" height="14" rx="2" fill="#7f1d1d" opacity="0.7"/>
+          <!-- Thumbs up from waitress -->
+          <text x="242" y="56" font-size="20">👍</text>
+          <!-- Coin rain -->
+          <circle cx="88" cy="30" r="7" fill="#FFD700" stroke="#B8860B"/>
+          <text x="84" y="35" font-size="8" fill="#B8860B">$</text>
+          <circle cx="240" cy="25" r="7" fill="#FFD700" stroke="#B8860B"/>
+          <text x="236" y="30" font-size="8" fill="#B8860B">$</text>
+          <circle cx="296" cy="45" r="5" fill="#FFD700" stroke="#B8860B"/>
+          <circle cx="22" cy="38" r="5" fill="#FFD700" stroke="#B8860B"/>
+          <!-- Stars -->
+          <text x="108" y="22" font-size="16" fill="#FFD700">★</text>
+          <text x="270" y="30" font-size="14" fill="#FFD700">★</text>
+          <!-- Lady E Luck chef's kiss in corner -->
+          <circle cx="280" cy="148" r="20" fill="#fbbf24" stroke="#FFD700" stroke-width="2"/>
+          <ellipse cx="273" cy="145" rx="5" ry="6" fill="#000"/>
+          <ellipse cx="287" cy="145" rx="5" ry="6" fill="#000"/>
+          <path d="M273,155 Q280,162 287,155" stroke="#d97706" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <text x="286" y="130" font-size="14">🤌</text>
+        </svg>
+      </div>
+      <div class="panel-body">
+        <h3>The Glow-Up</h3>
+        <p>Joe opens LadyELuck.com on his phone and logs in as VIP. Instantly: the sun blazes, his hair is perfect, coins rain down, the dog comes back wagging, and the waitress pours the coffee flawlessly. Joe leans back like royalty. Lady E Luck gives a chef's kiss.</p>
+        <div class="dialogue-box">"Okay. OKAY. I get it now."</div>
+        <div class="meta-row">
+          <span class="tag cam">WIDE → SMASH ZOOM IN on phone</span>
+          <span class="tag sfx">Triumphant Cartoon Fanfare</span>
+          <span class="tag tone">Victory / Transformation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 6 -->
+    <div class="panel">
+      <div class="panel-header scene6">
+        <span class="panel-num">SCENE 6 · "THE TAG"</span>
+        <span class="panel-time">0:52 – 1:00</span>
+      </div>
+      <div class="panel-art" style="background: radial-gradient(ellipse at 50% 50%, #7C3AED 0%, #1a1a2e 100%);">
+        <svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Star burst background -->
+          <g opacity="0.3">
+            <line x1="160" y1="90" x2="160" y2="10" stroke="#FFD700" stroke-width="2"/>
+            <line x1="160" y1="90" x2="230" y2="20" stroke="#FFD700" stroke-width="2"/>
+            <line x1="160" y1="90" x2="280" y2="60" stroke="#FFD700" stroke-width="2"/>
+            <line x1="160" y1="90" x2="300" y2="120" stroke="#FFD700" stroke-width="2"/>
+            <line x1="160" y1="90" x2="250" y2="165" stroke="#FFD700" stroke-width="2"/>
+            <line x1="160" y1="90" x2="160" y2="175" stroke="#FFD700" stroke-width="2"/>
+            <line x1="160" y1="90" x2="70" y2="165" stroke="#FFD700" stroke-width="2"/>
+            <line x1="160" y1="90" x2="20" y2="120" stroke="#FFD700" stroke-width="2"/>
+            <line x1="160" y1="90" x2="40" y2="60" stroke="#FFD700" stroke-width="2"/>
+            <line x1="160" y1="90" x2="90" y2="20" stroke="#FFD700" stroke-width="2"/>
+          </g>
+          <!-- Sparkles ring -->
+          <circle cx="160" cy="90" r="75" fill="none" stroke="#FFD700" stroke-width="2" stroke-dasharray="8,6" opacity="0.5"/>
+          <!-- Gold coins orbiting -->
+          <circle cx="90" cy="40" r="9" fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+          <text x="85" y="46" font-size="10" fill="#B8860B">$</text>
+          <circle cx="234" cy="35" r="9" fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+          <text x="229" y="41" font-size="10" fill="#B8860B">$</text>
+          <circle cx="270" cy="130" r="7" fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+          <circle cx="52" cy="135" r="7" fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+          <!-- Main Logo Box -->
+          <rect x="50" y="30" width="220" height="80" rx="16" fill="rgba(0,0,0,0.5)" stroke="#FFD700" stroke-width="3"/>
+          <!-- Lady E Luck logo text -->
+          <text x="160" y="68" font-family="Impact,Arial Black,sans-serif" font-size="30" fill="#FFD700" text-anchor="middle" letter-spacing="2">LADY E LUCK</text>
+          <!-- Stars flanking -->
+          <text x="54" y="70" font-size="20" fill="#FFD700">★</text>
+          <text x="262" y="70" font-size="20" fill="#FFD700">★</text>
+          <!-- Subtitle -->
+          <text x="160" y="94" font-family="Arial,sans-serif" font-size="11" fill="#c4b5fd" text-anchor="middle" letter-spacing="1">VIP GAMING  ·  DAILY BONUSES  ·  REAL WINS</text>
+          <!-- URL banner -->
+          <rect x="70" y="118" width="180" height="30" rx="8" fill="#FFD700"/>
+          <text x="160" y="138" font-family="Arial Black,sans-serif" font-size="14" fill="#000" text-anchor="middle" font-weight="bold">www.LadyELuck.com</text>
+          <!-- Joe cameo bottom left -->
+          <circle cx="32" cy="158" r="20" fill="#fbbf24" stroke="#FFD700" stroke-width="2"/>
+          <ellipse cx="25" cy="155" rx="5" ry="6" fill="#fff"/>
+          <ellipse cx="39" cy="155" rx="5" ry="6" fill="#fff"/>
+          <circle cx="26" cy="157" r="3" fill="#000"/>
+          <circle cx="40" cy="157" r="3" fill="#000"/>
+          <path d="M24,167 Q32,174 40,167" stroke="#d97706" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Joe speech bubble -->
+          <rect x="52" y="144" width="130" height="22" rx="8" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+          <polygon points="58,166 52,176 68,166" fill="#fff" stroke="#d97706" stroke-width="1"/>
+          <text x="61" y="158" font-size="9" fill="#000" font-weight="bold">"Don't be me. Be a VIP."</text>
+          <!-- Lady E Luck winking from clouds -->
+          <ellipse cx="284" cy="154" rx="20" ry="14" fill="#7C3AED" opacity="0.5"/>
+          <circle cx="284" cy="148" r="18" fill="#fbbf24" stroke="#FFD700" stroke-width="2"/>
+          <!-- Crown small -->
+          <polygon points="274,132 278,124 283,132 288,122 293,132 298,124 302,132" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+          <!-- Wink -->
+          <path d="M276,145 Q282,141 288,145" stroke="#000" stroke-width="2" fill="none"/>
+          <ellipse cx="292" cy="148" rx="5" ry="6" fill="#fff"/>
+          <circle cx="292" cy="149" r="3" fill="#000"/>
+          <!-- Wink closed eye line -->
+          <path d="M272,148 Q278,145 284,148" stroke="#000" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="panel-body">
+        <h3>The Tag / Logo Card</h3>
+        <p>Lady E Luck floats back into golden clouds, winks at camera, and snaps her fingers. The Lady E Luck logo BURSTS onto screen surrounded by sparkles and coin rain. Joe pops in the corner with his thumbs up.</p>
+        <div class="dialogue-box">V.O.: "Lady E Luck. VIP gaming, daily bonuses, and the kind of luck you actually EARN."<br>Joe: "Don't be me. Be a VIP."</div>
+        <div class="meta-row">
+          <span class="tag cam">SMASH CUT · LOGO PUSH IN</span>
+          <span class="tag sfx">FINAL BOING · Logo Sting</span>
+          <span class="tag tone">Triumphant / Call to Action</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Lady E Luck Super Bowl Commercial Storyboard · <span>www.LadyELuck.com</span> · 60-Second Animated Spot · Production Package v1.0</p>
+</div>
+
+</body>
+</html>

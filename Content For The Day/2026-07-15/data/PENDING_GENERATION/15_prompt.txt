@@ -1,0 +1,11 @@
+ASSET: 15_reel_lou_wins_goldengoal
+FORMAT: reel
+TOOL: higgsfield generate_video
+ORIENTATION: vertical 9:16
+DURATION: 8s
+POST TIME: 11:00 PM
+PLATFORM: FB + IG
+PROMO TYPE: lucky_lou_wins
+
+PROMPT:
+8-second vertical 9:16 cinematic video clip. Shot: night stadium, dark emerald turf under floodlights. Movement: slow-motion arc following the ball, then whip to celebration. Character action: male character, mid-30s, stocky build, wide expressive eyes, huge warm smile, green-and-gold soccer jersey with no real logos, fishing hat with slot machine and gold star stickers and a small soccer ball sticker, mismatched green and gold socks, strikes a golden soccer ball that curls into the top corner; the net explodes into a shower of gold coins; he rips off his fishing hat and lifts it overhead like a trophy, 4-leaf clover held high in the other hand. Lighting: warm directional gold floodlights, cinematic slow-motion sparkle. Atmosphere: euphoric, coins raining, confetti. Audio cue: ball strike, net swish becoming coin cascade, crowd eruption. Style: photorealistic cinematic. Color: dark green black gold. No text, no words, no letters.

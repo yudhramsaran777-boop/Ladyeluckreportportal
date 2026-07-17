@@ -1,0 +1,7 @@
+ASSET: 07_image_referral_penalty_kick
+FORMAT: Feed Image (4:5 portrait)
+TOOL: generate_image
+POST TIME: 2:00 PM — FB + IG
+
+PROMPT:
+Wide portrait duo shot. Setting: dark emerald casino floor with gold goal net hanging behind them, coins cascading out of the goal net like scoring a goal. Penalty spot visible on the dark green floor as a single glowing gold circle. Character 1 (LADY E): Black female character, mid-30s to early 40s, black and gold striped referee-inspired dress, gold whistle on chain, gold crown headpiece, bronze-brown skin, crimson lips — she holds a glowing gold penalty spot marker in her right hand, arm extended toward camera, confident smile. Character 2 (LUCKY LOU): beside her, male character, green-and-gold soccer jersey, fishing hat with stickers, mismatched lucky socks — he holds a gold card in his left hand displaying a QR-code-like pattern, huge grin, free hand giving a thumbs up. Both characters stand shoulder to shoulder facing camera. Lighting: warm directional gold light from above on both characters, cinematic. Foreground: goal net raining gold coins, gold confetti. Background: dark emerald casino with subtle stadium lighting. Style: photorealistic, cinematic. No text, no words, no letters in the image. Camera: medium wide shot at eye level.

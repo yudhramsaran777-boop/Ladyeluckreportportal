@@ -1,0 +1,11 @@
+ASSET: 19_audio_golden_dealer_midnight
+FORMAT: Audio voice line (5-8 seconds)
+TOOL: generate_audio (text2speech)
+VOICE: Golden Dealer — Sterling preset — voice_id: dc382508-c8bd-443c-8cb2-46e57b8d2e6f
+PAIRS WITH: 13_story_halftime_reload_drop
+
+SCRIPT:
+"The second half always surprises."
+
+DELIVERY NOTES: This is the ONLY sentence he speaks all day. Every word is its own moment. Low, rich, resonant. Silence before and after. Absolute certainty. Slightly ominous warmth.
+Emotion: Calm, mysterious, absolute. Pace: Very slow and deliberate.

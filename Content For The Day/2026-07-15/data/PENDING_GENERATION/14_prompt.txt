@@ -1,0 +1,11 @@
+ASSET: 14_story_mystery_envelope
+FORMAT: image_story
+TOOL: higgsfield generate_image
+ORIENTATION: vertical 9:16
+DURATION: n/a
+POST TIME: 10:15 PM
+PLATFORM: FB + IG Story
+PROMO TYPE: halftime_reload
+
+PROMPT:
+Mysterious cinematic shot. Night stadium, dark emerald turf wet with dew, black sky. At the penalty spot, a sealed black envelope with a gold wax seal lies under a single floodlight beam, faint gold light seeping from inside its edges as if the contents glow. Lighting: one warm directional gold floodlight beam through night haze, cinematic. Mood: mystery, midnight secret. Foreground: turf blades and a single gold chip beside the envelope. Background: dark empty stands. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle close to turf, close-medium distance.

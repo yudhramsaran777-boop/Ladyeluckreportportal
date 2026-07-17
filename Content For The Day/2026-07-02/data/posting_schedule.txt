@@ -1,0 +1,68 @@
+LADY E LUCK — CONTENT PLAN
+Date: 2026-07-02 (Thursday) | Theme: World Cup Golden Kick Day | Total Posts: 14
+World Cup Mode: ON | Matches Today: Spain vs Austria 3PM, Portugal vs Croatia 7PM, Switzerland vs Algeria 11PM
+Referral Code: REF-GOLDENKICK-847
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIME      | FORMAT        | PLATFORM         | FILE                                    | PROMO TYPE          | ACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7:00 AM   | Reel          | FB + IG          | 01_reel_lady_e_golden_whistle_open      | Theme Launch        | 1
+          | + Audio       |                  | 17_song_golden_kick_stadium_anthem      | Background Music    |
+8:30 AM   | Feed Image    | FB + IG          | 02_image_golden_stadium_lady_e_sideline | Theme Launch        | 1
+9:15 AM   | Story         | FB + IG Stories  | 03_image_story_gold_whistle_closeup     | Theme Launch        | 1
+11:00 AM  | Feed Image    | FB + IG          | 04_image_new_player_golden_boot_welcome | NEW PLAYER BONUS    | 2
+11:45 AM  | Story         | FB + IG Stories  | 05_image_story_lucky_lou_scoreboard     | Character Intro     | 2
+12:30 PM  | Story (Audio) | FB + IG Stories  | 06_audio_lady_e_voice_welcome           | Welcome Message     | 2
+2:00 PM   | Feed + Groups | FB Feed + Groups | 07a_image_referral_lucky_lou_gold_kick  | REFERRAL CODE       | 3
+          | + Audio       |                  | 07b_audio_lucky_lou_referral_line       | REF-GOLDENKICK-847  |
+3:00 PM ⚽ | Reel          | FB + IG Reels    | 08_reel_golden_dealer_hat_trick_reveal  | HAT TRICK BONUS     | 3
+          | + Audio       |                  | 16_audio_golden_dealer_hat_trick_line   | (Spain vs Austria)  |
+4:30 PM   | Story         | FB + IG Stories  | 09_image_story_hat_trick_deadline       | Hat Trick Deadline  | 3
+6:00 PM   | Feed Image    | FB + IG          | 10_image_summer_crew_jackpot_parade     | Community Wins      | 4
+7:30 PM ⚽ | Story         | FB + IG Stories  | 11_image_story_bonus_wheel_spin         | DAILY BONUS WHEEL   | 4
+          |               |                  |                                         | (Portugal vs Croatia)|
+9:00 PM   | Story         | FB + IG Stories  | 12_image_story_daily_bonus_final_whistle| DAILY BONUS         | 4
+10:00 PM  | Story         | FB + IG Stories  | 13_image_story_golden_dealer_halftime   | TODAY'S SPECIAL     | 5
+10:15 PM  | Feed Image    | FB + IG          | 14_image_feed_penalty_spot_halftime     | BONUS (double-post) | 5
+11:00 PM ⚽| Reel          | FB + IG Reels    | 15_reel_lucky_lou_wins_tomorrow_tease   | Lucky Lou Wins      | 5
+          | + Audio       |                  | 18_audio_lady_e_golden_hour_close       | (Switzerland vs ALG)|
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚽ = Timed to World Cup match kickoff
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DEALS TODAY:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. GOLDEN BOOT JACKPOT (All Day)
+   Mechanic: Biggest recharge of the day wins a multiplier bonus.
+   Tagline: "Score the biggest. Win the boot."
+   Character: Lady E
+
+2. HAT TRICK BONUS (3PM - 6PM, during Spain vs Austria)
+   Mechanic: 3 recharges during match hours = stacked bonus.
+   Tagline: "Three times. Three wins."
+   Character: The Golden Dealer
+   ⚠️ LUIS: Set up the Hat Trick Bonus in your system before 3PM.
+
+3. PENALTY KICK FREE SPIN (All Day, referral-triggered)
+   Mechanic: Share REF-GOLDENKICK-847 → friend joins → both get free spin bonus.
+   Tagline: "Pass it. They score. You both win."
+   Character: Lucky Lou
+
+4. HALFTIME RELOAD (10PM - Midnight)
+   Mechanic: Mystery bonus drop for active players.
+   Tagline: "The second half always surprises."
+   Character: The Golden Dealer + Lady E
+   ⚠️ LUIS: Set up the Halftime Reload mystery bonus before 10PM.
+
+REFERRAL CODE: REF-GOLDENKICK-847
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FIRST POST: 7:00 AM — Reel: Lady E Blows the Golden Whistle
+GOLDEN HOUR: 10:00 PM – Midnight
+
+⚠️ PENDING (need manual generation via Higgsfield dashboard):
+All 18 media assets are ready as prompts in: data/PENDING_GENERATION/
+See individual [asset_id]_prompt.txt files for copy-paste-ready generation prompts.
+

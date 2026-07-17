@@ -1,0 +1,11 @@
+ASSET: 08_story_dealer_penalty_spot
+FORMAT: image_story
+TOOL: higgsfield generate_image
+ORIENTATION: vertical 9:16
+DURATION: n/a
+POST TIME: 3:30 PM
+PLATFORM: FB + IG Story
+PROMO TYPE: during_match
+
+PROMPT:
+Tense cinematic shot. Night stadium, dark emerald turf, black sky. Tall male character, all-black slim-cut suit, gold pocket square, gold-edged card deck held in one gloved hand, wide-brim hat with face partially shadowed showing only jaw and lips, completely still, standing beside the penalty spot where a single gold casino chip spins on its edge, caught mid-rotation with a faint gold light trail. Lighting: warm directional gold light from a single overhead floodlight, deep shadows, cinematic. Mood: silent tension, held breath. Foreground: the spinning chip and its reflection on dewy turf. Background: empty goal in darkness. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle near the turf, medium distance.

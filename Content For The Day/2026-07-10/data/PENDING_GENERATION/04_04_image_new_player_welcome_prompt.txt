@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 04
+Filename: 04_image_new_player_welcome
+Format: image
+Tool: higgsfield_generate_image
+Orientation: square (1:1)
+Duration: N/A
+Post Time: 11:00 AM
+Platform: Facebook + Instagram
+Promo Type: new_player_bonus
+Character: Lady E (World Cup Variant) + Lucky Lou (World Cup Variant)
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Medium shot. Setting: entrance to a luxury casino space with dark emerald green walls and gold trim, large golden door open behind the characters. Black female character mid-30s to early 40s in black and gold striped referee-inspired dress, gold whistle on chain, gold crown headpiece, deep bronze-brown skin, crimson lipstick, extending one long-gloved hand toward the camera with a warm inviting smile. At her right side, slightly behind her, a male character mid-30s stocky build in green-and-gold soccer jersey, fishing hat with slot machine stickers and soccer ball sticker, giving two enthusiastic thumbs up with a giant warm smile. Lighting: warm gold light spilling from inside the door, golden welcome glow. Mood: welcoming, premium, inclusive, community-first. Foreground: gold casino chips scattered on a deep emerald carpet. Style: photorealistic, cinematic, dark green and gold palette. No text, no words, no letters in the image. Camera: eye-level medium shot, wide enough to include both characters and the golden door.

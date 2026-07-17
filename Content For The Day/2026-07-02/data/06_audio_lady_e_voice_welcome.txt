@@ -1,0 +1,24 @@
+━━━━━━━━━━━━━━━━━━━━━━━━
+LADY E LUCK — POST CAPTION
+File: 06_audio_lady_e_voice_welcome.mp3
+Platform: Facebook + Instagram Stories (Audio Story card)
+Post Time: 12:30 PM
+Promo Type: Welcome Message — Act 2
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+CAPTION:
+[Story card background: dark emerald with gold particle animation overlay]
+[Audio plays: Lady E voice welcome]
+
+[Story text overlay:]
+Lady E has a message for you. 🎙️👑
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+INSTAGRAM NOTES:
+Place the audio as a Story background track. Add a "tap to listen" text sticker.
+Keep text minimal — the voice IS the content.
+━━━━━━━━━━━━━━━━━━━━━━━━
+NOTES FOR LUIS:
+This requires the 06_audio_lady_e_voice_welcome.mp3 file to be generated first.
+Create a simple dark emerald/gold gradient background card in Canva or use any Lady E image as the Story background, then layer the audio on top.
+Script Lady E speaks: "This is your day. Every spin could be your Golden Boot moment. The stadium is open, the gold is waiting — and you belong right here. Welcome to Lady E Luck."

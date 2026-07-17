@@ -1,0 +1,9 @@
+ASSET: 03_story_semifinal_countdown_poll
+FORMAT: Story Image (9:16 vertical)
+TOOL: generate_image
+POST TIME: 9:30 AM — FB + IG Stories
+
+PROMPT:
+Vertical portrait shot for Stories. Setting: dark emerald background with subtle gold stadium lighting rays from above. Character: Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress with gold whistle on a chain, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick. Pose: she points directly at camera with one hand, confident expression, other hand on hip. The point feels like she is asking the viewer a question. Lighting: dramatic directional gold light from directly above, cinematic. Foreground: gold particles floating in the air. Background: dark emerald with faint silhouettes of a stadium and casino lights merging. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: close-medium portrait shot from slightly above. Space in upper third and lower third for text overlay by Luis.
+
+NOTE FOR LUIS: Add IG poll sticker: "Who wins Wednesday? England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 / Argentina 🇦🇷"

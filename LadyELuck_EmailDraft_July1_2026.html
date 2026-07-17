@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lady E Luck — Golden Summer Content Calendar | July 1, 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; color: #e8d5a0; font-family: 'Georgia', serif; }
+  .email-wrapper { max-width: 700px; margin: 0 auto; background: #0f1a0f; }
+
+  /* Header */
+  .header { background: linear-gradient(135deg, #0a1a0a 0%, #1a2e1a 50%, #0f1a0f 100%);
+    padding: 48px 40px; text-align: center; border-bottom: 2px solid #c9a227; }
+  .logo-text { font-size: 11px; letter-spacing: 6px; color: #c9a227;
+    text-transform: uppercase; margin-bottom: 16px; }
+  .header h1 { font-size: 32px; color: #f0d060; font-weight: normal;
+    line-height: 1.2; margin-bottom: 8px; }
+  .header .subtitle { font-size: 13px; color: #8aaa8a; letter-spacing: 2px;
+    text-transform: uppercase; }
+  .gold-line { width: 60px; height: 2px; background: #c9a227;
+    margin: 20px auto; }
+
+  /* Intelligence Bar */
+  .intel-bar { background: #111d11; padding: 24px 40px;
+    border-bottom: 1px solid #2a3a2a; }
+  .intel-bar h2 { font-size: 10px; letter-spacing: 4px; color: #c9a227;
+    text-transform: uppercase; margin-bottom: 16px; }
+  .intel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .intel-item { background: #0f170f; border: 1px solid #2a3a2a;
+    border-left: 3px solid #c9a227; padding: 12px 16px; border-radius: 2px; }
+  .intel-item .label { font-size: 9px; letter-spacing: 3px; color: #5a7a5a;
+    text-transform: uppercase; margin-bottom: 4px; }
+  .intel-item .value { font-size: 13px; color: #e8d5a0; }
+
+  /* Section */
+  .section { padding: 36px 40px; border-bottom: 1px solid #1a2a1a; }
+  .section-tag { font-size: 9px; letter-spacing: 4px; color: #c9a227;
+    text-transform: uppercase; margin-bottom: 8px; }
+  .section h2 { font-size: 22px; color: #f0d060; font-weight: normal;
+    margin-bottom: 20px; }
+
+  /* Concept Box */
+  .concept-box { background: #111d11; border: 1px solid #2a4a2a;
+    border-top: 3px solid #c9a227; padding: 24px; margin-bottom: 24px;
+    border-radius: 2px; }
+  .concept-box .title { font-size: 18px; color: #f0d060; margin-bottom: 8px; }
+  .concept-box .tagline { font-size: 13px; color: #8aaa8a;
+    font-style: italic; margin-bottom: 16px; }
+  .concept-box p { font-size: 14px; color: #c8b880; line-height: 1.7; }
+
+  /* Characters */
+  .character-card { background: #0f170f; border: 1px solid #2a3a2a;
+    padding: 20px; margin-bottom: 12px; border-radius: 2px;
+    border-left: 3px solid #c9a227; }
+  .character-card .name { font-size: 14px; color: #f0d060;
+    letter-spacing: 1px; margin-bottom: 4px; }
+  .character-card .role { font-size: 10px; color: #5a7a5a;
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  .character-card .voice-match { font-size: 11px; color: #c9a227;
+    margin-top: 8px; }
+  .character-card p { font-size: 13px; color: #a8a080; line-height: 1.6; }
+  .character-card .line { font-size: 13px; color: #e8d5a0;
+    font-style: italic; margin-top: 8px; border-left: 2px solid #c9a227;
+    padding-left: 12px; }
+
+  /* Story Arc */
+  .arc-step { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+  .arc-step .time { font-size: 11px; color: #c9a227; letter-spacing: 1px;
+    min-width: 80px; padding-top: 2px; }
+  .arc-step .content .act { font-size: 10px; color: #5a7a5a;
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+  .arc-step .content .desc { font-size: 13px; color: #c8b880; line-height: 1.6; }
+
+  /* Deals */
+  .deal-card { background: linear-gradient(135deg, #0f1a0f, #1a2a0a);
+    border: 1px solid #3a5a1a; padding: 20px; margin-bottom: 12px;
+    border-radius: 2px; }
+  .deal-card .deal-name { font-size: 14px; color: #f0d060; margin-bottom: 4px; }
+  .deal-card .timing { font-size: 10px; color: #5a9a1a; letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 8px; }
+  .deal-card .tagline-deal { font-size: 13px; color: #c9a227;
+    font-style: italic; }
+  .deal-card p { font-size: 13px; color: #a8a080; line-height: 1.5; margin-top: 6px; }
+
+  /* Schedule Table */
+  .schedule-table { width: 100%; border-collapse: collapse; }
+  .schedule-table th { background: #1a2a1a; color: #c9a227; font-size: 9px;
+    letter-spacing: 2px; text-transform: uppercase; padding: 10px 12px;
+    text-align: left; }
+  .schedule-table td { padding: 10px 12px; font-size: 12px; color: #a8a080;
+    border-bottom: 1px solid #1a2a1a; }
+  .schedule-table tr:hover td { background: #111d11; }
+  .schedule-table .time-col { color: #c9a227; font-family: monospace;
+    white-space: nowrap; }
+  .schedule-table .type-badge { font-size: 9px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 2px 6px; border-radius: 2px; }
+  .badge-story { background: #1a2a4a; color: #5a8acf; }
+  .badge-reel { background: #2a1a4a; color: #9a5acf; }
+  .badge-feed { background: #2a1a0a; color: #cf9a2a; }
+  .badge-group { background: #0a2a1a; color: #2acf8a; }
+  .badge-audio { background: #2a0a1a; color: #cf2a7a; }
+
+  /* Media Section */
+  .media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .media-item { background: #0f170f; border: 1px solid #2a3a2a;
+    padding: 16px; border-radius: 2px; }
+  .media-item .num { font-size: 20px; color: #2a3a2a; font-weight: bold;
+    margin-bottom: 6px; }
+  .media-item .asset-name { font-size: 12px; color: #e8d5a0; margin-bottom: 4px; }
+  .media-item .tool { font-size: 10px; color: #5a7a5a; letter-spacing: 1px;
+    text-transform: uppercase; }
+
+  /* Song Section */
+  .song-block { background: #0f0f1a; border: 1px solid #2a2a4a;
+    border-top: 3px solid #8a5acf; padding: 24px; border-radius: 2px;
+    margin-bottom: 20px; }
+  .song-block .song-title { font-size: 22px; color: #d0b0ff;
+    margin-bottom: 8px; }
+  .song-block .genre { font-size: 10px; color: #5a5a8a; letter-spacing: 3px;
+    text-transform: uppercase; margin-bottom: 16px; }
+  .lyrics-preview { font-size: 14px; color: #c0a8e8; line-height: 1.9;
+    font-style: italic; border-left: 2px solid #8a5acf; padding-left: 16px; }
+
+  /* Visitor Analysis */
+  .journey-step { display: flex; gap: 16px; margin-bottom: 20px; }
+  .journey-step .time-badge { background: #1a2a1a; border: 1px solid #c9a227;
+    color: #c9a227; font-size: 11px; padding: 6px 10px; min-width: 80px;
+    text-align: center; height: fit-content; border-radius: 2px; }
+  .journey-step .feeling { font-size: 13px; color: #c8b880; line-height: 1.6; }
+  .journey-step .feeling strong { color: #f0d060; }
+
+  .emotion-arc { background: #111d11; border: 1px solid #2a3a2a;
+    padding: 20px; border-radius: 2px; text-align: center; margin-top: 20px; }
+  .emotion-arc .label { font-size: 10px; color: #5a7a5a; letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 12px; }
+  .emotion-flow { font-size: 13px; color: #c9a227; letter-spacing: 1px; }
+  .quote-box { background: #0f1a0f; border-left: 3px solid #c9a227;
+    padding: 16px 20px; margin-top: 16px; font-size: 14px; color: #e8d5a0;
+    font-style: italic; line-height: 1.7; }
+
+  /* Footer */
+  .footer { background: #080f08; padding: 32px 40px; text-align: center;
+    border-top: 2px solid #c9a227; }
+  .footer .brand { font-size: 14px; color: #c9a227; letter-spacing: 4px;
+    text-transform: uppercase; margin-bottom: 8px; }
+  .footer .note { font-size: 11px; color: #3a5a3a; line-height: 1.6; }
+  .cta-box { background: #1a2a1a; border: 1px solid #c9a227;
+    padding: 20px; margin: 24px 0; border-radius: 2px; text-align: center; }
+  .cta-box .cta-label { font-size: 10px; color: #5a7a5a; letter-spacing: 3px;
+    text-transform: uppercase; margin-bottom: 8px; }
+  .cta-box .cta-text { font-size: 16px; color: #f0d060; }
+  .cta-box .cta-sub { font-size: 12px; color: #8aaa8a; margin-top: 6px; }
+
+  .divider { height: 1px; background: linear-gradient(to right, transparent, #c9a227, transparent);
+    margin: 8px 0; }
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-text">Lady E Luck &mdash; Content Intelligence</div>
+    <h1>The Golden Summer Kickoff</h1>
+    <div class="subtitle">Daily Content Calendar &mdash; July 1, 2026</div>
+    <div class="gold-line"></div>
+    <div style="font-size:12px; color:#5a7a5a;">First Draft &bull; Prepared for: Luis Rivera &bull; kemprotunda@gmail.com</div>
+  </div>
+
+  <!-- INTEL BRIEF -->
+  <div class="intel-bar">
+    <h2>Day Intelligence Brief</h2>
+    <div class="intel-grid">
+      <div class="intel-item">
+        <div class="label">Date & Day</div>
+        <div class="value">Wednesday, July 1, 2026</div>
+      </div>
+      <div class="intel-item">
+        <div class="label">Primary Hooks</div>
+        <div class="value">Canada Day &bull; International Joke Day &bull; Reggae Day</div>
+      </div>
+      <div class="intel-item">
+        <div class="label">Trending Format</div>
+        <div class="value">4-Tone Acting &bull; Pixel Stretch &bull; Jackpot Reaction Clips</div>
+      </div>
+      <div class="intel-item">
+        <div class="label">Casino Trend</div>
+        <div class="value">Meme characters &bull; Time-limited community drops &bull; Short win clips</div>
+      </div>
+      <div class="intel-item">
+        <div class="label">Strategic Context</div>
+        <div class="value">Q3 Kickoff &bull; Pre-July 4th Build-Up &bull; Summer Peak Season</div>
+      </div>
+      <div class="intel-item">
+        <div class="label">Day Theme</div>
+        <div class="value" style="color:#c9a227; font-weight:bold;">THE GOLDEN SUMMER KICKOFF</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONCEPT -->
+  <div class="section">
+    <div class="section-tag">Section 1</div>
+    <h2>Day Concept</h2>
+    <div class="concept-box">
+      <div class="title">&#127942; "THE GOLDEN SUMMER KICKOFF"</div>
+      <div class="tagline">"July starts today — and so does your luck."</div>
+      <p>Lady E Luck is launching July Lucky Month — the luckiest stretch of the year. Today is the opening night. The vibe is a summer casino gala mixed with a street celebration: gold everywhere, music in the air, jokes flying, and jackpots dropping like fireworks. Every piece of content builds toward the message: <strong style="color:#f0d060;">Something big is coming, and it starts RIGHT NOW.</strong></p>
+    </div>
+
+    <div class="section-tag" style="margin-top:28px;">Characters of the Day</div>
+    <div style="margin-top:12px;">
+      <div class="character-card">
+        <div class="name">LADY E &mdash; The Lead</div>
+        <div class="role">Anchor Character &bull; All Day</div>
+        <p>Elegant casino owner. Dark emerald gown, gold jewelry, gold crown headpiece, crimson lips. Warm but commands every room. Celebratory today — she's been waiting for July all year.</p>
+        <div class="line">"You didn't come this far to lose in July, baby."</div>
+        <div class="voice-match">&#127925; Voice Match: <strong>Vesper</strong> (preset) &mdash; deep, smooth, commanding female</div>
+      </div>
+      <div class="character-card">
+        <div class="name">LUCKY LOU &mdash; The Joker</div>
+        <div class="role">Comedy Anchor &bull; International Joke Day</div>
+        <p>Lovable underdog. Fishing hat covered in slot stickers, mismatched lucky socks, 4-leaf clover slowly losing petals. Always almost wins. The community's mascot. His arc today: convinced this is his day — hilariously close all day — then actually wins at midnight. The joke was on luck all along.</p>
+        <div class="line">"I've been practicing being lucky. Watch me flop perfectly."</div>
+        <div class="voice-match">&#127925; Voice Match: <strong>Leo</strong> (preset) &mdash; warm, friendly, slightly excitable</div>
+      </div>
+      <div class="character-card">
+        <div class="name">THE GOLDEN DEALER &mdash; The Mystery</div>
+        <div class="role">Limited Appearances &bull; Key Moments Only</div>
+        <p>Tall. All-black suit, gold pocket square, gold card deck, face partially shadowed. Silent. Appears 3 times: morning tease, midday deal reveal, night jackpot. Every word is intentional. He does not repeat himself.</p>
+        <div class="line">[Says nothing. Deals a card. Something good happens.]</div>
+        <div class="voice-match">&#127925; Voice Match: <strong>Sterling</strong> (preset) &mdash; deep, authoritative, measured baritone</div>
+      </div>
+      <div class="character-card">
+        <div class="name">THE SUMMER CREW &mdash; The Community</div>
+        <div class="role">Group / Ensemble &bull; Celebration & Reaction Shots</div>
+        <p>4–5 diverse players, different looks, same energy. Used in celebration shots, group Stories, community win posts. They are the face of the player base — real, warm, genuinely excited.</p>
+        <div class="voice-match">&#127925; Voice Match: Various presets (Maya, Tasha, Roman, Andre, Quinn)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY ARC -->
+  <div class="section">
+    <div class="section-tag">Section 2</div>
+    <h2>Story Arc of the Day</h2>
+    <div class="arc-step">
+      <div class="time">6 AM – 11 AM</div>
+      <div class="content">
+        <div class="act">Act 1 — The Awakening</div>
+        <div class="desc">Lady E opens the casino for July. The Golden Dealer sets the table. Teaser: Something big is different today. A golden envelope sits on the table. <strong style="color:#f0d060;">Message: July is HERE. Luck season has officially started.</strong></div>
+      </div>
+    </div>
+    <div class="arc-step">
+      <div class="time">11 AM – 2 PM</div>
+      <div class="content">
+        <div class="act">Act 2 — The Joke's On Luck</div>
+        <div class="desc">Lucky Lou arrives. International Joke Day content — funny, relatable, human. The community laughs WITH Lou. The Golden Dealer slides Lou a card he doesn't look at yet. <strong style="color:#f0d060;">Message: Luck has a sense of humor. So do we.</strong></div>
+      </div>
+    </div>
+    <div class="arc-step">
+      <div class="time">2 PM – 6 PM</div>
+      <div class="content">
+        <div class="act">Act 3 — The Golden Rush</div>
+        <div class="desc">Lady E reveals the July deals. Energy shifts from funny to exciting. Countdown posts, deal reveals, community challenge drop. <strong style="color:#f0d060;">Message: The deals are in. Now is the time to play.</strong></div>
+      </div>
+    </div>
+    <div class="arc-step">
+      <div class="time">6 PM – 10 PM</div>
+      <div class="content">
+        <div class="act">Act 4 — Jackpot Parade</div>
+        <div class="desc">Win celebrations, community reactions, player spotlights. Lucky Lou ALMOST wins again — the community roars. <strong style="color:#f0d060;">Message: Players are winning RIGHT NOW. Are you in?</strong></div>
+      </div>
+    </div>
+    <div class="arc-step">
+      <div class="time">10 PM – Midnight</div>
+      <div class="content">
+        <div class="act">Act 5 — The Golden Hour</div>
+        <div class="desc">Lou finally opens the card. It's a winner. The whole crew erupts. Lady E closes with: "Tomorrow it gets even better." Golden envelope tease for tomorrow. <strong style="color:#f0d060;">Message: Tonight was just the beginning.</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEALS -->
+  <div class="section">
+    <div class="section-tag">Section 3</div>
+    <h2>Deals of the Day</h2>
+    <div class="deal-card">
+      <div class="deal-name">&#127941; GOLDEN SUMMER LAUNCH BONUS</div>
+      <div class="timing">All Day &bull; Today Only</div>
+      <p>First recharge of the day gets a summer bonus multiplier.</p>
+      <div class="tagline-deal">"July opened. So did the vault."</div>
+    </div>
+    <div class="deal-card">
+      <div class="deal-name">&#128514; LUCKY LOU'S JOKE SPECIAL</div>
+      <div class="timing">12 PM – 3 PM Only</div>
+      <p>Tag a friend who needs luck by 3PM. Winner drawn live gets a free bonus.</p>
+      <div class="tagline-deal">"The joke's on anyone who didn't grab this."</div>
+    </div>
+    <div class="deal-card">
+      <div class="deal-name">&#128336; GOLDEN HOUR MIDNIGHT DROP</div>
+      <div class="timing">10 PM – Midnight Only</div>
+      <p>Mystery bonus revealed only to players active during the golden hour window.</p>
+      <div class="tagline-deal">"You have to be up to be lucky."</div>
+    </div>
+  </div>
+
+  <!-- POSTING SCHEDULE -->
+  <div class="section">
+    <div class="section-tag">Section 4</div>
+    <h2>Full Day Posting Schedule</h2>
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Platform</th>
+          <th>Type</th>
+          <th>Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="time-col">7:00 AM</td><td>FB + IG</td><td><span class="type-badge badge-story">Story</span></td><td>Morning Wake-Up — Lady E at dawn casino window</td></tr>
+        <tr><td class="time-col">7:00 AM</td><td>FB + IG</td><td><span class="type-badge badge-reel">Reel</span></td><td>"July is HERE" — launch reel with chip tap hook</td></tr>
+        <tr><td class="time-col">8:00 AM</td><td>Facebook</td><td><span class="type-badge badge-feed">Feed</span></td><td>Day Launch Image — Lady E in grand casino hall</td></tr>
+        <tr><td class="time-col">10:00 AM</td><td>FB + IG</td><td><span class="type-badge badge-story">Story</span></td><td>Lucky Lou Teaser — slot machine near-miss close-up</td></tr>
+        <tr><td class="time-col">11:00 AM</td><td>Facebook</td><td><span class="type-badge badge-feed">Feed</span></td><td>Lucky Lou Introduction Post — character reveal</td></tr>
+        <tr><td class="time-col">11:00 AM</td><td>FB Groups</td><td><span class="type-badge badge-group">Group</span></td><td>Community Poll — July 1 emoji drop</td></tr>
+        <tr><td class="time-col">12:00 PM</td><td>FB + IG</td><td><span class="type-badge badge-story">Story</span></td><td>Gold Envelope Deal Reveal Story</td></tr>
+        <tr><td class="time-col">12:00 PM</td><td>FB + IG</td><td><span class="type-badge badge-reel">Reel</span></td><td>Lucky Lou 4-Mood Reel (Joke Day Trend)</td></tr>
+        <tr><td class="time-col">2:00 PM</td><td>Facebook</td><td><span class="type-badge badge-feed">Feed</span></td><td>Full Deal Announcement — Gold Key Image</td></tr>
+        <tr><td class="time-col">3:00 PM</td><td>FB + IG</td><td><span class="type-badge badge-story">Story</span></td><td>Lucky Lou Afternoon Check-In with Summer Crew</td></tr>
+        <tr><td class="time-col">6:00 PM</td><td>Facebook</td><td><span class="type-badge badge-feed">Feed</span></td><td>Community Win Post — Summer Crew celebration</td></tr>
+        <tr><td class="time-col">7:00 PM</td><td>FB + IG</td><td><span class="type-badge badge-story">Story</span></td><td>Evening Jackpot Hype — Golden Dealer walkthrough</td></tr>
+        <tr><td class="time-col">9:00 PM</td><td>FB + IG</td><td><span class="type-badge badge-reel">Reel</span></td><td>Golden Hour Countdown Reel — Lady E "One hour."</td></tr>
+        <tr><td class="time-col">10:00 PM</td><td>FB + IG</td><td><span class="type-badge badge-story">Story</span></td><td>Midnight Tease — Gold Clock Story</td></tr>
+        <tr><td class="time-col">All Day</td><td>FB + IG</td><td><span class="type-badge badge-audio">Audio</span></td><td>"Golden July" — Song for Stories &amp; Reels soundtrack</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- MEDIA QUEUE -->
+  <div class="section">
+    <div class="section-tag">Section 5</div>
+    <h2>Media Generation Queue</h2>
+    <p style="font-size:13px; color:#5a7a5a; margin-bottom:20px;">15 images + 3 reels + 8 music video scenes + 3 character voices. All prompts are in the full content calendar document.</p>
+    <div class="media-grid">
+      <div class="media-item"><div class="num">01</div><div class="asset-name">Lady E Morning Silhouette</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">02</div><div class="asset-name">Lucky Lou Slot Close-Up</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">03</div><div class="asset-name">Gold Envelope Reveal</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">04</div><div class="asset-name">Lou + Summer Crew Near-Miss</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">05</div><div class="asset-name">Summer Crew Celebration</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">06</div><div class="asset-name">Gold Countdown Clock</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">07</div><div class="asset-name">Lady E — Grand Casino Hall</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">08</div><div class="asset-name">Lucky Lou — Trophy Table</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">09</div><div class="asset-name">Gold Key — Dark BG</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">10</div><div class="asset-name">Summer Crew Wide Celebration</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">11</div><div class="asset-name">Casino Table — Overhead</div><div class="tool">Higgsfield Image</div></div>
+      <div class="media-item"><div class="num">12</div><div class="asset-name">"July is HERE" Launch Reel</div><div class="tool">Higgsfield Video</div></div>
+      <div class="media-item"><div class="num">13</div><div class="asset-name">Lucky Lou 4-Mood Reel</div><div class="tool">Higgsfield Video</div></div>
+      <div class="media-item"><div class="num">14</div><div class="asset-name">Golden Hour Countdown Reel</div><div class="tool">Higgsfield Video</div></div>
+      <div class="media-item"><div class="num">15–22</div><div class="asset-name">Music Video — 8 Scenes</div><div class="tool">Higgsfield Video</div></div>
+    </div>
+    <div style="margin-top:20px; background:#0f0f1a; border:1px solid #2a2a4a; padding:16px; border-radius:2px;">
+      <div style="font-size:10px; color:#5a5a8a; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px;">Voice Assignments</div>
+      <div style="font-size:13px; color:#c0a8e8; line-height:1.8;">
+        &#127925; <strong style="color:#f0d060;">Lady E (Lead Vocal)</strong> — Vesper preset (voice_id: c3204739-4084-41a3-9dc5-c805b307ec18)<br>
+        &#127925; <strong style="color:#f0d060;">Lucky Lou (Ad Libs)</strong> — Leo preset (voice_id: 73a45c18-0c56-4642-a61e-f6b303f8ded1)<br>
+        &#127925; <strong style="color:#f0d060;">Golden Dealer (Whisper)</strong> — Sterling preset (voice_id: dc382508-c8bd-443c-8cb2-46e57b8d2e6f)
+      </div>
+    </div>
+  </div>
+
+  <!-- SONG -->
+  <div class="section">
+    <div class="section-tag">Section 6</div>
+    <h2>Song of the Day</h2>
+    <div class="song-block">
+      <div class="song-title">&#127925; "GOLDEN JULY"</div>
+      <div class="genre">R&amp;B / Trap Soul &bull; Reggae Undertone &bull; 90 BPM &bull; G Minor &bull; 2:45</div>
+      <div class="lyrics-preview">
+        First of the month and I already know<br>
+        Everything I touch is gonna turn to gold<br>
+        Woke up this morning with a different kind of feel<br>
+        July is here and baby, this is real<br><br>
+        <strong style="color:#f0d060;">Golden July, golden July</strong><br>
+        Everything's aligned, look up at the sky<br>
+        Roll the dice once, roll it twice<br>
+        Golden July's only come around once in life<br><br>
+        You gotta be IN it to WIN it tonight<br>
+        Golden July, golden July<br>
+        The luckiest night of your luckiest life<br>
+        Don't you waste it, don't you wait it<br>
+        <strong style="color:#f0d060;">Golden July &#127920;</strong>
+      </div>
+    </div>
+    <p style="font-size:12px; color:#5a7a5a; text-align:center;">Full lyrics, storyboard (8 scenes), and music video scene-by-scene video prompts are in the attached content calendar document.</p>
+  </div>
+
+  <!-- VISITOR EXPERIENCE -->
+  <div class="section">
+    <div class="section-tag">Section 7</div>
+    <h2>Visitor Experience Analysis</h2>
+    <p style="font-size:13px; color:#8aaa8a; margin-bottom:24px;">What a visitor to the Lady E Luck Facebook page feels and experiences throughout July 1:</p>
+
+    <div class="journey-step">
+      <div class="time-badge">7–8 AM</div>
+      <div class="feeling"><strong>Intrigue + Warmth.</strong> The morning reel and Lady E story feel like being let into something before everyone else. The aesthetic signals premium. They don't feel sold to — they feel invited.</div>
+    </div>
+    <div class="journey-step">
+      <div class="time-badge">10–11 AM</div>
+      <div class="feeling"><strong>Laughter + Attachment.</strong> Lucky Lou changes the energy. The page is suddenly human. The visitor sees themselves or someone they love in Lou. Emotional attachment forms through comedy.</div>
+    </div>
+    <div class="journey-step">
+      <div class="time-badge">12–2 PM</div>
+      <div class="feeling"><strong>Clarity + Social Play.</strong> Three deals, clearly explained. The "tag a friend" mechanic is low-pressure and fun. The visitor doesn't feel advertised to — they feel included in an inside joke with a freebie.</div>
+    </div>
+    <div class="journey-step">
+      <div class="time-badge">3–5 PM</div>
+      <div class="feeling"><strong>Community + Story Pull.</strong> The Lou update makes the visitor feel part of a running story. They check back. They comment. The page is now something they <em>follow</em>, not just scroll past.</div>
+    </div>
+    <div class="journey-step">
+      <div class="time-badge">6–8 PM</div>
+      <div class="feeling"><strong>FOMO + Conversion.</strong> The community win post is joyful and achievable. The visitor thinks: "People are winning right now and I'm not there." This is the conversion moment.</div>
+    </div>
+    <div class="journey-step">
+      <div class="time-badge">9 PM–Mid</div>
+      <div class="feeling"><strong>Anticipation + Participation.</strong> The countdown reel is cinematic. Lady E's "One hour." is personal. The visitor mentally commits to being there. When Lou wins at midnight — the day's payoff lands.</div>
+    </div>
+
+    <div class="emotion-arc">
+      <div class="label">Full Emotional Arc</div>
+      <div class="emotion-flow">Intrigue &rarr; Warmth &rarr; Laughter &rarr; Community &rarr; FOMO &rarr; Anticipation &rarr; Participation</div>
+    </div>
+
+    <div class="quote-box">
+      &#8220;That Lady E Luck page is actually funny. There's this guy Lucky Lou who always almost wins. And the deals they ran today were actually good. I followed the whole thing like a show.&#8221;
+      <br><br><em style="font-size:11px; color:#5a7a5a;">— What visitors will tell their friends at the end of July 1</em>
+    </div>
+  </div>
+
+  <!-- NEXT STEPS -->
+  <div class="section">
+    <div class="section-tag">Next Steps</div>
+    <h2>After This Draft</h2>
+    <div class="cta-box">
+      <div class="cta-label">Phase 2</div>
+      <div class="cta-text">Portal Integration</div>
+      <div class="cta-sub">Wire this workflow into the Lady E Luck portal so it runs automatically at 6AM daily — research, generate, schedule, and post.</div>
+    </div>
+    <p style="font-size:13px; color:#8aaa8a; line-height:1.7;">
+      <strong style="color:#c9a227;">What's ready now:</strong> Full concept, characters, story arc, deals, all 15+ media prompts, song lyrics + storyboard + music video scene prompts, voice assignments.<br><br>
+      <strong style="color:#c9a227;">What needs the portal phase:</strong> Automatic Higgsfield image/video generation, ElevenLabs audio synthesis, Facebook API posting scheduler, Gmail daily delivery, and the 6AM cron job wiring.<br><br>
+      <strong style="color:#c9a227;">Daily schedule set:</strong> Agent will run every day at 6:00 AM, pull trending topics, and generate that day's full calendar.
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="brand">Lady E Luck</div>
+    <div class="divider"></div>
+    <div class="note">
+      Generated: July 1, 2026 &bull; Lady E Luck Content Intelligence System &bull; First Draft<br>
+      Prepared for Luis Rivera &bull; kemprotunda@gmail.com<br><br>
+      Full content calendar with all prompts, lyrics, storyboard, and media queue:<br>
+      <span style="color:#c9a227;">LadyELuck_ContentCalendar_July1_2026.md</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+ASSET: 04_image_new_player_welcome
+FORMAT: feed_image
+TOOL: higgsfield generate_image
+ORIENTATION: 1:1 square
+POST TIME: 11:00 AM
+PLATFORM: FB + IG
+PROMO TYPE: new_player_bonus
+CHARACTER: Lady E (World Cup variant)
+
+PROMPT:
+Medium warm portrait shot. An elegant gold-trimmed welcome table at the entrance of a stadium-styled casino lounge, dark emerald drapes with gold cords. Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress and gold whistle on a chain, long black gloves, large gold hoop earrings, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, tall confident posture. Pose: leaning slightly forward, extending one gloved hand toward camera in warm invitation, genuine welcoming smile. Lighting: warm directional gold light from above, soft and flattering, cinematic. Mood: 'you belong here' warmth, VIP hospitality. Foreground: a gold gift box with emerald ribbon on the table. Background: soft-focus stadium tunnel glowing gold. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: eye level, medium shot, viewer-as-guest perspective.

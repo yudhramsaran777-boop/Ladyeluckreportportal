@@ -1,0 +1,62 @@
+LADY E LUCK — CONTENT PLAN
+Date: 2026-07-10 (Friday) | Theme: Golden Quarterfinal Friday | Total Posts: 17 + Song
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WORLD CUP MODE: ACTIVE — Spain vs. Belgium Quarterfinal — 3:00 PM ET — SoFi Stadium LA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIME      | FORMAT      | PLATFORM       | FILE                              | PROMO TYPE          | ACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7:00 AM   | Reel        | FB + IG        | 01_reel_launch_whistle.mp4        | Theme Launch        | Act 1
+8:30 AM   | Feed Image  | FB + IG        | 02_image_lady_e_emerald_field.png | Theme Launch        | Act 1
+9:30 AM   | Story       | FB + IG        | 03_story_golden_boot_jackpot.png  | Today's Special     | Act 1
+11:00 AM  | Feed Image  | FB + IG        | 04_image_new_player_welcome.png   | New Player Bonus    | Act 2
+11:30 AM  | Story       | FB + IG        | 05_story_lucky_lou_welcome.png    | New Player Bonus    | Act 2
+1:00 PM   | Story       | FB + IG        | 06_story_ball_to_chip_morph.png   | Theme Hype          | Act 2
+2:00 PM   | Reel        | FB + IG        | 07_reel_bonus_wheel_spin.mp4      | Daily Bonus Wheel   | Act 3
+2:30 PM   | Feed Image  | FB + IG        | 08_image_hat_trick_bonus.png      | Hat Trick Bonus     | Act 3
+3:00 PM   | Feed Image  | FB Groups      | 09_image_referral_golden_boots.png| Referral Code       | Act 3
+4:30 PM   | Story       | FB + IG        | 10_story_golden_dealer_hat_trick.png| Hat Trick Bonus   | Act 3
+6:00 PM   | Story       | FB + IG        | 11_story_daily_bonus_clock.png    | Daily Bonus         | Act 4
+6:30 PM   | Feed Image  | FB + IG        | 12_image_golden_boot_trophy.png   | Today's Special     | Act 4
+7:30 PM   | Story       | FB + IG        | 13_story_summer_crew_celebration.png| Community Wins    | Act 4
+8:00 PM   | Reel        | FB + IG        | 14_reel_victory_montage.mp4       | Community Hype      | Act 4
+10:00 PM  | Story       | FB + IG        | 15_story_halftime_reload.png      | Golden Hour         | Act 5
+11:00 PM  | Story       | FB + IG        | 16_story_lucky_lou_wins.png       | Lucky Lou Win       | Act 5
+11:30 PM  | Reel        | FB + IG        | 17_reel_tomorrow_tease.mp4        | Tomorrow Tease      | Act 5
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DEALS TODAY:
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ 🥇 GOLDEN BOOT JACKPOT (All Day — 7AM to Midnight)                             │
+│    Biggest recharge of the day wins a multiplier bonus.                         │
+│    "Score the biggest. Win the boot."                                           │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│ ⚽ HAT TRICK BONUS (1PM–6PM ET — Match Hours)                                  │
+│    3 recharges during the window = stacked bonus.                               │
+│    "Three times. Three wins."                                                   │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│ 🎯 PENALTY KICK FREE SPIN (All Day — Referral)                                 │
+│    Share REF-QUARTERFINAL-847 → friend joins → both get free spin bonus.        │
+│    "Pass it. They score. You both win."                                         │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│ 🌙 HALFTIME RELOAD (10PM–Midnight)                                              │
+│    Mystery drop for active players. "The second half always surprises."         │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+REFERRAL CODE: REF-QUARTERFINAL-847
+
+SONG OF THE DAY: "Golden Kick" — Afrobeats/Trap Fusion, 105 BPM, F# minor
+Voice: Lady E (Vesper preset — voice_id: c3204739-4084-41a3-9dc5-c805b307ec18)
+Use as background track for Reels: 01, 07, 14, 17
+
+AUDIO VOICE LINES:
+  18_audio_lady_e_new_player_welcome.mp3 → pair with post_04 (11AM Feed Image)
+  19_audio_golden_hour_announcement.mp3  → pair with post_15 (10PM Story)
+  20_audio_lucky_lou_hat_trick.mp3       → pair with post_07 (2PM Reel)
+  21_audio_song_golden_kick.mp3          → background for all Reels
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PENDING (need manual generation via Higgsfield dashboard):
+ALL 21 assets — prompts saved to: data/PENDING_GENERATION/
+  13 images  |  4 videos  |  4 audio files
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

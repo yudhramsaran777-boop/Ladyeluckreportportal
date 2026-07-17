@@ -1,0 +1,7 @@
+ASSET: 09_reel_hat_trick_celebration
+FORMAT: Reel (9:16 vertical video, 12-15 seconds)
+TOOL: generate_video
+POST TIME: 5:00 PM — FB + IG
+
+PROMPT:
+12-second vertical cinematic video clip. Shot: Male character in green-and-gold soccer jersey, fishing hat with stickers, mismatched lucky socks — standing on dark emerald casino floor. Movement: camera is static, then shakes slightly on each chip appearance for impact. Character action: Lucky Lou watches as first gold casino chip appears floating in the air before him — he reacts with surprise and delight. Second chip appears — he points at it with growing excitement. Third chip appears — a soccer ball rolls into frame, morphs into the third chip, and all three explode in a burst of gold confetti and coins. Lucky Lou pumps both fists in the air, leaps slightly, biggest grin possible. Lighting: warm gold casino light from above, each chip arrival is punctuated by a gold flash. Atmosphere: casino ambiance with crowd cheer on third chip explosion. Style: photorealistic cinematic. Color: dark green black gold. Audio cue: three satisfying 'ding' sounds building to a crowd roar on the third.

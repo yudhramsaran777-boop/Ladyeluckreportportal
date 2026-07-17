@@ -1,0 +1,7 @@
+ASSET: 11_story_daily_bonus_wheel
+FORMAT: Story Image (vertical 9:16)
+TOOL: generate_image
+CHARACTER: Lady E (World Cup Variant)
+
+PROMPT:
+Vertical 9:16 cinematic story image. Dynamic shot. Black female character, mid-30s to early 40s, in black and gold striped referee-inspired dress with gold whistle on chain, gold crown headpiece, bronze-brown skin, crimson lips — standing beside a glowing oversized vertical slot/bonus wheel made of dark green and gold segments, one arm dramatically pointing at it, other hand on hip, expression urgent and commanding. Wheel is actively blurred as if spinning at speed, gold light radiating from segments. Setting: dark casino interior, deep black behind. Lighting: dramatic mixed lighting — wheel glow and overhead gold spotlight combining on her. Mood: urgent, exciting, deadline energy. Style: photorealistic cinematic. Color: dark green, black, gold glow. No text, no words, no letters. Camera: medium shot, slight low angle capturing her and the wheel.

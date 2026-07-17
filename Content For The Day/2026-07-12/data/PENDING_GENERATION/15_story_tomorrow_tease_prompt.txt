@@ -1,0 +1,7 @@
+ASSET: 15_story_tomorrow_tease
+FORMAT: Story Image (9:16 vertical)
+TOOL: generate_image
+POST TIME: 11:00 PM — FB + IG Stories
+
+PROMPT:
+Vertical cinematic portrait for Stories. Setting: deep emerald darkness, late-night atmosphere. A large gold hourglass with sand slowly falling is positioned beside the character, glowing softly. Character: Black female character, mid-30s to early 40s, black and gold striped referee-inspired dress, gold whistle in hand at her side, gold crown headpiece, deep bronze-brown skin, crimson red lipstick. Pose: one finger held gently to her lips in a 'shhh' gesture toward camera, knowing half-smile, the other hand holds the gold whistle loosely at her side. Eyes locked directly on camera — warm but mysterious. Her expression says she knows something incredible is coming. Lighting: low atmospheric emerald and gold ambient light, cinematic late-night noir softness. Foreground: single gold coin balanced on edge near bottom of frame, slowly settling. Background: emerald darkness, subtle gold particle dust floating. Style: photorealistic, cinematic, mysterious and warm simultaneously. No text, no words, no letters in the image. Camera: close-medium portrait for Stories, slight low angle, space at top and bottom for text overlay.

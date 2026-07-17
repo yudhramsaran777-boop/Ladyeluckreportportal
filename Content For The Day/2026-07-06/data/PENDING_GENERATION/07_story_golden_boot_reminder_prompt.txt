@@ -1,0 +1,7 @@
+ASSET: 07_story_golden_boot_reminder
+FORMAT: Story Image (vertical 9:16)
+TOOL: generate_image
+CHARACTER: The Golden Dealer
+
+PROMPT:
+Vertical 9:16 cinematic story portrait. Close-up dramatic shot. Tall male character, all-black slim-cut suit, gold pocket square, wide-brim hat with face partially shadowed revealing only a strong jaw and slightly parted lips — hand extended toward camera, palm up, a single spinning gold casino chip balanced on fingertips glowing intensely. Background: pure deep black with single cone of gold light from above. Foreground: chip glow reflecting on dark surface below. Lighting: single overhead dramatic spotlight, deep noir contrast. Mood: exclusive, urgent, powerful. Style: photorealistic cinematic noir. Color: black, gold, deep shadow. No text, no words, no letters. Camera: extreme close portrait, chin up, slight below-chin angle.

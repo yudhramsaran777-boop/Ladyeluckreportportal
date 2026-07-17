@@ -1,0 +1,7 @@
+ASSET: 02_image_luckylou_matchday_fit
+FORMAT: Feed Image (1:1 square)
+TOOL: generate_image
+POST TIME: 8:30 AM — FB + IG
+
+PROMPT:
+Full-body portrait shot. Setting: dark emerald green casino floor with subtle gold floor markings suggesting a soccer pitch, soft stadium lighting from above. Character: male character, mid-30s, stocky-average build, wide expressive eyes, enormous warm smile, wearing green-and-gold soccer jersey with no real team logos, fishing hat covered in slot machine emoji stickers and gold star stickers plus a small soccer ball sticker, mismatched lucky socks one green one gold visible above brown loafers. Pose: he holds out both hands — in his left hand a 4-leaf clover, in his right hand a gold casino chip, both on display like trophies. Expression: pure gleeful excitement, largest smile possible. Lighting: warm directional gold light from above, cinematic. Foreground: a gold confetti piece floating near camera. Background: dark emerald green with soft golden bokeh lights. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: medium full-body shot, slightly low angle to make him look triumphant.

@@ -1,0 +1,133 @@
+{
+  "date": "2026-07-16",
+  "run_time": "2026-07-16T19:31:45.574028",
+  "note": "Higgsfield media generation tools (generate_image, generate_video, generate_audio) were NOT available in this scheduled session \u2014 the connected Higgsfield MCP only exposed website/shorts-studio/voice-clone tools. shorts_studio_create requires an uploaded source video, so it could not be used autonomously. All 18 assets saved as ready-to-run prompts in PENDING_GENERATION.",
+  "assets": [
+    {
+      "asset_id": "01_reel_kickoff_whistle",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/01_reel_kickoff_whistle_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "02_image_road_to_final_opener",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/02_image_road_to_final_opener_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "03_image_golden_boot_teaser",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/03_image_golden_boot_teaser_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "04_image_new_player_welcome",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/04_image_new_player_welcome_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "05_image_lucky_lou_intro",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/05_image_lucky_lou_intro_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "06_image_bonus_wheel_spin",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/06_image_bonus_wheel_spin_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "07_image_hat_trick_special",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/07_image_hat_trick_special_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "08_image_referral_penalty_kick",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/08_image_referral_penalty_kick_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "09_reel_dealer_deal_reveal",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/09_reel_dealer_deal_reveal_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "10_image_jackpot_parade_crew",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/10_image_jackpot_parade_crew_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "11_image_daily_bonus_reminder",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/11_image_daily_bonus_reminder_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "12_image_lou_almost_win",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/12_image_lou_almost_win_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "13_image_halftime_reload",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/13_image_halftime_reload_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "14_reel_lou_golden_hour_win",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/14_reel_lou_golden_hour_win_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "15_audio_song_golden_kick",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/15_audio_song_golden_kick_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "16_audio_ladye_kickoff_vo",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/16_audio_ladye_kickoff_vo_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "17_audio_dealer_one_line",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/17_audio_dealer_one_line_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    },
+    {
+      "asset_id": "18_audio_lou_victory_line",
+      "status": "failed_pending_manual",
+      "file_path": "data/PENDING_GENERATION/18_audio_lou_victory_line_prompt.txt",
+      "tool_used": "none (tool unavailable)",
+      "generation_time": null
+    }
+  ]
+}

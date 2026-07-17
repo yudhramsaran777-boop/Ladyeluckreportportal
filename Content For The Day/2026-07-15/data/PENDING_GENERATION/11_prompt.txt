@@ -1,0 +1,11 @@
+ASSET: 11_image_crew_fulltime_party
+FORMAT: image_feed
+TOOL: higgsfield generate_image
+ORIENTATION: square 1:1
+DURATION: n/a
+POST TIME: 6:30 PM
+PLATFORM: FB + IG
+PROMO TYPE: community_wins
+
+PROMPT:
+Celebration group shot. A luxurious dark emerald VIP lounge styled like a stadium box, gold confetti raining down. Four to five diverse players, men and women of varied ethnicities in stylish casual summer wear with subtle green-and-gold accents, cheering with arms raised, phones held up, faces lit with real joy like a full-time winning crowd. Lighting: warm directional gold light from above, confetti catching sparkle, cinematic. Mood: communal triumph, party energy. Foreground: a table with gold casino chips stacked like a trophy. Background: floor-to-ceiling window showing stadium floodlights in the night. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: slightly low angle, wide enough to hold the whole group.

@@ -10,6 +10,7 @@ import { TopGamesBarChart } from "@/components/charts/top-games-bar-chart";
 import {
   formatCurrency,
   formatNumber,
+  reportTotalsFromStoredEntries,
 } from "@/lib/calculations";
 
 interface OwnerReportContentProps {
@@ -145,34 +146,16 @@ function cashoutGameRows(cashouts: any[]) {
 }
 
 function totals(entries: any[], cashouts: any[]) {
-  // Group entries by report to apply the report-level zero-out rule per report.
-  // Use stored game_cost from the DB (what the employee calculated at submission
-  // and the manager verifies) so owner and manager always show identical numbers.
-  const byReport = new Map<string, any[]>();
-  for (const entry of entries) {
-    const list = byReport.get(entry.shift_report_id) ?? [];
-    list.push(entry);
-    byReport.set(entry.shift_report_id, list);
-  }
-  let rechargeSum = 0, gameCostSum = 0, profitSum = 0, trueProfitSum = 0;
-  for (const [, group] of byReport) {
-    const reportProfit   = group.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
-    const reportRecharge = group.reduce((s: number, e: any) => s + Number(e.real_recharge || 0), 0);
-    // Stored game_cost per entry is max(0, profit) × rate, saved at submission time.
-    const storedCost     = group.reduce((s: number, e: any) => s + Number(e.game_cost || 0), 0);
-    // Zero-out rule: no game fee if the report lost money overall.
-    const reportGameCost = reportProfit > 0 ? storedCost : 0;
-    rechargeSum  += reportRecharge;
-    gameCostSum  += reportGameCost;
-    profitSum    += reportProfit;
-    trueProfitSum += reportProfit - reportGameCost;
-  }
+  // Canonical formula from src/lib/calculations.ts: stored game_cost
+  // (max(profit, 0) × rate), per-report zero-out, no scaling — identical
+  // in owner and manager views.
+  const rt = reportTotalsFromStoredEntries(entries);
   return {
-    recharge: rechargeSum,
+    recharge: rt.totalRecharge,
     cashout: cashouts.reduce((sum, c) => sum + Number(c.amount || 0), 0),
-    gameCost: gameCostSum,
-    profit: profitSum,
-    trueProfit: trueProfitSum,
+    gameCost: rt.totalGameCost,
+    profit: rt.totalProfit,
+    trueProfit: rt.totalTrueProfit,
     cashoutCount: cashouts.length,
     cashAppCashout: cashouts.reduce(
       (sum, c) => sum + (normalizePaymentMethod(c.payment_method) === "CashApp" ? Number(c.amount || 0) : 0),

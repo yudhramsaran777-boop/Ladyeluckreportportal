@@ -1,0 +1,37 @@
+{
+  "date": "2026-07-10",
+  "generation_status": "PENDING — media generation tools not available in this session",
+  "note": "All 21 prompts saved to data/PENDING_GENERATION/. Generate manually via Higgsfield dashboard or next session with generate_image / generate_video / generate_audio tools.",
+  "assets": [
+    {"asset_id": "01", "filename": "01_reel_launch_whistle.mp4", "format": "video", "status": "PENDING", "file_path": "videos/01_reel_launch_whistle.mp4", "tool_used": "higgsfield_generate_video", "generation_time": null},
+    {"asset_id": "02", "filename": "02_image_lady_e_emerald_field.png", "format": "image", "status": "PENDING", "file_path": "images/02_image_lady_e_emerald_field.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "03", "filename": "03_story_golden_boot_jackpot.png", "format": "image", "status": "PENDING", "file_path": "images/03_story_golden_boot_jackpot.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "04", "filename": "04_image_new_player_welcome.png", "format": "image", "status": "PENDING", "file_path": "images/04_image_new_player_welcome.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "05", "filename": "05_story_lucky_lou_welcome.png", "format": "image", "status": "PENDING", "file_path": "images/05_story_lucky_lou_welcome.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "06", "filename": "06_story_ball_to_chip_morph.png", "format": "image", "status": "PENDING", "file_path": "images/06_story_ball_to_chip_morph.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "07", "filename": "07_reel_bonus_wheel_spin.mp4", "format": "video", "status": "PENDING", "file_path": "videos/07_reel_bonus_wheel_spin.mp4", "tool_used": "higgsfield_generate_video", "generation_time": null},
+    {"asset_id": "08", "filename": "08_image_hat_trick_bonus.png", "format": "image", "status": "PENDING", "file_path": "images/08_image_hat_trick_bonus.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "09", "filename": "09_image_referral_golden_boots.png", "format": "image", "status": "PENDING", "file_path": "images/09_image_referral_golden_boots.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "10", "filename": "10_story_golden_dealer_hat_trick.png", "format": "image", "status": "PENDING", "file_path": "images/10_story_golden_dealer_hat_trick.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "11", "filename": "11_story_daily_bonus_clock.png", "format": "image", "status": "PENDING", "file_path": "images/11_story_daily_bonus_clock.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "12", "filename": "12_image_golden_boot_trophy.png", "format": "image", "status": "PENDING", "file_path": "images/12_image_golden_boot_trophy.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "13", "filename": "13_story_summer_crew_celebration.png", "format": "image", "status": "PENDING", "file_path": "images/13_story_summer_crew_celebration.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "14", "filename": "14_reel_victory_montage.mp4", "format": "video", "status": "PENDING", "file_path": "videos/14_reel_victory_montage.mp4", "tool_used": "higgsfield_generate_video", "generation_time": null},
+    {"asset_id": "15", "filename": "15_story_halftime_reload.png", "format": "image", "status": "PENDING", "file_path": "images/15_story_halftime_reload.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "16", "filename": "16_story_lucky_lou_wins.png", "format": "image", "status": "PENDING", "file_path": "images/16_story_lucky_lou_wins.png", "tool_used": "higgsfield_generate_image", "generation_time": null},
+    {"asset_id": "17", "filename": "17_reel_tomorrow_tease.mp4", "format": "video", "status": "PENDING", "file_path": "videos/17_reel_tomorrow_tease.mp4", "tool_used": "higgsfield_generate_video", "generation_time": null},
+    {"asset_id": "18", "filename": "18_audio_lady_e_new_player_welcome.mp3", "format": "audio", "status": "PENDING", "file_path": "audio/18_audio_lady_e_new_player_welcome.mp3", "tool_used": "higgsfield_generate_audio", "voice_id": "c3204739-4084-41a3-9dc5-c805b307ec18", "generation_time": null},
+    {"asset_id": "19", "filename": "19_audio_golden_hour_announcement.mp3", "format": "audio", "status": "PENDING", "file_path": "audio/19_audio_golden_hour_announcement.mp3", "tool_used": "higgsfield_generate_audio", "voice_id": "c3204739-4084-41a3-9dc5-c805b307ec18", "generation_time": null},
+    {"asset_id": "20", "filename": "20_audio_lucky_lou_hat_trick.mp3", "format": "audio", "status": "PENDING", "file_path": "audio/20_audio_lucky_lou_hat_trick.mp3", "tool_used": "higgsfield_generate_audio", "voice_id": "73a45c18-0c56-4642-a61e-f6b303f8ded1", "generation_time": null},
+    {"asset_id": "21", "filename": "21_audio_song_golden_kick.mp3", "format": "audio", "status": "PENDING", "file_path": "audio/21_audio_song_golden_kick.mp3", "tool_used": "higgsfield_generate_audio", "voice_id": "c3204739-4084-41a3-9dc5-c805b307ec18", "generation_time": null}
+  ],
+  "summary": {
+    "total": 21,
+    "generated": 0,
+    "pending": 21,
+    "failed": 0,
+    "images_pending": 13,
+    "videos_pending": 4,
+    "audio_pending": 4
+  }
+}

@@ -1,0 +1,34 @@
+✅ LADY E LUCK DAILY CONTENT — 2026-07-16 COMPLETE (planning + captions; media pending)
+
+Theme: Road to the Final (World Cup mode ON)
+Hook: World Cup 2026 final is set — Spain vs Argentina this Sunday at MetLife. Semifinal drama (Argentina's late rally past England) is THE viral moment of the week. Today is the rest day: prediction and hype energy everywhere.
+
+📁 Saved to: Content For The Day/2026-07-16/ (project folder — Downloads not accessible from this environment)
+
+GENERATED:
+  ⚠️ 0 images (11 planned)
+  ⚠️ 0 videos/reels (3 planned)
+  ⚠️ 0 audio files (4 planned, incl. song "Golden Kick")
+  ✅ 18 captions (.txt files in images/, videos/, audio/ — ready the moment media exists)
+  ✅ theme_brief.json, storyline.json, schedule.json, prompts.json, media_log.json, posting_schedule.txt
+  ⚠️ 18 assets pending manual generation (data/PENDING_GENERATION/ — one ready-to-paste prompt per asset)
+
+WHY MEDIA IS PENDING:
+The Higgsfield generation tools (generate_image / generate_video / generate_audio) were not exposed in this scheduled session — the connector only offered website, shorts-studio, and voice-clone tools, and shorts_studio_create needs an uploaded source video. Check the Higgsfield connector in Claude settings (it may need re-auth or a plan with generation enabled), then re-run generation from the PENDING_GENERATION prompts.
+
+DEALS TODAY:
+  • Golden Boot Jackpot — all day — biggest recharge wins a multiplier bonus
+  • Hat Trick Bonus — 3PM-6PM — 3 recharges = stacked bonus (TODAY'S SPECIAL, double-posted)
+  • Penalty Kick Free Spin — referral — both sides get a free spin bonus
+  • Halftime Reload — 10PM-Midnight — mystery drop for active players
+  Referral Code: REF-GOLDENBOOT-284
+
+FIRST POST: 7:00 AM — 01_reel_kickoff_whistle (Lady E blows the gold whistle, ball morphs into a chip)
+GOLDEN HOUR: 10PM – Midnight (Halftime Reload story + Lucky Lou's extra-time win reel)
+
+NOTES FOR LUIS:
+  1. Generate the 18 assets from data/PENDING_GENERATION/ (prompts are copy-paste ready, exact character specs included).
+  2. Set up referral code REF-GOLDENBOOT-284 in the system BEFORE the 2PM Groups post.
+  3. Fill in bonus amounts flagged in each caption's "NOTES FOR LUIS" section (Golden Boot multiplier, Hat Trick tiers, welcome bonus, free spin values, Halftime Reload contents).
+  4. Post 08 (3:30 PM story) reuses the 07 Hat Trick image as a 9:16 crop with a "LIVE UNTIL 6PM" countdown sticker.
+  5. Tomorrow (Fri) and the weekend are peak World Cup: third-place match Sat 7/18, FINAL Sun 7/19-20 — expect World Cup mode again with match-aligned timing.

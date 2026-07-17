@@ -1,0 +1,23 @@
+━━━━━━━━━━━━━━━━━━━━━━━━
+LADY E LUCK — POST CAPTION
+File: 15_story_halftime_reload.png
+Platform: Facebook + Instagram
+Post Time: 10:00 PM
+Promo Type: Golden Hour
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+CAPTION:
+🌙 Golden Hour is here.
+
+Halftime Reload just dropped.
+If you've been playing today — check your account right now.
+
+The second half always surprises. 👑
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+INSTAGRAM NOTES:
+Story overlay: "HALFTIME RELOAD — CHECK YOUR ACCOUNT" in gold. Countdown sticker to midnight. Audio: use 19_audio_golden_hour_announcement.mp3 (Lady E voiceover) if the platform supports audio Stories. Link sticker: "Check Now →"
+━━━━━━━━━━━━━━━━━━━━━━━━
+NOTES FOR LUIS:
+This is the Halftime Reload trigger post. Make sure the mystery bonus is actually active in your system BEFORE this posts at 10PM. The audio voice line from Lady E (asset 19) was written specifically for this moment — use it if possible.
+━━━━━━━━━━━━━━━━━━━━━━━━

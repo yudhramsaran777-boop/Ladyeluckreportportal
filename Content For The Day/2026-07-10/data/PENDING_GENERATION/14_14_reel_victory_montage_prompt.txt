@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 14
+Filename: 14_reel_victory_montage
+Format: video
+Tool: higgsfield_generate_video
+Orientation: vertical (9:16)
+Duration: 20 seconds
+Post Time: 8:00 PM
+Platform: Facebook + Instagram
+Promo Type: community_hype
+Character: Lucky Lou (WC) + Lady E (WC) + Golden Dealer
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+20-second vertical cinematic video. Three-scene montage cut rapidly: SCENE 1 (7 sec): Male character in green-gold soccer jersey does a full knee-slide goal celebration on dark emerald turf, arms wide, fishing hat nearly flying off, enormous grin — stadium lights burst gold above him. SCENE 2 (7 sec): Black female character in black-gold referee dress raises a gold trophy above her head with both gloved hands, crimson lips in a triumphant smile, gold coins raining from above as she stands on emerald turf. SCENE 3 (6 sec): Tall dealer in black suit, wide-brim hat, places one final gold casino chip with perfect precision onto a stack of chips that reaches screen height — chips catch light as they sway and settle. Camera movement: each scene has a slow push-in. Cuts are sharp and rhythmic. Lighting: warm gold stadium floodlights, dramatic. Atmosphere: euphoric, triumphant, electric. Afrobeats drum beat sound cue. Style: photorealistic cinematic. Color: dark green black gold. No text no words no letters.

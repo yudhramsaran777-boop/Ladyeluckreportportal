@@ -1,0 +1,11 @@
+ASSET: 08_image_referral_penalty_kick
+FORMAT: groups_image
+TOOL: higgsfield generate_image
+ORIENTATION: 1:1 square
+POST TIME: 2:00 PM
+PLATFORM: FB Groups
+PROMO TYPE: referral
+CHARACTER: none
+
+PROMPT:
+Symbolic wide shot. A night stadium penalty area: dark emerald turf, white penalty spot, and a goal whose net is dripping strings of gold coins that pool beneath it. Pose/action: a single oversized gold casino chip spinning upright on the penalty spot, motion-blurred edges, mid-spin. Lighting: warm directional gold light from above like a floodlight column, cinematic. Mood: the perfect assist, shared victory. Foreground: the spinning chip casting a long warm shadow. Background: goal net glittering with falling gold coins, dark stands beyond. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: knee-height wide shot facing the goal.

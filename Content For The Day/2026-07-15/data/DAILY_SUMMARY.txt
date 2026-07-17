@@ -1,0 +1,40 @@
+✅ LADY E LUCK DAILY CONTENT — 2026-07-15 COMPLETE (PLANS + CAPTIONS; MEDIA PENDING)
+
+Theme: Semifinal Showdown (World Cup mode)
+Hook: FIFA World Cup semifinal — England vs Argentina, 3PM ET, Atlanta Stadium. Final lands Sunday July 19 at MetLife.
+
+📁 Saved to: Employee Management App (Lady E Luck Portal Project)/Content For The Day/2026-07-15/
+
+GENERATED:
+  ✅ 0 images (11 planned — prompts ready)
+  ✅ 0 videos/reels (3 planned — prompts ready)
+  ✅ 0 audio files (4 planned — prompts + full song lyrics ready)
+  ✅ 15 captions (.txt files in images/, videos/, audio/)
+  ⚠️  18 assets pending manual generation — all prompts saved in data/PENDING_GENERATION/
+      Reason: Higgsfield generate_image / generate_video / generate_audio tools were
+      not available in this session (connector only exposed website/voice/shorts tools).
+
+DEALS TODAY:
+  1. Golden Boot Jackpot — ALL DAY — biggest recharge wins a multiplier bonus
+  2. Hat Trick Bonus — 3PM-6PM — 3 recharges during match hours = stacked bonus
+  3. Penalty Kick Free Spin — ALL DAY — referral: both sides get a free spin bonus
+  4. Halftime Reload — 10PM-Midnight — mystery drop for active players
+  Referral Code: REF-GOAL-347
+
+FIRST POST: 7:00 AM — 01_reel_kickoff_whistle (Lady E blows the kickoff whistle)
+GOLDEN HOUR: 10PM – Midnight
+
+SONG OF THE DAY: "Golden Kick" — Afrobeats/Trap fusion, 105 BPM, F minor.
+Full lyrics in data/storyline.json.
+
+NOTES FOR LUIS:
+  1. GENERATE MEDIA: paste each prompt from data/PENDING_GENERATION/ into Higgsfield
+     (18 files, each labeled with tool, orientation, and duration). Reconnect/re-auth
+     the Higgsfield connector so tomorrow's run can generate automatically.
+  2. FILL IN bonus amounts before posting: Golden Boot multiplier, Hat Trick stack,
+     welcome bonus, Halftime Reload contents (flagged in each caption's NOTES section).
+  3. REGISTER referral code REF-GOAL-347 in your system before the 2:30 PM Groups post.
+  4. Groups post (2:30 PM) reuses the Hat Trick image (07) — its caption is in
+     images/07_image_hat_trick_deal.txt under GROUPS VERSION.
+  5. Stories only between 3PM-5PM (match window) — schedule already respects this.
+  6. All posting still requires your approval — nothing was published.

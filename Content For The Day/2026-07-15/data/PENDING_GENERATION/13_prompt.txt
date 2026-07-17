@@ -1,0 +1,11 @@
+ASSET: 13_story_golden_boot_lastcall
+FORMAT: image_story
+TOOL: higgsfield generate_image
+ORIENTATION: vertical 9:16
+DURATION: n/a
+POST TIME: 9:00 PM
+PLATFORM: FB + IG Story
+PROMO TYPE: todays_special_bonus_story
+
+PROMPT:
+Dramatic silhouette shot. Total black darkness. A single vertical spotlight beam of warm gold light cuts down through haze, illuminating a gleaming gold soccer boot on a black pedestal, edge-lit and glowing, a few gold coins mid-fall around it. Lighting: one directional gold spotlight from above, volumetric haze, cinematic. Mood: last call, now-or-never gravity. Foreground: faint gold coin reflections on black floor. Background: pure darkness. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: straight-on, medium-close, boot centered in vertical frame.

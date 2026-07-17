@@ -1,0 +1,7 @@
+ASSET: 12_image_story_daily_bonus_final_whistle
+FORMAT: image (vertical 9:16)
+TOOL: generate_image (Higgsfield)
+POST TIME: 9:00 PM | PLATFORM: Stories | ACT: 4 | PROMO: daily_bonus
+
+PROMPT:
+Close-up still life shot. Subject: large ornate gold coin front-facing and perfectly centered, glowing with warm internal gold light, placed on a dark emerald velvet surface. Behind the coin: a digital clock displaying 11:59 in glowing gold numerals (clock numerals only, no other text). The clock face is blurred/soft focus — the coin is the sharp subject. Fine gold dust particles float around the coin. Lighting: dramatic single overhead gold spotlight, deep shadow surround. Mood: urgent, precious, final-moment intensity. Foreground: gold dust. Background: deep black. Style: photorealistic, cinematic macro, dark green and gold color palette. Clock numerals 11:59 in image are acceptable. No other text, no words, no letters in the image. Camera: close-up, eye-level, centered.

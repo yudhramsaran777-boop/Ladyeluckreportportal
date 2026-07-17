@@ -1,0 +1,12 @@
+ASSET: 01_reel_kickoff_whistle
+FORMAT: reel
+TOOL: higgsfield generate_video
+ORIENTATION: 9:16 vertical
+DURATION: 8s
+POST TIME: 7:00 AM
+PLATFORM: FB + IG
+PROMO TYPE: theme_launch
+CHARACTER: Lady E (World Cup variant)
+
+PROMPT:
+8-second vertical 9:16 cinematic video clip. Shot: a grand casino floor transformed into a stadium — dark emerald turf underfoot, gold floodlights above. Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress and gold whistle on a chain, long black gloves, large gold hoop earrings, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, tall confident posture, standing on the center circle. Movement: slow push-in from low angle. Character action: she raises the gold whistle, blows it, and a burst of gold confetti erupts as a soccer ball at her feet morphs into a spinning gold casino chip. Lighting: warm directional gold light from above, cinematic, floodlight flares. Atmosphere: electric kickoff energy, floating gold particles. Audio cue: sharp whistle, crowd roar swell, deep drum hit. Style: photorealistic cinematic. Color: dark green black gold.

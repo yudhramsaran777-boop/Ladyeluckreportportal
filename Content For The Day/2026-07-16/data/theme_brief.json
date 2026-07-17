@@ -1,0 +1,21 @@
+{
+  "date": "2026-07-16",
+  "day_of_week": "Thursday",
+  "theme_source": "trending",
+  "theme_name": "Road to the Final",
+  "theme_tagline": "The whole world is watching. The gold is already here.",
+  "primary_hook": "World Cup 2026 final is set: Spain vs Argentina this Sunday at MetLife Stadium. Semifinals just wrapped (Spain 2-0 France, Argentina 2-1 England with a late Messi-led rally).",
+  "secondary_hook": "Third-place match France vs England Saturday July 18. Today is the rest day — everyone is buzzing, predicting, and reliving semifinal drama.",
+  "trending_topic_details": "World Cup 2026 dominates every platform. Argentina's stunning late comeback over England is the viral moment of the week; Spain vs Argentina final hype is peaking. Perfect all-audience, non-political trending anchor.",
+  "special_day_details": null,
+  "world_cup_mode": true,
+  "tone": ["electric", "celebratory", "premium stadium-night energy"],
+  "content_angle": "Lady E Luck is the VIP box of the Road to the Final — match-day energy, golden-boot deals, and community predictions while the world counts down to Sunday.",
+  "deals_hook": [
+    "Golden Boot Jackpot (all day): biggest recharge of the day wins a multiplier bonus — 'Score the biggest. Win the boot.'",
+    "Hat Trick Bonus (3PM-6PM): 3 recharges during match hours = stacked bonus — 'Three times. Three wins.'",
+    "Penalty Kick Free Spin (referral): share code, friend joins = both get a free spin bonus — 'Pass it. They score. You both win.'",
+    "Halftime Reload (10PM-Midnight): mystery midnight drop for active players — 'The second half always surprises.'"
+  ],
+  "avoid": ["politics", "tragedy", "conflict", "religion", "real team logos or player likenesses", "gambling/betting language", "chasing losses"]
+}

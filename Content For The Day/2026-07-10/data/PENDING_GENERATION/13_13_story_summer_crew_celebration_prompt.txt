@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 13
+Filename: 13_story_summer_crew_celebration
+Format: image
+Tool: higgsfield_generate_image
+Orientation: vertical (9:16)
+Duration: N/A
+Post Time: 7:30 PM
+Platform: Facebook + Instagram
+Promo Type: community_wins
+Character: Summer Crew (4-5 diverse players)
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Wide group shot. Setting: dark emerald green soccer turf at night under stadium floodlights. A group of four to five diverse adults — varied ages, backgrounds, all in casual elegant style with touches of gold and green accessories — celebrating together with arms raised high, wide joyful smiles, in the midst of a golden and green confetti explosion raining from above. The group is tightly arranged, everyone leaning into each other in a community celebration. Lighting: warm gold stadium floodlights from above, confetti catching the light in a shower of gold and emerald green. Mood: pure joy, community, belonging, winning together. Foreground: confetti landing in front of camera. Background: stadium lights creating warm bokeh halos. Style: photorealistic, cinematic, warm golden tones. No text, no words, no letters in the image. Camera: wide shot, group centered, slight low angle to feel immersive and celebratory.

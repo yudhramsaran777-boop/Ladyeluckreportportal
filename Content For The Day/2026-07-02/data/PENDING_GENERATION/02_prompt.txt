@@ -1,0 +1,7 @@
+ASSET: 02_image_golden_stadium_lady_e_sideline
+FORMAT: image (square 1:1)
+TOOL: generate_image (Higgsfield)
+POST TIME: 8:30 AM | PLATFORM: Facebook + Instagram Feed | ACT: 1
+
+PROMPT:
+Wide establishing shot. Setting: luxury casino reimagined as a soccer stadium — emerald green playing surface, stadium floodlights as casino spotlights overhead, gold Lady E Luck logo design at center circle on the floor. In foreground: soccer ball morphing mid-frame into a spinning gold casino chip, trailing gold light particles. Character: Black female character, mid-30s to early 40s, floor-length black and gold striped referee-inspired dress, gold crown headpiece, deep bronze-brown skin, crimson lips, standing at the right sideline with arms open wide in a welcoming gesture, confident posture. Lighting: warm directional gold light from above, cinematic stadium lighting. Mood: electric, grand, luxurious, celebratory. Foreground: gold coin confetti scattered on emerald floor. Background: dark stadium seating with gold light accents. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: wide angle, eye-level.

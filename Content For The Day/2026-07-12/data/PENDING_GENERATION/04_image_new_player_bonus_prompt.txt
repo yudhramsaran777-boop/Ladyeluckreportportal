@@ -1,0 +1,7 @@
+ASSET: 04_image_new_player_bonus
+FORMAT: Feed Image (4:5 portrait)
+TOOL: generate_image
+POST TIME: 11:00 AM — FB + IG
+
+PROMPT:
+Wide portrait shot. Setting: entrance of a glowing luxury casino with dark green walls and gold accents — the floor has faint gold lines suggesting a soccer pitch, blending casino and stadium aesthetics. Grand arched entrance with warm golden light pouring through. Character: Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress with gold whistle on a chain, large gold hoop earrings, gold bracelet, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick. Pose: both arms extended wide in a welcoming embrace gesture, warm smile, head slightly tilted in invitation. She stands at the entrance, gold spotlight from above haloing her. Lighting: warm directional gold light from above and behind creating a halo effect, cinematic. Foreground: gold carpet leading toward her, rose petals mixed with gold confetti on the floor. Background: elegant casino interior glowing emerald and gold. Style: photorealistic, cinematic, luxury premium aesthetic. No text, no words, no letters in the image. Camera: medium wide shot at eye level.

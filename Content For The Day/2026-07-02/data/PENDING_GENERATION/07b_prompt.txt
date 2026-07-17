@@ -1,0 +1,10 @@
+ASSET: 07b_audio_lucky_lou_referral_line
+FORMAT: audio (8 seconds, voiceover)
+TOOL: generate_audio — text2speech_v2 (Higgsfield)
+VOICE: Lucky Lou / Leo / voice_id: 73a45c18-0c56-4642-a61e-f6b303f8ded1
+POST TIME: 2:00 PM | PLATFORM: Reels voiceover option | ACT: 3
+
+TEXT TO SPEAK:
+"Hey — pass it to your buddy. They score, you score. We ALL score. That's the Penalty Kick Free Spin, baby!"
+
+DELIVERY: Enthusiastic, warm, lovably over-the-top excitement. Quick and punchy, natural pause after "baby". Slight chuckle at the end if possible.

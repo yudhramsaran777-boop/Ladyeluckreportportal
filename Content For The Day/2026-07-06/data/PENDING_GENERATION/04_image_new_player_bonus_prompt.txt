@@ -1,0 +1,7 @@
+ASSET: 04_image_new_player_bonus
+FORMAT: Feed Image (square 1:1)
+TOOL: generate_image
+CHARACTER: Lady E (World Cup Variant)
+
+PROMPT:
+Cinematic square 1:1 feed image. Wide shot. Black female character, mid-30s to early 40s, wearing a black and gold striped fitted referee-inspired dress with gold whistle on a gold chain, long black gloves, large gold hoop earrings, gold bracelet, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, tall confident posture — standing at grand double doors made of dark emerald wood with gold filigree handles, both arms spread wide open in a welcoming gesture, warm confident smile directed at camera. Setting: luxurious casino interior behind her, warm golden ambient glow spilling through doorway, dark green velvet walls, gold chandeliers. Foreground: ornate dark marble floor. Lighting: golden backlight framing her silhouette, warm directional front fill catching her face. Mood: welcoming, aspirational, luxury. Style: photorealistic cinematic, dark green and gold palette. No text, no words, no letters. Camera: centered medium-wide shot, eye level.

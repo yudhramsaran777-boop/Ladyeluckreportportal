@@ -1,0 +1,33 @@
+LADY E LUCK — CONTENT PLAN
+Date: 2026-07-16 (Thursday) | Theme: Road to the Final (World Cup mode) | Total Posts: 15
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIME     | FORMAT      | PLATFORM   | FILE                            | PROMO TYPE          | CAPTION OPENS WITH
+7:00 AM  | Reel        | FB + IG    | 01_reel_kickoff_whistle         | Theme Launch        | "The whistle just blew — and the gold is already here."
+8:00 AM  | Feed Image  | FB + IG    | 02_image_road_to_final_opener   | Theme Launch        | "Match week. Final Sunday. Gold every day in between."
+9:30 AM  | Story       | FB + IG    | 03_image_golden_boot_teaser     | Deal Tease          | "A boot full of gold has one name on it today."
+11:00 AM | Feed Image  | FB + IG    | 04_image_new_player_welcome     | NEW PLAYER BONUS    | "Every squad has room for one more."
+12:30 PM | Story       | FB + IG    | 05_image_lucky_lou_intro        | Character           | "Lou's first touch needs work. His luck doesn't."
+1:30 PM  | Story       | FB + IG    | 06_image_bonus_wheel_spin       | DAILY BONUS WHEEL   | "Your daily spin is sitting there."
+2:00 PM  | Groups      | FB Groups  | 08_image_referral_penalty_kick  | REFERRAL CODE       | "Pass it. They score. You BOTH win."
+2:30 PM  | Feed Image  | FB + IG    | 07_image_hat_trick_special      | TODAY'S SPECIAL     | "TODAY ONLY: The Hat Trick Bonus."
+3:30 PM  | Story      | FB + IG    | 07_image_hat_trick_special (crop)| TODAY'S SPECIAL x2  | "LIVE UNTIL 6PM" overlay + countdown
+4:00 PM  | Reel        | FB + IG    | 09_reel_dealer_deal_reveal      | Deal Reveal         | "He only says one thing."
+6:00 PM  | Feed Image  | FB + IG    | 10_image_jackpot_parade_crew    | Community           | "This is what a trophy lift looks like at Lady E Luck."
+7:30 PM  | Story       | FB + IG    | 11_image_daily_bonus_reminder   | DAILY BONUS         | "Still unclaimed? Your daily bonus won't wait forever."
+9:00 PM  | Story       | FB + IG    | 12_image_lou_almost_win         | Character           | "OFF THE CROSSBAR. So close, Lou."
+10:30 PM | Story       | FB + IG    | 13_image_halftime_reload        | HALFTIME RELOAD     | "The vault is open."
+11:00 PM | Reel        | FB + IG    | 14_reel_lou_golden_hour_win     | Golden Hour + Tease | "Off the post... AND IN."
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPTIONAL: 8:30 PM Story — Song of the Day "Golden Kick" (15_audio_song_golden_kick)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DEALS TODAY:
+1. Golden Boot Jackpot — ALL DAY. Biggest recharge of the day wins a multiplier bonus. "Score the biggest. Win the boot."
+2. Hat Trick Bonus — 3PM-6PM. 3 recharges during the window = stacked bonus. "Three times. Three wins."
+3. Penalty Kick Free Spin — ALL DAY (referral). Share code, friend joins = both get a free spin bonus. "Pass it. They score. You both win."
+4. Halftime Reload — 10PM-MIDNIGHT. Mystery drop for active players. "The second half always surprises."
+REFERRAL CODE: REF-GOLDENBOOT-284
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PENDING (need manual generation): ALL 18 assets — 11 images, 3 reels, 4 audio.
+Ready-to-run prompts are in data/PENDING_GENERATION/ (one .txt per asset).
+Reason: Higgsfield media generation tools were not available in this scheduled session.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

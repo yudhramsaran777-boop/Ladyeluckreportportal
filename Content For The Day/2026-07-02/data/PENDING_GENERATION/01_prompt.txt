@@ -1,0 +1,7 @@
+ASSET: 01_reel_lady_e_golden_whistle_open
+FORMAT: video (Reel, vertical 9:16, 8 seconds)
+TOOL: generate_video (Higgsfield)
+POST TIME: 7:00 AM | PLATFORM: Facebook + Instagram Reels | ACT: 1
+
+PROMPT:
+8-second vertical cinematic video clip. Shot: Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress with gold whistle on a chain, gold crown headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick — walks in slow motion toward camera down a golden stadium tunnel. Movement: slow push-in camera following her approach. Character action: She raises the gold whistle to her lips and blows it — gold coins and miniature soccer balls explode outward in a burst of confetti. Lighting: warm directional gold light from above, stadium floodlights as casino spotlights converging on her. Atmosphere: electric, celebratory, gold particle confetti raining down, stadium crowd roar implied. Audio cue: whistle blow + crowd roar + deep 808 bass hit. Style: photorealistic cinematic. Color: dark emerald green, deep black, rich gold. No text, no words, no letters in the image.

@@ -1,0 +1,104 @@
+{
+  "date": "2026-07-15",
+  "theme": "Semifinal Showdown",
+  "brand_note": "All assets: dark emerald green, deep black, rich gold. Photorealistic cinematic. No text/words/letters in images. Must read clearly on a 6-inch phone screen.",
+  "character_blocks": {
+    "LADY_E_WC": "Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress and gold whistle on a chain, long black gloves, large gold hoop earrings, gold bracelet, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, tall confident posture",
+    "LUCKY_LOU_WC": "Male character, mid-30s, stocky-average build, wide expressive eyes, large warm smile, wearing green-and-gold soccer jersey with no real team logos, fishing hat covered in slot machine emoji stickers and gold star stickers plus a small soccer ball sticker, mismatched lucky socks (one green one gold) visible above loafers, always holding or near a 4-leaf clover",
+    "GOLDEN_DEALER": "Tall male character, all-black slim-cut suit, gold pocket square, gold-edged card deck, wide-brim hat with face partially shadowed showing only jaw and lips, completely still"
+  },
+  "assets": [
+    {
+      "asset_id": "01", "filename": "01_reel_kickoff_whistle", "format": "reel", "tool": "higgsfield generate_video", "orientation": "vertical 9:16", "duration": "8s",
+      "post_time": "7:00 AM", "platform": "FB + IG", "promo_type": "theme_launch", "character": "LADY_E_WC", "world_cup_variation": true,
+      "prompt": "8-second vertical 9:16 cinematic video clip. Shot: a luxurious dark emerald casino lounge transformed with stadium green turf underfoot, stadium floodlights beaming down like casino spotlights. Movement: slow push-in toward center. Character action: Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress and gold whistle on a chain, long black gloves, gold hoop earrings, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, raises the gold whistle to her lips and blows; the moment she blows, gold confetti erupts and floodlights flare. Lighting: warm directional gold light from above, dramatic flares. Atmosphere: electric kickoff energy, floating gold dust particles. Audio cue: sharp whistle blast into crowd roar. Style: photorealistic cinematic. Color: dark green black gold. No text, no words, no letters."
+    },
+    {
+      "asset_id": "02", "filename": "02_image_golden_boot_deal", "format": "image_feed", "tool": "higgsfield generate_image", "orientation": "square 1:1",
+      "post_time": "8:00 AM", "platform": "FB + IG", "promo_type": "todays_special_bonus", "character": "none", "world_cup_variation": true,
+      "prompt": "Hero product shot. A dark emerald stadium at night, penalty area of glowing green turf. A gleaming solid-gold soccer boot on a black marble pedestal at the penalty spot, dripping molten gold coins that pool on the turf. Lighting: warm directional gold light from above, single dramatic floodlight beam, cinematic. Mood: prestigious, high-stakes trophy energy. Foreground: scattered gold casino chips catching the light. Background: soft-focus goal net dripping gold coins, black stadium darkness. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle, medium-close distance, boot dominating frame."
+    },
+    {
+      "asset_id": "03", "filename": "03_story_bonus_wheel_spin", "format": "image_story", "tool": "higgsfield generate_image", "orientation": "vertical 9:16",
+      "post_time": "9:30 AM", "platform": "FB + IG Story", "promo_type": "daily_bonus_wheel", "character": "none", "world_cup_variation": true,
+      "prompt": "Dynamic close-up shot. A dark black-and-emerald casino backdrop. A large prize wheel styled like a soccer ball — black and white pentagon panels alternating with glowing gold segments — captured mid-spin with motion blur at the edges, gold light streaking. Lighting: warm directional gold light from above, rim lighting on the wheel edge, cinematic. Mood: urgency, morning energy. Foreground: a single gold pointer flag at the top of the wheel. Background: blurred emerald curtain with bokeh gold lights. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: straight-on, close distance, wheel filling most of vertical frame."
+    },
+    {
+      "asset_id": "04", "filename": "04_image_new_player_welcome", "format": "image_feed", "tool": "higgsfield generate_image", "orientation": "square 1:1",
+      "post_time": "11:00 AM", "platform": "FB + IG", "promo_type": "new_player_bonus", "character": "LADY_E_WC", "world_cup_variation": true,
+      "prompt": "Wide welcoming shot. A stadium locker-room entrance reimagined in luxury: black marble walls with gold trim. Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress and gold whistle on a chain, long black gloves, gold hoop earrings, gold bracelet, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, tall confident posture, holds open a tall gold-trimmed door revealing a glowing emerald-and-gold VIP lounge beyond, her other hand extended in warm invitation. Lighting: warm directional gold light from above spilling through the doorway, cinematic. Mood: warm, inviting, you-belong-here. Foreground: polished black floor reflecting gold light. Background: the radiant lounge with plush emerald seating and golden glow. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: eye level, medium-wide distance."
+    },
+    {
+      "asset_id": "05", "filename": "05_story_lou_hits_post", "format": "image_story", "tool": "higgsfield generate_image", "orientation": "vertical 9:16",
+      "post_time": "12:15 PM", "platform": "FB + IG Story", "promo_type": "character_moment", "character": "LUCKY_LOU_WC", "world_cup_variation": true,
+      "prompt": "Action freeze-frame shot. Night stadium with dark emerald turf and black sky. Male character, mid-30s, stocky-average build, wide expressive eyes, large warm smile turning to comic shock, wearing green-and-gold soccer jersey with no real team logos, fishing hat covered in slot machine emoji stickers and gold star stickers plus a small soccer ball sticker, mismatched lucky socks one green one gold visible above loafers, a 4-leaf clover tucked in his hat band, frozen mid-follow-through after a penalty kick as a golden soccer ball ricochets off the goal post with a burst of gold sparks. Lighting: warm directional gold light from above, floodlight drama, cinematic. Mood: comedic near-miss, lovable underdog. Foreground: the penalty spot marked by a single gold casino chip. Background: goal net woven with strands of gold. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle from beside the goal, medium distance."
+    },
+    {
+      "asset_id": "06", "filename": "06_story_tunnel_prematch", "format": "image_story", "tool": "higgsfield generate_image", "orientation": "vertical 9:16",
+      "post_time": "1:00 PM", "platform": "FB + IG Story", "promo_type": "pre_match_hype", "character": "none", "world_cup_variation": true,
+      "prompt": "Dramatic perspective shot. A stadium players' tunnel in black marble with gold trim, leading out to a blazing wall of floodlight at the far end. A procession of oversized gold casino chips stands upright in two lines like players waiting to walk out, each chip catching the light. Lighting: warm directional gold light from above, intense white-gold glow from the tunnel mouth, cinematic haze. Mood: anticipation, held breath before kickoff. Foreground: polished black floor with gold reflections. Background: the radiant tunnel exit and a hint of emerald turf. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low center of tunnel looking out, one-point perspective, medium-wide."
+    },
+    {
+      "asset_id": "07", "filename": "07_image_hat_trick_deal", "format": "image_feed", "tool": "higgsfield generate_image", "orientation": "square 1:1",
+      "post_time": "2:00 PM", "platform": "FB + IG", "promo_type": "hat_trick_deal", "character": "none", "world_cup_variation": true,
+      "prompt": "Symmetrical product shot. A goal net dripping gold coins against black stadium darkness, dark emerald turf below. Three large gold casino chips rest in the back of the net like three scored goals, arranged left to center to right, each glowing progressively brighter, the third radiating an intense golden halo. Lighting: warm directional gold light from above, three distinct spotlight beams, cinematic. Mood: escalating triumph, three-times-three energy. Foreground: turf blades catching gold light. Background: soft-focus stadium bokeh. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: straight-on at net level, medium-close."
+    },
+    {
+      "asset_id": "08", "filename": "08_story_dealer_penalty_spot", "format": "image_story", "tool": "higgsfield generate_image", "orientation": "vertical 9:16",
+      "post_time": "3:30 PM", "platform": "FB + IG Story", "promo_type": "during_match", "character": "GOLDEN_DEALER", "world_cup_variation": true,
+      "prompt": "Tense cinematic shot. Night stadium, dark emerald turf, black sky. Tall male character, all-black slim-cut suit, gold pocket square, gold-edged card deck held in one gloved hand, wide-brim hat with face partially shadowed showing only jaw and lips, completely still, standing beside the penalty spot where a single gold casino chip spins on its edge, caught mid-rotation with a faint gold light trail. Lighting: warm directional gold light from a single overhead floodlight, deep shadows, cinematic. Mood: silent tension, held breath. Foreground: the spinning chip and its reflection on dewy turf. Background: empty goal in darkness. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle near the turf, medium distance."
+    },
+    {
+      "asset_id": "09", "filename": "09_reel_penalty_pass_referral", "format": "reel", "tool": "higgsfield generate_video", "orientation": "vertical 9:16", "duration": "8s",
+      "post_time": "5:30 PM", "platform": "FB + IG", "promo_type": "referral_code", "character": "LUCKY_LOU_WC", "world_cup_variation": true,
+      "prompt": "8-second vertical 9:16 cinematic video clip. Shot: night stadium with dark emerald turf. Movement: tracking shot following a golden soccer ball passed between two silhouetted players. Character action: male character in green-and-gold soccer jersey with no real logos and a sticker-covered fishing hat passes the ball; mid-flight the ball morphs seamlessly into a large spinning gold casino chip that lands softly in the second player's hands as both raise their arms in celebration, gold sparks trailing. Lighting: warm directional gold floodlight, cinematic. Atmosphere: joyful, shared victory, gold particle trail. Audio cue: clean kick sound into a shimmering coin ring and crowd cheer. Style: photorealistic cinematic. Color: dark green black gold. No text, no words, no letters."
+    },
+    {
+      "asset_id": "11", "filename": "11_image_crew_fulltime_party", "format": "image_feed", "tool": "higgsfield generate_image", "orientation": "square 1:1",
+      "post_time": "6:30 PM", "platform": "FB + IG", "promo_type": "community_wins", "character": "SUMMER_CREW", "world_cup_variation": true,
+      "prompt": "Celebration group shot. A luxurious dark emerald VIP lounge styled like a stadium box, gold confetti raining down. Four to five diverse players, men and women of varied ethnicities in stylish casual summer wear with subtle green-and-gold accents, cheering with arms raised, phones held up, faces lit with real joy like a full-time winning crowd. Lighting: warm directional gold light from above, confetti catching sparkle, cinematic. Mood: communal triumph, party energy. Foreground: a table with gold casino chips stacked like a trophy. Background: floor-to-ceiling window showing stadium floodlights in the night. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: slightly low angle, wide enough to hold the whole group."
+    },
+    {
+      "asset_id": "12", "filename": "12_story_midnight_watch", "format": "image_story", "tool": "higgsfield generate_image", "orientation": "vertical 9:16",
+      "post_time": "7:45 PM", "platform": "FB + IG Story", "promo_type": "daily_bonus", "character": "none", "world_cup_variation": false,
+      "prompt": "Elegant macro shot. Deep emerald casino felt surface in darkness. An ornate antique gold pocket watch lies open, hands at five minutes to twelve, its polished case reflecting warm light, fine gold chain trailing across the felt. Lighting: warm directional gold light from above, single soft spotlight, cinematic. Mood: quiet urgency, time running out. Foreground: watch face in crisp focus. Background: felt fading to black with faint gold bokeh. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image (clock hands only, no numerals visible — use minimalist markers). Camera: top-down macro, close distance."
+    },
+    {
+      "asset_id": "13", "filename": "13_story_golden_boot_lastcall", "format": "image_story", "tool": "higgsfield generate_image", "orientation": "vertical 9:16",
+      "post_time": "9:00 PM", "platform": "FB + IG Story", "promo_type": "todays_special_bonus_story", "character": "none", "world_cup_variation": true,
+      "prompt": "Dramatic silhouette shot. Total black darkness. A single vertical spotlight beam of warm gold light cuts down through haze, illuminating a gleaming gold soccer boot on a black pedestal, edge-lit and glowing, a few gold coins mid-fall around it. Lighting: one directional gold spotlight from above, volumetric haze, cinematic. Mood: last call, now-or-never gravity. Foreground: faint gold coin reflections on black floor. Background: pure darkness. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: straight-on, medium-close, boot centered in vertical frame."
+    },
+    {
+      "asset_id": "14", "filename": "14_story_mystery_envelope", "format": "image_story", "tool": "higgsfield generate_image", "orientation": "vertical 9:16",
+      "post_time": "10:15 PM", "platform": "FB + IG Story", "promo_type": "halftime_reload", "character": "none", "world_cup_variation": true,
+      "prompt": "Mysterious cinematic shot. Night stadium, dark emerald turf wet with dew, black sky. At the penalty spot, a sealed black envelope with a gold wax seal lies under a single floodlight beam, faint gold light seeping from inside its edges as if the contents glow. Lighting: one warm directional gold floodlight beam through night haze, cinematic. Mood: mystery, midnight secret. Foreground: turf blades and a single gold chip beside the envelope. Background: dark empty stands. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle close to turf, close-medium distance."
+    },
+    {
+      "asset_id": "15", "filename": "15_reel_lou_wins_goldengoal", "format": "reel", "tool": "higgsfield generate_video", "orientation": "vertical 9:16", "duration": "8s",
+      "post_time": "11:00 PM", "platform": "FB + IG", "promo_type": "lucky_lou_wins", "character": "LUCKY_LOU_WC", "world_cup_variation": true,
+      "prompt": "8-second vertical 9:16 cinematic video clip. Shot: night stadium, dark emerald turf under floodlights. Movement: slow-motion arc following the ball, then whip to celebration. Character action: male character, mid-30s, stocky build, wide expressive eyes, huge warm smile, green-and-gold soccer jersey with no real logos, fishing hat with slot machine and gold star stickers and a small soccer ball sticker, mismatched green and gold socks, strikes a golden soccer ball that curls into the top corner; the net explodes into a shower of gold coins; he rips off his fishing hat and lifts it overhead like a trophy, 4-leaf clover held high in the other hand. Lighting: warm directional gold floodlights, cinematic slow-motion sparkle. Atmosphere: euphoric, coins raining, confetti. Audio cue: ball strike, net swish becoming coin cascade, crowd eruption. Style: photorealistic cinematic. Color: dark green black gold. No text, no words, no letters."
+    },
+    {
+      "asset_id": "16", "filename": "16_audio_ladye_kickoff_line", "format": "audio_voice", "tool": "higgsfield generate_audio", "orientation": "n/a",
+      "post_time": "7:00 AM (pairs with reel 01)", "platform": "FB + IG", "promo_type": "theme_launch", "character": "LADY_E", "world_cup_variation": true,
+      "prompt": "Voice: Lady E. Preset: Vesper. Voice ID: c3204739-4084-41a3-9dc5-c805b307ec18. Text: 'Semifinal day, players. The whistle is mine, the gold is yours. Kickoff at Lady E Luck starts now.' Emotion: commanding warmth, regal confidence. Pacing: measured, deliberate, slight rise on the final phrase. Notes: rich low-mid delivery, a knowing smile in the voice, brief pause before 'starts now'."
+    },
+    {
+      "asset_id": "17", "filename": "17_audio_lou_extratime_line", "format": "audio_voice", "tool": "higgsfield generate_audio", "orientation": "n/a",
+      "post_time": "11:00 PM (pairs with reel 15)", "platform": "FB + IG", "promo_type": "lucky_lou_wins", "character": "LUCKY_LOU", "world_cup_variation": true,
+      "prompt": "Voice: Lucky Lou. Preset: Leo. Voice ID: 73a45c18-0c56-4642-a61e-f6b303f8ded1. Text: 'Hit the post AGAIN? Oh come on! You know what — extra time. That's my time. Lou always finds the net.' Emotion: comic frustration flipping to gleeful confidence. Pacing: quick and exasperated at the start, slows into a cocky grin by the end. Notes: audible smile on the final sentence, everyman charm."
+    },
+    {
+      "asset_id": "18", "filename": "18_audio_dealer_boot_line", "format": "audio_voice", "tool": "higgsfield generate_audio", "orientation": "n/a",
+      "post_time": "3:30 PM (pairs with story 08)", "platform": "FB + IG Story", "promo_type": "during_match", "character": "GOLDEN_DEALER", "world_cup_variation": true,
+      "prompt": "Voice: Golden Dealer. Preset: Sterling. Voice ID: dc382508-c8bd-443c-8cb2-46e57b8d2e6f. Text: 'The boot goes to the bold.' Emotion: cold calm, quiet menace-turned-elegance. Pacing: very slow, every word placed. Notes: low register, near-whisper, long silence implied before and after — he speaks only one sentence."
+    },
+    {
+      "asset_id": "19", "filename": "19_song_golden_kick", "format": "audio_song", "tool": "higgsfield generate_audio (music mode)", "orientation": "n/a",
+      "post_time": "usable across reels + stories all day", "platform": "FB + IG", "promo_type": "song_of_the_day", "character": "LADY_E", "world_cup_variation": true,
+      "prompt": "Original song 'Golden Kick'. Genre: Afrobeats/Trap fusion, stadium anthem energy. BPM: 105. Key: F minor. Instruments: log drums, 808 bass, stadium claps, brass stabs, shekere, layered crowd chants, airhorn accents. Lead voice: Lady E (Vesper preset, voice_id c3204739-4084-41a3-9dc5-c805b307ec18) — commanding, warm, melodic. Structure and full lyrics as written in storyline.json song_of_the_day (Intro with whistle, Verse 1, Pre-Chorus, Chorus, Verse 2, Bridge with crowd chant OHHH-OH-OH-OH, Final Chorus, Outro with final whistle). Mood: triumphant World Cup night anthem for a premium gold-and-emerald brand."
+    }
+  ],
+  "groups_post_note": "Post 10 (2:30 PM FB Groups) reuses image 07_image_hat_trick_deal — no separate asset generated. Caption written separately by Agent 7.",
+  "totals": {"images": 11, "reels": 3, "audio": 4, "total": 18}
+}

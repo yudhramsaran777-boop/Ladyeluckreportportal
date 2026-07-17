@@ -1,0 +1,12 @@
+ASSET: 14_reel_lou_golden_hour_win
+FORMAT: reel
+TOOL: higgsfield generate_video
+ORIENTATION: 9:16 vertical
+DURATION: 8s
+POST TIME: 11:00 PM
+PLATFORM: FB + IG
+PROMO TYPE: character_win
+CHARACTER: Lucky Lou (World Cup variant)
+
+PROMPT:
+8-second vertical 9:16 cinematic video clip. Shot: night stadium casino floor, emerald turf, polished gold goal frame, lights dimmed to deep gold. Male character, mid-30s, stocky-average build, wide expressive eyes, large warm smile, wearing green-and-gold soccer jersey with no real team logos, fishing hat covered in slot machine emoji stickers and gold star stickers plus a small soccer ball sticker, mismatched lucky socks (one green one gold) visible above loafers, 4-leaf clover in hand. Movement: slow-motion tracking shot. Character action: he rolls a large gold chip toward the goal; it strikes the post, teeters agonizingly, then drops in; gold confetti cannon bursts as he falls to his knees and lifts his 4-leaf clover overhead like a trophy. Lighting: warm directional gold floodlight, lens flare on the confetti burst, cinematic. Atmosphere: extra-time drama flipping to euphoria, floating gold particles. Audio cue: heartbeat thumps, post 'ping', eruption of crowd roar and airhorn. Style: photorealistic cinematic. Color: dark green black gold.

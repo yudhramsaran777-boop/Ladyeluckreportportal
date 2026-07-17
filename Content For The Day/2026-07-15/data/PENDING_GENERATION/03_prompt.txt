@@ -1,0 +1,11 @@
+ASSET: 03_story_bonus_wheel_spin
+FORMAT: image_story
+TOOL: higgsfield generate_image
+ORIENTATION: vertical 9:16
+DURATION: n/a
+POST TIME: 9:30 AM
+PLATFORM: FB + IG Story
+PROMO TYPE: daily_bonus_wheel
+
+PROMPT:
+Dynamic close-up shot. A dark black-and-emerald casino backdrop. A large prize wheel styled like a soccer ball — black and white pentagon panels alternating with glowing gold segments — captured mid-spin with motion blur at the edges, gold light streaking. Lighting: warm directional gold light from above, rim lighting on the wheel edge, cinematic. Mood: urgency, morning energy. Foreground: a single gold pointer flag at the top of the wheel. Background: blurred emerald curtain with bokeh gold lights. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: straight-on, close distance, wheel filling most of vertical frame.

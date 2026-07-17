@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 02
+Filename: 02_image_lady_e_emerald_field
+Format: image
+Tool: higgsfield_generate_image
+Orientation: square (1:1)
+Duration: N/A
+Post Time: 8:30 AM
+Platform: Facebook + Instagram
+Promo Type: theme_launch
+Character: Lady E (World Cup Variant)
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Wide shot. Setting: vast dark emerald green stadium turf at night, goal net visible in soft focus background with gold light dripping through the net like liquid. Black female character mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress, gold whistle on gold chain, long black gloves, large gold hoop earrings, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, standing with arms slightly outstretched in a powerful commanding pose. Lighting: single warm gold stadium spotlight from directly above, dramatic chiaroscuro, gold rim lighting on edges of dress. Mood: premium, aspirational, commanding. Foreground: scattered gold casino chips and a single soccer ball catching gold light. Background: stadium lights creating bokeh halos in dark green and gold. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: slightly low angle looking up to amplify authority.

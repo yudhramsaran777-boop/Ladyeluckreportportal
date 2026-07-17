@@ -1,0 +1,7 @@
+ASSET: 14_image_feed_penalty_spot_halftime_reload
+FORMAT: image (square 1:1)
+TOOL: generate_image (Higgsfield)
+POST TIME: 10:15 PM | PLATFORM: Facebook + Instagram Feed | ACT: 5 | PROMO: todays_special_bonus (double-post)
+
+PROMPT:
+Dramatic wide-angle shot from low ground level. Setting: dark empty casino floor styled as a penalty spot on a green field — a single white circle mark on dark emerald floor. At center: one large gold casino chip standing upright and spinning, gold light radiating from it as it rotates. Above: a single beam of white stadium floodlight piercing down from the darkness of the ceiling, illuminating only the chip and the circle below. Everything else is in complete darkness with only faint ambient emerald glow. Gold light particles float upward from the chip. Lighting: single dramatic overhead beam, deep vignette surround. Mood: magnetic, mysterious, lone champion energy. Foreground: dark emerald floor with faint green turf texture pattern. Background: pure dark void. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: ultra-wide angle, very low to ground, looking up slightly.

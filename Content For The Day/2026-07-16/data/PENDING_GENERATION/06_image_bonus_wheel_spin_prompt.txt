@@ -1,0 +1,11 @@
+ASSET: 06_image_bonus_wheel_spin
+FORMAT: story_image
+TOOL: higgsfield generate_image
+ORIENTATION: 9:16 vertical
+POST TIME: 1:30 PM
+PLATFORM: FB + IG Story
+PROMO TYPE: daily_bonus_wheel
+CHARACTER: none
+
+PROMPT:
+Dramatic centered shot. A giant gold prize wheel designed like a luxury stadium clock face, gold segments alternating with deep emerald segments, mounted against a black stadium wall. Pose/action: the wheel frozen mid-spin with motion blur on its edges, gold light streaks trailing. Lighting: warm directional gold light from above, rim-lit edges, cinematic. Mood: ticking urgency, midnight-deadline tension. Foreground: a gold pointer arrow catching a bright glint. Background: dark stadium stands with faint floodlight beams. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: straight-on, centered, vertical composition.

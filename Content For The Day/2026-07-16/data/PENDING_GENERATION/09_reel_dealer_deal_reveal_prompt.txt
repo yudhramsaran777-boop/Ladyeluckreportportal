@@ -1,0 +1,12 @@
+ASSET: 09_reel_dealer_deal_reveal
+FORMAT: reel
+TOOL: higgsfield generate_video
+ORIENTATION: 9:16 vertical
+DURATION: 6s
+POST TIME: 4:00 PM
+PLATFORM: FB + IG
+PROMO TYPE: deal_reveal
+CHARACTER: The Golden Dealer
+
+PROMPT:
+6-second vertical 9:16 cinematic video clip. Shot: noir card table with dark emerald turf surface, black void around it. Tall male character, all-black slim-cut suit, gold pocket square, gold-edged card deck, wide-brim hat with face partially shadowed showing only jaw and lips, completely still except his hands. Movement: locked-off camera, slow subtle push-in. Character action: he deals three cards one by one onto the turf; each card ignites a small controlled gold flare as it lands; on the third flare he gives the faintest nod. Lighting: single warm directional gold overhead beam, hard noir shadows. Atmosphere: silent tension, dust motes in the gold beam. Audio cue: three crisp card snaps, low bass pulse, distant crowd hush. Style: photorealistic cinematic. Color: dark green black gold.

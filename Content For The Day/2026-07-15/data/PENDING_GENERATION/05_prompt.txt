@@ -1,0 +1,11 @@
+ASSET: 05_story_lou_hits_post
+FORMAT: image_story
+TOOL: higgsfield generate_image
+ORIENTATION: vertical 9:16
+DURATION: n/a
+POST TIME: 12:15 PM
+PLATFORM: FB + IG Story
+PROMO TYPE: character_moment
+
+PROMPT:
+Action freeze-frame shot. Night stadium with dark emerald turf and black sky. Male character, mid-30s, stocky-average build, wide expressive eyes, large warm smile turning to comic shock, wearing green-and-gold soccer jersey with no real team logos, fishing hat covered in slot machine emoji stickers and gold star stickers plus a small soccer ball sticker, mismatched lucky socks one green one gold visible above loafers, a 4-leaf clover tucked in his hat band, frozen mid-follow-through after a penalty kick as a golden soccer ball ricochets off the goal post with a burst of gold sparks. Lighting: warm directional gold light from above, floodlight drama, cinematic. Mood: comedic near-miss, lovable underdog. Foreground: the penalty spot marked by a single gold casino chip. Background: goal net woven with strands of gold. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle from beside the goal, medium distance.

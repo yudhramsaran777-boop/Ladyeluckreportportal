@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 11
+Filename: 11_story_daily_bonus_clock
+Format: image
+Tool: higgsfield_generate_image
+Orientation: vertical (9:16)
+Duration: N/A
+Post Time: 6:00 PM
+Platform: Facebook + Instagram
+Promo Type: daily_bonus
+Character: Lady E (World Cup Variant)
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Medium shot. Setting: dark luxury casino interior, emerald green velvet walls, gold sconces. Black female character mid-30s to early 40s in black and gold striped referee-inspired dress, gold whistle on chain, gold crown headpiece, deep bronze-brown skin, crimson lipstick. She holds up a large ornate gold pocket watch toward the camera with one gloved hand, eyes wide and direct, expression conveying warm urgency. Her other hand is raised palm-out in a gentle stop gesture. Above and around her, a cascade of gold coins rains from ceiling, catching the warm light. Lighting: warm gold sconce light from sides, coin shower catching light from above. Mood: urgent but warm, don't miss out. Style: photorealistic, cinematic, dark green black gold palette. No text, no words, no letters in the image. Camera: eye-level medium shot, watch in foreground slightly blurred, face in sharp focus behind it.

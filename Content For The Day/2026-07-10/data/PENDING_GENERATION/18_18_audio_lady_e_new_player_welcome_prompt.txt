@@ -1,0 +1,20 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 18
+Filename: 18_audio_lady_e_new_player_welcome
+Format: audio
+Tool: higgsfield_generate_audio
+Orientation: None
+Duration: 20-25 seconds
+Post Time: 11:00 AM (paired with post_04)
+Platform: Reel voiceover / Story audio
+Promo Type: new_player_bonus
+Character: Lady E
+World Cup Variation: False
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Voice: Lady E. Preset: Vesper. Voice ID: c3204739-4084-41a3-9dc5-c805b307ec18. Text: 'You found us. And that means today is already a good day. At Lady E Luck, every new player walks in with a bonus waiting — no questions, no waiting. Just your moment to play. Welcome home.' Emotion: warm, genuine, inviting, premium confidence. Pacing: slow and deliberate, slight pause after 'good day' and 'waiting.' Notes: Velvet-smooth delivery. She speaks like she owns the room but wants you to feel at home in it. No rush.
+
+VOICE ID: c3204739-4084-41a3-9dc5-c805b307ec18
+VOICE PRESET: Vesper

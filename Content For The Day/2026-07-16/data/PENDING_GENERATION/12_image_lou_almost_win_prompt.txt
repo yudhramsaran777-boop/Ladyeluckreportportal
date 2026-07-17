@@ -1,0 +1,11 @@
+ASSET: 12_image_lou_almost_win
+FORMAT: story_image
+TOOL: higgsfield generate_image
+ORIENTATION: 9:16 vertical
+POST TIME: 9:00 PM
+PLATFORM: FB + IG Story
+PROMO TYPE: character
+CHARACTER: Lucky Lou (World Cup variant)
+
+PROMPT:
+Comedic frozen-moment shot. Night stadium casino floor, emerald turf, a goal frame made of polished gold. Male character, mid-30s, stocky-average build, wide expressive eyes, large warm smile turned into an open-mouthed gasp, wearing green-and-gold soccer jersey with no real team logos, fishing hat covered in slot machine emoji stickers and gold star stickers plus a small soccer ball sticker, mismatched lucky socks (one green one gold) visible above loafers, a 4-leaf clover tucked in his hat band. Pose/action: both hands on his head in classic 'so close' despair-joy as a large gold casino chip rattles off the crossbar above him, chip frozen mid-bounce. Lighting: warm directional gold light from above, cinematic. Mood: hilarious heartbreak, everyone-has-been-there. Foreground: turf blades catching gold light. Background: gold goal frame and dark stands. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle behind Lou toward the goal, vertical composition.

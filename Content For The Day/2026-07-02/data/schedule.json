@@ -1,0 +1,176 @@
+{
+  "date": "2026-07-02",
+  "day_of_week": "Thursday",
+  "theme": "World Cup Golden Kick Day",
+  "world_cup_mode": true,
+  "world_cup_matches_today": [
+    {"match": "Spain vs Austria", "kickoff": "3:00 PM ET", "venue": "SoFi Stadium, Inglewood CA"},
+    {"match": "Portugal vs Croatia", "kickoff": "7:00 PM ET", "venue": "BMO Field, Toronto"},
+    {"match": "Switzerland vs Algeria", "kickoff": "11:00 PM ET", "venue": "BC Place, Vancouver"}
+  ],
+  "day_modifiers": ["Thursday — no special boost"],
+  "total_posts": 14,
+
+  "schedule": [
+    {
+      "post_id": "post_01",
+      "time": "7:00 AM",
+      "format": "Reel",
+      "platform": "Facebook + Instagram",
+      "promo_type": "theme_launch",
+      "act": 1,
+      "title": "Lady E Blows the Golden Whistle — Match Day Open",
+      "timing_reason": "First post of the day, Reel peak window at 7AM, maximum organic reach for Thursday morning"
+    },
+    {
+      "post_id": "post_02",
+      "time": "8:30 AM",
+      "format": "Feed Image",
+      "platform": "Facebook + Instagram",
+      "promo_type": "theme_launch",
+      "act": 1,
+      "title": "Golden Stadium — Lady E at the Sideline",
+      "timing_reason": "Feed image peak at 8AM, morning scroll audience, minimum 90-min gap after Reel"
+    },
+    {
+      "post_id": "post_03",
+      "time": "9:15 AM",
+      "format": "Story",
+      "platform": "Facebook + Instagram Stories",
+      "promo_type": "theme_launch",
+      "act": 1,
+      "title": "Lady E Gold Whistle Close-Up Story",
+      "timing_reason": "Story every 60-90 min; keeps brand top-of-mind during morning commute"
+    },
+    {
+      "post_id": "post_04",
+      "time": "11:00 AM",
+      "format": "Feed Image",
+      "platform": "Facebook + Instagram",
+      "promo_type": "new_player_bonus",
+      "act": 2,
+      "title": "Golden Boot Welcome — New Player Bonus",
+      "timing_reason": "Feed image peak at 11AM, lunch window opens; new player bonus is best when audience is largest"
+    },
+    {
+      "post_id": "post_05",
+      "time": "11:45 AM",
+      "format": "Story",
+      "platform": "Facebook + Instagram Stories",
+      "promo_type": "character_intro",
+      "act": 2,
+      "title": "Lucky Lou Watches the Scoreboard",
+      "timing_reason": "Story 60-90 min after last story; lunch hour keeps engagement high"
+    },
+    {
+      "post_id": "post_06",
+      "time": "12:30 PM",
+      "format": "Story (Audio Voiceover)",
+      "platform": "Facebook + Instagram Stories",
+      "promo_type": "welcome_message",
+      "act": 2,
+      "title": "Lady E Voice Welcome — Audio Story",
+      "timing_reason": "Midday peak window (11AM-1PM); audio Story differentiates from image posts"
+    },
+    {
+      "post_id": "post_07",
+      "time": "2:00 PM",
+      "format": "Feed Image + Groups",
+      "platform": "Facebook Feed + Facebook Groups",
+      "promo_type": "referral_code",
+      "act": 3,
+      "title": "Penalty Kick Free Spin — Lucky Lou Referral",
+      "timing_reason": "Groups peak at 2PM; referral push before match window to maximize sharing; minimum 3hrs after last feed image"
+    },
+    {
+      "post_id": "post_08_pre",
+      "time": "3:00 PM",
+      "format": "Reel",
+      "platform": "Facebook + Instagram Reels",
+      "promo_type": "hat_trick_bonus",
+      "act": 3,
+      "title": "Golden Dealer — Hat Trick Bonus Drops Now",
+      "timing_reason": "Timed exactly to Spain vs Austria kickoff — peak World Cup engagement moment; Reel at 3PM aligns with match hour"
+    },
+    {
+      "post_id": "post_08a",
+      "time": "4:30 PM",
+      "format": "Story",
+      "platform": "Facebook + Instagram Stories",
+      "promo_type": "hat_trick_bonus",
+      "act": 3,
+      "title": "Hat Trick Bonus — Deadline Reminder Story",
+      "timing_reason": "Mid-match reminder; Story during match so it doesn't interrupt viewing; urgency (ends at 6PM)"
+    },
+    {
+      "post_id": "post_09",
+      "time": "6:00 PM",
+      "format": "Feed Image",
+      "platform": "Facebook + Instagram",
+      "promo_type": "community_wins",
+      "act": 4,
+      "title": "Summer Crew Celebrates — Community Jackpot Parade",
+      "timing_reason": "Evening rush opens at 6PM; post-work scroll peak; community celebration post maximizes shares"
+    },
+    {
+      "post_id": "post_10",
+      "time": "7:30 PM",
+      "format": "Story",
+      "platform": "Facebook + Instagram Stories",
+      "promo_type": "daily_bonus_wheel",
+      "act": 4,
+      "title": "Daily Bonus Wheel — Spin It Now",
+      "timing_reason": "Portugal vs Croatia at 7PM — Story during match; urgency reminder while audience is engaged"
+    },
+    {
+      "post_id": "post_11",
+      "time": "9:00 PM",
+      "format": "Story",
+      "platform": "Facebook + Instagram Stories",
+      "promo_type": "daily_bonus",
+      "act": 4,
+      "title": "Daily Bonus — Final Whistle Warning",
+      "timing_reason": "Late night peak opens at 9PM; final push before midnight reset"
+    },
+    {
+      "post_id": "post_12",
+      "time": "10:00 PM",
+      "format": "Story",
+      "platform": "Facebook + Instagram Stories",
+      "promo_type": "todays_special_bonus",
+      "act": 5,
+      "title": "Golden Dealer — Halftime Reload Mystery Story",
+      "timing_reason": "Golden Hour opens at 10PM; mystery drop creates urgency for active players"
+    },
+    {
+      "post_id": "post_13",
+      "time": "10:15 PM",
+      "format": "Feed Image",
+      "platform": "Facebook + Instagram Feed",
+      "promo_type": "todays_special_bonus",
+      "act": 5,
+      "title": "Halftime Reload — Penalty Spot Feed Post",
+      "timing_reason": "Double-post with Story for max reach; late night peak; Switzerland vs Algeria starts at 11PM — build anticipation"
+    },
+    {
+      "post_id": "post_14",
+      "time": "11:00 PM",
+      "format": "Reel",
+      "platform": "Facebook + Instagram Reels",
+      "promo_type": "lucky_lou_wins",
+      "act": 5,
+      "title": "Lucky Lou Wins — Tomorrow Even Bigger Tease",
+      "timing_reason": "Late night Reel peak (10PM-Midnight); Lucky Lou's big win is the emotional close; Switzerland vs Algeria kickoff aligns perfectly"
+    }
+  ],
+
+  "summary": {
+    "first_post": "7:00 AM — Reel: Lady E Blows the Golden Whistle",
+    "last_post": "11:00 PM — Reel: Lucky Lou Wins + Tomorrow Tease",
+    "total_feed_images": 5,
+    "total_reels": 3,
+    "total_stories": 6,
+    "total_groups": 1,
+    "world_cup_aligned_posts": ["post_08_pre at 3PM (Spain vs Austria)", "post_10 at 7:30PM (Portugal vs Croatia)", "post_14 at 11PM (Switzerland vs Algeria)"]
+  }
+}

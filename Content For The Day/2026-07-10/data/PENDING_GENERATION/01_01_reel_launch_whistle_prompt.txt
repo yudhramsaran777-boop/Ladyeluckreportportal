@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 01
+Filename: 01_reel_launch_whistle
+Format: video
+Tool: higgsfield_generate_video
+Orientation: vertical (9:16)
+Duration: 15 seconds
+Post Time: 7:00 AM
+Platform: Facebook + Instagram
+Promo Type: theme_launch
+Character: Lady E (World Cup Variant)
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+15-second vertical cinematic video clip. Shot: Black female character in black-and-gold striped referee-inspired dress with gold whistle on chain raises whistle to crimson lips and blows. Camera movement: slow push-in starting from wide angle to close on her face as golden coins and sparks explode outward from the whistle blast. Character action: she blows the whistle, then slowly lowers it with a half-smile, gold crown headpiece gleaming. Lighting: warm directional gold stadium spotlights from above, dramatic shadows, dark emerald background. Atmosphere: electric, triumphant, golden particles raining, stadium crowd ambiance fading in. Style: photorealistic cinematic. Color: dark green black gold. No text, no words, no letters. Camera: begins at mid-shot, pushes to close-up on face as coins explode.

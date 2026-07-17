@@ -1,0 +1,11 @@
+ASSET: 07_image_hat_trick_deal
+FORMAT: image_feed
+TOOL: higgsfield generate_image
+ORIENTATION: square 1:1
+DURATION: n/a
+POST TIME: 2:00 PM
+PLATFORM: FB + IG
+PROMO TYPE: hat_trick_deal
+
+PROMPT:
+Symmetrical product shot. A goal net dripping gold coins against black stadium darkness, dark emerald turf below. Three large gold casino chips rest in the back of the net like three scored goals, arranged left to center to right, each glowing progressively brighter, the third radiating an intense golden halo. Lighting: warm directional gold light from above, three distinct spotlight beams, cinematic. Mood: escalating triumph, three-times-three energy. Foreground: turf blades catching gold light. Background: soft-focus stadium bokeh. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: straight-on at net level, medium-close.

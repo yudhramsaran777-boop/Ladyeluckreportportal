@@ -1,0 +1,317 @@
+{
+  "date": "2026-07-10",
+  "theme": "Golden Quarterfinal Friday",
+  "world_cup_mode": true,
+  "referral_code": "REF-QUARTERFINAL-847",
+  "characters_today": ["Lady E (World Cup Variant)", "Lucky Lou (World Cup Variant)", "Golden Dealer"],
+
+  "promo_map": {
+    "new_player_bonus": "post_04",
+    "daily_bonus_wheel": "post_07",
+    "referral_code": "post_09",
+    "daily_bonus": "post_11",
+    "todays_special_bonus": ["post_03", "post_12"]
+  },
+
+  "deals": [
+    {
+      "name": "Golden Boot Jackpot",
+      "timing": "All Day (7AM–Midnight)",
+      "mechanic": "Biggest recharge of the day wins a multiplier bonus. Score the biggest. Win the boot.",
+      "promo_type": "todays_special_bonus"
+    },
+    {
+      "name": "Hat Trick Bonus",
+      "timing": "1PM–6PM ET (Match Hours)",
+      "mechanic": "3 recharges during match window = stacked bonus. Three times. Three wins.",
+      "promo_type": "todays_deal"
+    },
+    {
+      "name": "Penalty Kick Free Spin",
+      "timing": "All Day",
+      "mechanic": "Share referral code REF-QUARTERFINAL-847, friend joins = both get a free spin bonus. Pass it. They score. You both win.",
+      "promo_type": "referral_code"
+    },
+    {
+      "name": "Halftime Reload",
+      "timing": "10PM–Midnight",
+      "mechanic": "Mystery midnight drop for all active players. The second half always surprises.",
+      "promo_type": "golden_hour"
+    }
+  ],
+
+  "story_arc": {
+    "act_1": {
+      "name": "THE OPENING",
+      "window": "6AM–11AM",
+      "concept": "Quarterfinal Friday kicks off. Lady E in referee dress blows the gold whistle — the game is ON at Lady E Luck. Launch energy, World Cup excitement, introduce theme.",
+      "character_focus": "Lady E (World Cup Variant)",
+      "posts": [
+        {
+          "post_id": "post_01",
+          "format": "Reel",
+          "platform": "Facebook + Instagram",
+          "promo_type": "theme_launch",
+          "concept": "Lady E blows a gold whistle — golden coins explode from the blast. Stadium lights flood the frame. Text-free cinematic opener.",
+          "caption_hook": "Match day at Lady E Luck. The quarterfinals just got golden. 🥇"
+        },
+        {
+          "post_id": "post_02",
+          "format": "Feed Image",
+          "platform": "Facebook + Instagram",
+          "promo_type": "theme_launch",
+          "concept": "Lady E standing on a field of dark emerald turf, gold spotlights overhead, gold whistle on chain, arms wide, commanding presence.",
+          "caption_hook": "Friday. Quarterfinals. Golden Boot Jackpot. Today we play for keeps."
+        },
+        {
+          "post_id": "post_03",
+          "format": "Story",
+          "platform": "Facebook + Instagram",
+          "promo_type": "todays_special_bonus",
+          "concept": "Golden Boot Jackpot announcement. Boot made of gold, coins spilling from it.",
+          "caption_hook": "🥇 GOLDEN BOOT JACKPOT — Biggest recharge today wins the multiplier bonus. All day."
+        }
+      ]
+    },
+
+    "act_2": {
+      "name": "THE WELCOME",
+      "window": "11AM–2PM",
+      "concept": "New Player Bonus launches. Lucky Lou arrives in his soccer jersey, hyped for match day. Community welcome energy — everyone belongs here.",
+      "character_focus": "Lucky Lou (World Cup Variant) + Lady E",
+      "posts": [
+        {
+          "post_id": "post_04",
+          "format": "Feed Image",
+          "platform": "Facebook + Instagram",
+          "promo_type": "new_player_bonus",
+          "concept": "Lady E extends a gloved hand toward the viewer, warm welcoming smile, stadium gold light behind her. Lucky Lou peeks from the side in his soccer jersey giving two thumbs up.",
+          "caption_hook": "New here? Your welcome bonus is waiting. Lady E Luck — where every player is a VIP from day one."
+        },
+        {
+          "post_id": "post_05",
+          "format": "Story",
+          "platform": "Facebook + Instagram",
+          "promo_type": "new_player_bonus",
+          "concept": "Lucky Lou running onto emerald field in his soccer jersey, arms out, clover in hand, giant smile.",
+          "caption_hook": "Lucky Lou says: First time? Your bonus is already scored. Come on in. 🍀"
+        },
+        {
+          "post_id": "post_06",
+          "format": "Story",
+          "platform": "Facebook + Instagram",
+          "promo_type": "theme_hype",
+          "concept": "Soccer ball morphing mid-spin into a golden casino chip, slow-motion, gold dust.",
+          "caption_hook": "⚽ → 🎰 Every spin is a goal at Lady E Luck. Quarterfinal energy ALL day."
+        }
+      ]
+    },
+
+    "act_3": {
+      "name": "THE GOLDEN RUSH",
+      "window": "2PM–6PM",
+      "concept": "Match kicks off at 3PM ET. Hat Trick Bonus is live. Referral push. Golden Dealer makes an appearance — silent, commanding. Deals stacking as match heats up.",
+      "character_focus": "Golden Dealer + Lucky Lou",
+      "posts": [
+        {
+          "post_id": "post_07",
+          "format": "Reel",
+          "platform": "Facebook + Instagram",
+          "promo_type": "daily_bonus_wheel",
+          "concept": "Lucky Lou in soccer jersey spinning a giant golden wheel on an emerald field. Wheel stops on BONUS. He celebrates like he scored a goal.",
+          "caption_hook": "The Daily Bonus Wheel is spinning. It resets at midnight — don't let your spin go to waste. 🔄"
+        },
+        {
+          "post_id": "post_08",
+          "format": "Feed Image",
+          "platform": "Facebook + Instagram",
+          "promo_type": "hat_trick_bonus",
+          "concept": "Three gold soccer balls lined up on a penalty spot, each morphing into a stack of gold coins. Dark emerald background, cinematic gold lighting.",
+          "caption_hook": "HAT TRICK BONUS ⚽⚽⚽ — 3 recharges between 1PM–6PM = stacked bonus. Three times. Three wins."
+        },
+        {
+          "post_id": "post_09",
+          "format": "Feed Image",
+          "platform": "Facebook Groups",
+          "promo_type": "referral_code",
+          "concept": "Two golden soccer boots side by side on emerald turf, each boot glowing. One boot for you, one for your friend.",
+          "caption_hook": "Pass it like a pro. Share code REF-QUARTERFINAL-847 — your friend joins, you BOTH score a free spin bonus."
+        },
+        {
+          "post_id": "post_10",
+          "format": "Story",
+          "platform": "Facebook + Instagram",
+          "promo_type": "hat_trick_bonus",
+          "concept": "Golden Dealer holds up three fingers from behind a shadowed visor. Three gold chips materialize in his palm.",
+          "caption_hook": "Three charges. Three wins. Hat Trick Bonus ends at 6PM. ⏱️"
+        }
+      ]
+    },
+
+    "act_4": {
+      "name": "JACKPOT PARADE",
+      "window": "6PM–10PM",
+      "concept": "Match is over. Celebration energy peaks. Community wins showcased. Daily Bonus reminder — urgent. Lady E leads the victory lap.",
+      "character_focus": "Lady E + Summer Crew",
+      "posts": [
+        {
+          "post_id": "post_11",
+          "format": "Story",
+          "platform": "Facebook + Instagram",
+          "promo_type": "daily_bonus",
+          "concept": "Lady E in referee dress holding a glowing golden clock. Coins raining around her. Urgency.",
+          "caption_hook": "⏰ DAILY BONUS — Still unclaimed? It resets at midnight. Go get it now."
+        },
+        {
+          "post_id": "post_12",
+          "format": "Feed Image",
+          "platform": "Facebook + Instagram",
+          "promo_type": "todays_special_bonus",
+          "concept": "A golden soccer boot trophy on a pedestal, surrounded by gold coins, emerald green spotlight above. Cinematic, luxury, aspirational.",
+          "caption_hook": "🥇 Golden Boot Jackpot is still running. Who's topping the leaderboard today? Drop a 🥾 if you're in the game."
+        },
+        {
+          "post_id": "post_13",
+          "format": "Story",
+          "platform": "Facebook + Instagram",
+          "promo_type": "community_wins",
+          "concept": "Lady E and the Summer Crew celebrating on emerald turf, confetti in gold and green, everyone arms raised.",
+          "caption_hook": "The community is WINNING today 🏆 Drop your W in the comments — big wins, small wins, all wins count."
+        },
+        {
+          "post_id": "post_14",
+          "format": "Reel",
+          "platform": "Facebook + Instagram",
+          "promo_type": "community_hype",
+          "concept": "Montage-style reel — Lucky Lou doing a goal celebration (knee slide), Lady E raising a gold trophy, Golden Dealer placing a final gold chip. Afrobeats soundtrack cue.",
+          "caption_hook": "This is what Quarterfinal Friday looks like at Lady E Luck. Golden energy all day. 🥇 #MatchDay #GoldenBoot"
+        }
+      ]
+    },
+
+    "act_5": {
+      "name": "GOLDEN HOUR",
+      "window": "10PM–Midnight",
+      "concept": "Halftime Reload mystery drop goes live. Lucky Lou finally wins big — his signature arc complete. Tomorrow teased. Premium late-night energy.",
+      "character_focus": "Lucky Lou + Lady E",
+      "posts": [
+        {
+          "post_id": "post_15",
+          "format": "Story",
+          "platform": "Facebook + Instagram",
+          "promo_type": "golden_hour",
+          "concept": "Lucky Lou at midnight, stadium lights off except one gold spotlight on him. He checks his phone — eyes go wide — drops of gold coins fall from above.",
+          "caption_hook": "🌙 Halftime Reload just dropped. Mystery bonus — active players only. Check. Your. Account."
+        },
+        {
+          "post_id": "post_16",
+          "format": "Story",
+          "platform": "Facebook + Instagram",
+          "promo_type": "lucky_lou_win",
+          "concept": "Lucky Lou on his knees, arms to the sky, under a shower of gold coins, soccer jersey glowing gold in the light. The underdog WINS.",
+          "caption_hook": "He almost didn't make it today. Then the Golden Hour hit. Lucky Lou wins AGAIN. 🍀🏆"
+        },
+        {
+          "post_id": "post_17",
+          "format": "Reel",
+          "platform": "Facebook + Instagram",
+          "promo_type": "tomorrow_tease",
+          "concept": "Lady E walks toward camera in slow motion, golden whistle swinging, half-smiling. She stops, holds up one finger. Slow fade to black. Whisper voiceover.",
+          "caption_hook": "Tomorrow. Something golden is coming. Stay close. 👑"
+        }
+      ]
+    }
+  },
+
+  "song_of_the_day": {
+    "title": "Golden Kick",
+    "artist": "Lady E Luck",
+    "lead_voice": "Lady E",
+    "voice_preset": "Vesper",
+    "voice_id": "c3204739-4084-41a3-9dc5-c805b307ec18",
+    "genre": "Afrobeats / Trap Fusion",
+    "bpm": 105,
+    "key": "F# minor",
+    "mood": "electric, triumphant, warm-community",
+    "instruments": "808 bass, live percussion (talking drum layer), brass hits, synth pads, stadium crowd swell, gold-coin SFX integrated as percussion",
+    "world_cup_context": true,
+    "lyrics": {
+      "intro": [
+        "Mmm... yeah...",
+        "Lady E Luck, we playing for gold tonight",
+        "Quarterfinal Friday — every kick, every spin, every light"
+      ],
+      "verse_1": [
+        "Rise up, it's the golden hour",
+        "Turf is green, the crown is ours",
+        "Every recharge stacking power",
+        "Hat trick coming, watch it flower",
+        "Lucky Lou he put his boots on",
+        "Dealer laid the chips and moved on",
+        "Community we never lose long",
+        "Fortune Friday — play your truth song"
+      ],
+      "pre_chorus": [
+        "Oh-oh, the whistle blow",
+        "Gold light everywhere we go",
+        "Oh-oh, feel that glow",
+        "Lady E Luck — steal the show"
+      ],
+      "chorus": [
+        "Golden kick, golden kick",
+        "Every spin's a hat trick",
+        "Golden kick, golden kick",
+        "Win it like a classic",
+        "Score big, rise up, we riding till midnight",
+        "Lady E Luck — where every Friday's a highlight",
+        "Golden kick — yeah, yeah",
+        "Golden kick — hey hey hey"
+      ],
+      "verse_2": [
+        "Penalty spot, one chip in the net",
+        "Biggest recharge — you win, don't forget",
+        "Golden Boot Jackpot, no regret",
+        "Fortune Friday, not done yet",
+        "Pass the code, let your people in",
+        "They score a bonus, you both win",
+        "Halftime Reload about to begin",
+        "Lady E Luck — can't stop the spin"
+      ],
+      "bridge": [
+        "From the opening whistle to the golden hour",
+        "We built this for the ones who know their power",
+        "Not about the rush — it's the community we grow",
+        "Every Friday night — we putting on a show",
+        "Lucky Lou said — 'I almost missed it'",
+        "Lady E said — 'Baby, you were gifted'",
+        "Golden Dealer smiled — the table shifted",
+        "Fortune Friday — lifted, lifted"
+      ],
+      "final_chorus": [
+        "Golden kick, golden kick",
+        "Every spin's a hat trick",
+        "Golden kick, golden kick",
+        "Win it like a classic",
+        "Score big, rise up, we riding till midnight",
+        "Lady E Luck — where every Friday's a highlight",
+        "Golden kick — yeah, yeah",
+        "Golden kick — hey hey hey",
+        "GOLDEN KICK!"
+      ],
+      "outro": [
+        "Halftime Reload dropping tonight...",
+        "Stay close... the second half always surprises...",
+        "Lady E Luck... playing for gold...",
+        "Golden kick... yeah..."
+      ]
+    }
+  },
+
+  "total_posts": 17,
+  "post_formats_summary": {
+    "feed_images": 6,
+    "stories": 7,
+    "reels": 4,
+    "groups_posts": 1
+  }
+}

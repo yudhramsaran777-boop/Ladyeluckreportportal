@@ -1,0 +1,10 @@
+TOOL: generate_audio (voice mode)
+VOICE: Golden Dealer | Preset: Sterling | Voice ID: dc382508-c8bd-443c-8cb2-46e57b8d2e6f
+DURATION: ~5 seconds
+
+TEXT:
+"The boot belongs to the biggest."
+
+EMOTION: Completely calm, almost quiet, deeply certain — no drama needed when you have this much authority.
+PACING: Extremely deliberate, each word a full beat. Long pause before the line.
+NOTES: Minimal ambient sound. This line should feel like the most important thing said all day. Deep, resonant, unforgettable.

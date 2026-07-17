@@ -1,0 +1,34 @@
+{
+  "date": "2026-07-12",
+  "generation_run": "automated-scheduled",
+  "note": "Media generation tools (generate_image, generate_video, generate_audio) were not available in this automated session. All 20 assets have been logged as PENDING with full prompts saved to data/PENDING_GENERATION/. Luis should run these manually via Higgsfield or equivalent tools.",
+  "total_assets": 20,
+  "generated": 0,
+  "pending": 20,
+  "failed": 0,
+
+  "assets": [
+    {"asset_id": "01", "filename": "01_reel_opening_whistle.mp4", "format": "video", "tool": "generate_video", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/01_reel_opening_whistle_prompt.txt"},
+    {"asset_id": "02", "filename": "02_image_luckylou_matchday_fit.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/02_image_luckylou_matchday_fit_prompt.txt"},
+    {"asset_id": "03", "filename": "03_story_semifinal_countdown_poll.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/03_story_semifinal_countdown_poll_prompt.txt"},
+    {"asset_id": "04", "filename": "04_image_new_player_bonus.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/04_image_new_player_bonus_prompt.txt"},
+    {"asset_id": "05", "filename": "05_story_luckylou_almost_win.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/05_story_luckylou_almost_win_prompt.txt"},
+    {"asset_id": "06", "filename": "06_story_hat_trick_tease.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/06_story_hat_trick_tease_prompt.txt"},
+    {"asset_id": "07", "filename": "07_image_referral_penalty_kick.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/07_image_referral_penalty_kick_prompt.txt"},
+    {"asset_id": "07b", "filename": "07b_groups_referral_penalty_kick.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/07_image_referral_penalty_kick_prompt.txt"},
+    {"asset_id": "08", "filename": "08_image_golden_boot_jackpot.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/08_image_golden_boot_jackpot_prompt.txt"},
+    {"asset_id": "08b", "filename": "08b_story_golden_boot_jackpot.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/08_image_golden_boot_jackpot_prompt.txt"},
+    {"asset_id": "09", "filename": "09_reel_hat_trick_celebration.mp4", "format": "video", "tool": "generate_video", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/09_reel_hat_trick_celebration_prompt.txt"},
+    {"asset_id": "10", "filename": "10_image_community_wins.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/10_image_community_wins_prompt.txt"},
+    {"asset_id": "11", "filename": "11_story_daily_bonus_dealer.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/11_story_daily_bonus_dealer_prompt.txt"},
+    {"asset_id": "12", "filename": "12_story_bonus_wheel_spin.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/12_story_bonus_wheel_spin_prompt.txt"},
+    {"asset_id": "13", "filename": "13_story_halftime_reload_drop.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/13_story_halftime_reload_drop_prompt.txt"},
+    {"asset_id": "14", "filename": "14_reel_luckylou_final_win.mp4", "format": "video", "tool": "generate_video", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/14_reel_luckylou_final_win_prompt.txt"},
+    {"asset_id": "15", "filename": "15_story_tomorrow_tease.png", "format": "image", "tool": "generate_image", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/15_story_tomorrow_tease_prompt.txt"},
+    {"asset_id": "16", "filename": "16_song_golden_kick.mp3", "format": "audio", "tool": "generate_audio", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/16_song_golden_kick_prompt.txt"},
+    {"asset_id": "17", "filename": "17_audio_ladye_opening_whistle.mp3", "format": "audio", "tool": "generate_audio", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/17_audio_ladye_opening_whistle_prompt.txt"},
+    {"asset_id": "18", "filename": "18_audio_luckylou_hat_trick.mp3", "format": "audio", "tool": "generate_audio", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/18_audio_luckylou_hat_trick_prompt.txt"},
+    {"asset_id": "19", "filename": "19_audio_golden_dealer_midnight.mp3", "format": "audio", "tool": "generate_audio", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/19_audio_golden_dealer_midnight_prompt.txt"},
+    {"asset_id": "20", "filename": "20_audio_ladye_referral.mp3", "format": "audio", "tool": "generate_audio", "status": "PENDING", "file_path": null, "prompt_file": "data/PENDING_GENERATION/20_audio_ladye_referral_prompt.txt"}
+  ]
+}

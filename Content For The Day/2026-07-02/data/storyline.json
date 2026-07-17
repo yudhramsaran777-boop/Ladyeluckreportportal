@@ -1,0 +1,294 @@
+{
+  "date": "2026-07-02",
+  "theme": "World Cup Golden Kick Day",
+  "tagline": "Every Spin is a Goal. Every Goal is Gold.",
+  "world_cup_mode": true,
+  "referral_code": "REF-GOLDENKICK-847",
+
+  "characters": {
+    "lady_e": {
+      "name": "Lady E",
+      "description": "Black female, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress with gold whistle on a chain, gold crown headpiece, crimson lips, bronze-brown skin. Confident, warm, commanding.",
+      "voice_id": "c3204739-4084-41a3-9dc5-c805b307ec18",
+      "voice_preset": "Vesper",
+      "arc": "Hosts the Golden Stadium all day. Opens the day with match energy, welcomes new players during midday, reveals deals in the afternoon, celebrates community wins at night, drops the Halftime Reload mystery at midnight."
+    },
+    "lucky_lou": {
+      "name": "Lucky Lou",
+      "description": "Male, mid-30s, stocky build, wearing green-and-gold soccer jersey with no real team logos, fishing hat with slot machine stickers AND a small soccer ball sticker, mismatched lucky socks, 4-leaf clover. Almost wins all day but WINS big in the final act.",
+      "voice_id": "73a45c18-0c56-4642-a61e-f6b303f8ded1",
+      "voice_preset": "Leo",
+      "arc": "Misses the first two goals of the day (just outside the net), ties up in Act 3, scores the Golden Boot in Act 5. Community favorite underdog."
+    },
+    "golden_dealer": {
+      "name": "The Golden Dealer",
+      "description": "Tall male, all-black suit, gold pocket square, wide-brim hat face half-shadowed. Appears only in Act 3 and Act 5. Deals the mystery bonus.",
+      "voice_id": "dc382508-c8bd-443c-8cb2-46e57b8d2e6f",
+      "voice_preset": "Sterling",
+      "arc": "Silent presence. Reveals the Hat Trick Bonus at 3PM. Returns at 10PM to drop the Halftime Reload."
+    }
+  },
+
+  "promotional_content": {
+    "new_player_bonus": {
+      "promo_type": "new_player_bonus",
+      "title": "Golden Boot Welcome",
+      "concept": "Lady E holds the golden whistle and welcomes new players into the Golden Stadium. 'Your first spin sets the tone. Welcome to the stadium.'",
+      "assigned_to_post": "post_04",
+      "format": "Feed Image",
+      "act": 2
+    },
+    "daily_bonus_wheel": {
+      "promo_type": "daily_bonus_wheel",
+      "title": "Spin the Wheel — Resets at Midnight",
+      "concept": "Quick urgent reminder. Casino wheel morphing into a soccer ball mid-spin. 'The wheel doesn't wait for overtime.'",
+      "assigned_to_post": "post_08",
+      "format": "Story",
+      "act": 4
+    },
+    "referral_code": {
+      "promo_type": "referral_code",
+      "title": "Penalty Kick Free Spin",
+      "concept": "Share REF-GOLDENKICK-847. Your friend joins = both get a free spin bonus. 'Pass it. They score. You both win.'",
+      "assigned_to_post": "post_07",
+      "format": "Groups Post + Feed Image",
+      "act": 3
+    },
+    "daily_bonus": {
+      "promo_type": "daily_bonus",
+      "title": "Daily Bonus — Claim Before Midnight",
+      "concept": "Fast Story reminder. Clock ticking. 'Your daily bonus is on the field. Claim it before the final whistle.'",
+      "assigned_to_post": "post_09",
+      "format": "Story",
+      "act": 4
+    },
+    "todays_special_bonus": {
+      "promo_type": "todays_special_bonus",
+      "title": "Halftime Reload Mystery Drop",
+      "concept": "Theme-specific: mystery bonus at 10PM for active players. 'The second half always surprises. Stay in the game.' Double-posted: Feed + Story.",
+      "assigned_to_posts": ["post_10", "post_11"],
+      "format": "Feed Image + Story",
+      "act": 5
+    }
+  },
+
+  "deals": {
+    "golden_boot_jackpot": {
+      "name": "Golden Boot Jackpot",
+      "timing": "All day",
+      "mechanic": "Biggest recharge of the day wins a multiplier bonus. 'Score the biggest. Win the boot.'",
+      "characters": ["Lady E"]
+    },
+    "hat_trick_bonus": {
+      "name": "Hat Trick Bonus",
+      "timing": "3PM - 6PM (during Spain vs Austria match)",
+      "mechanic": "3 recharges during match hours = stacked bonus. 'Three times. Three wins.'",
+      "characters": ["Golden Dealer"]
+    },
+    "penalty_kick_free_spin": {
+      "name": "Penalty Kick Free Spin",
+      "timing": "All day (referral-triggered)",
+      "mechanic": "Share referral code REF-GOLDENKICK-847, friend joins = both get free spin bonus. 'Pass it. They score. You both win.'",
+      "characters": ["Lucky Lou"]
+    },
+    "halftime_reload": {
+      "name": "Halftime Reload",
+      "timing": "10PM - Midnight",
+      "mechanic": "Mystery midnight drop for active players. 'The second half always surprises.'",
+      "characters": ["Golden Dealer", "Lady E"]
+    }
+  },
+
+  "story_arc": {
+    "act_1": {
+      "name": "THE OPENING",
+      "time_window": "6AM - 11AM",
+      "concept": "Launch the World Cup Golden Kick Day. Stadium energy. Lady E blows the golden whistle to open the day.",
+      "posts": [
+        {
+          "post_id": "post_01",
+          "format": "Reel",
+          "concept": "Lady E in World Cup referee dress walks into the Lady E Luck golden casino stadium setting, raises the golden whistle, blows it — confetti of gold coins and soccer balls burst out. Text overlay idea (in caption, not in image): 'Match Day at Lady E Luck. Let's go.'",
+          "character": "Lady E",
+          "world_cup_variation": true,
+          "platform": "Facebook + Instagram"
+        },
+        {
+          "post_id": "post_02",
+          "format": "Feed Image",
+          "concept": "Wide stadium shot — emerald green field with gold Lady E Luck logo at center circle. Soccer ball morphing into a spinning casino chip at midfield. Lady E stands at sideline, arms open, inviting. Cinematic.",
+          "character": "Lady E",
+          "world_cup_variation": true,
+          "platform": "Facebook + Instagram"
+        },
+        {
+          "post_id": "post_03",
+          "format": "Story",
+          "concept": "Close-up of Lady E's gold whistle. Quick caption (Story text overlay): 'Match Day is HERE. Spin like a champion.'",
+          "character": "Lady E",
+          "world_cup_variation": true,
+          "platform": "Facebook + Instagram Stories"
+        }
+      ]
+    },
+
+    "act_2": {
+      "name": "THE WELCOME",
+      "time_window": "11AM - 2PM",
+      "concept": "Welcome new players. Introduce Lucky Lou as the lovable underdog fan. New Player Bonus reveal.",
+      "posts": [
+        {
+          "post_id": "post_04",
+          "format": "Feed Image",
+          "concept": "NEW PLAYER BONUS: Lady E extends a gloved hand toward camera, golden stadium entrance archway glowing behind her. Warm, welcoming. 'Your first spin sets the tone. Welcome to the stadium.'",
+          "character": "Lady E",
+          "world_cup_variation": true,
+          "platform": "Facebook + Instagram",
+          "promo_type": "new_player_bonus"
+        },
+        {
+          "post_id": "post_05",
+          "format": "Story",
+          "concept": "Lucky Lou wearing his soccer jersey and fishing hat, eyes wide, watching a screen showing match scores, 4-leaf clover clutched in his fist. Pure excitement. Almost missed the opening goal.",
+          "character": "Lucky Lou",
+          "world_cup_variation": true,
+          "platform": "Stories"
+        },
+        {
+          "post_id": "post_06",
+          "format": "Story",
+          "concept": "Lady E voice line: 'This is your day. Every spin could be your Golden Boot moment. Welcome to the stadium.' Audio voiceover Story card with animated gold coin particles.",
+          "character": "Lady E",
+          "world_cup_variation": true,
+          "platform": "Stories",
+          "audio_voiceover": true
+        }
+      ]
+    },
+
+    "act_3": {
+      "name": "THE GOLDEN RUSH",
+      "time_window": "2PM - 6PM",
+      "concept": "Spain vs Austria match at 3PM. Hat Trick Bonus drops. Referral push. Golden Dealer appears.",
+      "posts": [
+        {
+          "post_id": "post_07",
+          "format": "Feed Image + Groups",
+          "concept": "REFERRAL: Lucky Lou kicking a gold-coin soccer ball toward the camera. Ball trails gold sparkles. 'Pass this to a friend. You both score.' Referral code REF-GOLDENKICK-847.",
+          "character": "Lucky Lou",
+          "world_cup_variation": true,
+          "platform": "Facebook Feed + Groups",
+          "promo_type": "referral_code"
+        },
+        {
+          "post_id": "post_08_pre",
+          "format": "Reel",
+          "concept": "HAT TRICK BONUS REVEAL: The Golden Dealer materializes from shadows in the casino, three gold card fans in his hands — they transform into three glowing soccer balls. 'Three times. Three wins. Hat Trick Bonus starts now.'",
+          "character": "Golden Dealer",
+          "world_cup_variation": false,
+          "platform": "Facebook + Instagram Reels",
+          "promo_type": "hat_trick_bonus"
+        },
+        {
+          "post_id": "post_08a",
+          "format": "Story",
+          "concept": "Quick urgent Story: Split frame — left side shows match clock ticking (3PM-6PM), right side shows stacked gold coins. 'Your window is open. Hat Trick Bonus ends at 6PM.'",
+          "character": null,
+          "world_cup_variation": true,
+          "platform": "Stories"
+        }
+      ]
+    },
+
+    "act_4": {
+      "name": "JACKPOT PARADE",
+      "time_window": "6PM - 10PM",
+      "concept": "Portugal vs Croatia at 7PM. Community energy. Daily Bonus Wheel + Daily Bonus reminders. Lucky Lou almost scores again.",
+      "posts": [
+        {
+          "post_id": "post_09",
+          "format": "Feed Image",
+          "concept": "COMMUNITY WINS: The Summer Crew — 4-5 diverse players in green and gold — celebrating together in the Lady E Luck golden lounge, TV screens showing match highlights behind them. Joyful, vibrant, community-first.",
+          "character": "Summer Crew",
+          "world_cup_variation": true,
+          "platform": "Facebook + Instagram"
+        },
+        {
+          "post_id": "post_10",
+          "format": "Story",
+          "concept": "DAILY BONUS WHEEL: Spinning casino wheel with soccer ball center. 'Resets at midnight. Spin it now.' Urgent.",
+          "character": null,
+          "world_cup_variation": true,
+          "platform": "Stories",
+          "promo_type": "daily_bonus_wheel"
+        },
+        {
+          "post_id": "post_11",
+          "format": "Story",
+          "concept": "DAILY BONUS: Clock showing 11:59 PM above a glowing gold coin. 'Your daily bonus is on the field. Claim it before the final whistle.'",
+          "character": null,
+          "world_cup_variation": true,
+          "platform": "Stories",
+          "promo_type": "daily_bonus"
+        }
+      ]
+    },
+
+    "act_5": {
+      "name": "GOLDEN HOUR",
+      "time_window": "10PM - Midnight",
+      "concept": "Switzerland vs Algeria at 11PM. Lucky Lou WINS. Mystery Halftime Reload drops. Tomorrow tease.",
+      "posts": [
+        {
+          "post_id": "post_12",
+          "format": "Story",
+          "concept": "HALFTIME RELOAD — TODAY'S SPECIAL BONUS: The Golden Dealer stands at the center of the casino floor, holds up a single gold card. One line: 'The second half always surprises.' Mystery bonus revealed.",
+          "character": "Golden Dealer",
+          "world_cup_variation": false,
+          "platform": "Stories",
+          "promo_type": "todays_special_bonus"
+        },
+        {
+          "post_id": "post_13",
+          "format": "Feed Image",
+          "concept": "HALFTIME RELOAD — FEED (double-post): Dramatic gold light beam from stadium ceiling onto casino floor. Empty penalty spot with a single spinning gold chip. Dark, cinematic, magnetic. 'The second half always surprises. Active players — check your bonus.'",
+          "character": null,
+          "world_cup_variation": true,
+          "platform": "Facebook + Instagram Feed",
+          "promo_type": "todays_special_bonus"
+        },
+        {
+          "post_id": "post_14",
+          "format": "Reel",
+          "concept": "LUCKY LOU WINS + TOMORROW TEASE: Lucky Lou's fishing hat flies into the air, gold coins rain down, he catches a 4-leaf clover as it transforms into a golden trophy. Final frame: Lady E smiles over his shoulder. Caption tease: 'Tomorrow? Even bigger.' Lucky Lou's biggest win of the day.",
+          "character": "Lucky Lou + Lady E",
+          "world_cup_variation": true,
+          "platform": "Facebook + Instagram Reels"
+        }
+      ]
+    }
+  },
+
+  "song_of_the_day": {
+    "title": "Golden Kick (Stadium Anthem)",
+    "genre": "Afrobeats / Trap Fusion",
+    "bpm": 105,
+    "key": "F# minor",
+    "mood": "Stadium anthem energy, celebratory, electric, warm",
+    "instruments": "808 bass, trap hi-hats, Afrobeats percussion (djembe pattern), stadium crowd ambiance, melodic synth pad, brass stabs",
+    "lead_voice": "Lady E",
+    "voice_id": "c3204739-4084-41a3-9dc5-c805b307ec18",
+    "voice_preset": "Vesper",
+    "asset_filename": "14_song_golden_kick_stadium_anthem",
+    "lyrics": {
+      "intro": "Lady E Luck, yeah... Golden Kick Day, let's go...",
+      "verse_1": "Morning whistle, the stadium glow / Golden field, watch them coins overflow / Lucky Lou got his jersey on tight / 4-leaf clover shining in the morning light / Lady E walking with the golden crown / Every spin electric, don't you dare slow down / Three bells ringing, can you hear the sound? / This is your moment — we don't back down",
+      "pre_chorus": "Hat trick, three wins stacked high / Golden Boot jackpot — touch the sky / Spin the wheel before the night is done / Every match day, every spin is one",
+      "chorus": "Golden Kick, we're scoring big tonight / Golden Kick, every spin feels right / Lady E Luck, the stadium is alive / Golden Kick — we spin, we win, we thrive / Score the biggest, win the boot / Hat trick bonus, follow through / Penalty Free Spin, pass it to a friend / Golden Hour, this night never ends",
+      "verse_2": "Second half coming, mystery in the air / Golden Dealer deals but he don't play fair / The Reload drops at midnight, you already know / Active players only — watch that bonus grow / Lucky Lou missed the first one, now he's locked in / Final act of the night — he's finally gonna win / Crowd goes gold, coins raining from the ceiling / This is Lady E Luck and you know the feeling",
+      "bridge": "Every stadium needs a champion tonight / Every spin you take could be the one that's right / We don't chase, we celebrate — this is our stage / Lady E Luck — the Golden Kick Decade / Spain and Portugal on the big screen / Portugal and Croatia making history / But right here in our world, only gold reigns / Lady E Luck — forever in the game",
+      "final_chorus": "Golden Kick, we're scoring big tonight / Golden Kick, every spin feels right / Lady E Luck, the stadium is alive / Golden Kick — we spin, we win, we thrive / Score the biggest, win the boot / Hat trick bonus, follow through / Penalty Free Spin, pass it to a friend / Golden Hour — this night never ends",
+      "outro": "Lady E Luck... Golden Kick Day... tomorrow even bigger... stay in the game..."
+    }
+  }
+}

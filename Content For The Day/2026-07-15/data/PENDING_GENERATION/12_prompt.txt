@@ -1,0 +1,11 @@
+ASSET: 12_story_midnight_watch
+FORMAT: image_story
+TOOL: higgsfield generate_image
+ORIENTATION: vertical 9:16
+DURATION: n/a
+POST TIME: 7:45 PM
+PLATFORM: FB + IG Story
+PROMO TYPE: daily_bonus
+
+PROMPT:
+Elegant macro shot. Deep emerald casino felt surface in darkness. An ornate antique gold pocket watch lies open, hands at five minutes to twelve, its polished case reflecting warm light, fine gold chain trailing across the felt. Lighting: warm directional gold light from above, single soft spotlight, cinematic. Mood: quiet urgency, time running out. Foreground: watch face in crisp focus. Background: felt fading to black with faint gold bokeh. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image (clock hands only, no numerals visible — use minimalist markers). Camera: top-down macro, close distance.

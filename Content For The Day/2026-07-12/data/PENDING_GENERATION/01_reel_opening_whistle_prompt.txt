@@ -1,0 +1,7 @@
+ASSET: 01_reel_opening_whistle
+FORMAT: Reel (9:16 vertical video, 10-12 seconds)
+TOOL: generate_video
+POST TIME: 7:00 AM — FB + IG
+
+PROMPT:
+10-second vertical cinematic video clip. Shot: Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress with gold whistle on a chain, large gold hoop earrings, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick — she raises the gold whistle to her lips and blows, triggering an explosion of gold confetti raining from above. Movement: camera slowly pushes in from mid-shot to close-up as the whistle blows. Character action: she blows the whistle then lowers it with a slow powerful smile, eyes locked on camera. Lighting: warm directional gold spotlight from above, cinematic. Atmosphere: stadium crowd roar sound implied, dark emerald green background transitions to casino floor, a soccer ball rolls into frame and morphs into a spinning gold casino chip. Style: photorealistic cinematic. Color: dark green black gold. Audio cue: gold whistle sound followed by crowd roar.

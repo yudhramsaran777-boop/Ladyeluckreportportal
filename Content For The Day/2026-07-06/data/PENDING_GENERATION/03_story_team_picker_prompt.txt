@@ -1,0 +1,7 @@
+ASSET: 03_story_team_picker
+FORMAT: Story Image (vertical 9:16)
+TOOL: generate_image
+CHARACTER: Lucky Lou (World Cup Variant)
+
+PROMPT:
+Vertical 9:16 cinematic story image. Full-body shot. Male character, mid-30s, stocky-average build, wide expressive eyes, large warm smile, wearing a green-and-gold soccer jersey with no real team logos, wide fishing hat covered in slot machine emoji stickers and gold star stickers with a small soccer ball sticker added, mismatched lucky socks (one green one gold) visible above loafers — holding a 4-leaf clover in one hand and giving an enthusiastic thumbs up with the other. Setting: dark emerald casino lounge that blends into a stadium-style viewing area, with large glowing screens implied behind him. Foreground: scattered gold casino chips on dark floor. Lighting: warm gold overhead directional light, cinematic. Mood: excited, fun, community invitation. Style: photorealistic, cinematic, dark green and gold palette. No text, no words, no letters in the image. Camera: medium shot, slight low angle making him feel friendly and accessible.

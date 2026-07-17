@@ -1,0 +1,258 @@
+{
+  "date": "2026-07-06",
+  "day_of_week": "Monday",
+  "world_cup_mode": true,
+  "theme": "Match Day Madness",
+  "total_posts": 17,
+  "day_modifiers": ["Monday boost 7AM", "World Cup: pre-match at 1PM (Spain/Portugal 3PM), during-match Stories only 3PM-5PM, post-match spike 5PM-6PM, USMNT match 8PM Stories only, post-USMNT spike 10PM+"],
+
+  "timing_notes": {
+    "world_cup_match_1": "Spain vs Portugal — 3:00 PM CT kickoff (AT&T Stadium, Dallas)",
+    "world_cup_match_2": "Belgium vs USMNT — 8:00 PM PT / 11:00 PM ET kickoff (Lumen Field, Seattle)",
+    "pre_match_1_window": "1:00 PM – 3:00 PM",
+    "during_match_1": "3:00 PM – 5:00 PM (Stories only)",
+    "post_match_1_spike": "5:00 PM – 6:00 PM",
+    "golden_hour": "10:00 PM – Midnight"
+  },
+
+  "schedule": [
+    {
+      "post_id": "01",
+      "title": "Match Day Arrives — Launch Reel",
+      "format": "Reel",
+      "platform": "FB + IG",
+      "post_time": "7:00 AM",
+      "act": 1,
+      "promo_type": "theme_launch",
+      "character": "Lady E (World Cup Variant)",
+      "world_cup_timing": "Opening salvo — set the match day tone",
+      "filename": "01_reel_launch_whistle"
+    },
+    {
+      "post_id": "02",
+      "title": "Match Day Monday Announcement — Feed Image",
+      "format": "Feed Image",
+      "platform": "FB + IG",
+      "post_time": "8:00 AM",
+      "act": 1,
+      "promo_type": "theme_launch",
+      "character": "Lady E (World Cup Variant)",
+      "world_cup_timing": "Morning ritual peak — Monday boost window",
+      "filename": "02_image_matchday_announcement"
+    },
+    {
+      "post_id": "03",
+      "title": "Who's Your Team Today? — Story",
+      "format": "Story",
+      "platform": "FB + IG Stories",
+      "post_time": "9:00 AM",
+      "act": 1,
+      "promo_type": "community_engagement",
+      "character": "Lucky Lou (World Cup Variant)",
+      "world_cup_timing": "Morning engagement — team pick poll",
+      "filename": "03_story_team_picker"
+    },
+    {
+      "post_id": "04",
+      "title": "New Player Bonus — Feed Image",
+      "format": "Feed Image",
+      "platform": "FB + IG",
+      "post_time": "11:00 AM",
+      "act": 2,
+      "promo_type": "new_player_bonus",
+      "character": "Lady E (World Cup Variant)",
+      "world_cup_timing": "Midday peak (lunch break scroll)",
+      "filename": "04_image_new_player_bonus"
+    },
+    {
+      "post_id": "05a",
+      "title": "New Player Bonus Story",
+      "format": "Story",
+      "platform": "FB + IG Stories",
+      "post_time": "11:30 AM",
+      "act": 2,
+      "promo_type": "new_player_bonus",
+      "character": "Lady E (World Cup Variant)",
+      "world_cup_timing": "Midday story cadence",
+      "filename": "05a_story_new_player_closeup"
+    },
+    {
+      "post_id": "05b",
+      "title": "Match Energy Check-In Story",
+      "format": "Story",
+      "platform": "FB + IG Stories",
+      "post_time": "12:30 PM",
+      "act": 2,
+      "promo_type": "community_engagement",
+      "character": "Lucky Lou (World Cup Variant)",
+      "world_cup_timing": "Pre-match excitement buildup (match starts 3PM)",
+      "filename": "05b_story_match_energy"
+    },
+    {
+      "post_id": "06",
+      "title": "Golden Boot Jackpot Reveal — Feed Image",
+      "format": "Feed Image",
+      "platform": "FB + IG",
+      "post_time": "1:00 PM",
+      "act": 3,
+      "promo_type": "todays_special_bonus_feed",
+      "character": "The Golden Dealer",
+      "world_cup_timing": "Pre-match peak window — 2 hours before kickoff",
+      "filename": "06_image_golden_boot_reveal"
+    },
+    {
+      "post_id": "07",
+      "title": "Golden Boot Story Reminder",
+      "format": "Story",
+      "platform": "FB + IG Stories",
+      "post_time": "1:30 PM",
+      "act": 3,
+      "promo_type": "todays_special_bonus_story",
+      "character": "The Golden Dealer",
+      "world_cup_timing": "Pre-match story — maximum pre-kickoff visibility",
+      "filename": "07_story_golden_boot_reminder"
+    },
+    {
+      "post_id": "08",
+      "title": "Referral Code — Groups Post",
+      "format": "Groups Post",
+      "platform": "Facebook Groups",
+      "post_time": "2:00 PM",
+      "act": 3,
+      "promo_type": "referral_code",
+      "character": "Lucky Lou (World Cup Variant)",
+      "world_cup_timing": "1 hour before match — community gathering moment",
+      "filename": "08_image_referral_penalty_kick"
+    },
+    {
+      "post_id": "09",
+      "title": "Hat Trick Bonus Reel",
+      "format": "Reel",
+      "platform": "FB + IG",
+      "post_time": "5:30 PM",
+      "act": 3,
+      "promo_type": "hat_trick_deal",
+      "character": "Lucky Lou (World Cup Variant)",
+      "world_cup_timing": "Post-match 1 spike (Spain/Portugal result is in, fans back on feeds)",
+      "filename": "09_reel_hat_trick_bonus"
+    },
+    {
+      "post_id": "10",
+      "title": "Community Win Parade — Feed Image",
+      "format": "Feed Image",
+      "platform": "FB + IG",
+      "post_time": "6:00 PM",
+      "act": 4,
+      "promo_type": "community_celebration",
+      "character": "The Summer Crew",
+      "world_cup_timing": "Evening rush — post-match celebration energy",
+      "filename": "10_image_community_celebration"
+    },
+    {
+      "post_id": "11",
+      "title": "Daily Bonus Wheel — Story",
+      "format": "Story",
+      "platform": "FB + IG Stories",
+      "post_time": "7:30 PM",
+      "act": 4,
+      "promo_type": "daily_bonus_wheel",
+      "character": "Lady E (World Cup Variant)",
+      "world_cup_timing": "Between matches — fans scrolling before USMNT game",
+      "filename": "11_story_daily_bonus_wheel"
+    },
+    {
+      "post_id": "12",
+      "title": "Daily Bonus Final Call — Story",
+      "format": "Story",
+      "platform": "FB + IG Stories",
+      "post_time": "8:30 PM",
+      "act": 4,
+      "promo_type": "daily_bonus",
+      "character": "Lady E (World Cup Variant)",
+      "world_cup_timing": "During USMNT match — Stories only rule (quick, won't interrupt)",
+      "filename": "12_story_daily_bonus_final"
+    },
+    {
+      "post_id": "13",
+      "title": "Halftime Reload Announced — Story",
+      "format": "Story",
+      "platform": "FB + IG Stories",
+      "post_time": "10:00 PM",
+      "act": 5,
+      "promo_type": "halftime_reload",
+      "character": "The Golden Dealer",
+      "world_cup_timing": "Golden Hour open — right after USMNT match ends",
+      "filename": "13_story_halftime_reload"
+    },
+    {
+      "post_id": "14",
+      "title": "Lucky Lou's Big Win Reel",
+      "format": "Reel",
+      "platform": "FB + IG",
+      "post_time": "10:30 PM",
+      "act": 5,
+      "promo_type": "golden_hour_win",
+      "character": "Lucky Lou (World Cup Variant)",
+      "world_cup_timing": "Late night peak — maximum engagement window post-match",
+      "filename": "14_reel_lucky_lou_golden_win"
+    },
+    {
+      "post_id": "15",
+      "title": "Tomorrow's Tease — Story",
+      "format": "Story",
+      "platform": "FB + IG Stories",
+      "post_time": "11:00 PM",
+      "act": 5,
+      "promo_type": "tomorrow_tease",
+      "character": "Lady E (World Cup Variant)",
+      "world_cup_timing": "Closing story — mystery for tomorrow",
+      "filename": "15_story_tomorrow_tease"
+    },
+    {
+      "post_id": "16",
+      "title": "Song of the Day — Golden Kick Audio",
+      "format": "Audio / Song",
+      "platform": "Internal / Reel backing track",
+      "post_time": "Background asset — used in Reels",
+      "act": "all",
+      "promo_type": "brand_anthem",
+      "character": "Lady E (Vesper voice)",
+      "filename": "16_audio_song_golden_kick"
+    },
+    {
+      "post_id": "17",
+      "title": "Lady E Voice Line — Golden Hour Announcement",
+      "format": "Audio / Voice",
+      "platform": "Reel / Story overlay",
+      "post_time": "10:00 PM",
+      "act": 5,
+      "promo_type": "halftime_reload",
+      "character": "Lady E (Vesper voice)",
+      "filename": "17_audio_lady_e_golden_hour"
+    }
+  ],
+
+  "story_cadence": {
+    "total_stories": 8,
+    "times": ["9:00 AM", "11:30 AM", "12:30 PM", "1:30 PM", "7:30 PM", "8:30 PM", "10:00 PM", "11:00 PM"],
+    "spacing_note": "Stories spaced 60-90 minutes apart minimum"
+  },
+
+  "feed_image_cadence": {
+    "total_feed_images": 5,
+    "times": ["8:00 AM", "11:00 AM", "1:00 PM", "6:00 PM"],
+    "spacing_note": "All feed images 2+ hours apart — compliant"
+  },
+
+  "reel_cadence": {
+    "total_reels": 3,
+    "times": ["7:00 AM", "5:30 PM", "10:30 PM"],
+    "spacing_note": "All reels 3+ hours apart — compliant"
+  },
+
+  "groups_cadence": {
+    "total_groups": 1,
+    "times": ["2:00 PM"],
+    "spacing_note": "Groups post within 10AM-8PM rule — compliant"
+  }
+}

@@ -7,6 +7,7 @@ import { DateRangeFilter } from "@/components/manager/date-range-filter";
 import {
   formatCurrency,
   formatNumber,
+  reportTotalsFromStoredEntries,
 } from "@/lib/calculations";
 
 export const dynamic = "force-dynamic";
@@ -114,26 +115,23 @@ export default async function ManagerShopReportPage({
     entriesByReport.set(entry.shift_report_id, list);
   }
 
-  let totalRecharge = 0, totalGameCost = 0, totalProfit = 0, totalTrueProfit = 0;
-  // Aggregate game-level rows across all reports (game cost computed from grouped profit per report)
+  // KPI totals: canonical formula shared with owner + manager dashboards.
+  const rangeTotals = reportTotalsFromStoredEntries(entries || []);
+  const totalRecharge = rangeTotals.totalRecharge;
+  const totalGameCost = rangeTotals.totalGameCost;
+  const totalProfit = rangeTotals.totalProfit;
+  const totalTrueProfit = rangeTotals.totalTrueProfit;
+
+  // Aggregate game-level rows across all reports (stored game_cost, zero-out per report)
   const rechargeGameMap = new Map<
     string,
     { game: string; recharge: number; normalDifference: number; gameCostPercent: number; gameCostPercentCount: number; gameCost: number; profit: number; trueProfit: number }
   >();
 
   for (const [, reportEntries] of entriesByReport) {
-    // Use stored game_cost from the DB — same source as the owner dashboard —
-    // so both views always agree. Apply the zero-out rule per report.
-    const reportProfit   = reportEntries.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
-    const reportRecharge = reportEntries.reduce((s: number, e: any) => s + Number(e.real_recharge || 0), 0);
-    const storedCost     = reportEntries.reduce((s: number, e: any) => s + Number(e.game_cost || 0), 0);
+    // Zero-out rule: if the report lost money overall, no game fee for any game in it.
+    const reportProfit = reportEntries.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
     const isPositive = reportProfit > 0;
-    const reportGameCost = isPositive ? storedCost : 0;
-
-    totalRecharge    += reportRecharge;
-    totalGameCost    += reportGameCost;
-    totalProfit      += reportProfit;
-    totalTrueProfit  += reportProfit - reportGameCost;
 
     for (const e of reportEntries) {
       const gameName = e.game_name || "Unknown";
@@ -227,7 +225,7 @@ export default async function ManagerShopReportPage({
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-8">
         <KpiCard label="Real Recharge" value={formatCurrency(totalRecharge)} icon={DollarSign} trend="Selected range" />
         <KpiCard label="Redeems" value={formatCurrency(totalRedeems)} icon={Wallet} trend="Cashout total" />
-        <KpiCard label="Game Cost" value={formatCurrency(totalGameCost)} icon={CreditCard} trend="Normal diff x cost %" />
+        <KpiCard label="Game Cost" value={formatCurrency(totalGameCost)} icon={CreditCard} trend="Positive game profit x cost %" />
         <KpiCard label="Profit" value={formatCurrency(totalProfit)} icon={TrendingUp} trend="Normal difference" />
         <KpiCard
           label="True Profit"

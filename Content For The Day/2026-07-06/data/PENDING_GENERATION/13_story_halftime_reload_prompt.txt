@@ -1,0 +1,7 @@
+ASSET: 13_story_halftime_reload
+FORMAT: Story Image (vertical 9:16)
+TOOL: generate_image
+CHARACTER: The Golden Dealer
+
+PROMPT:
+Vertical 9:16 cinematic story image. Dramatic close-up. Tall male character, all-black slim-cut suit, gold pocket square, wide-brim hat face partially shadowed — one hand raised, palm open, a single golden casino chip spinning and levitating above his palm, glowing intensely with gold light. The chip is motion-blurred from spin, emitting golden light particles upward. Background: absolute black with a single cone of light from directly above. Foreground: golden light pooling on surface below his hand. Lighting: single high-contrast overhead dramatic spotlight, deep noir shadows. Mood: mystery, exclusive, midnight energy, drop announcement. Style: photorealistic cinematic noir. Color: black, gold, pure shadow. No text, no words, no letters. Camera: extreme close dramatic angle, slightly below the hand, upward tilt.

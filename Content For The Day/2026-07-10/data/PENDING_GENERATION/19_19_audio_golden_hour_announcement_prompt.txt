@@ -1,0 +1,20 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 19
+Filename: 19_audio_golden_hour_announcement
+Format: audio
+Tool: higgsfield_generate_audio
+Orientation: None
+Duration: 15 seconds
+Post Time: 10:00 PM (paired with post_15)
+Platform: Story audio
+Promo Type: golden_hour
+Character: Lady E
+World Cup Variation: False
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Voice: Lady E. Preset: Vesper. Voice ID: c3204739-4084-41a3-9dc5-c805b307ec18. Text: 'The Golden Hour is here. Halftime Reload just dropped. If you've been playing today — check your account right now. The second half always surprises.' Emotion: mysterious, knowing, intimate, late-night. Pacing: hushed and deliberate. Pause after 'right now.' Final line delivered with a slight smile in the voice. Notes: Like a secret being shared. She whispers the last sentence almost conspiratorially.
+
+VOICE ID: c3204739-4084-41a3-9dc5-c805b307ec18
+VOICE PRESET: Vesper

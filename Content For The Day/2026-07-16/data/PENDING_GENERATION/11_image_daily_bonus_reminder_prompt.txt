@@ -1,0 +1,11 @@
+ASSET: 11_image_daily_bonus_reminder
+FORMAT: story_image
+TOOL: higgsfield generate_image
+ORIENTATION: 9:16 vertical
+POST TIME: 7:30 PM
+PLATFORM: FB + IG Story
+PROMO TYPE: daily_bonus
+CHARACTER: none
+
+PROMPT:
+Moody countdown shot. A small ornate gold gift chest sitting exactly on the white penalty spot of dark emerald night turf, lid cracked open with warm gold light leaking out. Pose/action: faint gold mist rising from the chest seam. Lighting: warm directional gold light from above narrowing like a closing spotlight, cinematic. Mood: last-call urgency, quiet ticking clock. Foreground: the chest's gold clasp glinting. Background: a huge blurred stadium clock face glowing faintly in the dark stands. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low close angle on the chest, vertical composition.

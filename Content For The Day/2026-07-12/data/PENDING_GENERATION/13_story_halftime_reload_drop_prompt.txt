@@ -1,0 +1,7 @@
+ASSET: 13_story_halftime_reload_drop
+FORMAT: Story Image (9:16 vertical)
+TOOL: generate_image
+POST TIME: 10:00 PM — FB + IG Stories
+
+PROMPT:
+Vertical cinematic portrait for Stories. Setting: near-complete darkness, single dramatic gold spotlight from directly above. A wrapped mystery prize box sits on a dark table in the foreground, glowing with gold light from within as if it contains something radiant. Character: tall male character, all-black slim-cut suit, gold pocket square, wide-brim hat with face half-shadowed. Pose: he steps slightly forward toward camera from the darkness — for the first time his posture has a slight forward lean, suggesting he is about to reveal something. His jaw and lips are faintly visible below the hat brim. One hand is on the mystery box, not touching it but hovering. Expression: imperceptible but one corner of lip slightly raised. Lighting: single tight gold spotlight, deep noir shadow everywhere else. The mystery box pulses with gold inner light. Foreground: box in foreground, character behind and above. Background: absolute darkness. Style: photorealistic cinematic noir, mystery and anticipation. No text, no words, no letters in the image. Camera: low angle close portrait, mystery box in foreground.

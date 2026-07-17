@@ -1,0 +1,11 @@
+ASSET: 19_song_golden_kick
+FORMAT: audio_song
+TOOL: higgsfield generate_audio (music mode)
+ORIENTATION: n/a
+DURATION: n/a
+POST TIME: usable across reels + stories all day
+PLATFORM: FB + IG
+PROMO TYPE: song_of_the_day
+
+PROMPT:
+Original song 'Golden Kick'. Genre: Afrobeats/Trap fusion, stadium anthem energy. BPM: 105. Key: F minor. Instruments: log drums, 808 bass, stadium claps, brass stabs, shekere, layered crowd chants, airhorn accents. Lead voice: Lady E (Vesper preset, voice_id c3204739-4084-41a3-9dc5-c805b307ec18) — commanding, warm, melodic. Structure and full lyrics as written in storyline.json song_of_the_day (Intro with whistle, Verse 1, Pre-Chorus, Chorus, Verse 2, Bridge with crowd chant OHHH-OH-OH-OH, Final Chorus, Outro with final whistle). Mood: triumphant World Cup night anthem for a premium gold-and-emerald brand.

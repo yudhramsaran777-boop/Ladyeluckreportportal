@@ -1,0 +1,11 @@
+ASSET: 01_reel_kickoff_whistle
+FORMAT: reel
+TOOL: higgsfield generate_video
+ORIENTATION: vertical 9:16
+DURATION: 8s
+POST TIME: 7:00 AM
+PLATFORM: FB + IG
+PROMO TYPE: theme_launch
+
+PROMPT:
+8-second vertical 9:16 cinematic video clip. Shot: a luxurious dark emerald casino lounge transformed with stadium green turf underfoot, stadium floodlights beaming down like casino spotlights. Movement: slow push-in toward center. Character action: Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress and gold whistle on a chain, long black gloves, gold hoop earrings, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, raises the gold whistle to her lips and blows; the moment she blows, gold confetti erupts and floodlights flare. Lighting: warm directional gold light from above, dramatic flares. Atmosphere: electric kickoff energy, floating gold dust particles. Audio cue: sharp whistle blast into crowd roar. Style: photorealistic cinematic. Color: dark green black gold. No text, no words, no letters.

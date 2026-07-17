@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 12
+Filename: 12_image_golden_boot_trophy
+Format: image
+Tool: higgsfield_generate_image
+Orientation: square (1:1)
+Duration: N/A
+Post Time: 6:30 PM
+Platform: Facebook + Instagram
+Promo Type: todays_special_bonus
+Character: No character — trophy focus
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Hero product shot. Setting: dark marble pedestal on dark emerald green background. An oversized trophy in the shape of a golden soccer boot sits on the pedestal, trophy-style with a wide gold base. Surrounding the trophy at its base: an overflowing pile of gold coins that have cascaded off the pedestal and pooled on the emerald surface below. A single emerald green spotlight from directly above illuminates the trophy in warm gold, the rest of the scene in dramatic deep shadow. Mood: aspirational, jackpot prestige, coveted prize. Foreground: loose gold coins at camera edge in shallow focus. Background: pure dark emerald fading to black, faint gold particles suspended in air. Style: photorealistic, cinematic, luxury editorial, trophy-showcase lighting. Color: gold, emerald, black. No text, no words, no letters in the image. Camera: slightly below pedestal level, angled up at 15 degrees, trophy commanding the frame.

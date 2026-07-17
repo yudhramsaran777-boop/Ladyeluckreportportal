@@ -1,0 +1,74 @@
+ASSET: 16_song_golden_kick
+FORMAT: Audio — Original Song (3-4 minutes)
+TOOL: generate_audio (music mode) or ElevenLabs music
+VOICE: Lady E — Vesper preset — voice_id: c3204739-4084-41a3-9dc5-c805b307ec18
+
+GENRE: Afrobeats/Trap Fusion | BPM: 105 | KEY: F# minor
+INSTRUMENTS: Afrobeat guitar loop, trap hi-hats with triplet rolls, booming 808 kick, brass stabs, crowd chant layer, marimba melody, gold coin sound FX on beats 2 and 4
+
+LYRICS:
+[INTRO]
+Uh, Lady E Luck... yeah... World Cup Sunday... we came to WIN...
+
+[VERSE 1]
+Sunday mornin, whistle blow
+Dark green casino, golden glow
+Lucky Lou lace up his shoes
+England Argentina, pick your crew
+But in here we don't pick sides
+We just ride the golden tide
+Every spin is a corner kick
+Every win comes real, real quick
+
+[PRE-CHORUS]
+Stack it up, stack it up
+Hat trick by three
+Bonus drop, bonus drop
+Come play with Lady E
+Golden boot in your hands
+Feel that stadium crowd
+When the whistle blow loud
+We celebrate PROUD
+
+[CHORUS]
+Golden kick, golden kick
+Lady E Luck is the place to be
+Score big, score big
+This Sunday energy is FREE
+Spin that wheel, feel the thrill
+Halftime reload, midnight fill
+Golden kick, golden kick
+We don't stop till the morning still
+
+[VERSE 2]
+Lucky Lou almost missed again
+But that clover said my friend
+This your time, this your night
+Third recharge and the win in sight
+Golden Dealer tip his hat
+No words needed, that's a fact
+When the final whistle ring
+Lady E Luck brings everything
+
+[BRIDGE]
+Dai Dai, we ride
+Stadium lights in our eyes
+Coins fallin from the sky
+We don't need to ask why
+Just spin it, claim it
+The Golden Hour, don't miss it
+Ref blow the whistle
+We already finished
+
+[FINAL CHORUS]
+Golden kick, golden kick
+Lady E Luck is the place to be
+Score big, score big
+This Sunday energy is FREE
+Spin that wheel, feel the thrill
+Halftime reload, midnight fill
+Golden kick, golden kick
+We don't stop till the morning still
+
+[OUTRO]
+Lady E Luck... Sunday Funday Finals... Golden Boot Jackpot all day long... REF-FINALS-847... bring a friend... you BOTH win... Aye...

@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 17
+Filename: 17_reel_tomorrow_tease
+Format: video
+Tool: higgsfield_generate_video
+Orientation: vertical (9:16)
+Duration: 12 seconds
+Post Time: 11:30 PM
+Platform: Facebook + Instagram
+Promo Type: tomorrow_tease
+Character: Lady E (World Cup Variant)
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+12-second vertical cinematic video. Shot: Black female character in black-and-gold referee-inspired dress, gold whistle on chain, gold crown headpiece, deep bronze-brown skin, crimson lipstick walks slowly toward camera down a long dark corridor with dark emerald green walls and gold trim. Camera movement: slow reverse dolly — camera retreats as she advances, keeping her at the same size. Character action: she walks with absolute confidence and calm. Halfway through, she stops. Holds up exactly one gloved finger toward the camera. Then gives the faintest half-smile. She doesn't speak. Slowly, the scene dims to black from the edges inward, but her gold crown headpiece catches the last point of light before complete fade. Audio cue: whisper of wind, single piano note, silence. Lighting: dim warm gold corridor lights, final gold point on crown. Mood: mystery, anticipation, premium exclusivity. Style: photorealistic cinematic, ultra-slow, deliberate. Color: dark emerald, black, gold. No text no words no letters. Camera: retreating medium shot.

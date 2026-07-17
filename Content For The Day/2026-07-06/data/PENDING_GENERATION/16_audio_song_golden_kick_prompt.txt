@@ -1,0 +1,83 @@
+ASSET: 16_audio_song_golden_kick
+FORMAT: Audio / Song (Music) ~3 minutes
+TOOL: generate_audio (music mode)
+VOICE: Lady E — Vesper preset — voice_id: c3204739-4084-41a3-9dc5-c805b307ec18
+
+MUSIC SPEC:
+Genre: Afrobeats / Trap Fusion
+BPM: 105
+Key: F# Minor
+Instruments: Afrobeats percussion pattern, trap hi-hats, deep 808 bass, gold shimmer synth lead, stadium crowd ambiance bed, horn stabs on chorus
+Mood: Stadium anthem — electric, celebratory, confident
+
+FULL LYRICS:
+
+[INTRO]
+Ay... Lady E Luck on the field tonight
+Golden boots and spinning chips, yeah we shining right
+World Cup got the whole world on fire
+Lady E Luck taking it higher, higher
+
+[VERSE 1]
+Monday morning, whistle blow, we step on the floor
+Chips stacking like a hat trick, can't help but score
+Lady E in the booth, gold crown on the throne
+Every spin is a goal, every win is our own
+Spain or Portugal, Belgium or the USA
+Whoever you ride with, Lady E Luck gonna pay
+The game don't stop when the final whistle blows
+Golden Hour is coming and everybody knows
+
+[PRE-CHORUS]
+You came to play, now play to win
+Door's wide open, let the luck come in
+Every match got a golden side
+Lady E Luck, your winning guide
+
+[CHORUS]
+Golden kick, golden spin
+Lady E Luck, let the magic begin
+Golden kick, golden day
+Match day at Lady E, we came to play
+Golden kick, golden night
+Stay in the game, keep the fire bright
+Golden kick — oh oh oh
+Lady E Luck, that's how we go
+
+[VERSE 2]
+Lucky Lou got his jersey on, clover in hand
+Three recharges, hat trick done, part of the plan
+Golden Dealer in the shadows, one chip in the light
+'The gold always finds the bold' — truer words tonight
+New player walking in, Lady E says welcome home
+Your bonus is waiting, you never spin alone
+Referral code spreading like an assist in the air
+Penalty Kick Free Spin — because Lady E cares
+
+[BRIDGE]
+This ain't just a game, this a celebration
+Every win shared across the whole nation
+Lady E Luck built for the community
+Match day, bonus day, same opportunity
+Dai Dai on the speakers, gold chips in the air
+Halftime Reload coming — be there, be there
+Golden Hour is the crown of the day
+Lucky Lou always wins — that's the Lady E way
+
+[FINAL CHORUS]
+Golden kick, golden spin
+Lady E Luck, let the magic begin
+Golden kick, golden day
+Match day at Lady E, we came to play
+Golden kick, golden night
+Stay in the game, keep the fire bright
+Golden kick — oh oh oh
+Lady E Luck, that's how we go
+(That's how we go, that's how we go)
+Lady E Luck, golden all the way
+
+[OUTRO]
+The world plays tonight... Lady E Luck pays tonight
+Match day madness... Golden Hour, all night
+Spin it... claim it... Golden Boot, take flight
+Lady E Luck... we shining, shining bright

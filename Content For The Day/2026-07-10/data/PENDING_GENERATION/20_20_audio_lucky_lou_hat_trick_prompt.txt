@@ -1,0 +1,20 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 20
+Filename: 20_audio_lucky_lou_hat_trick
+Format: audio
+Tool: higgsfield_generate_audio
+Orientation: None
+Duration: 18 seconds
+Post Time: 2:00 PM (paired with post_07)
+Platform: Reel audio
+Promo Type: hat_trick_bonus
+Character: Lucky Lou
+World Cup Variation: False
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Voice: Lucky Lou. Preset: Leo. Voice ID: 73a45c18-0c56-4642-a61e-f6b303f8ded1. Text: 'Three recharges. Match hours only. ONE — TWO — THREE. Hat Trick Bonus. I almost forgot to tell you! Don't miss it — ends at six!' Emotion: excited, breathless, lovably urgent. Pacing: quick and energetic, dramatic pause between ONE, TWO, THREE. 'I almost forgot to tell you!' delivered like a happy accident. Final line fast and urgent. Notes: Lucky Lou talks like he just remembered something amazing and can't wait to share it.
+
+VOICE ID: 73a45c18-0c56-4642-a61e-f6b303f8ded1
+VOICE PRESET: Leo

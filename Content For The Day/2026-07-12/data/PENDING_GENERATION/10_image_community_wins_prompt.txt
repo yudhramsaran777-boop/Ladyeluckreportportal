@@ -1,0 +1,7 @@
+ASSET: 10_image_community_wins
+FORMAT: Feed Image (4:5 portrait)
+TOOL: generate_image
+POST TIME: 6:00 PM — FB + IG
+
+PROMPT:
+Wide group portrait shot. Setting: luxury dark emerald green VIP lounge with gold accents — large floor-to-ceiling windows in background showing a blurred stadium exterior with floodlights at night. Casino chips and gold coins on tables. Character group: 4-5 diverse players — men and women, varied ages 25-50, varied ethnicities, all wearing either casual casino-chic or green-and-gold soccer gear without real team logos, some wearing Lady E Luck green accessories. Pose: the group is mid-celebration — some clapping, some with arms raised, some laughing together, gold coins tossed in air between them. Pure joy, community, authentic connection. Lighting: warm gold from above and from window side, cinematic. Foreground: gold coins floating near camera, casino chips on table edge. Background: blurred stadium through large windows, gold bokeh. Style: photorealistic, warm, cinematic, luxury community aesthetic. No text, no words, no letters in the image. Camera: medium wide group shot at eye level, slightly elevated.

@@ -1,0 +1,7 @@
+ASSET: 15_reel_lucky_lou_wins_tomorrow_tease
+FORMAT: video (Reel, vertical 9:16, 10 seconds)
+TOOL: generate_video (Higgsfield)
+POST TIME: 11:00 PM (timed to Switzerland vs Algeria kickoff) | PLATFORM: Facebook + Instagram Reels | ACT: 5
+
+PROMPT:
+10-second vertical cinematic video clip. Shot sequence: Opens on medium close-up of male character Lucky Lou — mid-30s, stocky build, green-and-gold soccer jersey, fishing hat with stickers, face lit in pure joy shock — looking down at his hand. Camera slowly pulls back to reveal: in his open palm, a 4-leaf clover is glowing gold, transforming into a miniature golden trophy. His fishing hat flies upward off his head. Gold coins rain down from above. He throws both arms up in triumph. In the final 2 seconds: Black female character Lady E — black and gold striped referee dress, gold crown, crimson lips — steps into frame behind him, places one gloved hand on his shoulder, and smiles knowingly at camera. Final frame: both characters, gold rain, triumphant. Movement: start static, then slow pull-back, then wide on the celebration. Lighting: dramatic warm gold from overhead, celebratory gold particle rain. Atmosphere: triumphant, joyful, emotional. Audio cue: crowd roar + cash register ding x3 + rising Afrobeats melody. Style: photorealistic cinematic. Color: dark green, black, rich gold. No text, no words, no letters in the image.

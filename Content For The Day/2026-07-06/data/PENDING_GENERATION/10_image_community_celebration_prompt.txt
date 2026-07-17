@@ -1,0 +1,7 @@
+ASSET: 10_image_community_celebration
+FORMAT: Feed Image (square 1:1)
+TOOL: generate_image
+CHARACTER: The Summer Crew
+
+PROMPT:
+Cinematic square 1:1 feed image. Wide shot. Group of 4-5 diverse players — men and women of various ethnicities, ages 20s-40s, casually dressed in gold and green accents — arms around each other, faces lit with pure joy, gold confetti raining down on them from above. Setting: luxurious casino interior with stadium-scale energy — dark emerald walls, chandeliers, casino floor in background. Foreground: scattered gold chips and soccer-ball-shaped chips on dark marble. Lighting: warm overhead gold spotlight catching the confetti, lens flare artistically applied. Mood: inclusive, celebratory, community, post-match energy. Style: photorealistic cinematic, magazine editorial. Color: dark green, black, gold confetti. No text, no words, no letters. Camera: wide group shot, slight warm color grade, eye level.

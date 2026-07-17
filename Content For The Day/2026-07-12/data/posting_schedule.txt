@@ -1,0 +1,50 @@
+LADY E LUCK — CONTENT PLAN
+Date: 2026-07-12 (Sunday) | Theme: Sunday Funday Finals — World Cup Semifinal Hype | Total Posts: 15
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIME      | FORMAT      | PLATFORM        | FILE                              | PROMO TYPE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7:00 AM   | Reel        | FB + IG         | 01_reel_opening_whistle           | Theme Launch
+8:30 AM   | Feed Image  | FB + IG         | 02_image_luckylou_matchday_fit    | Character Intro
+9:30 AM   | Story       | FB + IG Stories | 03_story_semifinal_countdown_poll | Engagement Poll
+11:00 AM  | Feed Image  | FB + IG         | 04_image_new_player_bonus         | New Player Bonus
+12:00 PM  | Story       | FB + IG Stories | 05_story_luckylou_almost_win      | Character Story
+1:00 PM   | Story       | FB + IG Stories | 06_story_hat_trick_tease          | Deal Tease
+2:00 PM   | Feed Image  | FB + IG         | 07_image_referral_penalty_kick    | Referral Code
+2:30 PM   | Groups Post | Facebook Groups | 07b_groups_referral_penalty_kick  | Referral Code
+3:00 PM   | Feed Image  | FB + IG         | 08_image_golden_boot_jackpot      | Today's Special Bonus
+3:15 PM   | Story       | FB + IG Stories | 08b_story_golden_boot_jackpot     | Today's Special Bonus
+5:00 PM   | Reel        | FB + IG         | 09_reel_hat_trick_celebration     | Hat Trick Bonus
+6:00 PM   | Feed Image  | FB + IG         | 10_image_community_wins           | Community / Social Proof
+7:30 PM   | Story       | FB + IG Stories | 11_story_daily_bonus_dealer       | Daily Bonus
+9:00 PM   | Story       | FB + IG Stories | 12_story_bonus_wheel_spin         | Daily Bonus Wheel
+10:00 PM  | Story       | FB + IG Stories | 13_story_halftime_reload_drop     | Golden Hour / Halftime Reload
+10:30 PM  | Reel        | FB + IG         | 14_reel_luckylou_final_win        | Lucky Lou Arc Payoff
+11:00 PM  | Story       | FB + IG Stories | 15_story_tomorrow_tease           | Tomorrow Tease
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DEALS TODAY:
+  🥇 Golden Boot Jackpot (All Day): Biggest single recharge wins a multiplier bonus. One winner. "Score the biggest. Win the boot."
+  ⚽ Hat Trick Bonus (3PM–6PM): 3 recharges in that window = stacked bonus on all three. "Three times. Three wins."
+  🎯 Penalty Kick Free Spin (All Day — Referral): Share REF-FINALS-847. Friend joins = both get free spin bonus. "Pass it. They score. You both win."
+  🌙 Halftime Reload (10PM–Midnight): Mystery drop for active players. Revealed at 10PM. "The second half always surprises."
+
+REFERRAL CODE: REF-FINALS-847
+
+AUDIO PRODUCTION ASSETS (paired with posts above):
+  17_audio_ladye_opening_whistle.mp3  → pairs with 01_reel_opening_whistle
+  18_audio_luckylou_hat_trick.mp3     → pairs with 09_reel_hat_trick_celebration
+  19_audio_golden_dealer_midnight.mp3 → pairs with 13_story_halftime_reload_drop
+  20_audio_ladye_referral.mp3         → pairs with 07_image_referral_penalty_kick
+  16_song_golden_kick.mp3             → background for Reels 01 + 14 or standalone IG audio post
+
+WORLD CUP CONTEXT FOR COPY:
+  England vs Argentina — World Cup 2026 Semifinal confirmed — Wednesday July 15, 3PM ET, Atlanta
+  Argentina def. Switzerland 3-1 (AET) | England def. Norway 2-1 (AET, Bellingham brace)
+  World Cup Final: July 19 at MetLife Stadium
+  Viral song: "Dai Dai" by Shakira & Burna Boy (safe to reference)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PENDING (need manual generation — all 20 assets):
+  📁 Full prompts saved to: Content For The Day/2026-07-12/data/PENDING_GENERATION/
+  Use Higgsfield generate_image, generate_video, generate_audio to produce each file.
+  Voice IDs: Lady E = c3204739-4084-41a3-9dc5-c805b307ec18 | Lucky Lou = 73a45c18-0c56-4642-a61e-f6b303f8ded1 | Golden Dealer = dc382508-c8bd-443c-8cb2-46e57b8d2e6f

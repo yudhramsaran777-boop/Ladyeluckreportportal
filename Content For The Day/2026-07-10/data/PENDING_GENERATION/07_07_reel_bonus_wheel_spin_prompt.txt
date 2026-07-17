@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 07
+Filename: 07_reel_bonus_wheel_spin
+Format: video
+Tool: higgsfield_generate_video
+Orientation: vertical (9:16)
+Duration: 15 seconds
+Post Time: 2:00 PM
+Platform: Facebook + Instagram
+Promo Type: daily_bonus_wheel
+Character: Lucky Lou (World Cup Variant)
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+15-second vertical cinematic video clip. Shot: Male character mid-30s stocky build in green-and-gold soccer jersey, fishing hat with stickers, spinning a massive glowing golden wheel mounted on a dark emerald green field under stadium lights. Camera movement: wide shot establishing the scene, then slow circular pan around Lucky Lou as he spins the wheel. Character action: He grabs the wheel handle with both hands and heaves it into a spin. Wheel slows. Arrow clicks to BONUS. His eyes go wide, then he explodes into a full celebration — drops to his knees, slides on the turf (goal celebration style), arms raised. Lighting: gold wheel casting warm rotating light on his face and jersey. Atmosphere: electric, triumphant, gold sparks flying from the wheel as it spins, crowd cheer sound cue. Style: photorealistic cinematic. Color: dark green, black, gold. No text, no words, no letters. Camera: begins wide, follows the celebration to a close-up of his victorious face.

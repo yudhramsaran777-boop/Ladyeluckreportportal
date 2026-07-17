@@ -1,0 +1,7 @@
+ASSET: 05a_story_new_player_closeup
+FORMAT: Story Image (vertical 9:16)
+TOOL: generate_image
+CHARACTER: Lady E (World Cup Variant)
+
+PROMPT:
+Vertical 9:16 cinematic portrait story image. Close-up shot. Black female character, mid-30s to early 40s, wearing a black and gold striped fitted referee-inspired dress with gold whistle on a gold chain, large gold hoop earrings, gold bracelet, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick — looking directly into camera with a warm, knowing, confident smile. Large gold hoop earring catching warm light on right side. Foreground: subtly out-of-focus gold chip in lower corner. Background: dark emerald bokeh with gold light points. Lighting: warm directional gold light from above-left, catchlights in eyes, cinematic. Mood: personal, direct, welcoming, luxury. Style: photorealistic editorial portrait, dark green and gold palette. No text, no words, no letters. Camera: close portrait, eye level, slight shallow depth of field.

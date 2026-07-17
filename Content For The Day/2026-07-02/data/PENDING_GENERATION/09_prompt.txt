@@ -1,0 +1,7 @@
+ASSET: 09_image_story_hat_trick_deadline
+FORMAT: image (vertical 9:16)
+TOOL: generate_image (Higgsfield)
+POST TIME: 4:30 PM | PLATFORM: Stories | ACT: 3 | PROMO: hat_trick_bonus deadline
+
+PROMPT:
+Split-frame composition, vertical 9:16. Left half: extreme close-up of an old-school analog match clock face, gold-rimmed, showing hands approaching 6 o'clock, dark green background, worn leather texture. Right half: towering stack of gold coins, perfectly lit with warm directional gold overhead light, coins gleaming, a 4-leaf clover resting on top of the stack. Center dividing line: a thin gold vertical stripe. Lighting: dramatic, cinematic — each half independently lit. Mood: urgent, premium, time-sensitive. Foreground: small gold sparkles scattered across both halves. Background: deep black behind clock, deep emerald behind coins. Style: photorealistic, cinematic still life, dark green and gold color palette. No text, no words, no letters in the image. Camera: straight-on medium shot, split composition.

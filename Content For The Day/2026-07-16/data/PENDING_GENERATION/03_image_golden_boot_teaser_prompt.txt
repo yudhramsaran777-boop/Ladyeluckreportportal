@@ -1,0 +1,11 @@
+ASSET: 03_image_golden_boot_teaser
+FORMAT: story_image
+TOOL: higgsfield generate_image
+ORIENTATION: 9:16 vertical
+POST TIME: 9:30 AM
+PLATFORM: FB + IG Story
+PROMO TYPE: deal_tease
+CHARACTER: none
+
+PROMPT:
+Dramatic product-style close-up. A gleaming solid-gold soccer boot overflowing with gold casino chips and coins, set on dark emerald turf under a single spotlight. Pose/action: coins spilling in mid-fall, frozen. Lighting: warm directional gold light from above, cinematic, deep black vignette. Mood: trophy-room prestige, quiet anticipation. Foreground: scattered gold coins catching light on the turf. Background: pure darkness with faint stadium floodlight beams. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: eye-level macro, shallow depth of field, vertical composition.

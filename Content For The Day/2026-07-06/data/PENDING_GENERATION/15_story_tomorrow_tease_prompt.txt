@@ -1,0 +1,7 @@
+ASSET: 15_story_tomorrow_tease
+FORMAT: Story Image (vertical 9:16)
+TOOL: generate_image
+CHARACTER: Lady E (World Cup Variant)
+
+PROMPT:
+Vertical 9:16 cinematic story image. Atmospheric wide-to-medium shot from behind. Black female character, mid-30s to early 40s, in black and gold striped referee-inspired dress, gold crown headpiece visible from behind in natural dark hair, long black gloves — standing at the far end of a grand casino floor looking out over glowing machines and golden ambient light, posture completely still and commanding. Setting: luxury casino at near-closing, warm gold light glowing from machines and chandeliers, dark emerald walls, a few silhouetted players in deep background. Foreground: dark marble floor reflecting warm gold from machines. Lighting: dramatic warm gold ambient glow, no overhead spotlight — softer, mysterious. Mood: reflective, mysterious, aspirational tomorrow energy. Style: photorealistic cinematic, moody. Color: dark green, black, warm gold ambient. No text, no words, no letters. Camera: shot from behind at medium-wide distance, low angle looking into the casino floor.

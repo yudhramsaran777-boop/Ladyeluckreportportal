@@ -1,0 +1,11 @@
+ASSET: 06_story_tunnel_prematch
+FORMAT: image_story
+TOOL: higgsfield generate_image
+ORIENTATION: vertical 9:16
+DURATION: n/a
+POST TIME: 1:00 PM
+PLATFORM: FB + IG Story
+PROMO TYPE: pre_match_hype
+
+PROMPT:
+Dramatic perspective shot. A stadium players' tunnel in black marble with gold trim, leading out to a blazing wall of floodlight at the far end. A procession of oversized gold casino chips stands upright in two lines like players waiting to walk out, each chip catching the light. Lighting: warm directional gold light from above, intense white-gold glow from the tunnel mouth, cinematic haze. Mood: anticipation, held breath before kickoff. Foreground: polished black floor with gold reflections. Background: the radiant tunnel exit and a hint of emerald turf. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low center of tunnel looking out, one-point perspective, medium-wide.

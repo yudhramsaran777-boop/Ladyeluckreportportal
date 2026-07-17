@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-06",
+  "day_of_week": "Monday",
+  "theme_source": "trending",
+  "theme_name": "Match Day Madness",
+  "theme_tagline": "The World Plays. Lady E Luck Pays.",
+  "primary_hook": "FIFA World Cup 2026 Round of 16 — Spain vs. Portugal (3PM) & Belgium vs. USMNT (8PM)",
+  "secondary_hook": "Monday Madness energy meets the biggest match week of the summer",
+  "trending_topic_details": "World Cup 2026 Round of 16 is live. Two massive matches today: Spain vs. Portugal at 3PM CT at AT&T Stadium Dallas, and Belgium vs. USMNT at 8PM PT at Lumen Field Seattle. England already advanced beating Mexico 3-2. Shakira & Burna Boy 'Dai Dai' is the viral World Cup anthem driving massive social engagement. Soccer content is dominating all platforms.",
+  "special_day_details": "National Fried Chicken Day — fun secondary flavor for community posts",
+  "world_cup_mode": true,
+  "tone": "electric, community-driven, winning energy",
+  "content_angle": "Lady E Luck is the home base for fans between matches — every spin is a goal, every bonus is a celebration, and tonight's Golden Hour hits right after the USMNT final whistle.",
+  "deals_hook": [
+    "Golden Boot Jackpot — all day biggest recharger wins a multiplier bonus",
+    "Hat Trick Bonus — 3 recharges during match hours (2PM-9PM) = stacked bonus",
+    "Penalty Kick Free Spin — refer a friend, both get a free spin bonus",
+    "Halftime Reload — mystery midnight drop for active players 10PM-Midnight"
+  ],
+  "avoid": [
+    "politics",
+    "conflict",
+    "tragedy",
+    "gambling/betting language",
+    "chasing losses",
+    "real team logos",
+    "any controversial match commentary",
+    "religion"
+  ]
+}

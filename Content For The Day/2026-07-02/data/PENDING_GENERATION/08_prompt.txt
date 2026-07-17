@@ -1,0 +1,7 @@
+ASSET: 08_reel_golden_dealer_hat_trick_reveal
+FORMAT: video (Reel, vertical 9:16, 8 seconds)
+TOOL: generate_video (Higgsfield)
+POST TIME: 3:00 PM (timed to Spain vs Austria kickoff) | PLATFORM: Facebook + Instagram Reels | ACT: 3 | PROMO: hat_trick_bonus
+
+PROMPT:
+8-second vertical cinematic video clip. Shot: Tall male character, all-black slim-cut suit, gold pocket square, wide-brim hat with face partially shadowed showing only jaw and gold lips, stands at center of a dark casino floor with gold spotlight on him. Movement: slow zoom-in from medium to close-up. Character action: He raises both hands slowly — in each hand he fans out golden cards, three per hand. The cards glow, then each transforms with a flash into a glowing gold soccer ball. He holds all three soccer balls suspended in the air simultaneously. Final frame: three gold soccer balls floating, his half-shadowed face beneath them. Lighting: single gold overhead spotlight, deep dramatic shadows, noir-casino mood. Atmosphere: mysterious, powerful, electric. Audio cue: deep bass thud x3 (hat trick beat) then a rising tension chord. Style: photorealistic cinematic. Color: black, deep shadow, rich gold. No text, no words, no letters in the image.

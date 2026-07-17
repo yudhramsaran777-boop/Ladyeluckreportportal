@@ -1,0 +1,94 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ LADY E LUCK DAILY CONTENT — 2026-07-06 COMPLETE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Theme: Match Day Madness 🏆
+Hook: FIFA World Cup 2026 Round of 16 — Spain vs. Portugal (3PM CT) & Belgium vs. USMNT (8PM PT)
+Tagline: "The World Plays. Lady E Luck Pays."
+World Cup Mode: ON ✅
+Day: Monday (Monday Madness + World Cup boost applied)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 Saved to:
+   C:\Users\iamsa\Claude\Projects\Employee Management App (Lady E Luck Portal Project)\Content For The Day\2026-07-06\
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GENERATED THIS SESSION:
+  ✅ 0  images (tools not available in automated session)
+  ✅ 0  videos/reels (tools not available in automated session)
+  ✅ 0  audio files (tools not available in automated session)
+  ✅ 17 captions (.txt files) — ALL WRITTEN
+  ✅ 18 prompt files in /data/PENDING_GENERATION/ — READY TO USE
+  ✅ theme_brief.json
+  ✅ storyline.json (with full song lyrics)
+  ✅ schedule.json
+  ✅ prompts.json (all 18 assets)
+  ✅ media_log.json
+  ✅ posting_schedule.txt (human-readable plan)
+  ⚠️  18 assets PENDING manual generation (in /data/PENDING_GENERATION/)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DEALS TODAY:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  🥇 Golden Boot Jackpot    — All Day — biggest recharge wins multiplier bonus (announced 10PM)
+  ⚽ Hat Trick Bonus         — 2PM–9PM — 3 recharges = stacked bonus
+  🍀 Penalty Kick Free Spin — All Day — Referral Code: REF-MATCHDAY-847
+  🌙 Halftime Reload         — 10PM–Midnight — mystery drop for active players
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+POSTING SCHEDULE SUMMARY:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  FIRST POST:  7:00 AM — Match Day Arrives Launch Reel (01_reel_launch_whistle)
+  GOLDEN HOUR: 10:00 PM – 11:00 PM — Halftime Reload + Lucky Lou Big Win + Tomorrow Tease
+  LAST POST:   11:00 PM — Tomorrow Tease Story (15_story_tomorrow_tease)
+
+  Total scheduled posts: 17
+  Feed Images: 5 | Stories: 8 | Reels: 3 | Groups: 1
+  Audio assets: 3 (song + 2 voice lines)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WORLD CUP TIMING RULES (CRITICAL):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ⚽ 3:00 PM CT — Spain vs Portugal KICKOFF
+     → During match (3PM-5PM): Stories ONLY — do NOT post feed content
+  ⚽ 8:00 PM PT — Belgium vs USMNT KICKOFF
+     → During match (8PM-10PM): Stories ONLY — do NOT post feed content
+  🏆 10:00 PM — Golden Hour opens (right after USMNT match ends)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HOW TO GENERATE ASSETS (Luis — action required):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1. Open Cowork in an interactive session (not scheduled task)
+  2. Load the Higgsfield MCP
+  3. Open each prompt file from: data/PENDING_GENERATION/
+  4. Run generate_image for all .png assets (priority: 02, 04, 06)
+  5. Run generate_video for Reels (priority: 01, 14, 09)
+  6. Run generate_audio for voice lines first (17, 18), then song (16)
+  7. Save generated files to images/, videos/, audio/ folders
+  Priority: Have assets 01, 02, 04, 06 ready before 7AM if possible.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOTES FOR LUIS — FILL IN BEFORE POSTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1. New Player Bonus: Fill in the welcome bonus amount (posts 04, 05a)
+  2. Golden Boot Jackpot: Fill in the multiplier amount (posts 06, 07)
+  3. Hat Trick Bonus: Fill in the stacked bonus amount (post 09, reel)
+  4. Halftime Reload: Fill in the mystery bonus value (post 13 story)
+  5. Confirm REF-MATCHDAY-847 is active in your referral system
+  6. Check recharge leaderboard at 9:30PM → announce Golden Boot winner at 10PM
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SONG: "Golden Kick" — Lady E Luck Anthem
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Genre: Afrobeats/Trap Fusion | BPM: 105 | Key: F# Minor
+  Voice: Lady E (Vesper — c3204739-4084-41a3-9dc5-c805b307ec18)
+  Full lyrics in storyline.json → song_of_the_day.lyrics
+  Use as backing track for Reels 01, 09, 14
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Pipeline ran: 2026-07-06 | All 7 agents completed ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

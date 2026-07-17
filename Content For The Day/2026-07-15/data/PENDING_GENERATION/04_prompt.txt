@@ -1,0 +1,11 @@
+ASSET: 04_image_new_player_welcome
+FORMAT: image_feed
+TOOL: higgsfield generate_image
+ORIENTATION: square 1:1
+DURATION: n/a
+POST TIME: 11:00 AM
+PLATFORM: FB + IG
+PROMO TYPE: new_player_bonus
+
+PROMPT:
+Wide welcoming shot. A stadium locker-room entrance reimagined in luxury: black marble walls with gold trim. Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress and gold whistle on a chain, long black gloves, gold hoop earrings, gold bracelet, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, tall confident posture, holds open a tall gold-trimmed door revealing a glowing emerald-and-gold VIP lounge beyond, her other hand extended in warm invitation. Lighting: warm directional gold light from above spilling through the doorway, cinematic. Mood: warm, inviting, you-belong-here. Foreground: polished black floor reflecting gold light. Background: the radiant lounge with plush emerald seating and golden glow. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: eye level, medium-wide distance.

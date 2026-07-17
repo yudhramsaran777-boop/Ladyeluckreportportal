@@ -1,0 +1,11 @@
+ASSET: 18_audio_lou_victory_line
+FORMAT: audio_voice
+TOOL: higgsfield generate_audio
+DURATION: ~6s
+POST TIME: layered on reel 15 (11:00 PM)
+PLATFORM: voiceover
+PROMO TYPE: character_win
+CHARACTER: Lucky Lou
+
+PROMPT:
+Voice: Lucky Lou. Preset: Leo. Voice ID: 73a45c18-0c56-4642-a61e-f6b303f8ded1. Text: 'Off the post... AND IN! Extra time, baby! I TOLD you the clover works! Golden Hour, let's GO!' Emotion: breathless disbelief exploding into pure joy. Pacing: slow tense start, then rapid-fire celebration. Notes: genuine laugh breaking through on the final line.

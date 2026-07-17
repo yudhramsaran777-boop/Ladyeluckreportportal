@@ -1,0 +1,7 @@
+ASSET: 14_reel_luckylou_final_win
+FORMAT: Reel (9:16 vertical video, 15-20 seconds)
+TOOL: generate_video
+POST TIME: 10:30 PM — FB + IG
+
+PROMPT:
+18-second vertical cinematic video clip — triumphant arc payoff. Shot: Male character in green-and-gold soccer jersey, fishing hat with stickers, mismatched lucky socks — standing on dark casino floor. Movement: camera starts close on his face showing exhausted anticipation, then pulls back wide as the win is revealed. Character action: Lucky Lou stands still, holding his 4-leaf clover with both hands looking at it — then it GLOWS gold. His eyes go wide. He looks up, and in that moment a massive explosion of gold coins and confetti bursts from above. He leaps into the air with both fists raised, spinning slightly. A soccer ball rolls in from the side and transforms into a jackpot burst of light. Lucky Lou lands, arms out wide, head back, laughing with absolute joy. Lighting: dramatic shift from dim suspense light to full warm golden celebration light as the win triggers. Atmosphere: celebration music swell implied, crowd roar. Style: photorealistic cinematic, triumphant. Color: dark green black gold with gold burst. Audio cue: suspense silence, then coin ding, then explosion of celebration sound.

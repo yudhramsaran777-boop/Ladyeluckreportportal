@@ -1,0 +1,10 @@
+TOOL: generate_audio (voice mode)
+VOICE: Lady E | Preset: Vesper | Voice ID: c3204739-4084-41a3-9dc5-c805b307ec18
+DURATION: ~12 seconds
+
+TEXT:
+"The second half... always surprises. Tonight's mystery drop is live. Active players know what to do. The Golden Hour has begun."
+
+EMOTION: Mysterious, knowing, warm power — like a secret only she and the audience share.
+PACING: Slow, deliberate, slight pause after "surprises" and after "live."
+NOTES: Slight reverb/echo treatment suggested, as if speaking in a grand empty space.

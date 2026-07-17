@@ -1,0 +1,7 @@
+ASSET: 08_image_referral_penalty_kick
+FORMAT: Feed Image / Groups Post (square 1:1)
+TOOL: generate_image
+CHARACTER: Lucky Lou (World Cup Variant)
+
+PROMPT:
+Cinematic square 1:1 feed image. Full-body shot. Male character, mid-30s, stocky-average build, wide expressive eyes, huge grin, wearing a green-and-gold soccer jersey with no real team logos, wide fishing hat covered in slot machine emoji stickers and soccer ball sticker — in a dynamic 'assist pass' pose: upper body turned left, one arm extended forward in a passing motion, 4-leaf clover in passing hand. Setting: dark emerald casino lounge blending into a penalty area — green turf patch at feet, dark casino interior behind him. Foreground: a gold casino chip rolling across the floor. Lighting: warm directional gold light, casual and friendly. Mood: fun, community, sharing energy. Style: photorealistic cinematic, dark green and gold palette. No text, no words, no letters. Camera: medium-wide, slightly warm lens rendering, eye-level friendly.

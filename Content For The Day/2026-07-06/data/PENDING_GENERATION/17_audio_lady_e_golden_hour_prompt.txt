@@ -1,0 +1,14 @@
+ASSET: 17_audio_lady_e_golden_hour
+FORMAT: Audio / Voice Line (~15-20 seconds)
+TOOL: generate_audio
+VOICE: Lady E — Vesper preset — voice_id: c3204739-4084-41a3-9dc5-c805b307ec18
+VOICE TYPE: preset
+
+SCRIPT:
+"The final whistle has blown. The world celebrated. And now — Golden Hour begins at Lady E Luck. The Halftime Reload is live. One night only. Come claim what's yours."
+
+DELIVERY NOTES:
+- Emotion: Warm, commanding, confident, exclusive
+- Pacing: Measured and deliberate — slight dramatic pause after "The world celebrated."
+- No music under — pure voice, room reverb only
+- Perfect for Story or Reel voiceover overlay

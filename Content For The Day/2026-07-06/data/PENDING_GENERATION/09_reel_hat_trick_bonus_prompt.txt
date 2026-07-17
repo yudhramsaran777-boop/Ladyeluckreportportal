@@ -1,0 +1,7 @@
+ASSET: 09_reel_hat_trick_bonus
+FORMAT: Reel / Video (15s vertical 9:16)
+TOOL: generate_video
+CHARACTER: Lucky Lou (World Cup Variant)
+
+PROMPT:
+15-second vertical 9:16 cinematic video clip. Three-beat sequence. Male character in green-and-gold soccer jersey and sticker-covered fishing hat celebrates three consecutive jackpot moments. Beat 1 (0-4s): Lucky Lou punches the air as first slot machine behind him lights up gold. Beat 2 (4-9s): second slot machine explodes with gold coins as he spins around arms wide. Beat 3 (9-15s): third machine hits jackpot — massive gold coin explosion, he drops to his knees in a soccer celebration knee-slide across a dark casino floor covered in glittering coins, arms outstretched, hat nearly flying off. Camera movement: cut between three angles — medium, wide, close reaction face. Lighting: warm gold spotlight intensifying with each hit. Atmosphere: coins, confetti, slot light flashes. Style: photorealistic cinematic, high energy. Color: dark green, black, gold. No text, no words, no letters.

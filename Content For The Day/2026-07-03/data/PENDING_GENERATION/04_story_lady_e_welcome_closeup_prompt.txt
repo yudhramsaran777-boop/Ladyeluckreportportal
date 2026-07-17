@@ -1,0 +1,4 @@
+TOOL: generate_image
+FORMAT: vertical (1080x1920) for story
+
+Vertical close-up portrait. Black female character, mid-30s to early 40s, wearing black and gold striped referee-inspired dress with gold whistle on a chain, gold crown headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick — she looks directly into the camera with a soft, warm, confident, slightly knowing smile. One hand lightly resting near her gold whistle. Background: shallow-focus emerald stadium lights creating soft bokeh circles of green and gold. Lighting: soft warm gold key light from slightly above, gentle emerald rim light, creating a beautiful cinematic portrait quality. Mood: personal, warm, premium, 'you belong here.' Style: photorealistic, cinematic, luxury. Color: dark emerald green, deep black, rich gold. No text, no words, no letters. Camera: close-up portrait, slight shallow depth of field, straight-on eye level.

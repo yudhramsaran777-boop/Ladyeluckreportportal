@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 09
+Filename: 09_image_referral_golden_boots
+Format: image
+Tool: higgsfield_generate_image
+Orientation: square (1:1)
+Duration: N/A
+Post Time: 3:00 PM
+Platform: Facebook Groups
+Promo Type: referral_code
+Character: No character — object focus
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Symmetrical flat-lay cinematic shot. Two identical solid gold soccer boots placed side by side on dark emerald green turf, toes pointing away from camera. Each boot glows with an internal warm gold light. Between them, two 4-leaf clovers made of gold leaf placed in perfect symmetry. Lighting: overhead warm gold spot illuminating both boots equally, turf in deep shadow between them. Mood: partnership, shared win, premium referral energy. Foreground: single gold casino chip centered between the two boots, catching the light. Background: pure dark emerald gradient fading to black. Style: photorealistic, cinematic, luxury product photography style. Color: gold and emerald. No text, no words, no letters in the image. Camera: directly overhead (top-down flat-lay), slight tilt for dimension.

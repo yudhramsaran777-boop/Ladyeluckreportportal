@@ -1,0 +1,7 @@
+ASSET: 05_story_luckylou_almost_win
+FORMAT: Story Image (9:16 vertical)
+TOOL: generate_image
+POST TIME: 12:00 PM — FB + IG Stories
+
+PROMPT:
+Vertical shot for Stories. Setting: dark casino floor, spin wheel visible in the background showing it landed one spot away from the jackpot. Character: male character, mid-30s, stocky-average build, wearing green-and-gold soccer jersey, fishing hat with stickers, mismatched lucky socks. Pose: both hands on his cheeks in an exaggerated shocked-but-amused expression — wide eyes, mouth open mid-gasp, eyebrows raised high, slight grin breaking through like he knows his luck is building. His 4-leaf clover glows faintly gold in his shirt pocket. Lighting: warm casino ambient light from above, slight comic dramatic shadow under eyes for expressiveness. Foreground: a single gold coin spinning on its edge near his feet. Background: slot machine reels visible blurred in background, one stop short. Style: photorealistic but with slightly heightened expressiveness, cinematic. No text, no words, no letters in the image. Camera: close medium shot, slightly low angle. Space at top and bottom for text overlay.

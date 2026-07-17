@@ -1,0 +1,11 @@
+ASSET: 13_image_halftime_reload
+FORMAT: story_image
+TOOL: higgsfield generate_image
+ORIENTATION: 9:16 vertical
+POST TIME: 10:30 PM
+PLATFORM: FB + IG Story
+PROMO TYPE: halftime_reload
+CHARACTER: none
+
+PROMPT:
+Mysterious reveal shot. A dark stadium tunnel at midnight, walls of black stone with thin gold inlay lines. Pose/action: a massive circular vault door half-open at the tunnel's end, intense warm gold light and slow-drifting gold particles pouring through the gap onto emerald turf that begins at the tunnel mouth. Lighting: warm directional gold light source entirely from within the vault, cinematic, deep shadows. Mood: mystery drop, second-half surprise. Foreground: a lone gold chip on the turf catching the vault light. Background: the glowing vault seam and swirling gold dust. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: centered one-point perspective down the tunnel, vertical composition.

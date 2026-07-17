@@ -5,6 +5,7 @@ import { EmptyState } from "@/components/empty-state";
 import { StatusBadge } from "@/components/status-badge";
 import {
   formatCurrency,
+  singleReportTotalsFromStoredEntries,
 } from "@/lib/calculations";
 
 export const dynamic = "force-dynamic";
@@ -66,19 +67,16 @@ export default async function ManagerShiftReportsPage() {
     { recharge: number; normalDifference: number; gameCost: number; profit: number; cashout: number; cashoutCount: number; trueProfit: number }
   >();
   for (const [reportId, group] of entriesByReport) {
-    const reportProfit   = group.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
-    const reportRecharge = group.reduce((s: number, e: any) => s + Number(e.real_recharge || 0), 0);
-    const storedCost     = group.reduce((s: number, e: any) => s + Number(e.game_cost || 0), 0);
-    // Zero-out: no game fee if the report lost money overall.
-    const reportGameCost = reportProfit > 0 ? storedCost : 0;
+    // Canonical formula shared with all owner/manager views.
+    const rt = singleReportTotalsFromStoredEntries(group);
     totalsByReport.set(reportId, {
-      recharge: reportRecharge,
-      normalDifference: reportProfit,
-      gameCost: reportGameCost,
-      profit: reportProfit,
+      recharge: rt.totalRecharge,
+      normalDifference: rt.totalProfit,
+      gameCost: rt.totalGameCost,
+      profit: rt.totalProfit,
       cashout: 0,
       cashoutCount: 0,
-      trueProfit: reportProfit - reportGameCost,
+      trueProfit: rt.totalTrueProfit,
     });
   }
   for (const cashout of cashouts || []) {

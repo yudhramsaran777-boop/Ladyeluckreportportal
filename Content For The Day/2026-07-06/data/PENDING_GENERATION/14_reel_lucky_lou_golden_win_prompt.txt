@@ -1,0 +1,7 @@
+ASSET: 14_reel_lucky_lou_golden_win
+FORMAT: Reel / Video (15s vertical 9:16)
+TOOL: generate_video
+CHARACTER: Lucky Lou (World Cup Variant)
+
+PROMPT:
+15-second vertical 9:16 cinematic video clip. Golden Hour finale sequence. Male character in green-and-gold soccer jersey, sticker-covered fishing hat, now with a gold championship scarf draped around shoulders — pulls a slot machine lever in dramatic slow motion. Reels spin and land on triple gold. Jackpot explodes: massive wave of gold coins pours from machine filling the floor. He drops to knees in an iconic soccer celebration knee-slide across a casino floor shimmering with gold coins and confetti, arms wide, head back, expression of pure joy and disbelief. Camera movement: starts on his face in close-up, pulls back wide to reveal the full coin explosion. Lighting: golden celebration lighting intensifying to maximum warmth, almost cinematic overexposure on coin rain. Atmosphere: coins, confetti, victory energy. Style: photorealistic cinematic, high-energy. Color: dark green, gold, black. No text, no words, no letters.

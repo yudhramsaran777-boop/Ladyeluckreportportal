@@ -1,0 +1,7 @@
+ASSET: 02_image_matchday_announcement
+FORMAT: Feed Image (square 1:1)
+TOOL: generate_image
+CHARACTER: Lady E (World Cup Variant)
+
+PROMPT:
+Cinematic split-composition feed image. Left panel: Black female character, mid-30s to early 40s, wearing a black and gold striped fitted referee-inspired dress with gold whistle on a gold chain, long black gloves, large gold hoop earrings, gold bracelet, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, tall confident posture — standing on a field of dark emerald turf under stadium floodlights that glow gold, posture powerful and commanding. Right panel: cascading waterfall of gold casino chips shaped like soccer balls tumbling into a dark black void with golden light at the bottom. Center dividing line: a glowing gold vertical stripe separating both panels. Lighting: warm directional gold light from above on both sides. Mood: electric, premium, match-day energy. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: wide establishing shot capturing full scene.

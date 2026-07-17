@@ -1,0 +1,11 @@
+ASSET: 18_audio_dealer_boot_line
+FORMAT: audio_voice
+TOOL: higgsfield generate_audio
+ORIENTATION: n/a
+DURATION: n/a
+POST TIME: 3:30 PM (pairs with story 08)
+PLATFORM: FB + IG Story
+PROMO TYPE: during_match
+
+PROMPT:
+Voice: Golden Dealer. Preset: Sterling. Voice ID: dc382508-c8bd-443c-8cb2-46e57b8d2e6f. Text: 'The boot goes to the bold.' Emotion: cold calm, quiet menace-turned-elegance. Pacing: very slow, every word placed. Notes: low register, near-whisper, long silence implied before and after — he speaks only one sentence.

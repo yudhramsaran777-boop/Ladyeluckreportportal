@@ -1,0 +1,20 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 21
+Filename: 21_audio_song_golden_kick
+Format: audio
+Tool: higgsfield_generate_audio
+Orientation: None
+Duration: 3-4 minutes (full song)
+Post Time: All day — use in Reels and Stories
+Platform: Facebook + Instagram (background music for video content)
+Promo Type: song_of_the_day
+Character: Lady E
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Voice: Lady E. Preset: Vesper. Voice ID: c3204739-4084-41a3-9dc5-c805b307ec18. Music mode: full song production. Genre: Afrobeats / Trap Fusion. BPM: 105. Key: F# minor. Instruments: 808 bass, live percussion talking drum layer, brass section hits on chorus, warm synth pads, stadium crowd swell on bridges, gold-coin metallic percussion sound integrated into beat. Song title: Golden Kick. Full lyrics — Intro: 'Mmm... yeah... Lady E Luck, we playing for gold tonight, Quarterfinal Friday — every kick, every spin, every light.' Verse 1: 'Rise up it is the golden hour, Turf is green the crown is ours, Every recharge stacking power, Hat trick coming watch it flower, Lucky Lou he put his boots on, Dealer laid the chips and moved on, Community we never lose long, Fortune Friday play your truth song.' Pre-Chorus: 'Oh-oh the whistle blow, Gold light everywhere we go, Oh-oh feel that glow, Lady E Luck steal the show.' Chorus: 'Golden kick golden kick, Every spin is a hat trick, Golden kick golden kick, Win it like a classic, Score big rise up we riding till midnight, Lady E Luck where every Friday is a highlight, Golden kick yeah yeah, Golden kick hey hey hey.' Verse 2: 'Penalty spot one chip in the net, Biggest recharge you win do not forget, Golden Boot Jackpot no regret, Fortune Friday not done yet, Pass the code let your people in, They score a bonus you both win, Halftime Reload about to begin, Lady E Luck cannot stop the spin.' Bridge: 'From the opening whistle to the golden hour, We built this for the ones who know their power, Not about the rush it is the community we grow, Every Friday night we putting on a show, Lucky Lou said I almost missed it, Lady E said Baby you were gifted, Golden Dealer smiled the table shifted, Fortune Friday lifted lifted.' Final Chorus: 'Golden kick golden kick, Every spin is a hat trick, Golden kick golden kick, Win it like a classic, Score big rise up we riding till midnight, Lady E Luck where every Friday is a highlight, Golden kick yeah yeah, Golden kick hey hey hey, GOLDEN KICK!' Outro: 'Halftime Reload dropping tonight... Stay close... the second half always surprises... Lady E Luck... playing for gold... Golden kick... yeah...' Emotion: triumphant, electric, warm community energy, stadium anthem. Notes: Production should feel like a premium stadium anthem that still has warmth and community in the bass. The chorus should feel like a crowd can sing along.
+
+VOICE ID: c3204739-4084-41a3-9dc5-c805b307ec18
+VOICE PRESET: Vesper

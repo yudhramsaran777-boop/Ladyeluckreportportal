@@ -1,0 +1,14 @@
+ASSET: 18_audio_lucky_lou_referral
+FORMAT: Audio / Voice Line (~10-15 seconds)
+TOOL: generate_audio
+VOICE: Lucky Lou — Leo preset — voice_id: 73a45c18-0c56-4642-a61e-f6b303f8ded1
+VOICE TYPE: preset
+
+SCRIPT:
+"Hey! You watching the match? Good — because I just sent my buddy the referral code and we BOTH got a free spin. REF-MATCHDAY-847. Pass it like an assist — you both score!"
+
+DELIVERY NOTES:
+- Emotion: Excited, fun, inclusive, buddy energy
+- Pacing: Fast and enthusiastic — big grin in the voice
+- Light crowd ambiance bed suggested
+- Perfect for Reel or Groups video overlay

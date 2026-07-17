@@ -1,0 +1,11 @@
+ASSET: 02_image_road_to_final_opener
+FORMAT: feed_image
+TOOL: higgsfield generate_image
+ORIENTATION: 1:1 square
+POST TIME: 8:00 AM
+PLATFORM: FB + IG
+PROMO TYPE: theme_launch
+CHARACTER: Lady E (World Cup variant)
+
+PROMPT:
+Wide heroic full-body shot. A luxury casino floor styled as a night stadium: dark emerald green turf floor with a white center circle, gold floodlights cutting through light haze. Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress and gold whistle on a chain, long black gloves, large gold hoop earrings, gold bracelet, gold crown-style headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick, tall confident posture. Pose: standing tall at the center circle, one hand lifting the gold whistle, chin high. Lighting: warm directional gold light from above, cinematic. Mood: commanding, opening-ceremony grandeur. Foreground: a single oversized gold casino chip resting on the penalty spot. Background: stadium floodlights as casino spotlights, bokeh crowd glow. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle, full body, slight wide lens.

@@ -1,0 +1,7 @@
+ASSET: 06_image_golden_boot_reveal
+FORMAT: Feed Image (square 1:1)
+TOOL: generate_image
+CHARACTER: The Golden Dealer
+
+PROMPT:
+Cinematic square 1:1 feed image. Dramatic wide shot. Tall male character, all-black slim-cut suit, gold pocket square, wide-brim hat with face partially shadowed showing only jaw and strong chin, completely still, standing beside a monumental trophy shaped like a golden soccer boot mounted on a pedestal built from stacked gleaming gold casino chips — the boot glowing as if lit from within. Setting: dark casino stage, dramatic spotlight from above illuminating only the dealer and the trophy, deep black void background. Foreground: single gold casino chip on the floor catching light. Lighting: single dramatic overhead spotlight, deep shadows, Rembrandt-style contrast. Mood: exclusive, powerful, mysterious, cinematic. Style: photorealistic noir cinema, dark green and gold palette. No text, no words, no letters. Camera: low-angle wide shot making the trophy and dealer monumental.

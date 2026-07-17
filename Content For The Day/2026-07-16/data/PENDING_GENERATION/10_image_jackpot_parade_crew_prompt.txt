@@ -1,0 +1,11 @@
+ASSET: 10_image_jackpot_parade_crew
+FORMAT: feed_image
+TOOL: higgsfield generate_image
+ORIENTATION: 1:1 square
+POST TIME: 6:00 PM
+PLATFORM: FB + IG
+PROMO TYPE: community
+CHARACTER: The Summer Crew
+
+PROMPT:
+Energetic celebration group shot. A stadium-styled casino floor at night, emerald turf, gold confetti raining. Four to five diverse players, men and women of varied ethnicities in stylish summer-casual outfits with subtle green and gold accents. Pose/action: hoisting together a gleaming gold trophy-style cup overflowing with gold casino chips, heads back laughing, one on another's shoulders, locker-room trophy-lift energy. Lighting: warm directional gold light from above plus stadium floodlight flares, cinematic. Mood: pure communal joy, championship parade. Foreground: confetti and a few chips mid-air. Background: floodlights and dark stands with golden bokeh. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: slightly low wide angle capturing the whole group.

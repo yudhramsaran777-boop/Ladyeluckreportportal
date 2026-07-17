@@ -1,0 +1,11 @@
+ASSET: 16_audio_ladye_kickoff_vo
+FORMAT: audio_voice
+TOOL: higgsfield generate_audio
+DURATION: ~7s
+POST TIME: layered on reel 01 (7:00 AM)
+PLATFORM: voiceover
+PROMO TYPE: theme_launch
+CHARACTER: Lady E
+
+PROMPT:
+Voice: Lady E. Preset: Vesper. Voice ID: c3204739-4084-41a3-9dc5-c805b307ec18. Text: 'The whole world is watching the road to the final. But the gold? The gold lives here. Welcome to match day at Lady E Luck.' Emotion: commanding, warm, regal excitement. Pacing: measured, letting each phrase land, slight lift on the last line. Notes: subtle smile in the voice; a beat of silence before 'Welcome'.

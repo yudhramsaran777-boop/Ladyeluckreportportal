@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 15
+Filename: 15_story_halftime_reload
+Format: image
+Tool: higgsfield_generate_image
+Orientation: vertical (9:16)
+Duration: N/A
+Post Time: 10:00 PM
+Platform: Facebook + Instagram
+Promo Type: golden_hour
+Character: Lucky Lou (World Cup Variant)
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Atmospheric night shot. Setting: empty dark stadium at midnight, only a single gold spotlight remaining on, all other lights off. Male character mid-30s in green-and-gold soccer jersey and fishing hat with stickers stands alone under the spotlight, looking down at a glowing object in his hands (implied phone/device, represented as a warm gold glow source). His eyes go comically wide, jaw drops, then his face breaks into an enormous grin. From directly above him, a cascade of gold coins begins to fall, slowly at first then torrential, catching the spotlight. Lighting: single overhead stadium spotlight, everything else pitch black, coins illuminated mid-fall. Mood: late-night surprise, mystery revealed, pure delight. Style: photorealistic, cinematic, ultra-dramatic lighting contrast. Color: black, gold, traces of dark emerald on his jersey. No text, no words, no letters in the image. Camera: wide shot establishing loneliness under spotlight, then the coins change the mood entirely.

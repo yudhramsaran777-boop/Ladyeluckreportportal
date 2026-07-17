@@ -1,0 +1,11 @@
+ASSET: 07_image_hat_trick_special
+FORMAT: feed_image
+TOOL: higgsfield generate_image
+ORIENTATION: 1:1 square
+POST TIME: 2:30 PM (feed) + 3:30 PM (story re-crop)
+PLATFORM: FB + IG (+ Story double-post)
+PROMO TYPE: todays_special
+CHARACTER: The Golden Dealer
+
+PROMPT:
+Cinematic table-level shot. A card table surfaced with dark emerald stadium turf instead of felt, gold trim rail. Tall male character, all-black slim-cut suit, gold pocket square, gold-edged card deck, wide-brim hat with face partially shadowed showing only jaw and lips, completely still. Pose/action: his gloved hand fanning exactly three gold-backed playing cards onto the turf felt, precise and silent. Lighting: single warm directional gold light from above, hard shadows, cinematic noir. Mood: mystery, high-stakes reveal. Foreground: three gold cards glowing softly on emerald turf. Background: the dealer's shadowed figure, black void behind. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low table-level angle, shallow depth of field.

@@ -1,0 +1,7 @@
+ASSET: 12_story_bonus_wheel_spin
+FORMAT: Story Image (9:16 vertical)
+TOOL: generate_image
+POST TIME: 9:00 PM — FB + IG Stories
+
+PROMPT:
+Vertical dynamic shot for Stories. Setting: dark casino floor bathed in gold and emerald light, midnight clock on wall in soft background. Character: Male character in green-and-gold soccer jersey, fishing hat with stickers, mismatched lucky socks — he is spinning an oversized gold prize wheel that floats before him. Pose: both hands gripping the wheel rim, turning it with full body enthusiasm, eyes wide with pure excitement and anticipation, mouth open mid-shout of joy. His 4-leaf clover is pinned to his jersey glowing softly gold. Lighting: warm casino gold from above, motion blur on wheel to suggest speed, character sharp. Foreground: gold coin sparks flying from the spinning wheel. Background: dark emerald casino fading to black, clock showing near-midnight. Style: photorealistic, cinematic, high energy. No text, no words, no letters in the image. Camera: medium vertical shot capturing Lucky Lou and full wheel. Space at top for text overlay.

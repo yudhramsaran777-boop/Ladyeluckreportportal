@@ -1,0 +1,11 @@
+ASSET: 18_audio_luckylou_hat_trick
+FORMAT: Audio voice line (20-25 seconds)
+TOOL: generate_audio (text2speech)
+VOICE: Lucky Lou — Leo preset — voice_id: 73a45c18-0c56-4642-a61e-f6b303f8ded1
+PAIRS WITH: 09_reel_hat_trick_celebration
+
+SCRIPT:
+"Three recharges between three and six? That's my hat trick baby! Stack em all up — Lady E Luck gives you the bonus on every single one. I ALMOST missed it... but you know what? Lucky Lou NEVER misses twice!"
+
+DELIVERY NOTES: Maximum excitement on "hat trick baby!" Dip briefly mock-sad on "ALMOST missed it" then rocket back up on "NEVER misses twice!" Lovable and energetic throughout.
+Emotion: Excited, enthusiastic, lovably dramatic. Pace: Fast with dramatic pauses.

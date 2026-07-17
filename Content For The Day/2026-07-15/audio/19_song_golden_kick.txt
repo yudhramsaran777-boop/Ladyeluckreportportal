@@ -1,0 +1,23 @@
+━━━━━━━━━━━━━━━━━━━━━━━━
+LADY E LUCK — POST CAPTION
+File: 19_song_golden_kick.mp3
+Platform: FB + IG (background audio)
+Post Time: All day
+Promo Type: Song of the Day
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+CAPTION:
+🎵 'Golden Kick' — the official Lady E Luck semifinal anthem. Afrobeats meets stadium night. Full song in our story highlights.
+
+#GoldenKick #LadyELuck #WorldCup2026 #Anthem #MatchDay
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+INSTAGRAM NOTES:
+Upload as original audio on IG so Reels can reuse it; save to a 'Song of the Day' highlight.
+━━━━━━━━━━━━━━━━━━━━━━━━
+GROUPS VERSION (if applicable):
+N/A
+━━━━━━━━━━━━━━━━━━━━━━━━
+NOTES FOR LUIS:
+Full lyrics in data/storyline.json. Use as Reel background audio for posts 01, 09, 15.
+━━━━━━━━━━━━━━━━━━━━━━━━

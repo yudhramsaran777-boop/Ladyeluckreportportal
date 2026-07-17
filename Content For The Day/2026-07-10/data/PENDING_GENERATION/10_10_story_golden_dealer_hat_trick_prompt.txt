@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 10
+Filename: 10_story_golden_dealer_hat_trick
+Format: image
+Tool: higgsfield_generate_image
+Orientation: vertical (9:16)
+Duration: N/A
+Post Time: 4:30 PM
+Platform: Facebook + Instagram
+Promo Type: hat_trick_bonus
+Character: Golden Dealer
+World Cup Variation: False
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Dramatic close shot. Setting: dark studio background, single warm gold overhead light. Tall male character in all-black slim-cut suit, gold pocket square, wide-brim hat casting face in half-shadow — only jaw and chin visible beneath the shadow. He extends one gloved hand toward camera with exactly three fingers raised. Floating in the space above the three raised fingers: three small perfectly round gold casino chips materializing from golden light particles, hovering in the air. Character is utterly still, no expression visible — pure mystery and authority. Lighting: single gold overhead key light, everything else in deep shadow, chips creating their own warm glow. Mood: silent authority, urgency, mystery. Style: photorealistic, cinematic, high contrast, dark green black gold palette. No text, no words, no letters in the image. Camera: medium shot, slightly below eye-line of the outstretched hand.

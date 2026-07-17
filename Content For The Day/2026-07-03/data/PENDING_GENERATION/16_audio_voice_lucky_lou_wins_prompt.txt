@@ -1,0 +1,10 @@
+TOOL: generate_audio (voice mode)
+VOICE: Lucky Lou | Preset: Leo | Voice ID: 73a45c18-0c56-4642-a61e-f6b303f8ded1
+DURATION: ~10 seconds
+
+TEXT:
+"I KNEW it! I always said — Lucky Lou ALWAYS wins! Tonight was OUR night. World Cup Friday. Lady E Luck. We never lose!"
+
+EMOTION: Explosive joy, disbelief turning to triumph, lovable and infectious.
+PACING: Starts mid-shout, breathless, slightly stumbling over words from excitement.
+NOTES: Sounds like a real spontaneous reaction — imperfect, human, electric.

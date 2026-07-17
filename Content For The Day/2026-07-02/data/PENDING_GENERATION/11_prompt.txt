@@ -1,0 +1,7 @@
+ASSET: 11_image_story_bonus_wheel_spin
+FORMAT: image (vertical 9:16)
+TOOL: generate_image (Higgsfield)
+POST TIME: 7:30 PM | PLATFORM: Stories | ACT: 4 | PROMO: daily_bonus_wheel
+
+PROMPT:
+Close-up dynamic shot. Subject: large ornate casino prize wheel in mid-spin, motion blur on the segments showing gold and emerald alternating panels, the center hub of the wheel is a gold soccer ball design. The wheel fills most of the vertical frame, slightly angled. Gold light particles trail off the spinning edges. Around the wheel: small gold coin sparks. Lighting: overhead dramatic gold spotlight on the wheel, dark surround, cinematic. Mood: urgent, dynamic, thrilling. Foreground: gold sparks. Background: deep black void with faint dark emerald hexagonal pattern. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: close-up, slight low angle, dramatic.

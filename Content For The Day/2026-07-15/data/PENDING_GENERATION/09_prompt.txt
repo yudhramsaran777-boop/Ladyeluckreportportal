@@ -1,0 +1,11 @@
+ASSET: 09_reel_penalty_pass_referral
+FORMAT: reel
+TOOL: higgsfield generate_video
+ORIENTATION: vertical 9:16
+DURATION: 8s
+POST TIME: 5:30 PM
+PLATFORM: FB + IG
+PROMO TYPE: referral_code
+
+PROMPT:
+8-second vertical 9:16 cinematic video clip. Shot: night stadium with dark emerald turf. Movement: tracking shot following a golden soccer ball passed between two silhouetted players. Character action: male character in green-and-gold soccer jersey with no real logos and a sticker-covered fishing hat passes the ball; mid-flight the ball morphs seamlessly into a large spinning gold casino chip that lands softly in the second player's hands as both raise their arms in celebration, gold sparks trailing. Lighting: warm directional gold floodlight, cinematic. Atmosphere: joyful, shared victory, gold particle trail. Audio cue: clean kick sound into a shimmering coin ring and crowd cheer. Style: photorealistic cinematic. Color: dark green black gold. No text, no words, no letters.

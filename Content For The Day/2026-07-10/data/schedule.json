@@ -1,0 +1,191 @@
+{
+  "date": "2026-07-10",
+  "day_of_week": "Friday",
+  "theme": "Golden Quarterfinal Friday",
+  "world_cup_mode": true,
+  "match_kickoff_et": "3:00 PM",
+  "friday_boost": "All evening windows boosted. Late night peak (9PM-Midnight) maximized.",
+  "notes": "Friday modifier: ALL evening windows boosted. Match at 3PM ET drives Act 3 posts to pre-match (1PM) and during-match Stories only. Post-match spike at ~5:30PM. Reels spaced 3h+ apart. Feed images 2h+ apart.",
+
+  "schedule": [
+    {
+      "post_id": "post_01",
+      "act": 1,
+      "title": "Quarterfinal Friday Launch Reel — Lady E Whistle",
+      "format": "Reel",
+      "platform": "Facebook + Instagram",
+      "promo_type": "theme_launch",
+      "post_time": "7:00 AM",
+      "reasoning": "First post sharp at 7AM. Reels peak slot. Friday morning ritual audience. Sets the World Cup tone immediately."
+    },
+    {
+      "post_id": "post_02",
+      "act": 1,
+      "title": "Lady E on Emerald Field — Feed Image",
+      "format": "Feed Image",
+      "platform": "Facebook + Instagram",
+      "promo_type": "theme_launch",
+      "post_time": "8:30 AM",
+      "reasoning": "Feed image peak slot. 90-min gap from first post. Morning commute/routine audience."
+    },
+    {
+      "post_id": "post_03",
+      "act": 1,
+      "title": "Golden Boot Jackpot Announcement — Story",
+      "format": "Story",
+      "platform": "Facebook + Instagram",
+      "promo_type": "todays_special_bonus",
+      "post_time": "9:30 AM",
+      "reasoning": "Story can post 60-90 min after last story. Early announcement of Golden Boot Jackpot gives the deal all-day visibility."
+    },
+    {
+      "post_id": "post_04",
+      "act": 2,
+      "title": "New Player Bonus — Lady E Welcome — Feed Image",
+      "format": "Feed Image",
+      "platform": "Facebook + Instagram",
+      "promo_type": "new_player_bonus",
+      "post_time": "11:00 AM",
+      "reasoning": "Midday peak (11AM-1PM). New player bonus hits fresh eyes at lunch browse. 2h30 gap from last feed image."
+    },
+    {
+      "post_id": "post_05",
+      "act": 2,
+      "title": "Lucky Lou Welcome Story",
+      "format": "Story",
+      "platform": "Facebook + Instagram",
+      "promo_type": "new_player_bonus",
+      "post_time": "11:30 AM",
+      "reasoning": "Story 2h after last story. Reinforces new player bonus with Lucky Lou personality."
+    },
+    {
+      "post_id": "post_06",
+      "act": 2,
+      "title": "Soccer Ball to Casino Chip Morph — Story",
+      "format": "Story",
+      "platform": "Facebook + Instagram",
+      "promo_type": "theme_hype",
+      "post_time": "1:00 PM",
+      "reasoning": "Pre-match hype. 90 min before kickoff. Builds World Cup energy right before match window begins."
+    },
+    {
+      "post_id": "post_07",
+      "act": 3,
+      "title": "Daily Bonus Wheel Spin Reel — Lucky Lou",
+      "format": "Reel",
+      "platform": "Facebook + Instagram",
+      "promo_type": "daily_bonus_wheel",
+      "post_time": "2:00 PM",
+      "reasoning": "Reels 3h gap from 7AM reel. Match just starting — Reel captures pre-match energy AND serves during-match algorithm push. Afternoon break audience."
+    },
+    {
+      "post_id": "post_08",
+      "act": 3,
+      "title": "Hat Trick Bonus — 3 Gold Balls — Feed Image",
+      "format": "Feed Image",
+      "platform": "Facebook + Instagram",
+      "promo_type": "hat_trick_bonus",
+      "post_time": "2:30 PM",
+      "reasoning": "30 min into match. Hat Trick Bonus announced mid-match. Audience watching and on phones. 3.5h gap from last feed image. Friday afternoon boost active."
+    },
+    {
+      "post_id": "post_09",
+      "act": 3,
+      "title": "Referral Code — Two Golden Boots — Groups Post",
+      "format": "Feed Image",
+      "platform": "Facebook Groups",
+      "promo_type": "referral_code",
+      "post_time": "3:00 PM",
+      "reasoning": "Groups post best at 2-3PM. Match kickoff moment — people checking phones. Referral feels natural in group community context."
+    },
+    {
+      "post_id": "post_10",
+      "act": 3,
+      "title": "Golden Dealer 3 Fingers — Hat Trick Story",
+      "format": "Story",
+      "platform": "Facebook + Instagram",
+      "promo_type": "hat_trick_bonus",
+      "post_time": "4:30 PM",
+      "reasoning": "Story during active match. 90 min gap. Quick, urgent reminder that Hat Trick Bonus ends at 6PM. Won't disrupt viewing."
+    },
+    {
+      "post_id": "post_11",
+      "act": 4,
+      "title": "Daily Bonus Countdown — Lady E Clock — Story",
+      "format": "Story",
+      "platform": "Facebook + Instagram",
+      "promo_type": "daily_bonus",
+      "post_time": "6:00 PM",
+      "reasoning": "Post-match peak begins. Match ends ~5PM, reaction wave hits 5:30-6:30PM. Daily Bonus urgency reminder catches the post-match audience."
+    },
+    {
+      "post_id": "post_12",
+      "act": 4,
+      "title": "Golden Boot Trophy — Jackpot Still Running — Feed Image",
+      "format": "Feed Image",
+      "platform": "Facebook + Instagram",
+      "promo_type": "todays_special_bonus",
+      "post_time": "6:30 PM",
+      "reasoning": "Evening rush begins. Friday 6PM+ is boosted. Golden Boot Jackpot reminder as post-match audience floods feeds. 4h gap from last feed image."
+    },
+    {
+      "post_id": "post_13",
+      "act": 4,
+      "title": "Community Celebration — Summer Crew — Story",
+      "format": "Story",
+      "platform": "Facebook + Instagram",
+      "promo_type": "community_wins",
+      "post_time": "7:30 PM",
+      "reasoning": "Prime Friday evening. Community wins energy peaks 7-9PM on Friday. Story keeps presence active."
+    },
+    {
+      "post_id": "post_14",
+      "act": 4,
+      "title": "Victory Montage Reel — Lucky Lou + Lady E + Dealer",
+      "format": "Reel",
+      "platform": "Facebook + Instagram",
+      "promo_type": "community_hype",
+      "post_time": "8:00 PM",
+      "reasoning": "Friday peak Reel slot (7PM slot taken — 8PM is strong Friday). 6h gap from 2PM reel. Maximum evening reach. Post-match energy fully monetized."
+    },
+    {
+      "post_id": "post_15",
+      "act": 5,
+      "title": "Halftime Reload Mystery Drop — Story",
+      "format": "Story",
+      "platform": "Facebook + Instagram",
+      "promo_type": "golden_hour",
+      "post_time": "10:00 PM",
+      "reasoning": "Late night peak window opens (9PM-Midnight). Friday late night is boosted. Halftime Reload activates — time-sensitive announcement."
+    },
+    {
+      "post_id": "post_16",
+      "act": 5,
+      "title": "Lucky Lou Big Win — Story",
+      "format": "Story",
+      "platform": "Facebook + Instagram",
+      "promo_type": "lucky_lou_win",
+      "post_time": "11:00 PM",
+      "reasoning": "Late night peak. Lucky Lou's daily arc completes. Emotional payoff for the community. 90-min story gap."
+    },
+    {
+      "post_id": "post_17",
+      "act": 5,
+      "title": "Lady E Tomorrow Tease — Reel",
+      "format": "Reel",
+      "platform": "Facebook + Instagram",
+      "promo_type": "tomorrow_tease",
+      "post_time": "11:30 PM",
+      "reasoning": "Final post of the day. Reel at 11:30PM catches night-owl Friday scrollers. Teases tomorrow. 3.5h gap from 8PM reel. Ends day on mystery and anticipation."
+    }
+  ],
+
+  "story_count": 7,
+  "feed_image_count": 6,
+  "reel_count": 4,
+  "groups_count": 1,
+  "total_posts": 18,
+  "first_post": "7:00 AM — post_01 — Reel",
+  "last_post": "11:30 PM — post_17 — Reel",
+  "golden_hour": "10:00 PM – 11:30 PM"
+}

@@ -1,0 +1,11 @@
+ASSET: 02_image_golden_boot_deal
+FORMAT: image_feed
+TOOL: higgsfield generate_image
+ORIENTATION: square 1:1
+DURATION: n/a
+POST TIME: 8:00 AM
+PLATFORM: FB + IG
+PROMO TYPE: todays_special_bonus
+
+PROMPT:
+Hero product shot. A dark emerald stadium at night, penalty area of glowing green turf. A gleaming solid-gold soccer boot on a black marble pedestal at the penalty spot, dripping molten gold coins that pool on the turf. Lighting: warm directional gold light from above, single dramatic floodlight beam, cinematic. Mood: prestigious, high-stakes trophy energy. Foreground: scattered gold casino chips catching the light. Background: soft-focus goal net dripping gold coins, black stadium darkness. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle, medium-close distance, boot dominating frame.

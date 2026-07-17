@@ -1,0 +1,7 @@
+ASSET: 12_story_daily_bonus_final
+FORMAT: Story Image (vertical 9:16)
+TOOL: generate_image
+CHARACTER: Lady E (World Cup Variant)
+
+PROMPT:
+Vertical 9:16 cinematic story portrait. Close-medium shot. Black female character, mid-30s to early 40s, in black and gold striped referee-inspired dress with gold whistle on chain, gold crown headpiece, bronze-brown skin, crimson lips — raising one finger as if marking the final count, other wrist turned to show a gleaming gold watch face. Direct eye contact with camera, expression calm and authoritative. Background: deep dark green-black bokeh with warm gold light points. Foreground: subtle gold sheen on surface below. Lighting: warm directional gold light from upper left, dramatic Rembrandt shadows. Mood: final call, authoritative, premium. Style: photorealistic editorial portrait. Color: dark green, black, gold. No text, no words, no letters. Camera: medium-close portrait, eye level, slight shallow depth of field.

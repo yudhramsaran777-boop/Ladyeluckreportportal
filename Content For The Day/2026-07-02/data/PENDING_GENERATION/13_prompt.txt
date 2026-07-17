@@ -1,0 +1,7 @@
+ASSET: 13_image_story_golden_dealer_halftime_reload
+FORMAT: image (vertical 9:16)
+TOOL: generate_image (Higgsfield)
+POST TIME: 10:00 PM | PLATFORM: Stories | ACT: 5 | PROMO: todays_special_bonus
+
+PROMPT:
+Medium portrait shot. Character: tall male character, all-black slim-cut suit, gold pocket square perfectly folded, wide-brim hat with face almost entirely in shadow — only the lower jaw, a half-smile, and the gold cufflink on his raised wrist visible. He holds up a single oversize playing card face-out toward camera — the card has a golden question mark on a black background (the ? is the only symbol). His stance is perfectly still, commanding. Lighting: single overhead gold spotlight, everything else in complete shadow, noir casino mood. Mood: mysterious, powerful, intriguing, premium. Foreground: edge of casino floor in shadow. Background: pure black void. Style: photorealistic, cinematic noir, dark and gold color palette. Only the golden ? on the card is acceptable as a symbol. No text, no words, no letters in the image. Camera: medium portrait, eye-level, slightly low.

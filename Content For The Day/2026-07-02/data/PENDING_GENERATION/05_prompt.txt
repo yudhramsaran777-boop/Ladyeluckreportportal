@@ -1,0 +1,7 @@
+ASSET: 05_image_story_lucky_lou_scoreboard
+FORMAT: image (vertical 9:16)
+TOOL: generate_image (Higgsfield)
+POST TIME: 11:45 AM | PLATFORM: Stories | ACT: 2
+
+PROMPT:
+Medium shot. Character: male character, mid-30s, stocky-average build, wide expressive eyes huge with excitement, large warm smile showing teeth, wearing green-and-gold soccer jersey with no real team logos, fishing hat covered in slot machine emoji stickers AND a small soccer ball sticker on the brim, mismatched lucky socks one green one gold visible above loafers, clutching a 4-leaf clover in both fists raised near his face. He is looking UP off-camera at a large unseen screen, mouth open in pure joy. Setting: casino lounge area with emerald-tinted ambient light and gold accent lighting, a large bright screen reflection visible in his eyes. Lighting: warm gold key light from the screen above, dramatic shadows. Mood: pure underdog joy, infectious excitement. Foreground: 4-leaf clover sharp. Background: bokeh casino lounge gold-green. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: medium shot, eye-level, slight Dutch angle.

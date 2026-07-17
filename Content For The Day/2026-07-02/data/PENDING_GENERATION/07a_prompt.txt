@@ -1,0 +1,7 @@
+ASSET: 07a_image_referral_lucky_lou_gold_kick
+FORMAT: image (square 1:1)
+TOOL: generate_image (Higgsfield)
+POST TIME: 2:00 PM | PLATFORM: Facebook Feed + Groups | ACT: 3 | PROMO: referral_code REF-GOLDENKICK-847
+
+PROMPT:
+Dynamic action shot. Character: male character, mid-30s, stocky-average build, in a powerful kicking pose — right leg extended forward as if just completing a soccer kick, wearing green-and-gold soccer jersey with no real team logos, fishing hat slightly tilted from motion, mismatched lucky socks one green one gold. The kicked object: a large gold casino chip mid-air traveling toward camera, trailing a long arc of gold sparkles and light particles. Wide expressive eyes locked on camera, triumphant grin. 4-leaf clover tucked in his jersey pocket. Lighting: warm directional gold backlight creating a halo rim, dramatic side gold key light. Mood: triumphant, playful, dynamic energy. Foreground: gold sparkle trail. Background: blurred dark emerald casino floor with ambient gold accents. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle medium shot looking up, slightly wide lens for energy.

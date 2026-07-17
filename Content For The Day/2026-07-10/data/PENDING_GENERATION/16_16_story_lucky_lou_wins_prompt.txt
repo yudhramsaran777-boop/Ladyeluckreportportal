@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 16
+Filename: 16_story_lucky_lou_wins
+Format: image
+Tool: higgsfield_generate_image
+Orientation: vertical (9:16)
+Duration: N/A
+Post Time: 11:00 PM
+Platform: Facebook + Instagram
+Promo Type: lucky_lou_win
+Character: Lucky Lou (World Cup Variant)
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Victory shot. Setting: dark emerald green stadium turf, midnight. Male character mid-30s, stocky build, in green-and-gold soccer jersey and fishing hat with stickers, on his knees on the turf with both arms raised straight to the sky in pure triumph. His face is tilted upward, eyes closed in overwhelmed joy, enormous smile. From directly above: a thick downpour of gold coins falls, coating his shoulders and the turf around him in a golden layer. His 4-leaf clover is visible in one raised hand. His mismatched lucky socks (one green, one gold) caught in the light at the edge of frame. Soccer jersey glowing gold in the coin-light. Lighting: warm gold from above (coin-light source), dark dramatic surroundings. Mood: the underdog finally wins — emotional, triumphant, earned, joyful. Style: photorealistic, cinematic, emotionally resonant. Color: dark green, black, gold. No text, no words, no letters in the image. Camera: medium shot slightly below eye level, amplifying the triumph gesture.

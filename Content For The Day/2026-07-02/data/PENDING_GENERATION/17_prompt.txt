@@ -1,0 +1,63 @@
+ASSET: 17_song_golden_kick_stadium_anthem
+FORMAT: audio (90-120 seconds, original song)
+TOOL: generate_audio — music mode (Higgsfield) or ElevenLabs music
+VOICE: Lady E as lead / Vesper / voice_id: c3204739-4084-41a3-9dc5-c805b307ec18
+
+SONG TITLE: Golden Kick (Stadium Anthem)
+GENRE: Afrobeats / Trap Fusion | BPM: 105 | KEY: F# minor
+INSTRUMENTS: 808 bass, trap hi-hats, Afrobeats djembe percussion, stadium crowd ambiance, melodic synth pad, brass stabs on chorus
+
+FULL LYRICS:
+[Intro]
+Lady E Luck, yeah... Golden Kick Day, let's go...
+
+[Verse 1]
+Morning whistle, the stadium glow
+Golden field, watch them coins overflow
+Lucky Lou got his jersey on tight
+4-leaf clover shining in the morning light
+Lady E walking with the golden crown
+Every spin electric, don't you dare slow down
+Three bells ringing, can you hear the sound?
+This is your moment — we don't back down
+
+[Pre-Chorus]
+Hat trick, three wins stacked high
+Golden Boot jackpot — touch the sky
+Spin the wheel before the night is done
+Every match day, every spin is one
+
+[Chorus]
+Golden Kick, we're scoring big tonight
+Golden Kick, every spin feels right
+Lady E Luck, the stadium is alive
+Golden Kick — we spin, we win, we thrive
+Score the biggest, win the boot
+Hat trick bonus, follow through
+Penalty Free Spin, pass it to a friend
+Golden Hour, this night never ends
+
+[Verse 2]
+Second half coming, mystery in the air
+Golden Dealer deals but he don't play fair
+The Reload drops at midnight, you already know
+Active players only — watch that bonus grow
+Lucky Lou missed the first one, now he's locked in
+Final act of the night — he's finally gonna win
+Crowd goes gold, coins raining from the ceiling
+This is Lady E Luck and you know the feeling
+
+[Bridge]
+Every stadium needs a champion tonight
+Every spin you take could be the one that's right
+We don't chase, we celebrate — this is our stage
+Lady E Luck — the Golden Kick Decade
+
+[Final Chorus - repeat]
+Golden Kick, we're scoring big tonight
+Golden Kick, every spin feels right
+Lady E Luck, the stadium is alive
+Golden Kick — we spin, we win, we thrive
+
+[Outro]
+Lady E Luck... Golden Kick Day... tomorrow even bigger... stay in the game...

@@ -1,0 +1,313 @@
+{
+  "date": "2026-07-02",
+  "theme": "World Cup Golden Kick Day",
+  "world_cup_mode": true,
+  "total_assets": 18,
+  "assets": [
+
+    {
+      "asset_id": "01",
+      "filename": "01_reel_lady_e_golden_whistle_open",
+      "format": "video",
+      "tool": "higgsfield_generate_video",
+      "orientation": "vertical 9:16",
+      "duration": "8 seconds",
+      "post_id": "post_01",
+      "post_time": "7:00 AM",
+      "platform": "Facebook + Instagram Reels",
+      "promo_type": "theme_launch",
+      "character": "Lady E",
+      "world_cup_variation": true,
+      "prompt": "8-second vertical cinematic video clip. Shot: Black female character, mid-30s to early 40s, wearing black and gold striped fitted referee-inspired dress with gold whistle on a chain, gold crown headpiece in natural dark hair, deep bronze-brown skin, crimson red lipstick — walks in slow motion toward camera down a golden stadium tunnel. Movement: slow push-in camera following her approach. Character action: She raises the gold whistle to her lips and blows it — gold coins and miniature soccer balls explode outward in a burst of confetti. Lighting: warm directional gold light from above, stadium floodlights as casino spotlights converging on her. Atmosphere: electric, celebratory, gold particle confetti raining down, stadium crowd roar implied. Audio cue: whistle blow + crowd roar + deep 808 bass hit. Style: photorealistic cinematic. Color: dark emerald green, deep black, rich gold. No text, no words, no letters in the image."
+    },
+
+    {
+      "asset_id": "02",
+      "filename": "02_image_golden_stadium_lady_e_sideline",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "square 1:1",
+      "duration": null,
+      "post_id": "post_02",
+      "post_time": "8:30 AM",
+      "platform": "Facebook + Instagram Feed",
+      "promo_type": "theme_launch",
+      "character": "Lady E",
+      "world_cup_variation": true,
+      "prompt": "Wide establishing shot. Setting: luxury casino reimagined as a soccer stadium — emerald green playing surface, stadium floodlights as casino spotlights overhead, gold Lady E Luck logo design at center circle on the floor. In foreground: soccer ball morphing mid-frame into a spinning gold casino chip, trailing gold light particles. Character: Black female character, mid-30s to early 40s, floor-length black and gold striped referee-inspired dress, gold crown headpiece, deep bronze-brown skin, crimson lips, standing at the right sideline with arms open wide in a welcoming gesture, confident posture. Lighting: warm directional gold light from above, cinematic stadium lighting. Mood: electric, grand, luxurious, celebratory. Foreground: gold coin confetti scattered on emerald floor. Background: dark stadium seating with gold light accents. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: wide angle, eye-level."
+    },
+
+    {
+      "asset_id": "03",
+      "filename": "03_image_story_gold_whistle_closeup",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "vertical 9:16",
+      "duration": null,
+      "post_id": "post_03",
+      "post_time": "9:15 AM",
+      "platform": "Stories",
+      "promo_type": "theme_launch",
+      "character": "Lady E",
+      "world_cup_variation": true,
+      "prompt": "Extreme close-up shot. Subject: ornate gold whistle hanging from a delicate gold chain, resting against black and gold striped fabric. Gold whistle is engraved with a crown motif. Droplets of gold light refract off the surface. In soft background: blurred emerald green stadium floor and gold ambient light. Lighting: macro studio lighting, warm gold backlight rim. Mood: intimate, premium, anticipatory. Foreground: whistle in razor-sharp focus. Background: bokeh of gold and emerald light. Style: photorealistic, cinematic macro, dark green and gold color palette. No text, no words, no letters in the image. Camera: extreme close-up, macro lens, slight low angle upward."
+    },
+
+    {
+      "asset_id": "04",
+      "filename": "04_image_new_player_golden_boot_welcome",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "square 1:1",
+      "duration": null,
+      "post_id": "post_04",
+      "post_time": "11:00 AM",
+      "platform": "Facebook + Instagram Feed",
+      "promo_type": "new_player_bonus",
+      "character": "Lady E",
+      "world_cup_variation": true,
+      "prompt": "Medium shot at eye level. Setting: grand golden arched stadium entrance doorway glowing with warm gold light, emerald green interior visible beyond. Character: Black female character, mid-30s to early 40s, black and gold striped fitted referee-inspired dress, gold crown headpiece, gold chain with whistle, deep bronze-brown skin, crimson lips, long black gloves — extending one gloved hand directly toward camera in a welcoming gesture, warm smile. Lighting: soft warm gold light emanating from arch behind her, rim lighting on her silhouette. Mood: welcoming, premium, warm but confident. Foreground: soft gold coin sparkles at base of arch. Background: golden glow of the casino stadium beyond the entrance. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: medium shot, slight low angle, centered."
+    },
+
+    {
+      "asset_id": "05",
+      "filename": "05_image_story_lucky_lou_scoreboard",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "vertical 9:16",
+      "duration": null,
+      "post_id": "post_05",
+      "post_time": "11:45 AM",
+      "platform": "Stories",
+      "promo_type": "character_intro",
+      "character": "Lucky Lou",
+      "world_cup_variation": true,
+      "prompt": "Medium shot. Character: male character, mid-30s, stocky-average build, wide expressive eyes huge with excitement, large warm smile showing teeth, wearing green-and-gold soccer jersey with no real team logos, fishing hat covered in slot machine emoji stickers AND a small soccer ball sticker on the brim, mismatched lucky socks one green one gold visible above loafers, clutching a 4-leaf clover in both fists raised near his face. He is looking UP off-camera at a large unseen screen, mouth open in pure joy. Setting: casino lounge area with emerald-tinted ambient light and gold accent lighting, a large bright screen reflection visible in his eyes. Lighting: warm gold key light from the screen above, dramatic shadows. Mood: pure underdog joy, infectious excitement. Foreground: 4-leaf clover sharp. Background: bokeh casino lounge gold-green. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: medium shot, eye-level, slight Dutch angle."
+    },
+
+    {
+      "asset_id": "06",
+      "filename": "06_audio_lady_e_voice_welcome",
+      "format": "audio",
+      "tool": "higgsfield_generate_audio",
+      "orientation": null,
+      "duration": "15 seconds",
+      "post_id": "post_06",
+      "post_time": "12:30 PM",
+      "platform": "Stories (voiceover)",
+      "promo_type": "welcome_message",
+      "character": "Lady E",
+      "world_cup_variation": true,
+      "prompt": "Voice: Lady E. Preset: Vesper. Voice ID: c3204739-4084-41a3-9dc5-c805b307ec18. Text: 'This is your day. Every spin could be your Golden Boot moment. The stadium is open, the gold is waiting — and you belong right here. Welcome to Lady E Luck.' Emotion: warm confidence, slightly hushed and intimate, like a welcome whispered in a luxury lounge. Pacing: slow and deliberate, with a brief pause after 'Golden Boot moment' and before 'Welcome to Lady E Luck'. Notes: No music overlay needed in the generation — this is a standalone voice file for Story overlay use."
+    },
+
+    {
+      "asset_id": "07a",
+      "filename": "07a_image_referral_lucky_lou_gold_kick",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "square 1:1",
+      "duration": null,
+      "post_id": "post_07",
+      "post_time": "2:00 PM",
+      "platform": "Facebook Feed + Groups",
+      "promo_type": "referral_code",
+      "character": "Lucky Lou",
+      "world_cup_variation": true,
+      "prompt": "Dynamic action shot. Character: male character, mid-30s, stocky-average build, in a powerful kicking pose — right leg extended forward as if just completing a soccer kick, wearing green-and-gold soccer jersey with no real team logos, fishing hat staying on despite the motion (slightly tilted), mismatched lucky socks one green one gold. The kicked object: a large gold casino chip mid-air traveling toward camera, trailing a long arc of gold sparkles and light particles. Wide expressive eyes locked on camera, triumphant grin. 4-leaf clover tucked in his jersey pocket. Lighting: warm directional gold backlight creating a halo rim, dramatic side gold key light. Mood: triumphant, playful, dynamic energy. Foreground: gold sparkle trail from the chip kick. Background: blurred dark emerald casino floor with ambient gold accents. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: low angle medium shot looking up, slightly wide lens for energy."
+    },
+
+    {
+      "asset_id": "07b",
+      "filename": "07b_audio_lucky_lou_referral_line",
+      "format": "audio",
+      "tool": "higgsfield_generate_audio",
+      "orientation": null,
+      "duration": "8 seconds",
+      "post_id": "post_07",
+      "post_time": "2:00 PM",
+      "platform": "Reels voiceover option",
+      "promo_type": "referral_code",
+      "character": "Lucky Lou",
+      "world_cup_variation": true,
+      "prompt": "Voice: Lucky Lou. Preset: Leo. Voice ID: 73a45c18-0c56-4642-a61e-f6b303f8ded1. Text: 'Hey — pass it to your buddy. They score, you score. We ALL score. That's the Penalty Kick Free Spin, baby!' Emotion: enthusiastic, warm, lovably over-the-top excitement. Pacing: quick and punchy, natural pause after 'baby'. Notes: Slight chuckle at the end if possible. This is a voiceover for the referral Reel or as an audio Story layer."
+    },
+
+    {
+      "asset_id": "08",
+      "filename": "08_reel_golden_dealer_hat_trick_reveal",
+      "format": "video",
+      "tool": "higgsfield_generate_video",
+      "orientation": "vertical 9:16",
+      "duration": "8 seconds",
+      "post_id": "post_08_pre",
+      "post_time": "3:00 PM",
+      "platform": "Facebook + Instagram Reels",
+      "promo_type": "hat_trick_bonus",
+      "character": "Golden Dealer",
+      "world_cup_variation": false,
+      "prompt": "8-second vertical cinematic video clip. Shot: Tall male character, all-black slim-cut suit, gold pocket square, wide-brim hat with face partially shadowed showing only jaw and gold lips, stands at center of a dark casino floor with gold spotlight on him. Movement: slow zoom-in from medium to close-up. Character action: He raises both hands slowly — in each hand he fans out golden cards, three per hand. The cards glow, then each transforms with a flash into a glowing gold soccer ball. He holds all three soccer balls suspended in the air simultaneously. Final frame: three gold soccer balls floating, his half-shadowed face beneath them. Lighting: single gold overhead spotlight, deep dramatic shadows, noir-casino mood. Atmosphere: mysterious, powerful, electric. Audio cue: deep bass thud x3 (hat trick beat) then a rising tension chord. Style: photorealistic cinematic. Color: black, deep shadow, rich gold. No text, no words, no letters in the image."
+    },
+
+    {
+      "asset_id": "09",
+      "filename": "09_image_story_hat_trick_deadline",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "vertical 9:16",
+      "duration": null,
+      "post_id": "post_08a",
+      "post_time": "4:30 PM",
+      "platform": "Stories",
+      "promo_type": "hat_trick_bonus",
+      "character": null,
+      "world_cup_variation": true,
+      "prompt": "Split-frame composition, vertical 9:16. Left half: extreme close-up of an old-school analog match clock face, gold-rimmed, showing hands approaching 6 o'clock, dark green background, worn leather texture. Right half: towering stack of gold coins, perfectly lit with warm directional gold overhead light, coins gleaming, a 4-leaf clover resting on top of the stack. Center dividing line: a thin gold vertical stripe. Lighting: dramatic, cinematic — each half independently lit. Mood: urgent, premium, time-sensitive. Foreground: small gold sparkles scattered across both halves. Background: deep black behind the clock, deep emerald behind the coins. Style: photorealistic, cinematic still life, dark green and gold color palette. No text, no words, no letters in the image. Camera: straight-on medium shot, split composition."
+    },
+
+    {
+      "asset_id": "10",
+      "filename": "10_image_summer_crew_jackpot_parade",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "landscape 16:9",
+      "duration": null,
+      "post_id": "post_09",
+      "post_time": "6:00 PM",
+      "platform": "Facebook + Instagram Feed",
+      "promo_type": "community_wins",
+      "character": "Summer Crew",
+      "world_cup_variation": true,
+      "prompt": "Wide group shot. Setting: upscale casino lounge with several large screens on the wall behind the group showing green soccer pitch imagery and gold score graphics (screens blurred/glowing, no legible text on screens). Character group: 4-5 diverse players — different ethnicities, ages 25-45, mix of men and women — all wearing casual upscale attire in greens, golds, and blacks. They are in mid-celebration: arms up, wide smiles, some hugging, one woman pointing at the screen, a man laughing with eyes closed. Green and gold streamers in the air. Gold coins falling from above like confetti. Lighting: warm cocktail-lounge gold lighting from wall sconces and overhead pendants, back-lit by screen glow. Mood: joyful, community, celebratory, premium but warm. Foreground: scattered gold coins and streamers on bar surface. Background: glowing screens, dark emerald paneling with gold trim accents. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: wide angle, eye-level group shot."
+    },
+
+    {
+      "asset_id": "11",
+      "filename": "11_image_story_bonus_wheel_spin",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "vertical 9:16",
+      "duration": null,
+      "post_id": "post_10",
+      "post_time": "7:30 PM",
+      "platform": "Stories",
+      "promo_type": "daily_bonus_wheel",
+      "character": null,
+      "world_cup_variation": true,
+      "prompt": "Close-up dynamic shot. Subject: large ornate casino prize wheel in mid-spin, motion blur on the segments showing gold and emerald alternating panels, the center hub of the wheel is a gold soccer ball design. The wheel fills most of the vertical frame, slightly angled. Gold light particles trail off the spinning edges. Around the wheel: small gold coin sparks. Lighting: overhead dramatic gold spotlight on the wheel, dark surround, cinematic. Mood: urgent, dynamic, thrilling. Foreground: gold sparks. Background: deep black void with faint dark emerald hexagonal pattern. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: close-up, slight low angle, dramatic."
+    },
+
+    {
+      "asset_id": "12",
+      "filename": "12_image_story_daily_bonus_final_whistle",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "vertical 9:16",
+      "duration": null,
+      "post_id": "post_11",
+      "post_time": "9:00 PM",
+      "platform": "Stories",
+      "promo_type": "daily_bonus",
+      "character": null,
+      "world_cup_variation": true,
+      "prompt": "Close-up still life shot. Subject: large ornate gold coin front-facing and perfectly centered, glowing with warm internal gold light, placed on a dark emerald velvet surface. Behind the coin: a digital clock displaying 11:59 in glowing gold numerals (clock numerals only, no other text). The clock face is blurred/soft focus — the coin is the sharp subject. Fine gold dust particles float around the coin. Lighting: dramatic single overhead gold spotlight, deep shadow surround. Mood: urgent, precious, final-moment intensity. Foreground: gold dust. Background: deep black. Style: photorealistic, cinematic macro, dark green and gold color palette. No text captions — only the clock numerals in the image are acceptable. Camera: close-up, eye-level, centered."
+    },
+
+    {
+      "asset_id": "13",
+      "filename": "13_image_story_golden_dealer_halftime_reload",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "vertical 9:16",
+      "duration": null,
+      "post_id": "post_12",
+      "post_time": "10:00 PM",
+      "platform": "Stories",
+      "promo_type": "todays_special_bonus",
+      "character": "Golden Dealer",
+      "world_cup_variation": false,
+      "prompt": "Medium portrait shot. Character: tall male character, all-black slim-cut suit, gold pocket square perfectly folded, wide-brim hat with face almost entirely in shadow — only the lower jaw, a half-smile, and the gold cufflink on his raised wrist visible. He holds up a single oversize playing card face-out toward camera — the card has a golden question mark on a black background (no other markings, the ? is the only symbol). His stance is perfectly still, commanding. Lighting: single overhead gold spotlight, everything else in complete shadow, noir casino mood. Mood: mysterious, powerful, intriguing, premium. Foreground: edge of casino floor in shadow. Background: pure black void. Style: photorealistic, cinematic noir, dark and gold color palette. No text, no words, no letters in the image aside from the golden question mark on the card. Camera: medium portrait, eye-level, slightly low."
+    },
+
+    {
+      "asset_id": "14",
+      "filename": "14_image_feed_penalty_spot_halftime_reload",
+      "format": "image",
+      "tool": "higgsfield_generate_image",
+      "orientation": "square 1:1",
+      "duration": null,
+      "post_id": "post_13",
+      "post_time": "10:15 PM",
+      "platform": "Facebook + Instagram Feed",
+      "promo_type": "todays_special_bonus",
+      "character": null,
+      "world_cup_variation": true,
+      "prompt": "Dramatic wide-angle shot from low ground level. Setting: dark empty casino floor styled as a penalty spot on a green field — a single white circle mark on dark emerald floor. At center: one large gold casino chip standing upright and spinning, gold light radiating from it as it rotates. Above: a single beam of white stadium floodlight piercing down from the darkness of the ceiling, illuminating only the chip and the circle below. Everything else is in complete darkness with only faint ambient emerald glow. Gold light particles float upward from the chip. Lighting: single dramatic overhead beam, deep vignette surround. Mood: magnetic, mysterious, lone champion energy. Foreground: dark emerald floor with faint green turf texture pattern. Background: pure dark void, faint casino ceiling detail barely visible. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: ultra-wide angle, very low to ground, looking up slightly."
+    },
+
+    {
+      "asset_id": "15",
+      "filename": "15_reel_lucky_lou_wins_tomorrow_tease",
+      "format": "video",
+      "tool": "higgsfield_generate_video",
+      "orientation": "vertical 9:16",
+      "duration": "10 seconds",
+      "post_id": "post_14",
+      "post_time": "11:00 PM",
+      "platform": "Facebook + Instagram Reels",
+      "promo_type": "lucky_lou_wins",
+      "character": "Lucky Lou + Lady E",
+      "world_cup_variation": true,
+      "prompt": "10-second vertical cinematic video clip. Shot sequence: Opens on medium close-up of male character Lucky Lou — mid-30s, stocky build, green-and-gold soccer jersey, fishing hat with stickers, face lit in pure joy shock — looking down at his hand. Camera slowly pulls back to reveal: in his open palm, a 4-leaf clover is glowing gold, transforming into a miniature golden trophy. His fishing hat flies upward off his head. Gold coins rain down from above. He throws both arms up in triumph. In the final 2 seconds: Black female character Lady E — black and gold striped referee dress, gold crown, crimson lips — steps into frame behind him, places one gloved hand on his shoulder, and smiles knowingly at camera. Final frame: both characters, gold rain, triumphant. Movement: start static, then slow pull-back, then wide on the celebration. Lighting: dramatic warm gold from overhead, celebratory gold particle rain. Atmosphere: triumphant, joyful, emotional. Audio cue: crowd roar + cash register ding x3 + rising Afrobeats melody. Style: photorealistic cinematic. Color: dark green, black, rich gold. No text, no words, no letters in the image."
+    },
+
+    {
+      "asset_id": "16",
+      "filename": "16_audio_golden_dealer_hat_trick_line",
+      "format": "audio",
+      "tool": "higgsfield_generate_audio",
+      "orientation": null,
+      "duration": "6 seconds",
+      "post_id": "post_08_pre",
+      "post_time": "3:00 PM",
+      "platform": "Reel voiceover",
+      "promo_type": "hat_trick_bonus",
+      "character": "Golden Dealer",
+      "world_cup_variation": false,
+      "prompt": "Voice: The Golden Dealer. Preset: Sterling. Voice ID: dc382508-c8bd-443c-8cb2-46e57b8d2e6f. Text: 'Three times. Three wins. The Hat Trick Bonus... starts now.' Emotion: slow, deep, utterly calm — authority with zero urgency. Like a man who always wins. Pacing: very deliberate. Long pause after 'Three wins.' Then 'The Hat Trick Bonus' measured. Then '...starts now' with slight weight on 'now'. Notes: No music, pure voice — will layer over reel audio in post."
+    },
+
+    {
+      "asset_id": "17",
+      "filename": "17_song_golden_kick_stadium_anthem",
+      "format": "audio",
+      "tool": "higgsfield_generate_audio",
+      "orientation": null,
+      "duration": "90-120 seconds",
+      "post_id": "post_01",
+      "post_time": "7:00 AM (background music for opening Reel)",
+      "platform": "Background music for Reels + Song of the Day",
+      "promo_type": "song_of_the_day",
+      "character": "Lady E",
+      "world_cup_variation": true,
+      "prompt": "Voice: Lady E as lead vocalist. Preset: Vesper. Voice ID: c3204739-4084-41a3-9dc5-c805b307ec18. Generate original song: 'Golden Kick (Stadium Anthem)'. Genre: Afrobeats / Trap Fusion. BPM: 105. Key: F# minor. Instruments: 808 bass, trap hi-hats, Afrobeats djembe percussion pattern, stadium crowd ambiance underneath, melodic synth pad, brass stabs on chorus. Full lyrics to perform: Intro: 'Lady E Luck, yeah... Golden Kick Day, let\\'s go...' Verse 1: 'Morning whistle, the stadium glow / Golden field, watch them coins overflow / Lucky Lou got his jersey on tight / 4-leaf clover shining in the morning light / Lady E walking with the golden crown / Every spin electric, don\\'t you dare slow down / Three bells ringing, can you hear the sound? / This is your moment — we don\\'t back down' Pre-Chorus: 'Hat trick, three wins stacked high / Golden Boot jackpot — touch the sky / Spin the wheel before the night is done / Every match day, every spin is one' Chorus: 'Golden Kick, we\\'re scoring big tonight / Golden Kick, every spin feels right / Lady E Luck, the stadium is alive / Golden Kick — we spin, we win, we thrive / Score the biggest, win the boot / Hat trick bonus, follow through / Penalty Free Spin, pass it to a friend / Golden Hour, this night never ends' Verse 2: 'Second half coming, mystery in the air / Golden Dealer deals but he don\\'t play fair / The Reload drops at midnight, you already know / Active players only — watch that bonus grow / Lucky Lou missed the first one, now he\\'s locked in / Final act of the night — he\\'s finally gonna win / Crowd goes gold, coins raining from the ceiling / This is Lady E Luck and you know the feeling' Bridge: 'Every stadium needs a champion tonight / Every spin you take could be the one that\\'s right / We don\\'t chase, we celebrate — this is our stage / Lady E Luck — the Golden Kick Decade' Final Chorus (repeat). Outro: 'Lady E Luck... Golden Kick Day... tomorrow even bigger... stay in the game...' Emotion: triumphant, warm, energetic. Notes: Stadium crowd cheer bed underneath throughout. Brass stabs accentuate each chorus hit."
+    },
+
+    {
+      "asset_id": "18",
+      "filename": "18_audio_lady_e_golden_hour_close",
+      "format": "audio",
+      "tool": "higgsfield_generate_audio",
+      "orientation": null,
+      "duration": "12 seconds",
+      "post_id": "post_14",
+      "post_time": "11:00 PM",
+      "platform": "Reel voiceover / Story audio",
+      "promo_type": "golden_hour_close",
+      "character": "Lady E",
+      "world_cup_variation": true,
+      "prompt": "Voice: Lady E. Preset: Vesper. Voice ID: c3204739-4084-41a3-9dc5-c805b307ec18. Text: 'Tonight belonged to the bold. Lucky Lou proved it. Tomorrow? We go even bigger. Lady E Luck — your Golden Stadium, always open.' Emotion: warm, triumphant, intimate close — like a host wrapping up an incredible event. Pacing: steady, unhurried, with a smile in the voice. Pause after 'bold.' and after 'proved it.' Notes: This closes the day's Reel and can double as a Story voice card."
+    }
+
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-07-15",
+  "day_of_week": "Wednesday",
+  "world_cup_mode": true,
+  "match_info": "England vs Argentina semifinal, kickoff 3:00 PM ET, Atlanta Stadium. Pre-match content 1PM, Stories-only 3PM-5PM, post-match spike 5PM+.",
+  "day_modifiers_applied": ["Wednesday boost 9PM-11PM", "World Cup: pre-match 2h before kickoff, stories-only during match, post-match spike"],
+  "posts": [
+    {"post_id": "01", "time": "7:00 AM", "format": "reel", "platform": "FB + IG", "promo_type": "theme_launch", "act": 1, "note": "First post — 7AM sharp, reel peak slot"},
+    {"post_id": "02", "time": "8:00 AM", "format": "image_feed", "platform": "FB + IG", "promo_type": "todays_special_bonus", "act": 1, "note": "Golden Boot Jackpot reveal — feed peak 8AM"},
+    {"post_id": "03", "time": "9:30 AM", "format": "image_story", "platform": "FB + IG Story", "promo_type": "daily_bonus_wheel", "act": 1, "note": "Morning wheel spin reminder"},
+    {"post_id": "04", "time": "11:00 AM", "format": "image_feed", "platform": "FB + IG", "promo_type": "new_player_bonus", "act": 2, "note": "Midday window, 2h+ after post 02"},
+    {"post_id": "05", "time": "12:15 PM", "format": "image_story", "platform": "FB + IG Story", "promo_type": "character_moment", "act": 2, "note": "Lou hits the post — lunch scroll"},
+    {"post_id": "06", "time": "1:00 PM", "format": "image_story", "platform": "FB + IG Story", "promo_type": "pre_match_hype", "act": 2, "note": "Exactly 2h before 3PM kickoff"},
+    {"post_id": "07", "time": "2:00 PM", "format": "image_feed", "platform": "FB + IG", "promo_type": "hat_trick_deal", "act": 3, "note": "Hat Trick Bonus announced 1h before window opens; feed peak 2PM"},
+    {"post_id": "10", "time": "2:30 PM", "format": "groups_post", "platform": "FB Groups", "promo_type": "referral_community", "act": 3, "note": "Groups peak ~2PM, never after 8PM"},
+    {"post_id": "08", "time": "3:30 PM", "format": "image_story", "platform": "FB + IG Story", "promo_type": "during_match", "act": 3, "note": "Match live — Stories only, quick view"},
+    {"post_id": "09", "time": "5:30 PM", "format": "reel", "platform": "FB + IG", "promo_type": "referral_code", "act": 3, "note": "Post-match spike; 3h+ after morning reel"},
+    {"post_id": "11", "time": "6:30 PM", "format": "image_feed", "platform": "FB + IG", "promo_type": "community_wins", "act": 4, "note": "Evening rush; 2h+ after post 07"},
+    {"post_id": "12", "time": "7:45 PM", "format": "image_story", "platform": "FB + IG Story", "promo_type": "daily_bonus", "act": 4, "note": "Evening rush story"},
+    {"post_id": "13", "time": "9:00 PM", "format": "image_story", "platform": "FB + IG Story", "promo_type": "todays_special_bonus_story", "act": 4, "note": "Golden Boot last call — Wednesday 9-11PM boost, double-post of special"},
+    {"post_id": "14", "time": "10:15 PM", "format": "image_story", "platform": "FB + IG Story", "promo_type": "halftime_reload", "act": 5, "note": "Golden Hour mystery drop"},
+    {"post_id": "15", "time": "11:00 PM", "format": "reel", "platform": "FB + IG", "promo_type": "lucky_lou_wins", "act": 5, "note": "Closer — Lou wins + final tease; last post window"}
+  ],
+  "story_cadence_check": "7 stories: 9:30, 12:15, 1:00, 3:30, 7:45, 9:00, 10:15 — meets 5+/day, 60-90 min spacing in active blocks",
+  "spacing_check": "Feed: 8:00/11:00/2:00/6:30 (2h+ apart). Reels: 7:00/5:30/11:00 (3h+ apart)."
+}

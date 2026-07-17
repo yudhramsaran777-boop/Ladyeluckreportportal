@@ -1,0 +1,17 @@
+LADY E LUCK — PENDING GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Asset ID: 06
+Filename: 06_story_ball_to_chip_morph
+Format: image
+Tool: higgsfield_generate_image
+Orientation: vertical (9:16)
+Duration: N/A
+Post Time: 1:00 PM
+Platform: Facebook + Instagram
+Promo Type: theme_hype
+Character: No character — object focus
+World Cup Variation: True
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERATION PROMPT:
+
+Macro close-up cinematic still. A black-and-white soccer ball mid-spin in the air is caught in the precise moment of morphing into a glowing gold casino chip — the left half is clearly soccer ball, the right half has transformed into the gold chip with ridged edges, gold dust and sparks streaming from the transformation seam. Lighting: split lighting — cool blue-white on soccer ball side, warm gold on chip side. Background: dark emerald green gradient. Mood: magical, electric, surreal luxury. Foreground: tiny gold dust motes floating. Style: photorealistic, cinematic, hyper-detailed material textures, gold and emerald palette. No text, no words, no letters in the image. Camera: extreme close-up, object centered, shallow depth of field, background blurred.

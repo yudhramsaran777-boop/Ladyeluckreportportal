@@ -1,0 +1,7 @@
+ASSET: 10_image_summer_crew_jackpot_parade
+FORMAT: image (landscape 16:9)
+TOOL: generate_image (Higgsfield)
+POST TIME: 6:00 PM | PLATFORM: Facebook + Instagram Feed | ACT: 4 | PROMO: community_wins
+
+PROMPT:
+Wide group shot. Setting: upscale casino lounge with several large screens on the wall behind the group showing green soccer pitch imagery and gold score graphics (screens blurred/glowing, no legible text on screens). Character group: 4-5 diverse players — different ethnicities, ages 25-45, mix of men and women — all wearing casual upscale attire in greens, golds, and blacks. They are in mid-celebration: arms up, wide smiles, some hugging, one woman pointing at the screen, a man laughing with eyes closed. Green and gold streamers in the air. Gold coins falling from above like confetti. Lighting: warm cocktail-lounge gold lighting from wall sconces and overhead pendants, back-lit by screen glow. Mood: joyful, community, celebratory, premium but warm. Foreground: scattered gold coins and streamers on bar surface. Background: glowing screens, dark emerald paneling with gold trim accents. Style: photorealistic, cinematic, dark green and gold color palette. No text, no words, no letters in the image. Camera: wide angle, eye-level group shot.

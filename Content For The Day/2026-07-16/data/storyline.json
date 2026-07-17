@@ -1,0 +1,91 @@
+{
+  "date": "2026-07-16",
+  "theme": "Road to the Final",
+  "world_cup_mode": true,
+  "characters_today": ["Lady E (World Cup referee variant)", "Lucky Lou (World Cup jersey variant)", "The Golden Dealer", "The Summer Crew (Act 4 only)"],
+  "referral_code": "REF-GOLDENBOOT-284",
+  "deals": [
+    {"name": "Golden Boot Jackpot", "window": "All day", "mechanic": "Biggest recharge of the day wins a multiplier bonus", "line": "Score the biggest. Win the boot."},
+    {"name": "Hat Trick Bonus", "window": "3PM-6PM", "mechanic": "3 recharges during match hours = stacked bonus", "line": "Three times. Three wins."},
+    {"name": "Penalty Kick Free Spin", "window": "All day (referral)", "mechanic": "Share code REF-GOLDENBOOT-284, friend joins = both get free spin bonus", "line": "Pass it. They score. You both win."},
+    {"name": "Halftime Reload", "window": "10PM-Midnight", "mechanic": "Mystery midnight drop for active players", "line": "The second half always surprises."}
+  ],
+  "acts": [
+    {
+      "act": 1, "window": "6AM-11AM", "title": "THE OPENING — Kickoff Whistle",
+      "story": "Lady E, in her black-and-gold referee dress, steps onto a stadium-lit casino floor and blows the gold whistle: the Road to the Final starts here. Golden Boot Jackpot announced for the whole day.",
+      "posts": [
+        {"post_id": "01", "format": "reel", "promo_type": "theme_launch", "beat": "Lady E blows the whistle, gold confetti bursts, soccer ball morphs into a casino chip", "audio": "16_audio_ladye_kickoff_vo"},
+        {"post_id": "02", "format": "feed_image", "promo_type": "theme_launch", "beat": "Hero shot: Lady E on the center circle of a turf-floored casino, chip on the penalty spot"},
+        {"post_id": "03", "format": "story_image", "promo_type": "deal_tease", "beat": "Golden boot filled with gold coins under a spotlight — Golden Boot Jackpot teaser"}
+      ]
+    },
+    {
+      "act": 2, "window": "11AM-2PM", "title": "THE WELCOME — New Signings",
+      "story": "Transfer-window framing: new players are 'new signings.' Lady E welcomes them personally. Lucky Lou arrives in his green-and-gold jersey, juggling a soccer ball badly but grinning. Bonus Wheel reminder.",
+      "posts": [
+        {"post_id": "04", "format": "feed_image", "promo_type": "new_player_bonus", "beat": "Lady E extends a gloved hand across a gold-trimmed welcome table — 'You belong here'"},
+        {"post_id": "05", "format": "story_image", "promo_type": "character", "beat": "Lucky Lou mid-juggle, ball bouncing off his fishing hat, clover in hand"},
+        {"post_id": "06", "format": "story_image", "promo_type": "daily_bonus_wheel", "beat": "Giant gold prize wheel styled like a stadium clock — 'resets at midnight' urgency"}
+      ]
+    },
+    {
+      "act": 3, "window": "2PM-6PM", "title": "THE GOLDEN RUSH — Hat Trick Hours",
+      "story": "The Golden Dealer flips three cards onto green turf felt: Hat Trick Bonus is live 3-6PM. Referral push framed as a perfect assist — Penalty Kick Free Spin with code REF-GOLDENBOOT-284.",
+      "posts": [
+        {"post_id": "07", "format": "feed_image", "promo_type": "todays_special", "beat": "Three gold cards fanned on turf felt by the Golden Dealer — Hat Trick Bonus reveal"},
+        {"post_id": "08", "format": "story_image", "promo_type": "todays_special", "beat": "Story double-post of 07 (same image, story crop) with countdown urgency"},
+        {"post_id": "09", "format": "groups_post", "promo_type": "referral", "beat": "Penalty spot with a single spinning chip, goal net dripping gold coins — assist your friend"},
+        {"post_id": "10", "format": "reel", "promo_type": "deal_reveal", "beat": "The Golden Dealer silently deals three cards; each flip ignites a gold flare; one sentence only", "audio": "17_audio_dealer_one_line"}
+      ]
+    },
+    {
+      "act": 4, "window": "6PM-10PM", "title": "JACKPOT PARADE — Trophy Lift",
+      "story": "The Summer Crew celebrates like a locker-room trophy lift — community wins night. Daily Bonus reminder before the day resets. Lucky Lou hits the crossbar — SO close — and laughs it off.",
+      "posts": [
+        {"post_id": "11", "format": "feed_image", "promo_type": "community", "beat": "Summer Crew hoisting a gold trophy-cup of chips, confetti, stadium floodlights"},
+        {"post_id": "12", "format": "story_image", "promo_type": "daily_bonus", "beat": "Gold gift chest on the penalty spot, clock ticking — claim before the day resets"},
+        {"post_id": "13", "format": "story_image", "promo_type": "character", "beat": "Lucky Lou hands-on-head as his chip rattles the crossbar of a gold goal frame — almost!"}
+      ]
+    },
+    {
+      "act": 5, "window": "10PM-Midnight", "title": "GOLDEN HOUR — Extra Time",
+      "story": "Stadium lights dim to gold. Halftime Reload mystery drop opens. In extra time, Lucky Lou finally scores — his chip rolls in off the post and the floor erupts. Tomorrow tease: third-place match Saturday, final Sunday — the party is just starting.",
+      "posts": [
+        {"post_id": "14", "format": "story_image", "promo_type": "halftime_reload", "beat": "Half-open vault glowing gold in a darkened stadium tunnel — mystery drop"},
+        {"post_id": "15", "format": "reel", "promo_type": "character_win", "beat": "Slow-mo: Lou's chip hits the post, teeters, drops in. Eruption. Lou lifts his clover like a trophy. Tomorrow tease text-free end card", "audio": "18_audio_lou_victory_line"}
+      ]
+    }
+  ],
+  "character_arcs": {
+    "lady_e": "Referee-in-command: opens the day with the whistle, welcomes new signings, presides over Golden Hour.",
+    "lucky_lou": "Almost-wins all day (juggling fail, crossbar rattle) then scores in extra time at Golden Hour — always ends the day winning.",
+    "golden_dealer": "Appears once, Act 3, deals the Hat Trick. Says exactly one sentence: 'Three times. Three wins.'"
+  },
+  "song_of_the_day": {
+    "title": "Golden Kick",
+    "asset_id": "15_audio_song_golden_kick",
+    "genre": "Afrobeats/Trap fusion, stadium anthem",
+    "bpm": 105,
+    "key": "F minor",
+    "instruments": "Log drums, 808 sub, brass stabs, stadium crowd swells, shekere percussion, airhorn accents, gold-bell melody line",
+    "lead_voice": "Lady E — Vesper preset (voice_id: c3204739-4084-41a3-9dc5-c805b307ec18)",
+    "lyrics": {
+      "intro": "(whistle blows) Oh-oh-oh... you hear the drums? / The road ends Sunday but the gold's already come",
+      "verse_1": "Floodlights on, turf like emerald money / Crown on my head, yeah the future's looking sunny / Ninety minutes? No, we play all day / Chips on the spot, watch me put 'em in play",
+      "pre_chorus": "One touch, two touch, feel the stadium sway / Every heart in here beating one way",
+      "chorus": "Golden kick, golden kick — let it fly, let it hit / Top corner of the night, every spin is a hit / Golden kick, golden kick — hands up if you're with it / We don't chase, we celebrate — that's how legends did it",
+      "verse_2": "Lou on the wing with the clover in his grip / Post, then in — that's a champion trip / Dealer flips three, now the rush goes loud / E on the whistle with the gold-lit crowd",
+      "bridge": "(crowd swell) When the lights go low and the vault swings wide / Extra time is where the magic hides / Oh-oh-oh... hold the line / The second half always surprises — every time",
+      "final_chorus": "Golden kick, golden kick — let it fly, let it hit / Top corner of the night, every spin is a hit / Golden kick, golden kick — crown up if you're with it / Road to the final, and you're already in it",
+      "outro": "(whistle, long) Oh-oh-oh... see you at Golden Hour / Lady E Luck — where every kick turns gold"
+    }
+  },
+  "required_promos_map": {
+    "new_player_bonus": "post 04 (Feed, 11AM)",
+    "daily_bonus_wheel": "post 06 (Story, 1:30PM)",
+    "referral_code": "post 09 (Groups, 2PM) — REF-GOLDENBOOT-284",
+    "daily_bonus": "post 12 (Story, 7:30PM)",
+    "todays_special": "posts 07 + 08 (Feed 2:30PM + Story 3:30PM double-post) — Hat Trick Bonus"
+  }
+}

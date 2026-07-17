@@ -1,0 +1,11 @@
+ASSET: 15_audio_song_golden_kick
+FORMAT: audio_song
+TOOL: higgsfield generate_audio (music mode) or elevenlabs
+DURATION: ~2:30
+POST TIME: used in reels 01 and 15; optional 8:30 PM story
+PLATFORM: background track
+PROMO TYPE: song_of_the_day
+CHARACTER: Lady E
+
+PROMPT:
+Voice: Lady E. Preset: Vesper. Voice ID: c3204739-4084-41a3-9dc5-c805b307ec18. Song: 'Golden Kick' — Afrobeats/Trap fusion stadium anthem, BPM 105, key F minor. Instruments: log drums, 808 sub, brass stabs, shekere percussion, stadium crowd swells, airhorn accents, gold-bell melody. Structure and lyrics: INTRO: '(whistle blows) Oh-oh-oh... you hear the drums? / The road ends Sunday but the gold's already come'. VERSE 1: 'Floodlights on, turf like emerald money / Crown on my head, yeah the future's looking sunny / Ninety minutes? No, we play all day / Chips on the spot, watch me put 'em in play'. PRE-CHORUS: 'One touch, two touch, feel the stadium sway / Every heart in here beating one way'. CHORUS: 'Golden kick, golden kick — let it fly, let it hit / Top corner of the night, every spin is a hit / Golden kick, golden kick — hands up if you're with it / We don't chase, we celebrate — that's how legends did it'. VERSE 2: 'Lou on the wing with the clover in his grip / Post, then in — that's a champion trip / Dealer flips three, now the rush goes loud / E on the whistle with the gold-lit crowd'. BRIDGE: '(crowd swell) When the lights go low and the vault swings wide / Extra time is where the magic hides / Oh-oh-oh... hold the line / The second half always surprises — every time'. FINAL CHORUS: 'Golden kick, golden kick — let it fly, let it hit / Top corner of the night, every spin is a hit / Golden kick, golden kick — crown up if you're with it / Road to the final, and you're already in it'. OUTRO: '(whistle, long) Oh-oh-oh... see you at Golden Hour / Lady E Luck — where every kick turns gold'. Emotion: triumphant, warm, commanding. Pacing: driving but smooth. Notes: female lead with rich lower register, stacked harmonies on chorus, crowd chant layer on final chorus.

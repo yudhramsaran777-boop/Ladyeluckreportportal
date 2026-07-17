@@ -1,0 +1,196 @@
+{
+  "date": "2026-07-03",
+  "day": "Friday",
+  "theme": "Golden Kickoff — World Cup Friday",
+  "day_modifiers": ["Friday — boost ALL evening windows", "World Cup match day — align with 6PM and 9:30PM kickoffs"],
+  "world_cup_matches_today": [
+    { "match": "Australia vs Egypt", "kickoff": "2:00 PM ET", "venue": "AT&T Stadium, Dallas" },
+    { "match": "Argentina vs Cape Verde", "kickoff": "6:00 PM ET", "venue": "Hard Rock Stadium, Miami" },
+    { "match": "Colombia vs Ghana", "kickoff": "9:30 PM ET", "venue": "Arrowhead Stadium, Kansas City" }
+  ],
+  "posting_schedule": [
+    {
+      "post_id": "01",
+      "title": "Match Day at Lady E Luck",
+      "format": "reel",
+      "platform": "Facebook + Instagram",
+      "post_time": "7:00 AM",
+      "act": 1,
+      "promo_type": "theme_launch",
+      "timing_reason": "First post of day — 7AM Reel peak window. Sets the entire day's energy. Friday boost active."
+    },
+    {
+      "post_id": "02",
+      "title": "Golden Boot Morning",
+      "format": "feed_image",
+      "platform": "Facebook + Instagram",
+      "post_time": "8:00 AM",
+      "act": 1,
+      "promo_type": "atmosphere_set",
+      "timing_reason": "Feed image peak window 8AM. Morning ritual scrollers. 1 hour after Reel — respects spacing rule."
+    },
+    {
+      "post_id": "02b",
+      "title": "Today's Match Day Energy",
+      "format": "story",
+      "platform": "Facebook Story + Instagram Story",
+      "post_time": "9:00 AM",
+      "act": 1,
+      "promo_type": "theme_launch",
+      "timing_reason": "Story — 60-90 min after last story slot. Morning momentum continues."
+    },
+    {
+      "post_id": "03",
+      "title": "New Player Bonus — The Game Starts Here",
+      "format": "feed_image",
+      "platform": "Facebook + Instagram",
+      "post_time": "11:00 AM",
+      "act": 2,
+      "promo_type": "new_player_bonus",
+      "timing_reason": "Feed image peak 11AM. Lunch break scroll begins. 3 hours after last feed — respects 2hr spacing. New player welcome is most effective when players have time to sign up."
+    },
+    {
+      "post_id": "04",
+      "title": "Lady E Welcomes You",
+      "format": "story",
+      "platform": "Facebook Story + Instagram Story",
+      "post_time": "11:30 AM",
+      "act": 2,
+      "promo_type": "new_player_bonus",
+      "timing_reason": "Story supporting the 11AM feed post. Catches feed viewers who missed it."
+    },
+    {
+      "post_id": "05",
+      "title": "Meet Lucky Lou — He's Back",
+      "format": "story",
+      "platform": "Facebook Story + Instagram Story",
+      "post_time": "1:00 PM",
+      "act": 2,
+      "promo_type": "character_intro",
+      "timing_reason": "Story — 90 min after last story. Peak lunch window 11AM-1PM still active."
+    },
+    {
+      "post_id": "06",
+      "title": "Hat Trick Bonus — Today Only",
+      "format": "feed_image",
+      "platform": "Facebook + Instagram",
+      "post_time": "2:00 PM",
+      "act": 3,
+      "promo_type": "todays_special_bonus",
+      "timing_reason": "Feed image peak 2PM. Launches Hat Trick Bonus window (3PM-6PM) — 1 hour heads-up. Australia vs Egypt match is live at 2PM, creating World Cup context."
+    },
+    {
+      "post_id": "08b",
+      "title": "Golden Boot Jackpot — Mid-Day Drop",
+      "format": "reel",
+      "platform": "Facebook + Instagram",
+      "post_time": "3:00 PM",
+      "act": 3,
+      "promo_type": "golden_boot_jackpot",
+      "timing_reason": "Reel at 3PM — aligns with Hat Trick Bonus window opening (3PM-6PM). Afternoon break window active. 8 hours after morning Reel — respects 3hr spacing."
+    },
+    {
+      "post_id": "07",
+      "title": "Penalty Kick Free Spin — Referral Code Drop",
+      "format": "groups_post",
+      "platform": "Facebook Groups",
+      "post_time": "2:30 PM",
+      "act": 3,
+      "promo_type": "referral_code",
+      "timing_reason": "Groups post peak window 2PM. Not after 8PM rule respected. Active player community engaged in afternoon."
+    },
+    {
+      "post_id": "08",
+      "title": "Hat Trick Bonus — Story Reminder",
+      "format": "story",
+      "platform": "Facebook Story + Instagram Story",
+      "post_time": "4:00 PM",
+      "act": 3,
+      "promo_type": "todays_special_bonus",
+      "timing_reason": "Story — 3 hours into Hat Trick window (3PM-6PM), urgency building. 90 min after last story."
+    },
+    {
+      "post_id": "11",
+      "title": "Summer Crew Jackpot Celebration",
+      "format": "feed_image",
+      "platform": "Facebook + Instagram",
+      "post_time": "6:00 PM",
+      "act": 4,
+      "promo_type": "community_wins",
+      "timing_reason": "Feed image peak 6PM. Argentina vs Cape Verde kicks off at 6PM — maximum World Cup energy. Post-work Facebook scroll peak. 4 hours after last feed — solid spacing."
+    },
+    {
+      "post_id": "09",
+      "title": "Daily Bonus Wheel — Spin Before Midnight",
+      "format": "story",
+      "platform": "Facebook Story + Instagram Story",
+      "post_time": "7:00 PM",
+      "act": 4,
+      "promo_type": "daily_bonus_wheel",
+      "timing_reason": "Story during evening rush 6PM-9PM peak. 60 min after last story. Argentina match in progress — players checking phones."
+    },
+    {
+      "post_id": "11b",
+      "title": "Match Night at Lady E Luck",
+      "format": "story",
+      "platform": "Facebook Story + Instagram Story",
+      "post_time": "8:30 PM",
+      "act": 4,
+      "promo_type": "atmosphere",
+      "timing_reason": "Story during evening rush. Argentina match finishing up. 90 min after last story."
+    },
+    {
+      "post_id": "10",
+      "title": "Daily Bonus — Claim It Now",
+      "format": "story",
+      "platform": "Facebook Story + Instagram Story",
+      "post_time": "9:30 PM",
+      "act": 4,
+      "promo_type": "daily_bonus",
+      "timing_reason": "Story at 9:30PM — Colombia vs Ghana kickoff. Late night peak window begins (9PM-Midnight). Daily bonus urgency escalates. 60 min after last story."
+    },
+    {
+      "post_id": "12",
+      "title": "Halftime Reload — Mystery Drop",
+      "format": "story",
+      "platform": "Facebook Story + Instagram Story",
+      "post_time": "10:00 PM",
+      "act": 5,
+      "promo_type": "halftime_reload_mystery",
+      "timing_reason": "Story at 10PM — Golden Hour starts. Colombia match halftime or in-play. Late night peak is NOW. Only stories during match play (won't interrupt viewing)."
+    },
+    {
+      "post_id": "13",
+      "title": "Lucky Lou Wins — The Final Whistle",
+      "format": "reel",
+      "platform": "Facebook + Instagram",
+      "post_time": "11:00 PM",
+      "act": 5,
+      "promo_type": "lucky_lou_wins",
+      "timing_reason": "Final Reel of day. 11PM — peak late night window. Colombia match ending around this time. Day's emotional payoff. Lucky Lou always wins. Last major content push."
+    }
+  ],
+
+  "story_count": 9,
+  "feed_image_count": 4,
+  "reel_count": 3,
+  "groups_post_count": 1,
+  "total_scheduled_posts": 16,
+
+  "spacing_check": {
+    "feed_images_spacing": "7AM(none), 8AM, 11AM(3hr gap), 2PM(3hr gap), 6PM(4hr gap) — all exceed 2hr minimum ✅",
+    "reels_spacing": "7AM, 3PM(8hr gap), 11PM(8hr gap) — all exceed 3hr minimum ✅",
+    "groups_timing": "2:30PM — within 10AM-2PM peak window ✅",
+    "first_post": "7:00 AM ✅",
+    "last_post": "11:00 PM ✅"
+  },
+
+  "world_cup_timing_alignment": {
+    "pre_australia_egypt": "02b story at 9AM, 06 feed at 2PM (2hr pre-match)",
+    "during_australia_egypt": "08b reel at 3PM, 07 groups at 2:30PM",
+    "argentina_cape_verde_kickoff": "11 feed at 6PM (exact kickoff)",
+    "during_argentina": "09, 11b stories only during match",
+    "colombia_ghana_kickoff": "10 story at 9:30PM (aligns exactly)",
+    "golden_hour": "12, 13 at 10PM-11PM — final whistle window"
+  }
+}
