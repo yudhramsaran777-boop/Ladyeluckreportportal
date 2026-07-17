@@ -10,7 +10,8 @@ import { TopGamesBarChart } from "@/components/charts/top-games-bar-chart";
 import {
   formatCurrency,
   formatNumber,
-  reportTotalsFromStoredEntries,
+  rangeGameRowsFromStoredEntries,
+  rangeTotalsFromStoredEntries,
 } from "@/lib/calculations";
 import { fetchAllByIds, fetchAllRows } from "@/lib/supabase/fetch-all";
 
@@ -93,45 +94,19 @@ function topCashoutGame(cashouts: any[]) {
 }
 
 function topGames(entries: any[]) {
-  // Group entries by report first, then by game within each report.
-  // Use stored game_cost from DB — same source as the manager view.
-  const byReport = new Map<string, any[]>();
-  for (const entry of entries) {
-    const list = byReport.get(entry.shift_report_id) ?? [];
-    list.push(entry);
-    byReport.set(entry.shift_report_id, list);
-  }
-
-  const byGame = new Map<
-    string,
-    { name: string; recharge: number; normalDifference: number; gameCostPercent: number; gameCostPercentCount: number; gameCost: number; profit: number; trueProfit: number; count: number }
-  >();
-
-  for (const [, reportEntries] of byReport) {
-    // Zero-out rule: if report lost money, no game fee for any game in it.
-    const reportProfit = reportEntries.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
-    const isPositive = reportProfit > 0;
-
-    for (const e of reportEntries) {
-      const name = e.game_name || "Unknown";
-      const profit = Number(e.normal_coin_difference || 0);
-      const recharge = Number(e.real_recharge || 0);
-      const storedCost = Number(e.game_cost || 0);
-      const effectiveCost = isPositive ? storedCost : 0;
-      const current = byGame.get(name) ||
-        { name, recharge: 0, normalDifference: 0, gameCostPercent: 0, gameCostPercentCount: 0, gameCost: 0, profit: 0, trueProfit: 0, count: 0 };
-      current.recharge += recharge;
-      current.normalDifference += profit;
-      current.gameCostPercent += Number(e.game_cost_percentage || 0);
-      current.gameCostPercentCount += 1;
-      current.gameCost += effectiveCost;
-      current.profit += profit;
-      current.trueProfit += profit - effectiveCost;
-      current.count += 1;
-      byGame.set(name, current);
-    }
-  }
-  return Array.from(byGame.values()).sort((a, b) => b.recharge - a.recharge);
+  // Range/game-netting rule: net each game's coins across the whole range,
+  // then cost = max(net, 0) × rate. Same source as the KPI totals.
+  return rangeGameRowsFromStoredEntries(entries).map((row) => ({
+    name: row.name,
+    recharge: row.recharge,
+    normalDifference: row.net,
+    gameCostPercent: row.rate,
+    gameCostPercentCount: 1,
+    gameCost: row.gameCost,
+    profit: row.net,
+    trueProfit: row.trueProfit,
+    count: row.count,
+  }));
 }
 
 function cashoutGameRows(cashouts: any[]) {
@@ -147,10 +122,11 @@ function cashoutGameRows(cashouts: any[]) {
 }
 
 function totals(entries: any[], cashouts: any[]) {
-  // Canonical formula from src/lib/calculations.ts: stored game_cost
-  // (max(profit, 0) × rate), per-report zero-out, no scaling — identical
-  // in owner and manager views.
-  const rt = reportTotalsFromStoredEntries(entries);
+  // Range/game-netting rule from src/lib/calculations.ts: each game's coin
+  // difference nets across the range (coin balances carry over), cost =
+  // max(net, 0) × rate — identical in owner and manager views.
+  // Only call with ONE shop's entries at a time.
+  const rt = rangeTotalsFromStoredEntries(entries);
   return {
     recharge: rt.totalRecharge,
     cashout: cashouts.reduce((sum, c) => sum + Number(c.amount || 0), 0),
@@ -421,12 +397,8 @@ export async function OwnerReportContent({ searchParams, detailed = false }: Own
   const globalEntries = entries || [];
   // Re-sort after chunked fetching so the cashout detail table stays in order.
   const globalCashouts = (cashouts || []).slice().sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
-  const globalTotals = totals(globalEntries, globalCashouts);
-  const globalPaymentRows = paymentDistribution(activePaymentAccounts);
-  const globalTopGames = topGames(globalEntries);
-  const globalWinner = topUsername(globalCashouts);
-  const globalCashoutGame = topCashoutGame(globalCashouts);
-
+  // Global totals = sum of per-shop totals so each game nets within its own
+  // shop's coin balance (coins never move between shops or games).
   const shopStats = safeShops.map((shop) => {
     const shopEntries = entriesByShop.get(shop.id) || [];
     const shopCashouts = cashoutsByShop.get(shop.id) || [];
@@ -439,6 +411,36 @@ export async function OwnerReportContent({ searchParams, detailed = false }: Own
       totals: totals(shopEntries, shopCashouts),
     };
   });
+
+  const globalTotals = shopStats.reduce(
+    (acc, row) => {
+      acc.recharge += row.totals.recharge;
+      acc.gameCost += row.totals.gameCost;
+      acc.profit += row.totals.profit;
+      acc.trueProfit += row.totals.trueProfit;
+      return acc;
+    },
+    {
+      recharge: 0,
+      gameCost: 0,
+      profit: 0,
+      trueProfit: 0,
+      cashout: globalCashouts.reduce((sum, c) => sum + Number(c.amount || 0), 0),
+      cashoutCount: globalCashouts.length,
+      cashAppCashout: globalCashouts.reduce(
+        (sum, c) => sum + (normalizePaymentMethod(c.payment_method) === "CashApp" ? Number(c.amount || 0) : 0),
+        0
+      ),
+      chimeCashout: globalCashouts.reduce(
+        (sum, c) => sum + (normalizePaymentMethod(c.payment_method) === "Chime" ? Number(c.amount || 0) : 0),
+        0
+      ),
+    }
+  );
+  const globalPaymentRows = paymentDistribution(activePaymentAccounts);
+  const globalTopGames = topGames(globalEntries);
+  const globalWinner = topUsername(globalCashouts);
+  const globalCashoutGame = topCashoutGame(globalCashouts);
 
   const topShops = shopStats
     .filter((row) => row.totals.recharge || row.totals.cashout || row.totals.trueProfit)

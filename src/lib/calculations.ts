@@ -178,6 +178,74 @@ export function reportTotalsFromStoredEntries(entries: StoredShiftEntry[]): Repo
   return totals;
 }
 
+// ─── RANGE / GAME-NETTING RULE (confirmed by Luis, 2026-07-17) ──────────────
+//
+// Coin balances carry over between shifts. When players redeem, coins return
+// to the game account and reduce what must be bought from the distributor
+// later. So for a DATE RANGE the real distributor cost per game is:
+//     max(net normal difference of that game over the range, 0) × rate
+// - Netting happens WITHIN a game across reports (same coin balance).
+// - A loss in one game NEVER offsets another game (different distributors).
+// - No report-level zero-out here: positive games still need coins bought
+//   even if the range's overall profit is negative.
+// This is the ONLY correct formula for range KPIs (owner report, manager
+// dashboard, manager 24h shop report). The per-report functions above remain
+// for single-report displays, where each game appears once anyway.
+
+export interface StoredRangeEntry extends StoredShiftEntry {
+  game_code?: string | null;
+  game_name?: string | null;
+  game_cost_percentage?: number | string | null;
+}
+
+export interface RangeGameRow {
+  name: string;
+  recharge: number;
+  net: number;
+  rate: number;
+  gameCost: number;
+  trueProfit: number;
+  count: number;
+}
+
+/** Per-game rows for a date range: nets each game's coin difference across
+ *  all reports, then applies max(net, 0) × rate. Sorted by recharge desc. */
+export function rangeGameRowsFromStoredEntries(entries: StoredRangeEntry[]): RangeGameRow[] {
+  const byGame = new Map<string, RangeGameRow>();
+  for (const e of entries) {
+    const key = String(e.game_code ?? e.game_name ?? "Unknown");
+    const current =
+      byGame.get(key) ??
+      { name: String(e.game_name ?? e.game_code ?? "Unknown"), recharge: 0, net: 0, rate: 0, gameCost: 0, trueProfit: 0, count: 0 };
+    current.recharge += toFiniteNumber(e.real_recharge);
+    current.net += toFiniteNumber(e.normal_coin_difference);
+    const rate = toFiniteNumber(e.game_cost_percentage);
+    if (rate > 0) current.rate = rate;
+    current.count += 1;
+    byGame.set(key, current);
+  }
+  for (const row of byGame.values()) {
+    row.gameCost = (Math.max(row.net, 0) * row.rate) / 100;
+    row.trueProfit = row.net - row.gameCost;
+  }
+  return Array.from(byGame.values()).sort((a, b) => b.recharge - a.recharge);
+}
+
+/** Range totals for ONE shop's entries. IMPORTANT: never mix shops in one
+ *  call — coins do not move between shops, so net per shop separately and
+ *  sum the results (the owner report sums its per-shop totals). */
+export function rangeTotalsFromStoredEntries(entries: StoredRangeEntry[]): ReportTotals {
+  const rows = rangeGameRowsFromStoredEntries(entries);
+  const totals: ReportTotals = { totalRecharge: 0, totalProfit: 0, totalGameCost: 0, totalTrueProfit: 0 };
+  for (const row of rows) {
+    totals.totalRecharge += row.recharge;
+    totals.totalProfit += row.net;
+    totals.totalGameCost += row.gameCost;
+    totals.totalTrueProfit += row.trueProfit;
+  }
+  return totals;
+}
+
 export function formatCurrency(value: number): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency",

@@ -10,7 +10,7 @@ import { DateRangeFilter } from "@/components/manager/date-range-filter";
 import {
   formatCurrency,
   formatNumber,
-  reportTotalsFromStoredEntries,
+  rangeTotalsFromStoredEntries,
   singleReportTotalsFromStoredEntries,
 } from "@/lib/calculations";
 import { fetchAllByIds, fetchAllRows } from "@/lib/supabase/fetch-all";
@@ -105,9 +105,10 @@ export default async function ManagerDashboardPage({
 
   const activePaymentAccounts = (paymentAccounts || []).filter((p) => p.status === "active");
 
-  // KPI cards: canonical totals (stored game_cost = max(profit, 0) × rate,
-  // per-report zero-out, NO scaling) — identical to the owner dashboard.
-  const rangeTotals = reportTotalsFromStoredEntries(entries || []);
+  // KPI cards: range/game-netting rule — each game's coin difference nets
+  // across the range (coin balances carry over between shifts), then
+  // cost = max(net, 0) × rate. Identical to the owner report.
+  const rangeTotals = rangeTotalsFromStoredEntries(entries || []);
   const totalRecharge = rangeTotals.totalRecharge;
   const totalGameCost = rangeTotals.totalGameCost;
   const totalProfit = rangeTotals.totalProfit;
@@ -196,7 +197,7 @@ export default async function ManagerDashboardPage({
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-7">
         <KpiCard label="Shop Recharge" value={formatCurrency(totalRecharge)} icon={DollarSign} trend="Selected range" />
         <KpiCard label="Shop Redeem" value={formatCurrency(totalRedeem)} icon={Wallet} trend="Selected range" />
-        <KpiCard label="Shop Game Cost" value={formatCurrency(totalGameCost)} icon={CreditCard} trend="Positive game profit x cost %" />
+        <KpiCard label="Shop Game Cost" value={formatCurrency(totalGameCost)} icon={CreditCard} trend="Net game coins x cost %" />
         <KpiCard label="Shop Profit" value={formatCurrency(totalProfit)} icon={TrendingUp} trend="Normal difference" />
         <KpiCard
           label="Shop True Profit"

@@ -7,7 +7,8 @@ import { DateRangeFilter } from "@/components/manager/date-range-filter";
 import {
   formatCurrency,
   formatNumber,
-  reportTotalsFromStoredEntries,
+  rangeGameRowsFromStoredEntries,
+  rangeTotalsFromStoredEntries,
 } from "@/lib/calculations";
 import { fetchAllByIds, fetchAllRows } from "@/lib/supabase/fetch-all";
 
@@ -118,50 +119,27 @@ export default async function ManagerShopReportPage({
     ),
   ]);
 
-  // Group entries by report, compute grouped-game totals per report, then aggregate
-  const entriesByReport = new Map<string, any[]>();
-  for (const entry of entries || []) {
-    const list = entriesByReport.get(entry.shift_report_id) ?? [];
-    list.push(entry);
-    entriesByReport.set(entry.shift_report_id, list);
-  }
-
-  // KPI totals: canonical formula shared with owner + manager dashboards.
-  const rangeTotals = reportTotalsFromStoredEntries(entries || []);
+  // KPI totals: range/game-netting rule — each game's coin difference nets
+  // across the range (coin balances carry over between shifts), then
+  // cost = max(net, 0) × rate. Identical to the owner report.
+  const rangeTotals = rangeTotalsFromStoredEntries(entries || []);
   const totalRecharge = rangeTotals.totalRecharge;
   const totalGameCost = rangeTotals.totalGameCost;
   const totalProfit = rangeTotals.totalProfit;
   const totalTrueProfit = rangeTotals.totalTrueProfit;
 
-  // Aggregate game-level rows across all reports (stored game_cost, zero-out per report)
-  const rechargeGameMap = new Map<
-    string,
-    { game: string; recharge: number; normalDifference: number; gameCostPercent: number; gameCostPercentCount: number; gameCost: number; profit: number; trueProfit: number }
-  >();
-
-  for (const [, reportEntries] of entriesByReport) {
-    // Zero-out rule: if the report lost money overall, no game fee for any game in it.
-    const reportProfit = reportEntries.reduce((s: number, e: any) => s + Number(e.normal_coin_difference || 0), 0);
-    const isPositive = reportProfit > 0;
-
-    for (const e of reportEntries) {
-      const gameName = e.game_name || "Unknown";
-      const profit   = Number(e.normal_coin_difference || 0);
-      const recharge = Number(e.real_recharge || 0);
-      const entryCost = isPositive ? Number(e.game_cost || 0) : 0;
-      const current = rechargeGameMap.get(gameName) ||
-        { game: gameName, recharge: 0, normalDifference: 0, gameCostPercent: 0, gameCostPercentCount: 0, gameCost: 0, profit: 0, trueProfit: 0 };
-      current.recharge          += recharge;
-      current.normalDifference  += profit;
-      current.gameCostPercent   += Number(e.game_cost_percentage || 0);
-      current.gameCostPercentCount += 1;
-      current.gameCost          += entryCost;
-      current.profit            += profit;
-      current.trueProfit        += profit - entryCost;
-      rechargeGameMap.set(gameName, current);
-    }
-  }
-  const rechargeGameRows = Array.from(rechargeGameMap.values()).sort((a, b) => b.recharge - a.recharge);
+  // Per-game rows for the range table — same netting rule as the KPI totals,
+  // so the table's Game Cost column sums exactly to the KPI card.
+  const rechargeGameRows = rangeGameRowsFromStoredEntries(entries || []).map((row) => ({
+    game: row.name,
+    recharge: row.recharge,
+    normalDifference: row.net,
+    gameCostPercent: row.rate,
+    gameCostPercentCount: 1,
+    gameCost: row.gameCost,
+    profit: row.net,
+    trueProfit: row.trueProfit,
+  }));
 
   const totalRedeems = (cashouts || []).reduce((sum, c) => sum + Number(c.amount || 0), 0);
 
@@ -236,7 +214,7 @@ export default async function ManagerShopReportPage({
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-8">
         <KpiCard label="Real Recharge" value={formatCurrency(totalRecharge)} icon={DollarSign} trend="Selected range" />
         <KpiCard label="Redeems" value={formatCurrency(totalRedeems)} icon={Wallet} trend="Cashout total" />
-        <KpiCard label="Game Cost" value={formatCurrency(totalGameCost)} icon={CreditCard} trend="Positive game profit x cost %" />
+        <KpiCard label="Game Cost" value={formatCurrency(totalGameCost)} icon={CreditCard} trend="Net game coins x cost %" />
         <KpiCard label="Profit" value={formatCurrency(totalProfit)} icon={TrendingUp} trend="Normal difference" />
         <KpiCard
           label="True Profit"
