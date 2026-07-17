@@ -9,6 +9,7 @@ import {
   formatNumber,
   reportTotalsFromStoredEntries,
 } from "@/lib/calculations";
+import { fetchAllByIds, fetchAllRows } from "@/lib/supabase/fetch-all";
 
 export const dynamic = "force-dynamic";
 
@@ -77,34 +78,44 @@ export default async function ManagerShopReportPage({
     );
   }
 
-  const { data: reports } = await supabase
-    .from("shift_reports")
-    .select("id, shift_date")
-    .eq("shop_id", profile.shop_id)
-    .gte("shift_date", start)
-    .lte("shift_date", end)
-    .order("shift_date", { ascending: false });
+  // fetchAllRows / fetchAllByIds: complete results past Supabase's 1,000-row cap.
+  // A 2-month range can easily exceed 1,000 game entries.
+  const reports = await fetchAllRows<any>((from, to) =>
+    supabase
+      .from("shift_reports")
+      .select("id, shift_date")
+      .eq("shop_id", profile.shop_id)
+      .gte("shift_date", start)
+      .lte("shift_date", end)
+      .order("shift_date", { ascending: false })
+      .order("id", { ascending: true })
+      .range(from, to)
+  );
 
   const reportIds = (reports || []).map((r) => r.id);
 
-  const [{ data: entries }, { data: cashouts }] = await Promise.all([
-    reportIds.length
-      ? supabase
-          .from("shift_game_entries")
-          .select(
-            "shift_report_id, game_name, real_recharge, redeem_amount, normal_coin_difference, game_cost_percentage, game_cost, gross_profit, true_profit"
-          )
-          .in("shift_report_id", reportIds)
-      : Promise.resolve({ data: [] }),
-    reportIds.length
-      ? supabase
-          .from("shift_cashouts")
-          .select(
-            "id, shift_report_id, customer_facebook_name, game_username, game_name, amount, payment_method, payment_tag, page_source_name, created_at"
-          )
-          .eq("shop_id", profile.shop_id)
-          .in("shift_report_id", reportIds)
-      : Promise.resolve({ data: [] }),
+  const [entries, cashouts] = await Promise.all([
+    fetchAllByIds<any>(reportIds, (ids, from, to) =>
+      supabase
+        .from("shift_game_entries")
+        .select(
+          "shift_report_id, game_name, real_recharge, redeem_amount, normal_coin_difference, game_cost_percentage, game_cost, gross_profit, true_profit"
+        )
+        .in("shift_report_id", ids)
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
+    fetchAllByIds<any>(reportIds, (ids, from, to) =>
+      supabase
+        .from("shift_cashouts")
+        .select(
+          "id, shift_report_id, customer_facebook_name, game_username, game_name, amount, payment_method, payment_tag, page_source_name, created_at"
+        )
+        .eq("shop_id", profile.shop_id)
+        .in("shift_report_id", ids)
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
   ]);
 
   // Group entries by report, compute grouped-game totals per report, then aggregate

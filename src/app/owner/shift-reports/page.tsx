@@ -5,6 +5,7 @@ import {
   formatCurrency,
   singleReportTotalsFromStoredEntries,
 } from "@/lib/calculations";
+import { fetchAllByIds } from "@/lib/supabase/fetch-all";
 import type { ColumnConfig, FieldConfig } from "@/components/crud/types";
 
 export const dynamic = "force-dynamic";
@@ -28,19 +29,36 @@ const fields: FieldConfig[] = [
 export default async function OwnerShiftReportsPage() {
   const supabase = createClient();
 
-  const [{ data: reports }, { data: shops }, { data: entries }, { data: cashouts }] =
-    await Promise.all([
-      supabase
-        .from("shift_reports")
-        .select("*")
-        .order("created_at", { ascending: false })
-        .limit(100),
-      supabase.from("shops").select("id, name"),
+  const [{ data: reports }, { data: shops }] = await Promise.all([
+    supabase
+      .from("shift_reports")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(100),
+    supabase.from("shops").select("id, name"),
+  ]);
+
+  // Scoped to the listed reports + fetchAllByIds: previously this fetched the
+  // WHOLE entries table and silently lost rows past Supabase's 1,000-row cap.
+  const reportIds = (reports || []).map((r) => r.id);
+  const [entries, cashouts] = await Promise.all([
+    fetchAllByIds<any>(reportIds, (ids, from, to) =>
       supabase
         .from("shift_game_entries")
-        .select("shift_report_id, game_name, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, true_profit"),
-      supabase.from("shift_cashouts").select("shift_report_id, amount"),
-    ]);
+        .select("shift_report_id, game_name, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, true_profit")
+        .in("shift_report_id", ids)
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
+    fetchAllByIds<any>(reportIds, (ids, from, to) =>
+      supabase
+        .from("shift_cashouts")
+        .select("shift_report_id, amount")
+        .in("shift_report_id", ids)
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
+  ]);
 
   const shopNameById = new Map((shops || []).map((s) => [s.id, s.name]));
 

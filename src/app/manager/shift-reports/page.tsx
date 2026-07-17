@@ -7,6 +7,7 @@ import {
   formatCurrency,
   singleReportTotalsFromStoredEntries,
 } from "@/lib/calculations";
+import { fetchAllByIds } from "@/lib/supabase/fetch-all";
 
 export const dynamic = "force-dynamic";
 
@@ -37,20 +38,26 @@ export default async function ManagerShiftReportsPage() {
     .limit(100);
 
   const reportIds = (reports || []).map((r) => r.id);
-  const [{ data: entries }, { data: cashouts }] = await Promise.all([
-    reportIds.length
-      ? supabase
-          .from("shift_game_entries")
-          .select("shift_report_id, game_name, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, true_profit")
-          .in("shift_report_id", reportIds)
-      : Promise.resolve({ data: [] }),
-    reportIds.length
-      ? supabase
-          .from("shift_cashouts")
-          .select("shift_report_id, amount")
-          .eq("shop_id", profile.shop_id)
-          .in("shift_report_id", reportIds)
-      : Promise.resolve({ data: [] }),
+  // fetchAllByIds: complete results past Supabase's 1,000-row cap
+  // (100 reports × many games per report can exceed 1,000 entries).
+  const [entries, cashouts] = await Promise.all([
+    fetchAllByIds<any>(reportIds, (ids, from, to) =>
+      supabase
+        .from("shift_game_entries")
+        .select("shift_report_id, game_name, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, true_profit")
+        .in("shift_report_id", ids)
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
+    fetchAllByIds<any>(reportIds, (ids, from, to) =>
+      supabase
+        .from("shift_cashouts")
+        .select("shift_report_id, amount")
+        .eq("shop_id", profile.shop_id)
+        .in("shift_report_id", ids)
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
   ]);
 
   // Group entries by report. Use stored game_cost from DB (what was calculated at

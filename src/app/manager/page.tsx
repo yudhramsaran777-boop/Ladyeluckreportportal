@@ -13,6 +13,7 @@ import {
   reportTotalsFromStoredEntries,
   singleReportTotalsFromStoredEntries,
 } from "@/lib/calculations";
+import { fetchAllByIds, fetchAllRows } from "@/lib/supabase/fetch-all";
 
 export const dynamic = "force-dynamic";
 
@@ -57,39 +58,49 @@ export default async function ManagerDashboardPage({
     );
   }
 
-  const [{ data: shop }, { data: paymentAccounts }, { data: reports }] = await Promise.all([
+  // fetchAllRows / fetchAllByIds: complete results past Supabase's 1,000-row cap
+  // so manager and owner views always total the same rows.
+  const [{ data: shop }, { data: paymentAccounts }, reports] = await Promise.all([
     supabase.from("shops").select("name").eq("id", shopId).single(),
     supabase.from("payment_accounts").select("id, payment_type, status").eq("shop_id", shopId),
-    supabase
-      .from("shift_reports")
-      .select("id, employee_name, shift_date, shift_interval, status, created_at")
-      .eq("shop_id", shopId)
-      .gte("shift_date", start)
-      .lte("shift_date", end)
-      .order("shift_date", { ascending: false })
-      .order("created_at", { ascending: false }),
+    fetchAllRows<any>((from, to) =>
+      supabase
+        .from("shift_reports")
+        .select("id, employee_name, shift_date, shift_interval, status, created_at")
+        .eq("shop_id", shopId)
+        .gte("shift_date", start)
+        .lte("shift_date", end)
+        .order("shift_date", { ascending: false })
+        .order("created_at", { ascending: false })
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
   ]);
 
   const reportIds = (reports || []).map((r) => r.id);
 
-  const [{ data: entries }, { data: cashouts }] = await Promise.all([
-    reportIds.length
-      ? supabase
-          .from("shift_game_entries")
-          .select(
-            "shift_report_id, game_code, game_name, real_recharge, redeem_amount, normal_coin_difference, game_cost_percentage, game_cost, gross_profit, true_profit"
-          )
-          .in("shift_report_id", reportIds)
-      : Promise.resolve({ data: [] }),
-    reportIds.length
-      ? supabase
-          .from("shift_cashouts")
-          .select(
-            "id, shift_report_id, customer_facebook_name, game_username, game_name, amount, payment_method, payment_tag, page_source_name, created_at"
-          )
-          .eq("shop_id", shopId)
-          .in("shift_report_id", reportIds)
-      : Promise.resolve({ data: [] }),
+  const [entries, cashouts] = await Promise.all([
+    fetchAllByIds<any>(reportIds, (ids, from, to) =>
+      supabase
+        .from("shift_game_entries")
+        .select(
+          "shift_report_id, game_code, game_name, real_recharge, redeem_amount, normal_coin_difference, game_cost_percentage, game_cost, gross_profit, true_profit"
+        )
+        .in("shift_report_id", ids)
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
+    fetchAllByIds<any>(reportIds, (ids, from, to) =>
+      supabase
+        .from("shift_cashouts")
+        .select(
+          "id, shift_report_id, customer_facebook_name, game_username, game_name, amount, payment_method, payment_tag, page_source_name, created_at"
+        )
+        .eq("shop_id", shopId)
+        .in("shift_report_id", ids)
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
   ]);
 
   const activePaymentAccounts = (paymentAccounts || []).filter((p) => p.status === "active");

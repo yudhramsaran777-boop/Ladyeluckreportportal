@@ -12,6 +12,7 @@ import {
   formatNumber,
   reportTotalsFromStoredEntries,
 } from "@/lib/calculations";
+import { fetchAllByIds, fetchAllRows } from "@/lib/supabase/fetch-all";
 
 interface OwnerReportContentProps {
   searchParams?: { start?: string; end?: string };
@@ -345,40 +346,50 @@ export async function OwnerReportContent({ searchParams, detailed = false }: Own
   const { start, end } = parseRange(searchParams);
   const supabase = createClient();
 
-  const [{ data: shops }, { data: managers }, { data: paymentAccounts }, { data: reports }] =
+  const [{ data: shops }, { data: managers }, { data: paymentAccounts }, reports] =
     await Promise.all([
       supabase.from("shops").select("id, name, status").order("name"),
       supabase.from("profiles").select("full_name, shop_id").eq("role", "manager"),
       supabase.from("payment_accounts").select("id, shop_id, payment_type, status"),
-      supabase
-        .from("shift_reports")
-        .select("id, shop_id, employee_id, employee_name, shift_date, status, created_at")
-        .gte("shift_date", start)
-        .lte("shift_date", end)
-        .order("shift_date", { ascending: false }),
+      // fetchAllRows: complete results past the 1,000-row Supabase cap.
+      fetchAllRows<any>((from, to) =>
+        supabase
+          .from("shift_reports")
+          .select("id, shop_id, employee_id, employee_name, shift_date, status, created_at")
+          .gte("shift_date", start)
+          .lte("shift_date", end)
+          .order("shift_date", { ascending: false })
+          .order("id", { ascending: true })
+          .range(from, to)
+      ),
     ]);
 
   const safeShops = shops || [];
   const reportIds = (reports || []).map((report) => report.id);
 
-  const [{ data: entries }, { data: cashouts }, { data: employees }] = await Promise.all([
-    reportIds.length
-      ? supabase
-          .from("shift_game_entries")
-          .select(
-            "shift_report_id, game_code, game_name, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, gross_profit, true_profit"
-          )
-          .in("shift_report_id", reportIds)
-      : Promise.resolve({ data: [] }),
-    reportIds.length
-      ? supabase
-          .from("shift_cashouts")
-          .select(
-            "id, shift_report_id, shop_id, employee_id, customer_facebook_name, game_username, game_name, amount, payment_method, payment_tag, page_source_name, created_at"
-          )
-          .in("shift_report_id", reportIds)
-          .order("created_at", { ascending: false })
-      : Promise.resolve({ data: [] }),
+  // fetchAllByIds: chunks the id list and pages past the 1,000-row cap so
+  // owner totals include EVERY entry — matching the manager dashboards.
+  const [entries, cashouts, { data: employees }] = await Promise.all([
+    fetchAllByIds<any>(reportIds, (ids, from, to) =>
+      supabase
+        .from("shift_game_entries")
+        .select(
+          "shift_report_id, game_code, game_name, real_recharge, normal_coin_difference, game_cost_percentage, game_cost, gross_profit, true_profit"
+        )
+        .in("shift_report_id", ids)
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
+    fetchAllByIds<any>(reportIds, (ids, from, to) =>
+      supabase
+        .from("shift_cashouts")
+        .select(
+          "id, shift_report_id, shop_id, employee_id, customer_facebook_name, game_username, game_name, amount, payment_method, payment_tag, page_source_name, created_at"
+        )
+        .in("shift_report_id", ids)
+        .order("id", { ascending: true })
+        .range(from, to)
+    ),
     supabase.from("profiles").select("id, full_name"),
   ]);
 
@@ -408,7 +419,8 @@ export async function OwnerReportContent({ searchParams, detailed = false }: Own
   }
 
   const globalEntries = entries || [];
-  const globalCashouts = cashouts || [];
+  // Re-sort after chunked fetching so the cashout detail table stays in order.
+  const globalCashouts = (cashouts || []).slice().sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
   const globalTotals = totals(globalEntries, globalCashouts);
   const globalPaymentRows = paymentDistribution(activePaymentAccounts);
   const globalTopGames = topGames(globalEntries);
